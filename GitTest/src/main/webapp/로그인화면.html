@@ -35,11 +35,11 @@
         }
 
         p {
-            font-size: 14px;
+            font-size: 13px;
             font-weight: 100;
             line-height: 20px;
             letter-spacing: 0.5px;
-            margin: 20px 0 30px;
+            margin: 15px 0px -30px;
         }
 
         span {
@@ -54,16 +54,18 @@
         }
 
         button {
-            border-radius: 20px;
+            border-radius: 40px;
             border: 1px solid white;
             background-color: #f19040;
             color: #FFFFFF;
-            font-size: 12px;
+            font-size: 18px;
             font-weight: bold;
-            padding: 12px 45px;
+            padding: 20px 35px;
             letter-spacing: 1px;
             text-transform: uppercase;
             transition: transform 80ms ease-in;
+            margin-left: 20px;
+            margin-right: 20px;
         }
 
         button:active {
@@ -93,7 +95,7 @@
         input {
             background-color: #eee;
             border: none;
-            padding: 12px 15px;
+            padding: 18px 22px;
             margin: 8px 0;
             width: 100%;
         }
@@ -105,9 +107,10 @@
                 0 10px 10px rgba(0, 0, 0, 0.22);
             position: relative;
             overflow: hidden;
-            width: 768px;
-            max-width: 100%;
-            min-height: 480px;
+            width: 1152px;
+            max-width: 150%;
+            min-height: 720px;
+            max-height: 150%;
         }
 
         .form-container {
@@ -252,32 +255,26 @@
             width: 400px;
             height: 50px;
         }
+        .loginPhoto{
+            font-size: 50px;
+        }
     </style>
 
 </head>
 
 <body>
     <div class="container" id="container">
-        <div class="form-container sign-up-container">
-            <form action="#">
-                <h1>계정생성</h1>
-                <span>or use your email for registration</span>
-                <input type="text" placeholder="Name" />
-                <input type="email" placeholder="Email" />
-                <input type="password" placeholder="Password" />
-                <button>Sign Up</button>
-            </form>
-        </div>
         <div class="form-container sign-in-container">
             <form action="#">
-                <h1>로그인</h1>
-                <span>암튼 뭐든 해주세요</span>
+                <h1 style="font-size:60px;">Sign in</h1>
+                <p style="font-size:20px;">Welcome to WithDogs!!</p>
+                <br><br><br>
                 <input type="email" placeholder="Email" />
                 <input type="password" placeholder="Password" />
                 <br>
                 <li style="list-style: none; float: left; outline: 10px;">
-                    <button id="signin">로그인</button>
-                    <button id="signUp">회원가입</button>
+                    <button id="login">로그인</button>
+                    <button id="join">회원가입</button>
                 </li>
             </form>
         </div>
@@ -290,9 +287,9 @@
 
                 </div>
                 <div class="overlay-panel overlay-right">
-                    <h1>Hello, Friend!</h1>
-                    <br>
-                    <img src="./img/포켓몬10.jpg" weight=300px height=100px alt="">
+                    <h1 class="loginPhoto">With Dogs!</h1>
+                    <br><br>
+                    <img src="./img/loginpageimg.png" weight=250px height=200px alt="">
                     <br><br>
                 </div>
             </div>
