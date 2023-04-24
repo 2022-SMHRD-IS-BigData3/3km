@@ -9,4 +9,6 @@ CREATE TABLE USER_INFO(
 );
 select * from USER_INFO;
 
+
+
 select * from DOG_INFO;
