@@ -9,8 +9,6 @@
 <title>With Dogs!</title>
 <link rel="icon" href="./img/강아지로고.png" />
 <link rel="apple-touch-icon" href="./img/강아지로고.png" />
-<link rel="stylesheet"
-	href="/GitTest/src/main/java/km/frontcontroller/sangdan.css" />
 <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 
 <style>
@@ -84,17 +82,17 @@ body {
 	list-style: none;
 	padding-left: 0px;
 	text-align: left;
-	list-style: none;
 }
 
 .hidelist {
 	list-style: none;
 	padding-left: 0px;
-	list-style: none;
 }
 
 .hide .hidelist {
-	font-size: medium;
+	height: 30px;
+  font-size: 20px;
+  margin-top: 10px;
 	list-style: none;
 }
 
@@ -103,10 +101,15 @@ body {
 	width: 350px;
 	height: auto;
 	position: absolute;
+  font-family: Katuri;
 }
 
 .aham {
 	font-size: 25px;
+}
+
+#cate-list {
+  font-family: Katuri;
 }
 
 /* div의 스타일 */

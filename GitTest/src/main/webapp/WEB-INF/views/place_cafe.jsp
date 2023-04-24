@@ -81,7 +81,6 @@ form#mid {
 	list-style: none;
 	padding-left: 0px;
 	text-align: left;
-	list-style: none;
 }
 .hidelist {
 	list-style: none;
@@ -110,7 +109,6 @@ form#mid {
 #cate-list {
   font-family: Katuri;
 }
-
 
 /* div의 스타일 */
 #enter {
