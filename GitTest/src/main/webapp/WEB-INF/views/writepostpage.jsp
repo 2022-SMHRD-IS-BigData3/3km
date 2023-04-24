@@ -1,20 +1,13 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>With Dogs!</title>
-<link rel="icon" href="./img/강아지로고.png" />
-<link rel="apple-touch-icon" href="./img/강아지로고.png" />
-<link rel="stylesheet"
-	href="/GitTest/src/main/java/km/frontcontroller/sangdan.css" />
-<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
-
+<title>게시물 작성</title>
 <style>
-
 @font-face {
 	font-family: 'Katuri';
 	src:
@@ -28,9 +21,18 @@ body {
 	font-family: Katuri;
 	font-size: 20px;
 }
+/* div의 스타일 */
+#enter {
+	width: 360px;
+	height: 640px;
+	padding: 0px;
+	background-color: rgba(249, 230, 191, 0.15);
+	border: 1px solid #ccc;
+	box-sizing: border-box;
+	margin: 0 auto;
+}
 
-<!--
-상단바 css -->form#mid {
+form#mid {
 	text-align: center;
 }
 
@@ -109,66 +111,61 @@ body {
 	font-size: 25px;
 }
 
-/* div의 스타일 */
-#enter {
-	width: 360px;
-	height: 640px;
-	padding: 0px;
-	background-color: rgba(249, 230, 191, 0.15);
-	border: 1px solid #ccc;
-	box-sizing: border-box;
-	margin: 0 auto;
+#intitle {
+	margin-left: 20px;
+	height: 30px;
+	width: 210px;
 }
 
-div.photobox1 {
-	width: 150px;
-	height: 150px;
-	background-color: gainsboro;
-	float: left;
-	margin: 10px;
-	margin-left: 16px;
+#selgesi {
+	margin-left: 10px;
+	height: 35px;
+	width: 90px;
 }
 
-div.photobox2 {
-	width: 150px;
-	height: 150px;
-	background-color: gainsboro;
+textarea {
+	margin-left: 20px;
+	margin-top: 20px;
+	width: 316px;
+	height: 400px;
+	background-color: rgba(128, 128, 128, 0.085);
+	border: none;
+}
+
+#subbut {
 	float: right;
-	margin: 10px;
-	margin-right: 16px;
+	margin-right: 20px;
+	margin-top: 5px;
+	width: 70px;
+	height: 30px;
+	background-color: #6d6969;
+	color: aliceblue;
+	font-weight: bold;
+	border-radius: 5px;
+	border: none;
 }
 
-#top-area {
-	width: 360px;
-	height: 15px;
-	font-size: 13px;
-	padding: 15px;
-	margin-left: 190px
+#imgbut {
+	margin-left: 20px;
+	background-color: rgb(0, 0, 0, 0);
+	border: none;
 }
 
-#bottom {
-	text-align: center;
-	font-size: 10px
-}
-
-#morebutton {
-	width: 50px;
-	height: 25px;
-	font-size: 5px;
+#imgmap {
+	margin-left: -15px;
+	background-color: rgb(0, 0, 0, 0);
+	border: none;
 }
 </style>
-
-
+<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 </head>
-
 <body>
-
 	<form action="#">
 		<div id="enter">
 			<header class="sangdan">
 				<button type="button" id="ham">
 					<li class="menu"><a class="aham"><img
-							src="./img/햄버거아이콘.png" /></a>
+							src="./project/img/햄버거아이콘.png" /></a>
 						<ul class="hide">
 							<div class="kateham">
 								<li class="menu"><a class="aham">Place</a>
@@ -189,72 +186,35 @@ div.photobox2 {
 										<li class="hidelist">나눔</li>
 										<li class="hidelist">Q&A</li>
 									</ul></li> <br>
-								<li class="menu"><a class="aham" >MyPage</a>
-
+								<li class="menu"><a class="aham">MyPage</a>
 									<ul class="hide">
-										<li class="hidelist">‍계정 관리</li>
+										<li class="hidelist">계정 관리</li>
 										<li class="hidelist">내 정보 수정</li>
 									</ul></li>
 							</div>
 						</ul></li>
 				</button>
 				<button type="button" id="withdogslogo">
-					<img src="./img/이름로고.png" width="180">
+					<img src="./project/img/이름로고.png" width="180">
 				</button>
-				<button type="button" id="person" onClick="location.href='mypage.jsp'">
-					<img src="./img/프로필아이콘.png">
+				<button type="button" id="person">
+					<img src="./project/img/프로필아이콘.png">
 				</button>
 			</header>
+			<br> <input type="text" id="intitle" placeholder="제목을 입력해주세요">
+			<select id="selgesi">
+				<option value="">게시물</option>
+			</select> <br>
+			<textarea></textarea>
+			<br>
+			<br> <input type="submit" id="subbut" value="작성">
+			<button id="imgbut">
+				<img src="./img/image.png" alt="대충사진">
+			</button>
+			<button id="imgmap">
+				<img src="./img/pin.png" alt="대충지도">
+			</button>
 	</form>
-
-	<div id="top-area">
-		<label for="cate-list">정렬방식</label> <select name="cate-list"
-			id="cate-list">
-			<option value="조회순">조회순</option>
-			<option value="좋아요순">좋아요순</option>
-			<option value="최신순">최신순</option>
-		</select>
-	</div>
-
-	<div id="photobox-line">
-		<div class="photobox1">
-			<a href="#"></a>
-		</div>
-		<div class="photobox2">
-			<a href="#"></a>
-		</div>
-	</div>
-
-	<div id="photobox-line">
-		<div class="photobox1">
-			<a href="#"></a>
-		</div>
-		<div class="photobox2">
-			<a href="#"></a>
-		</div>
-	</div>
-
-	<div id="photobox-line">
-		<div class="photobox1">
-			<a href="#"></a>
-		</div>
-		<div class="photobox2">
-			<a href="#"></a>
-		</div>
-	</div>
-
-	<div id="bottom">
-		<button id="morebutton" class="btn btn-primary btn-sm" btn-sm>더보기</button>
-		<a href="#"></a>
-	</div>
-
-
-
-
-
-
-	</div>
-
 	<script>
 		$(document).ready(function() {
 			$(".menu>.aham").click(function() {
@@ -267,7 +227,5 @@ div.photobox2 {
 			})
 		})
 	</script>
-
 </body>
-
 </html>
