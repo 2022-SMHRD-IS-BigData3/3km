@@ -14,8 +14,23 @@
 <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 
 <style>
-<!--
-상단바 css-->form#mid {
+
+@font-face {
+    font-family: 'Katuri';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_13@1.0/Katuri.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body{
+      font-family: Katuri;
+      font-size: 20px;
+    }
+    
+
+<!-- 상단바 css -->
+
+form#mid {
 	text-align: center;
 }
 
@@ -125,7 +140,7 @@ div.photobox2 {
 
 #top-area {
 	width: 360px;
-	height: 40px;
+	height: 15px;
 	font-size: 13px;
 	padding: 15px;
 	margin-left: 190px
@@ -147,6 +162,7 @@ div.photobox2 {
 </head>
 
 <body>
+
 	<form action="#">
 		<div id="enter">
 			<header class="sangdan">
@@ -157,26 +173,26 @@ div.photobox2 {
 							<div class="kateham">
 								<li class="menu"><a class="aham">Place</a>
 									<ul class="hide">
-										<li class="hidelist">☕카페/식당</li>
-										<li class="hidelist">🦮산책</li>
-										<li class="hidelist">🎸기타</li>
+										<li class="hidelist">카페/식당</li>
+										<li class="hidelist">산책</li>
+										<li class="hidelist">기타</li>
 									</ul></li> <br>
 								<li class="menu"><a class="aham">Feed</a>
 									<ul class="hide">
-										<li class="hidelist">🐾puppy</li>
-										<li class="hidelist">🧔adult</li>
-										<li class="hidelist">👴senior</li>
+										<li class="hidelist">Puppy</li>
+										<li class="hidelist">Adult</li>
+										<li class="hidelist">Senior</li>
 									</ul></li> <br>
 								<li class="aham"><a>Items</a></li> <br>
 								<li class="menu"><a class="aham">Board</a>
 									<ul class="hide">
-										<li class="hidelist">🚚나눔</li>
-										<li class="hidelist">❓Q&A</li>
+										<li class="hidelist">나눔</li>
+										<li class="hidelist">Q&A</li>
 									</ul></li> <br>
 								<li class="menu"><a class="aham">MyPage</a>
 									<ul class="hide">
-										<li class="hidelist">👨‍💼계정 관리</li>
-										<li class="hidelist">👨‍🎓내 정보 수정</li>
+										<li class="hidelist">‍계정 관리</li>
+										<li class="hidelist">내 정보 수정</li>
 									</ul></li>
 							</div>
 						</ul></li>
