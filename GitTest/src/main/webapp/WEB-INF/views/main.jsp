@@ -189,42 +189,6 @@ div.photobox2 {
 										<li class="hidelist">Q&A</li>
 									</ul></li> <br>
 								<li class="menu"><a class="aham" >MyPage</a>
-
-</style>
-
-
-</head>
-
-<body>
-
-	<form action="#">
-		<div id="enter">
-			<header class="sangdan">
-				<button type="button" id="ham">
-					<li class="menu"><a class="aham"><img
-							src="./img/햄버거아이콘.png" /></a>
-						<ul class="hide">
-							<div class="kateham">
-								<li class="menu"><a class="aham">Place</a>
-									<ul class="hide">
-										<li class="hidelist">카페/식당</li>
-										<li class="hidelist">산책</li>
-										<li class="hidelist">기타</li>
-									</ul></li> <br>
-								<li class="menu"><a class="aham">Feed</a>
-									<ul class="hide">
-										<li class="hidelist">Puppy</li>
-										<li class="hidelist">Adult</li>
-										<li class="hidelist">Senior</li>
-									</ul></li> <br>
-								<li class="aham"><a>Items</a></li> <br>
-								<li class="menu"><a class="aham">Board</a>
-									<ul class="hide">
-										<li class="hidelist">나눔</li>
-										<li class="hidelist">Q&A</li>
-									</ul></li> <br>
-								<li class="menu"><a class="aham">MyPage</a>
->>>>>>> branch 'master' of https://github.com/2022-SMHRD-IS-BigData3/3km.git
 									<ul class="hide">
 										<li class="hidelist">‍계정 관리</li>
 										<li class="hidelist">내 정보 수정</li>
