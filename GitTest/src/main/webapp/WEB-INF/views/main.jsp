@@ -14,6 +14,7 @@
 <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 
 <style>
+
 @font-face {
 	font-family: 'Katuri';
 	src:
@@ -189,6 +190,7 @@ div.photobox2 {
 										<li class="hidelist">Q&A</li>
 									</ul></li> <br>
 								<li class="menu"><a class="aham" >MyPage</a>
+
 									<ul class="hide">
 										<li class="hidelist">‍계정 관리</li>
 										<li class="hidelist">내 정보 수정</li>

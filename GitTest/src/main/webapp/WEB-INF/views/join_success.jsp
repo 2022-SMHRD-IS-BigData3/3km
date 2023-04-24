@@ -219,7 +219,7 @@ div>ul {
 		<div id="blankarea"></div>
 		<div>회원가입이 완료되었습니다!</div>
 		<br>
-		<button id="sucessbutton" href="#">로그인 하러가기</button>
+		<button type="button" id="successbutton" onClick="location.href='login.jsp'">로그인 하러가기
 	</div>
 
 
