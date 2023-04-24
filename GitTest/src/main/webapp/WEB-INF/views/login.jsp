@@ -5,336 +5,355 @@
 <html lang="en">
 
 <head>
-<meta charset="UTF-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Login</title>
-<style>
-@font-face {
-	font-family: 'Katuri';
-	src:
-		url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_13@1.0/Katuri.woff')
-		format('woff');
-	font-weight: normal;
-	font-style: normal;
-}
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* div의 스타일 */
+        @font-face {
+            font-family: 'Katuri';
+            src:
+                url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_13@1.0/Katuri.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+        body {
+            font-family: Katuri;
+        }
+        div#enter {
+            width: 360px;
+            height: 500px;
+            padding: 0px;
+            background-color: rgba(249, 230, 191, 0.15);
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+            margin: 0 auto;
+        }
+        form#mid {
+            text-align: center;
+        }
 
-body {
-	font-family: Katuri;
-}
+        .sangdan {
+            height: 50px;
+            background: rgba(243, 156, 18, 0.73);
+            margin: 0;
+            display: flex;
+        }
 
-<!--
-상단바 css -->form#mid {
-	text-align: center;
-}
+        .aham {
+            padding-right: 50px;
+            font-weight: bold;
+            font-size: 15px;
+        }
 
-.sangdan {
-	height: 50px;
-	background: rgba(243, 156, 18, 0.73);
-	margin: 0;
-	display: flex;
-}
+        #ham {
+            border: none;
+            background-color: rgba(9, 9, 9, 0);
+            float: left;
+            display: flex;
+        }
 
-.aham {
-	padding-right: 50px;
-	font-weight: bold;
-	font-size: 15px;
-}
+        #withdogslogo {
+            background-color: rgb(0, 0, 0, 0);
+            border: none;
+            margin-right: 25px;
+            margin-top: 10px;
+            margin-left: -10px;
+            display: flex;
+        }
 
-#ham {
-	border: none;
-	background-color: rgba(9, 9, 9, 0);
-	float: left;
-	display: flex;
-	margin-top: 10px;
-}
+        #person {
+            border: none;
+            background-color: rgba(0, 0, 0, 0);
+            float: right;
+        }
 
-#withdogslogo {
-	background-color: rgb(0, 0, 0, 0);
-	border: none;
-	margin-right: 25px;
-	margin-top: 10px;
-	margin-left: -10px;
-	display: flex;
-}
+        .menu {
+            cursor: pointer;
+            list-style: none;
+        }
 
-#person {
-	border: none;
-	background-color: rgba(0, 0, 0, 0);
-	float: right;
-}
+        .menu .hide {
+            display: none;
+            font-size: 5px;
+        }
 
-.menu {
-	cursor: pointer;
-	list-style: none;
-}
+        .hide {
+            list-style: none;
+            padding-left: 0px;
+            text-align: left;
+        }
 
-.menu .hide {
-	display: none;
-	font-size: 5px;
-}
+        .hidelist {
+            list-style: none;
+            padding-left: 0px;
+        }
 
-.hide {
-	list-style: none;
-	padding-left: 0px;
-	text-align: left;
-}
+        .hide .hidelist {
+            font-size: medium;
+            list-style: none;
+        }
 
-.hidelist {
-	list-style: none;
-	padding-left: 0px;
-}
+        .kateham {
+            background-color: bisque;
+            width: 350px;
+            height: auto;
+            position: absolute;
+        }
 
-.hide .hidelist {
-	height: 30px;
-	font-size: 20px;
-	margin-top: 10px;
-	list-style: none;
-}
+        .aham {
+            font-size: 25px;
+        }
 
-.kateham {
-	background-color: bisque;
-	width: 350px;
-	height: auto;
-	position: absolute;
-	font-family: Katuri;
-}
+        #enter1 {
+            padding-top: 100px;
+            text-align: center;
+        }
 
-.aham {
-	font-size: 25px;
-}
+        input {
+            background-color: #eee;
+            border: gray;
+            padding: 12px 15px;
+            margin: 8px 0;
+            width: 230px;
+        }
 
-#cate-list {
-	font-family: Katuri;
-}
-    
-/* div의 스타일 */
-div#enter {
-	width: 360px;
-	height: 500px;
-	padding: 0px;
-	background-color: rgba(249, 230, 191, 0.15);
-	border: 1px solid #ccc;
-	box-sizing: border-box;
-	margin: 0 auto;
-	border-bottom: rgba(0, 0, 0, 0);
-}
+        #pw {
+            margin-left: 25px;
+        }
 
-#enter1 {
-	padding-top: 100px;
-}
+        #login {
+            width: 320px;
+            height: 30px;
+            margin: 0 auto;
+            background-color: rgba(243, 156, 18, 0.73);
+            text-align: center;
+            font-size: large;
+        }
 
-form#mid {
-	text-align: center;
-}
+        #loginbutton {
+            width: 320px;
+            height: 30px;
+            background-color: rgba(243, 156, 18, 0.73);
+            border: 0px;
+        }
 
-input {
-	background-color: #eee;
-	border: gray;
-	padding: 12px 15px;
-	margin: 8px 0;
-	width: 230px;
-}
 
-#pw {
-	margin-left: 25px;
-}
+        #ham {
+            border: none;
+            background-color: rgba(0, 0, 0, 0);
+            padding: 13px;
+            float: left;
+        }
 
-#login {
-	width: 320px;
-	height: 30px;
-	margin: 0 auto;
-	background-color: rgba(243, 156, 18, 0.73);
-	text-align: center;
-	font-size: large;
-}
+        #withdogslogo {
+            background-color: rgb(0, 0, 0, 0);
+            border: none;
+            margin-left: -20px;
+            margin-top: 10px;
+        }
 
-#loginbutton {
-	width: 320px;
-	height: 30px;
-	background-color: rgba(243, 156, 18, 0.73);
-	border: 0px;
-}
+        #person {
+            border: none;
+            background-color: rgba(0, 0, 0, 0);
+            float: right;
+            margin-left: -10px;
 
-header {
-	height: 50px;
-	background: rgba(243, 156, 18, 0.73);
-	margin: 0;
-}
+        }
 
-#ham {
-	border: none;
-	background-color: rgba(0, 0, 0, 0);
-	padding: 13px;
-	float: left;
-}
 
-#withdogslogo {
-	background-color: rgb(0, 0, 0, 0);
-	border: none;
-	margin-left: 38px;
-	margin-top: 10px;
-}
+        .bottom1 {
+            background-color: rgba(243, 156, 18, 0.73);
+            width: 360px;
+            height: 320px;
+            padding: 0px;
+            border: 1px solid #ccc;
+            border-top: rgba(0, 0, 0, 0);
+            border-bottom: rgba(0, 0, 0, 0);
+            box-sizing: border-box;
+            margin: 0 auto;
+            color: azure;
+            font-size: 25px;
+            font-weight: bold;
 
-#person {
-	border: none;
-	background-color: rgba(0, 0, 0, 0);
-	float: right;
-}
+        }
 
-#bottom {
-	text-align: center;
-}
+        #account {
+            padding: 0px;
+            float: left;
+            margin-top: 15px;
+            margin-left: -25px;
+        }
+        #help {
+            float: left;
+            margin-left: -25px;
+            padding-left: 0px;
+        }
 
-.bottom1 {
-	background-color: rgba(243, 156, 18, 0.73);
-	width: 360px;
-	height: 320px;
-	padding: 0px;
-	border: 1px solid #ccc;
-	border-top: rgba(0, 0, 0, 0);
-	border-bottom: rgba(0, 0, 0, 0);
-	box-sizing: border-box;
-	margin: 0 auto;
-	color: azure;
-	font-size: 25px;
-	font-weight: bold;
-}
+        #join {
+            float: right;
+            font-size: small;
+            color: gray;
+            margin-right: 20px;
+        }
 
-#account {
-	padding: 10px;
-	float: left;
-}
+        .end {
+            background-color: rgba(243, 156, 18, 0.73);
+            width: 360px;
+            margin: 0 auto;
+            text-align: center;
+        }
 
-#help {
-	float: left;
-	margin: 0px;
-	padding-left: 10px;
-}
+        #withdogs {
+            color: azure;
+            font-size: 30px;
+            font-weight: bold;
+        }
 
-#join {
-	float: right;
-	font-size: small;
-	color: gray;
-	margin-right: 20px;
-}
+        #copyright {
+            color: gray;
+            font-size: smaller;
+        }
 
-.end {
-	background-color: rgba(243, 156, 18, 0.73);
-	width: 360px;
-	margin: 0 auto;
-}
 
-#withdogs {
-	color: azure;
-	font-size: 30px;
-	font-weight: bold;
-}
+        ul.hide1 {
+            margin-left: 0px;
+            padding: 0;
+        }
 
-#copyright {
-	color: gray;
-	font-size: smaller;
-}
+        li.list {
+            float: left;
+            margin-left: 0;
+            margin-top: 10px;
+        }
 
-.menu {
-	cursor: pointer;
-}
+        .ahelp {
+            margin-right: 50px;
+        }
 
-.menu .hide {
-	display: none;
-	font-size: medium;
-}
+        .menu1 {
+            list-style: none;
+            float: left;
+            margin: 0;
+        }
 
-ul {
-	list-style: none;
-	padding-left: 0px;
-	margin-left: 0px;
-}
+        .hide1 {
+            list-style: none;
+            font-size: medium;
+        }
 
-li.list {
-	float: left;
-}
+        .hidelist1{
+            margin-left: 0px;
+            text-indent: -40px;
+        }
+        .hidelist2{
+            text-indent: -45px;
+        }
 
-#ahelp {
-	margin-right: 50px;
-}
-</style>
-<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    </style>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 </head>
 
 <body>
-	<form action="#">
-		<div id="enter">
-			<header class="sangdan">
-				<button type="button" id="ham">
-					<img src="./img/KakaoTalk_20230420_174244800.png">
-				</button>
-				<button type="button" id="withdogslogo">
-					<img src="./img/KakaoTalk_20230414_111706684_02.png" width="180">
-				</button>
-				<button type="button" id="person">
-					<img src="./img/person.png">
-				</button>
-			</header>
-	</form>
-	<form action="#" id="mid">
-		<div id="enter1">
-			<img src="./img/KakaoTalk_20230420_143633223.png" width="120px"
-				height="100px"></img>
-			<p>
-				E-mail <input type="email" placeholder="이메일 주소를 입력하세요" /><br>
-			</p>
-			<p>
-				PW<input id="pw" type="password" placeholder="8자 이내 비밀번호를 입력하세요" /><br>
-			</p>
-			<div id="login">
-				<button id="loginbutton">Login</button>
-			</div>
-			<a href="#" id="join">Join</a>
-		</div>
-		</div>
-	</form>
-	<form action="#" id="bottom">
-		<div class="bottom1">
-			<div id="account">
-				<ul>
-					<li class="menu"><a>MY ACCOUNT</a>
-						<ul class="hide">
-							<li class="list">로그인</li>
-						</ul></li>
-				</ul>
-				<!-- <div><img src="" alt="대충사진"></div> -->
-			</div>
-			<br> <br> <br> <br>
-			<div id="help">
-				<ul>
-					<li class="menu"><a id="ahelp">Help</a>
-						<ul class="hide">
-							<li class="list">공지사항</li>
-							<br>
-							<li class="list">1:1문의</li>
-						</ul></li>
-				</ul>
-			</div>
-		</div>
-		<div class="end">
-			<div id="withdogs">With Dogs!</div>
-			<div id="copyright">Copyright@with Dogs All Rights Reserved</div>
-			<br>
-		</div>
-	</form>
-	<script>
-		$(document).ready(function() {
-			$(".menu>a").click(function() {
-				var submenu = $(this).next("ul");
-				if (submenu.is(":visible")) {
-					submenu.slideUp();
-				} else {
-					submenu.slideDown();
-				}
-			})
-		})
-	</script>
+    <form action="#" id="mid">
+        <div id="enter">
+            <header class="sangdan">
+                <button type="button" id="ham">
+                    <li class="menu">
+                        <a class="aham"><img src="./img/햄버거아이콘.png" /></a>
+                        <ul class="hide">
+                            <div class="kateham">
+                                <li class="menu"><a class="aham">Place</a>
+                                    <ul class="hide">
+                                        <li class="hidelist">카페/식당</li>
+                                        <li class="hidelist">산책</li>
+                                        <li class="hidelist">기타</li>
+                                    </ul>
+                                </li>
+                                <br>
+                                <li class="menu"><a class="aham">Feed</a>
+                                    <ul class="hide">
+                                        <li class="hidelist">puppy</li>
+                                        <li class="hidelist">adult</li>
+                                        <li class="hidelist">senior</li>
+                                    </ul>
+                                </li>
+                                <br>
+                                <li class="aham"><a>Items</a></li>
+                                <br>
+                                <li class="menu"><a class="aham">Board</a>
+                                    <ul class="hide">
+                                        <li class="hidelist">나눔</li>
+                                        <li class="hidelist">Q&A</li>
+                                    </ul>
+                                </li>
+                                <br>
+                                <li class="menu"><a class="aham">MyPage</a>
+                                    <ul class="hide">
+                                        <li class="hidelist">계정 관리</li>
+                                        <li class="hidelist">내 정보 수정</li>
+                                    </ul>
+                                </li>
+                            </div>
+                        </ul>
+                    </li>
+                </button>
+                <button type="button" id="withdogslogo"><img src="./img/이름로고.png" width="180"></button>
+                <button type="button" id="person"><img src="./img/프로필아이콘.png"></button>
+            </header>
+            <div id="enter1">
+                <img src="./img/강아지로고.png" width="120px" height="100px"></img>
+                <p>E-mail <input type="email" placeholder="이메일 주소를 입력하세요" /><br></p>
+                <p>PW<input id="pw" type="password" placeholder="8자 이내 비밀번호를 입력하세요" /><br></p>
+                <div id="login">
+                    <button id="loginbutton">Login</button>
+                </div>
+                <a href="#" id="join">Join</a>
+            </div>
+        </div>
+        <div class="bottom1">
+            <div id="account">
+                <ul>
+                    <li class="menu1"><a class="ahelp">MY ACCOUNT</a>
+                        <ul class="hide1">
+                            <li class="list">-로그인</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <br><br><br><br><br>
+            <div id="help">
+                <ul>
+                    <li class="menu1"><a class="ahelp">Help</a>
+                        <ul class="hide1">
+                            <br>
+                            <li class="hidelist1">-공지사항</li>
+                            <br>
+                            <li class="hidelist2">-1:1문의</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="end">
+            <div id="withdogs">With Dogs!</div>
+            <div id="copyright">Copyright@with Dogs All Rights Reserved</div>
+            <br>
+        </div>
+    </form>
+    <script>
+        $(document).ready(function () {
+            $(".menu>.aham").click(function () {
+                var submenu = $(this).next(".hide");
+                if (submenu.is(":visible")) {
+                    submenu.slideUp();
+                } else {
+                    submenu.slideDown();
+                }
+            })
+        })
+    </script>
 </body>
 
 </html>
