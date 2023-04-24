@@ -2,7 +2,10 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="km/model/MemberDAO.java">
 
-
+	<insert id="join" parameterType="km.model.MemberVO">
+		INSERT INTO USER_INFO
+		VALUES(#{email},#{pw},#{birthday},#{nickname},#{dog_name},#{dog_age},#{dog_breed})
+	</insert>
 
 
 

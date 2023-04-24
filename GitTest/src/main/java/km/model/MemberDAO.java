@@ -25,6 +25,7 @@ public class MemberDAO {
 	
 	SqlSession session =null;
 	int row = 0;
+	
 	public int join(MemberVO vo) {
 		
 		try {
