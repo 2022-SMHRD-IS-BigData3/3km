@@ -8,6 +8,107 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>회원가입</title>
     <style>
+
+
+    @font-face {
+	font-family: 'Katuri';
+	src:
+		url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_13@1.0/Katuri.woff')
+		format('woff');
+	font-weight: normal;
+	font-style: normal;
+}
+
+body {
+	font-family: Katuri;
+}
+
+<!--
+상단바 css -->form#mid {
+	text-align: center;
+}
+
+.sangdan {
+	height: 50px;
+	background: rgba(243, 156, 18, 0.73);
+	margin: 0;
+	display: flex;
+}
+
+.aham {
+	padding-right: 50px;
+	font-weight: bold;
+	font-size: 15px;
+}
+
+#ham {
+	border: none;
+	background-color: rgba(9, 9, 9, 0);
+	float: left;
+	display: flex;
+	margin-top: 10px;
+}
+
+#withdogslogo {
+	background-color: rgb(0, 0, 0, 0);
+	border: none;
+	margin-right: 25px;
+	margin-top: 10px;
+	margin-left: -10px;
+	display: flex;
+}
+
+#person {
+	border: none;
+	background-color: rgba(0, 0, 0, 0);
+	float: right;
+}
+
+.menu {
+	cursor: pointer;
+	list-style: none;
+}
+
+.menu .hide {
+	display: none;
+	font-size: 5px;
+}
+
+.hide {
+	list-style: none;
+	padding-left: 0px;
+	text-align: left;
+}
+
+.hidelist {
+	list-style: none;
+	padding-left: 0px;
+}
+
+.hide .hidelist {
+	height: 30px;
+	font-size: 20px;
+	margin-top: 10px;
+	list-style: none;
+}
+
+.kateham {
+	background-color: bisque;
+	width: 350px;
+	height: auto;
+	position: absolute;
+	font-family: Katuri;
+}
+
+.aham {
+	font-size: 25px;
+}
+
+#cate-list {
+	font-family: Katuri;
+}
+    
+
        
         #container {
             width: 360px;

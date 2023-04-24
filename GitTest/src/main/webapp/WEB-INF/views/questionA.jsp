@@ -98,6 +98,8 @@
                 <button type="button" id="withdogs"><img src="/project/icon/logo.png" width="180"></button>
                 <button type="button" id="person"><img src="/project/icon/person.png" width="35" height="35"></button>
             </div>
+            
+            
             <div class="post-body">
                 <div class="post1">
                     <div class="post1-white">

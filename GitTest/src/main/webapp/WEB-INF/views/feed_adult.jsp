@@ -1,213 +1,272 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+	pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>With Dogs!</title>
-  <link rel="icon" href="/image/logo_noletter.png" />
-  <link rel="apple-touch-icon" href="/image/logo_noletter.png" />
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>사료_성견</title>
+<link rel="icon" href="./img/강아지로고.png" />
+<link rel="apple-touch-icon" href="./img/강아지로고.png" />
+<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link href="https://getbootstrap.com/docs/5.2/assets/css/docs.css" rel="stylesheet">
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
-
-  
-
-  <style>
-    @font-face {
-    font-family: 'Katuri';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_13@1.0/Katuri.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
+<style>
+@font-face {
+	font-family: 'Katuri';
+	src:
+		url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_13@1.0/Katuri.woff')
+		format('woff');
+	font-weight: normal;
+	font-style: normal;
 }
 
-    body{
-      font-family: Katuri;
-      font-size: 20px;
-    }
+body {
+	font-family: Katuri;
+}
 
-    /* div의 스타일 */
-    #container {
-      width: 360px;
-      height: 640px;
-      padding: 0px;
-      background-color: rgba(249, 230, 191, 0.15);
-      border: 1px solid #ccc;
-      box-sizing: border-box;
-      margin: 0 auto;
-    }
+<!--
+상단바 css -->form#mid {
+	text-align: center;
+}
 
-    #sangdan {
-      background-color: rgba(243, 156, 18, 0.73);
-      height: 50px
-    }
+.sangdan {
+	height: 50px;
+	background: rgba(243, 156, 18, 0.73);
+	margin: 0;
+	display: flex;
+}
 
-    div.photobox1 {
-      width: 150px;
-      height: 150px;
-      background-color: gainsboro;
-      float: left;
-      margin: 10px;
-      margin-left: 16px;
-    }
+.aham {
+	padding-right: 50px;
+	font-weight: bold;
+	font-size: 15px;
+}
 
-    div.photobox2 {
-      width: 150px;
-      height: 150px;
-      background-color: gainsboro;
-      float: right;
-      margin: 10px;
-      margin-right: 16px;
-    }
+#ham {
+	border: none;
+	background-color: rgba(9, 9, 9, 0);
+	float: left;
+	display: flex;
+	margin-top: 10px;
+}
 
-    #top-area {
-      width: 360px;
-      height: 40px;
-      font-size: 13px;
-      padding: 15px;
-      margin-left: 190px
-    }
+#withdogslogo {
+	background-color: rgb(0, 0, 0, 0);
+	border: none;
+	margin-right: 25px;
+	margin-top: 10px;
+	margin-left: -10px;
+	display: flex;
+}
 
-    #bottom {
-      text-align: center;
-      font-size: 10px
-    }
+#person {
+	border: none;
+	background-color: rgba(0, 0, 0, 0);
+	float: right;
+}
 
-    #morebutton {
-      width: 50px;
-      height: 25px;
-      font-size: 5px;
-    }
+.menu {
+	cursor: pointer;
+	list-style: none;
+}
+
+.menu .hide {
+	display: none;
+	font-size: 5px;
+}
+
+.hide {
+	list-style: none;
+	padding-left: 0px;
+	text-align: left;
+}
+
+.hidelist {
+	list-style: none;
+	padding-left: 0px;
+}
+
+.hide .hidelist {
+	height: 30px;
+	font-size: 20px;
+	margin-top: 10px;
+	list-style: none;
+}
+
+.kateham {
+	background-color: bisque;
+	width: 350px;
+	height: auto;
+	position: absolute;
+	font-family: Katuri;
+}
+
+.aham {
+	font-size: 25px;
+}
+
+#cate-list {
+	font-family: Katuri;
+}
+
+/* div의 스타일 */
+#enter {
+	width: 360px;
+	height: 640px;
+	padding: 0px;
+	background-color: rgba(249, 230, 191, 0.15);
+	border: 1px solid #ccc;
+	box-sizing: border-box;
+	margin: 0 auto;
+}
+
+div.photobox1 {
+	width: 150px;
+	height: 150px;
+	background-color: gainsboro;
+	float: left;
+	margin: 10px;
+	margin-left: 16px;
+}
+
+div.photobox2 {
+	width: 150px;
+	height: 150px;
+	background-color: gainsboro;
+	float: right;
+	margin: 10px;
+	margin-right: 16px;
+}
+
+#top-area {
+	width: 360px;
+	height: 15px;
+	font-size: 13px;
+	padding: 15px;
+	margin-left: 190px
+}
+
+#bottom {
+	text-align: center;
+	font-size: 10px
+}
+
+#morebutton {
+	width: 50px;
+	height: 25px;
+	font-size: 5px;
+}
+</style>
 
 
-    div>ul {
-      background-color: whitesmoke;
-    }
-
-    .dropdown-menu {
-      background-color: whitesmoke;
-    }
-  </style>
 </head>
 
 <body>
-  <div id="container">
-    <header id="sangdan">
 
-      <nav class="navbar navbar-expand-lg">
-        <div class="container-fluid">
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
-            aria-controls="navbarNavDropdown" aria-expanded="true" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <a class="navbar-brand" href="#"><img src="/image/withdogs_smallletter_logo.png" width="200px"></a>
-          <a class="navbar-brand" href="#">1</a>
-          <div class="navbar-collapse collapse show" id="navbarNavDropdown">
-            <ul class="navbar-nav">
-              <li class="nav-item">
-                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                  aria-expanded="false">
-                  장소
-                </a>
-                <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="#">카페/식당</a></li>
-                  <li><a class="dropdown-item" href="#">산책</a></li>
-                  <li><a class="dropdown-item" href="#">기타</a></li>
-                </ul>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                  aria-expanded="false">
-                  사료
-                </a>
-                <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="#">puppy</a></li>
-                  <li><a class="dropdown-item" href="#">adult</a></li>
-                  <li><a class="dropdown-item" href="#">senior</a></li>
-                </ul>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">용품</a>
+	<form action="#">
+		<div id="enter">
+			<header class="sangdan">
+				<button type="button" id="ham">
+					<li class="menu"><a class="aham"><img
+							src="./img/햄버거아이콘.png" /></a>
+						<ul class="hide">
+							<div class="kateham">
+								<li class="menu"><a class="aham">Place</a>
+									<ul class="hide">
+										<li class="hidelist">카페/식당</li>
+										<li class="hidelist">산책</li>
+										<li class="hidelist">기타</li>
+									</ul></li> <br>
+								<li class="menu"><a class="aham">Feed</a>
+									<ul class="hide">
+										<li class="hidelist">Puppy</li>
+										<li class="hidelist">Adult</li>
+										<li class="hidelist">Senior</li>
+									</ul></li> <br>
+								<li class="aham"><a>Items</a></li> <br>
+								<li class="menu"><a class="aham">Board</a>
+									<ul class="hide">
+										<li class="hidelist">나눔</li>
+										<li class="hidelist">Q&A</li>
+									</ul></li> <br>
+								<li class="menu"><a class="aham">MyPage</a>
+									<ul class="hide">
+										<li class="hidelist">‍계정 관리</li>
+										<li class="hidelist">내 정보 수정</li>
+									</ul></li>
+							</div>
+						</ul></li>
+				</button>
+				<button type="button" id="withdogslogo">
+					<img src="./img/이름로고.png" width="180">
+				</button>
+				<button type="button" id="person">
+					<img src="./img/프로필아이콘.png">
+				</button>
+			</header>
+	</form>
 
-              </li>
-              <li class="nav-item">
-                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                  aria-expanded="false">
-                  자유게시판
-                </a>
-                <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="#">나눔</a></li>
-                  <li><a class="dropdown-item" href="#">Q&A</a></li>
-                </ul>
-              </li>
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                  aria-expanded="false">
-                  My Page
-                </a>
-                <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="#">계정</a></li>
-                  <li><a class="dropdown-item" href="#">내 정보 수정</a></li>
-                </ul>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </nav>
+	<div id="top-area">
+		<label for="cate-list">정렬방식</label> <select name="cate-list"
+			id="cate-list">
+			<option value="조회순">조회순</option>
+			<option value="좋아요순">좋아요순</option>
+			<option value="최신순">최신순</option>
+		</select>
+	</div>
 
-    </header>
+	<div id="photobox-line">
+		<div class="photobox1">
+			<a href="#"></a>
+		</div>
+		<div class="photobox2">
+			<a href="#"></a>
+		</div>
+	</div>
 
+	<div id="photobox-line">
+		<div class="photobox1">
+			<a href="#"></a>
+		</div>
+		<div class="photobox2">
+			<a href="#"></a>
+		</div>
+	</div>
 
-    <div id="top-area">
-      <label for="cate-list">정렬방식</label>
-      <select name="cate-list" id="cate-list">
-        <option value="조회순">조회순</option>
-        <option value="좋아요순">좋아요순</option>
-        <option value="최신순">최신순</option>
-      </select>
-    </div>
+	<div id="photobox-line">
+		<div class="photobox1">
+			<a href="#"></a>
+		</div>
+		<div class="photobox2">
+			<a href="#"></a>
+		</div>
+	</div>
 
-    <div id="photobox-line">
-      <div class="photobox1">
-        <a href="#"></a>
-      </div>
-      <div class="photobox2">
-        <a href="#"></a>
-      </div>
-    </div>
-
-    <div id="photobox-line">
-      <div class="photobox1">
-        <a href="#"></a>
-      </div>
-      <div class="photobox2">
-        <a href="#"></a>
-      </div>
-    </div>
-
-    <div id="photobox-line">
-      <div class="photobox1">
-        <a href="#"></a>
-      </div>
-      <div class="photobox2">
-        <a href="#"></a>
-      </div>
-    </div>
-
-    <div id="bottom">
-      <button id="morebutton" class="btn btn-primary btn-sm" btn-sm>더보기</button>
-      <a href="#"></a>
-    </div>
+	<div id="bottom">
+		<button id="morebutton" class="btn btn-primary btn-sm" btn-sm>더보기</button>
+		<a href="#"></a>
+	</div>
 
 
 
 
 
 
-  </div>
+	</div>
+
+	<script>
+		$(document).ready(function() {
+			$(".menu>.aham").click(function() {
+				var submenu = $(this).next(".hide");
+				if (submenu.is(":visible")) {
+					submenu.slideUp();
+				} else {
+					submenu.slideDown();
+				}
+			})
+		})
+	</script>
 
 </body>
 

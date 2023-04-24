@@ -200,7 +200,7 @@ div.photobox2 {
 				<button type="button" id="withdogslogo">
 					<img src="./img/이름로고.png" width="180">
 				</button>
-				<button type="button" id="person">
+				<button type="button" id="person" onClick="location.href='mypage.jsp'">
 					<img src="./img/프로필아이콘.png">
 				</button>
 			</header>
