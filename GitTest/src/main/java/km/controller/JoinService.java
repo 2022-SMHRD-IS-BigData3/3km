@@ -31,7 +31,7 @@ public class JoinService implements Command {
 			request.setAttribute("email", email);
 			return "join_success.jsp";
 		}else {
-			return "redirect:/GoMain.do";
+			return "redirect:/GoLogin.do";
 		}
 	}
 }
