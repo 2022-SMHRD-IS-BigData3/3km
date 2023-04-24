@@ -168,8 +168,8 @@ input {
 	margin-left: 260px;
 }
 
-#date {
-	width: 245px;
+.date {
+	width: 240px;
 }
 </style>
 </head>
@@ -237,9 +237,9 @@ input {
 					maxlength=8 style="border-color: white;" /> <br> <br> <input
 					name="nickname" type="text" placeholder="*닉네임" size="30"
 					style="border-color: white;" /> <br> <br> <input
-					name="date" type="date" id="date" size="30"
+					name="date" type="date" class="date" size="30"
 					style="border-color: white;"> <br> <br> <input
-					name="age" type="number" placeholder="*강아지 나이" size="30"
+					name="age" type="number" class="date" placeholder="*강아지 나이" size="30"
 					style="border-color: white;"> <br> <br> <input
 					name="name" type="text" placeholder="*강아지 이름" size="30"
 					style="border-color: white;"> <br> <br> <input
