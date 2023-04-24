@@ -1,18 +1,17 @@
 package km.controller;
 
 import java.io.IOException;
+
 import javax.servlet.ServletException;
-import javax.servlet.annotation.WebServlet;
-import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import km.model.MemberDAO;
 import km.model.MemberVO;
 
-@WebServlet("/Join")
-public class JoinService {
-	public String execute(HttpServletRequest request, HttpServletResponse response) {
+public class JoinService implements Command {
+	
+	public String execute(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
 		
 		String email = request.getParameter("email");
 		String pw = request.getParameter("pw");
@@ -34,6 +33,5 @@ public class JoinService {
 		}else {
 			return "redirect:/GoMain.do";
 		}
-				
 	}
 }
