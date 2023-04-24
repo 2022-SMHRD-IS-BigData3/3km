@@ -14,23 +14,22 @@
 <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 
 <style>
-
 @font-face {
-    font-family: 'Katuri';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_13@1.0/Katuri.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
+	font-family: 'Katuri';
+	src:
+		url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_13@1.0/Katuri.woff')
+		format('woff');
+	font-weight: normal;
+	font-style: normal;
 }
 
-body{
-      font-family: Katuri;
-      font-size: 20px;
-    }
-    
+body {
+	font-family: Katuri;
+	font-size: 20px;
+}
 
-<!-- 상단바 css -->
-
-form#mid {
+<!--
+상단바 css -->form#mid {
 	text-align: center;
 }
 
@@ -189,7 +188,7 @@ div.photobox2 {
 										<li class="hidelist">나눔</li>
 										<li class="hidelist">Q&A</li>
 									</ul></li> <br>
-								<li class="menu"><a class="aham">MyPage</a>
+								<li class="menu"><a class="aham" >MyPage</a>
 									<ul class="hide">
 										<li class="hidelist">‍계정 관리</li>
 										<li class="hidelist">내 정보 수정</li>
@@ -200,7 +199,7 @@ div.photobox2 {
 				<button type="button" id="withdogslogo">
 					<img src="./img/이름로고.png" width="180">
 				</button>
-				<button type="button" id="person">
+				<button type="button" id="person" onClick="location.href='mypage.jsp'">
 					<img src="./img/프로필아이콘.png">
 				</button>
 			</header>
