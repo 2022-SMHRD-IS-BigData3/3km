@@ -4,7 +4,7 @@
 
 	<insert id="join" parameterType="km.model.MemberVO">
 		INSERT INTO USER_INFO
-		VALUES(#{user_id},#{email},#{pw},#{birthday},#{nickname},#{dog_name},#{dog_age},#{dog_breed})
+		VALUES(USER_SEQ.nextval,#{email},#{pw},#{birthday},#{nickname},#{dog_name},#{dog_age},#{dog_breed})
 	</insert>
 	
 
