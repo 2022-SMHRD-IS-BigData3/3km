@@ -1,173 +1,232 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+	pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>With Dogs!</title>
-  <link rel="icon" href="/image/logo_noletter.png" />
-  <link rel="apple-touch-icon" href="/image/logo_noletter.png" />
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>회원가입 성공</title>
+<link rel="icon" href="./img/강아지로고.png" />
+<link rel="apple-touch-icon" href="./img/강아지로고.png" />
+<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link href="https://getbootstrap.com/docs/5.2/assets/css/docs.css" rel="stylesheet">
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
-
-  
-
-  <style>
-    @font-face {
-    font-family: 'Katuri';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_13@1.0/Katuri.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
+<style>
+@font-face {
+	font-family: 'Katuri';
+	src:
+		url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_13@1.0/Katuri.woff')
+		format('woff');
+	font-weight: normal;
+	font-style: normal;
 }
 
-    body{
-      font-family: Katuri;
-      font-size: 18px;
-    }
+body {
+	font-family: Katuri;
+	font-size: 18px;
+}
 
-    /* div의 스타일 */
-    
+<!--
+상단바 css -->form#mid {
+	text-align: center;
+}
 
-    div>ul {
-      background-color: whitesmoke;
-    }
+.sangdan {
+	height: 50px;
+	background: rgba(243, 156, 18, 0.73);
+	margin: 0;
+	display: flex;
+}
 
-    .dropdown-menu {
-      background-color: whitesmoke;
-    }
+.aham {
+	padding-right: 50px;
+	font-weight: bold;
+	font-size: 15px;
+}
 
-    .navbar-toggler {
-      border : none;
-    }
+#ham {
+	border: none;
+	background-color: rgba(9, 9, 9, 0);
+	float: left;
+	display: flex;
+	margin-top: 10px;
+}
 
-    .navbar-brand {
-      margin-left: 15px;
-    }
+#withdogslogo {
+	background-color: rgb(0, 0, 0, 0);
+	border: none;
+	margin-right: 25px;
+	margin-top: 10px;
+	margin-left: -10px;
+	display: flex;
+}
 
-    .navbar-account {
-      border: none;
-      background-color: rgba(0,0,0,0);
-    }
+#person {
+	border: none;
+	background-color: rgba(0, 0, 0, 0);
+	float: right;
+}
 
-    #container {
-      width: 360px;
-      height: 640px;
-      padding: 0px;
-      background-color: rgba(249, 230, 191, 0.15);
-      border: 1px solid #ccc;
-      box-sizing: border-box;
-      margin: 0 auto;
-    }
+.menu {
+	cursor: pointer;
+	list-style: none;
+}
 
-    #sangdan {
-      background-color: rgba(243, 156, 18, 0.73);
-      height: 50px
-    }
+.menu .hide {
+	display: none;
+	font-size: 5px;
+}
 
-    #top-area {
-      width: 360px;
-      height: 40px;
-      font-size: 13px;
-      padding: 15px;
-      margin-left: 190px
-    }
+.hide {
+	list-style: none;
+	padding-left: 0px;
+	text-align: left;
+}
 
-    #bottom {
-      text-align: center;
-      font-size: 10px;
-    }
+.hidelist {
+	list-style: none;
+	padding-left: 0px;
+}
 
-    #blankarea{
-      height: 100px;
-    }
+.hide .hidelist {
+	height: 30px;
+	font-size: 20px;
+	margin-top: 10px;
+	list-style: none;
+}
 
-    #sucess {
-      height: 200px;
-      text-align: center;
-    }
+.kateham {
+	background-color: bisque;
+	width: 350px;
+	height: auto;
+	position: absolute;
+	font-family: Katuri;
+}
 
+.aham {
+	font-size: 25px;
+}
 
-  
+#cate-list {
+	font-family: Katuri;
+}
+/* div의 스타일 */
+div>ul {
+	background-color: whitesmoke;
+}
 
-    
+.dropdown-menu {
+	background-color: whitesmoke;
+}
 
-  </style>
+.navbar-toggler {
+	border: none;
+}
+
+.navbar-brand {
+	margin-left: 15px;
+}
+
+.navbar-account {
+	border: none;
+	background-color: rgba(0, 0, 0, 0);
+}
+
+#container {
+	width: 360px;
+	height: 640px;
+	padding: 0px;
+	background-color: rgba(249, 230, 191, 0.15);
+	border: 1px solid #ccc;
+	box-sizing: border-box;
+	margin: 0 auto;
+}
+
+#sangdan {
+	background-color: rgba(243, 156, 18, 0.73);
+	height: 50px
+}
+
+#top-area {
+	width: 360px;
+	height: 40px;
+	font-size: 13px;
+	padding: 15px;
+	margin-left: 190px
+}
+
+#bottom {
+	text-align: center;
+	font-size: 10px;
+}
+
+#blankarea {
+	height: 100px;
+}
+
+#sucess {
+	height: 200px;
+	text-align: center;
+}
+</style>
 </head>
 
 <body>
-  <div id="container">
-    <header id="sangdan">
-
-      <nav class="navbar">
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
-            aria-controls="navbarNavDropdown" aria-expanded="true" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <a class="navbar-brand" href="#"><img src="/image/withdogs_smallletter_logo.png" width="200px"></a>
-          <button class="navbar-account" href="#"><img src="/icon/person.png" alt=""></button>
-          <div class="navbar-collapse collapse show" id="navbarNavDropdown">
-            <ul class="navbar-nav">
-              <li class="nav-item">
-                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                  aria-expanded="false"> 장소 </a>
-                <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="#">카페/식당</a></li>
-                  <li><a class="dropdown-item" href="#">산책</a></li>
-                  <li><a class="dropdown-item" href="#">기타</a></li>
-                </ul>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                  aria-expanded="false">
-                  사료 </a>
-                <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="#">puppy</a></li>
-                  <li><a class="dropdown-item" href="#">adult</a></li>
-                  <li><a class="dropdown-item" href="#">senior</a></li>
-                </ul>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">용품</a>
-
-              </li>
-              <li class="nav-item">
-                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                  aria-expanded="false"> 자유게시판 </a>
-                <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="#">나눔</a></li>
-                  <li><a class="dropdown-item" href="#">Q&A</a></li>
-                </ul>
-              </li>
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                  aria-expanded="false">My Page </a>
-                <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="#">계정</a></li>
-                  <li><a class="dropdown-item" href="#">내 정보 수정</a></li>
-                </ul>
-              </li>
-            </ul>
-        </div>
-      </nav>
-
-    </header>
+	<form action="#">
+		<div id="enter">
+			<header class="sangdan">
+				<button type="button" id="ham">
+					<li class="menu"><a class="aham"><img
+							src="./img/햄버거아이콘.png" /></a>
+						<ul class="hide">
+							<div class="kateham">
+								<li class="menu"><a class="aham">Place</a>
+									<ul class="hide">
+										<li class="hidelist">카페/식당</li>
+										<li class="hidelist">산책</li>
+										<li class="hidelist">기타</li>
+									</ul></li> <br>
+								<li class="menu"><a class="aham">Feed</a>
+									<ul class="hide">
+										<li class="hidelist">Puppy</li>
+										<li class="hidelist">Adult</li>
+										<li class="hidelist">Senior</li>
+									</ul></li> <br>
+								<li class="aham"><a>Items</a></li> <br>
+								<li class="menu"><a class="aham">Board</a>
+									<ul class="hide">
+										<li class="hidelist">나눔</li>
+										<li class="hidelist">Q&A</li>
+									</ul></li> <br>
+								<li class="menu"><a class="aham">MyPage</a>
+									<ul class="hide">
+										<li class="hidelist">‍계정 관리</li>
+										<li class="hidelist">내 정보 수정</li>
+									</ul></li>
+							</div>
+						</ul></li>
+				</button>
+				<button type="button" id="withdogslogo">
+					<img src="./img/이름로고.png" width="180">
+				</button>
+				<button type="button" id="person">
+					<img src="./img/프로필아이콘.png">
+				</button>
+			</header>
+	</form>
 
 
-    <div id="sucess">
-      <div id="blankarea"></div>
-      <div> 회원가입이 완료되었습니다!</div>
-      <br>
-      <button id="sucessbutton" href="#">로그인 하러가기</button>
-    </div>
+	<div id="sucess">
+		<div id="blankarea"></div>
+		<div>회원가입이 완료되었습니다!</div>
+		<br>
+		<button id="sucessbutton" href="#">로그인 하러가기</button>
+	</div>
 
 
 
 
-  </div>
+	</div>
 
 </body>
 

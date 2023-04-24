@@ -6,30 +6,27 @@
 <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>With Dogs!</title>
+<title>메인페이지</title>
 <link rel="icon" href="./img/강아지로고.png" />
 <link rel="apple-touch-icon" href="./img/강아지로고.png" />
-<link rel="stylesheet"
-	href="/GitTest/src/main/java/km/frontcontroller/sangdan.css" />
 <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 
 <style>
-
 @font-face {
-    font-family: 'Katuri';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_13@1.0/Katuri.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
+	font-family: 'Katuri';
+	src:
+		url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_13@1.0/Katuri.woff')
+		format('woff');
+	font-weight: normal;
+	font-style: normal;
 }
 
-body{
-      font-family: Katuri;
-    }
-    
+body {
+	font-family: Katuri;
+}
 
-<!-- 상단바 css -->
-
-form#mid {
+<!--
+상단바 css -->form#mid {
 	text-align: center;
 }
 
@@ -83,8 +80,8 @@ form#mid {
 	list-style: none;
 	padding-left: 0px;
 	text-align: left;
-	list-style: none;
 }
+
 .hidelist {
 	list-style: none;
 	padding-left: 0px;
@@ -92,8 +89,8 @@ form#mid {
 
 .hide .hidelist {
 	height: 30px;
-  font-size: 20px;
-  margin-top: 10px;
+	font-size: 20px;
+	margin-top: 10px;
 	list-style: none;
 }
 
@@ -102,7 +99,7 @@ form#mid {
 	width: 350px;
 	height: auto;
 	position: absolute;
-  font-family: Katuri;
+	font-family: Katuri;
 }
 
 .aham {
@@ -110,9 +107,8 @@ form#mid {
 }
 
 #cate-list {
-  font-family: Katuri;
+	font-family: Katuri;
 }
-
 
 /* div의 스타일 */
 #enter {
