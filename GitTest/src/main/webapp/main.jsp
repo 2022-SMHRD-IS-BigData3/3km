@@ -24,7 +24,6 @@
 
 body{
       font-family: Katuri;
-      font-size: 20px;
     }
     
 
@@ -86,15 +85,15 @@ form#mid {
 	text-align: left;
 	list-style: none;
 }
-
 .hidelist {
 	list-style: none;
 	padding-left: 0px;
-	list-style: none;
 }
 
 .hide .hidelist {
-	font-size: medium;
+	height: 30px;
+  font-size: 20px;
+  margin-top: 10px;
 	list-style: none;
 }
 
@@ -103,11 +102,17 @@ form#mid {
 	width: 350px;
 	height: auto;
 	position: absolute;
+  font-family: Katuri;
 }
 
 .aham {
 	font-size: 25px;
 }
+
+#cate-list {
+  font-family: Katuri;
+}
+
 
 /* div의 스타일 */
 #enter {
