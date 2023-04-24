@@ -85,22 +85,22 @@
                 </div>
                 <br>
                 <div>
-                    <input name="email" type="text" placeholder="Email" size="30" style=" border-color: white;" />
+                    <input name="email" type="text" placeholder="*Email" size="30" style=" border-color: white;" />
                     <br>
                     <br>
-                    <input name="password" type="password" placeholder="비밀번호" size="30" maxlength=8 style=" border-color: white;" />
+                    <input name="password" type="password" placeholder="*비밀번호" size="30" maxlength=8 style=" border-color: white;" />
                     <br>
                     <br>
-                    <input name="nickname" type="text" placeholder="닉네임" size="30" style=" border-color: white;" />
+                    <input name="nickname" type="text" placeholder="*닉네임" size="30" style=" border-color: white;" />
                     <br>
                     <br>
                     <input name="date" type="date" id="date" size="30" style=" border-color: white;">
                     <br>
                     <br>
-                    <input name="age" type="number" placeholder="강아지 나이" size="30" style=" border-color: white;">
+                    <input name="age" type="number" placeholder="*강아지 나이" size="30" style=" border-color: white;">
                     <br>
                     <br>
-                    <input name="name" type="text" placeholder="강아지 이름" size="30" style=" border-color: white;">
+                    <input name="name" type="text" placeholder="*강아지 이름" size="30" style=" border-color: white;">
                     <br>
                     <br>
                     <input name="breed" type="text" placeholder="견종" size="30" style=" border-color: white;">
