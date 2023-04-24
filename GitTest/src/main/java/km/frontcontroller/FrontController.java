@@ -26,7 +26,7 @@ public class FrontController extends HttpServlet {
 	public void init() throws ServletException {
 
 		map = new HashMap<>();
-		map.put("Login.do", new LoginService());
+		map.put("login.do", new LoginService());
 		map.put("Join.do", new JoinService());
 	}
 
