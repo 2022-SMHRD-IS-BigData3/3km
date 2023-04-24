@@ -6,8 +6,8 @@
 <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>회원가입</title>
-<link rel="icon" href="./img/강아지로고 .png" />
+<title>회원가입</title>
+<link rel="icon" href="./img/강아지로고.png" />
 <link rel="apple-touch-icon" href="./img/강아지로고.png" />
 <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 
@@ -114,6 +114,10 @@ form#mid {
 }
 
 #cate-list {
+  font-family: Katuri;
+}
+
+#cate-list {
 	font-family: Katuri;
 }
 
@@ -179,14 +183,14 @@ input {
 				<header class="sangdan">
 					<button type="button" id="ham">
 						<li class="menu"><a class="aham"><img
-								src="./img/íë²ê±°ìì´ì½.png" /></a>
+								src="./img/햄버거아이콘.png" /></a>
 							<ul class="hide">
 								<div class="kateham">
 									<li class="menu"><a class="aham">Place</a>
 										<ul class="hide">
-											<li class="hidelist">ì¹´í/ìë¹</li>
-											<li class="hidelist">ì°ì±</li>
-											<li class="hidelist">ê¸°í</li>
+											<li class="hidelist">카페/식당</li>
+											<li class="hidelist">산책</li>
+											<li class="hidelist">기타</li>
 										</ul></li> <br>
 									<li class="menu"><a class="aham">Feed</a>
 										<ul class="hide">
@@ -197,24 +201,24 @@ input {
 									<li class="aham"><a>Items</a></li> <br>
 									<li class="menu"><a class="aham">Board</a>
 										<ul class="hide">
-											<li class="hidelist">ëë</li>
+											<li class="hidelist">나눔</li>
 											<li class="hidelist">Q&A</li>
 										</ul></li> <br>
 									<li class="menu"><a class="aham">MyPage</a>
 
 										<ul class="hide">
-											<li class="hidelist">âê³ì  ê´ë¦¬</li>
-											<li class="hidelist">ë´ ì ë³´ ìì </li>
+											<li class="hidelist">‍계정 관리</li>
+											<li class="hidelist">내 정보 수정</li>
 										</ul></li>
 								</div>
 							</ul></li>
 					</button>
 					<button type="button" id="withdogslogo">
-						<img src="./img/ì´ë¦ë¡ê³ .png" width="180">
+						<img src="./img/이름로고.png" width="180">
 					</button>
 					<button type="button" id="person"
 						onClick="location.href='mypage.jsp'">
-						<img src="./img/íë¡íìì´ì½.png">
+						<img src="./img/프로필아이콘.png">
 					</button>
 				</header>
 		</form>
@@ -223,26 +227,26 @@ input {
 		<form action="Join.do" method="post" id="info">
 			<h1>JOIN US</h1>
 			<div>
-				<span>ë°©ê°ìì ìë¹ ì¬ì©ìë</span>
+				<span>방가와요 예비 사용자님</span>
 			</div>
 			<br>
 			<div>
 				<input name="email" type="text" placeholder="*Email" size="30"
 					style="border-color: white;" /> <br> <br> <input
-					name="password" type="password" placeholder="*ë¹ë°ë²í¸" size="30"
+					name="password" type="password" placeholder="*비밀번호" size="30"
 					maxlength=8 style="border-color: white;" /> <br> <br> <input
-					name="nickname" type="text" placeholder="*ëë¤ì" size="30"
+					name="nickname" type="text" placeholder="*닉네임" size="30"
 					style="border-color: white;" /> <br> <br> <input
 					name="date" type="date" id="date" size="30"
 					style="border-color: white;"> <br> <br> <input
-					name="age" type="number" placeholder="*ê°ìì§ ëì´" size="30"
+					name="age" type="number" placeholder="*강아지 나이" size="30"
 					style="border-color: white;"> <br> <br> <input
-					name="name" type="text" placeholder="*ê°ìì§ ì´ë¦" size="30"
+					name="name" type="text" placeholder="*강아지 이름" size="30"
 					style="border-color: white;"> <br> <br> <input
-					name="breed" type="text" placeholder="ê²¬ì¢" size="30"
+					name="breed" type="text" placeholder="견종" size="30"
 					style="border-color: white;">
 			</div>
-			<br> <input type="submit" class="btn" value="íì¸"
+			<br> <input type="submit" class="btn" value="확인"
 				style="border-color: rgba(0, 0, 0, 0);">
 		</form>
 		</div>
