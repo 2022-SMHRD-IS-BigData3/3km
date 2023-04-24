@@ -26,33 +26,10 @@
 
     body{
       font-family: Katuri;
-      font-size: 18px;
+      font-size: 20px;
     }
 
     /* div의 스타일 */
-    
-
-    div>ul {
-      background-color: whitesmoke;
-    }
-
-    .dropdown-menu {
-      background-color: whitesmoke;
-    }
-
-    .navbar-toggler {
-      border : none;
-    }
-
-    .navbar-brand {
-      margin-left: 15px;
-    }
-
-    .navbar-account {
-      border: none;
-      background-color: rgba(0,0,0,0);
-    }
-
     #container {
       width: 360px;
       height: 640px;
@@ -68,6 +45,24 @@
       height: 50px
     }
 
+    div.photobox1 {
+      width: 150px;
+      height: 150px;
+      background-color: gainsboro;
+      float: left;
+      margin: 10px;
+      margin-left: 16px;
+    }
+
+    div.photobox2 {
+      width: 150px;
+      height: 150px;
+      background-color: gainsboro;
+      float: right;
+      margin: 10px;
+      margin-right: 16px;
+    }
+
     #top-area {
       width: 360px;
       height: 40px;
@@ -78,23 +73,23 @@
 
     #bottom {
       text-align: center;
-      font-size: 10px;
+      font-size: 10px
     }
 
-    #blankarea{
-      height: 100px;
-    }
-
-    #sucess {
-      height: 200px;
-      text-align: center;
+    #morebutton {
+      width: 50px;
+      height: 25px;
+      font-size: 5px;
     }
 
 
-  
+    div>ul {
+      background-color: whitesmoke;
+    }
 
-    
-
+    .dropdown-menu {
+      background-color: whitesmoke;
+    }
   </style>
 </head>
 
@@ -102,18 +97,21 @@
   <div id="container">
     <header id="sangdan">
 
-      <nav class="navbar">
+      <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
             aria-controls="navbarNavDropdown" aria-expanded="true" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
           <a class="navbar-brand" href="#"><img src="/image/withdogs_smallletter_logo.png" width="200px"></a>
-          <button class="navbar-account" href="#"><img src="/icon/person.png" alt=""></button>
+          <a class="navbar-brand" href="#">1</a>
           <div class="navbar-collapse collapse show" id="navbarNavDropdown">
             <ul class="navbar-nav">
               <li class="nav-item">
                 <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                  aria-expanded="false"> 장소 </a>
+                  aria-expanded="false">
+                  장소
+                </a>
                 <ul class="dropdown-menu">
                   <li><a class="dropdown-item" href="#">카페/식당</a></li>
                   <li><a class="dropdown-item" href="#">산책</a></li>
@@ -123,7 +121,8 @@
               <li class="nav-item">
                 <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
                   aria-expanded="false">
-                  사료 </a>
+                  사료
+                </a>
                 <ul class="dropdown-menu">
                   <li><a class="dropdown-item" href="#">puppy</a></li>
                   <li><a class="dropdown-item" href="#">adult</a></li>
@@ -136,7 +135,9 @@
               </li>
               <li class="nav-item">
                 <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                  aria-expanded="false"> 자유게시판 </a>
+                  aria-expanded="false">
+                  자유게시판
+                </a>
                 <ul class="dropdown-menu">
                   <li><a class="dropdown-item" href="#">나눔</a></li>
                   <li><a class="dropdown-item" href="#">Q&A</a></li>
@@ -144,25 +145,64 @@
               </li>
               <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                  aria-expanded="false">My Page </a>
+                  aria-expanded="false">
+                  My Page
+                </a>
                 <ul class="dropdown-menu">
                   <li><a class="dropdown-item" href="#">계정</a></li>
                   <li><a class="dropdown-item" href="#">내 정보 수정</a></li>
                 </ul>
               </li>
             </ul>
+          </div>
         </div>
       </nav>
 
     </header>
 
 
-    <div id="sucess">
-      <div id="blankarea"></div>
-      <div> 회원가입이 완료되었습니다!</div>
-      <br>
-      <button id="sucessbutton" href="#">로그인 하러가기</button>
+    <div id="top-area">
+      <label for="cate-list">정렬방식</label>
+      <select name="cate-list" id="cate-list">
+        <option value="조회순">조회순</option>
+        <option value="좋아요순">좋아요순</option>
+        <option value="최신순">최신순</option>
+      </select>
     </div>
+
+    <div id="photobox-line">
+      <div class="photobox1">
+        <a href="#"></a>
+      </div>
+      <div class="photobox2">
+        <a href="#"></a>
+      </div>
+    </div>
+
+    <div id="photobox-line">
+      <div class="photobox1">
+        <a href="#"></a>
+      </div>
+      <div class="photobox2">
+        <a href="#"></a>
+      </div>
+    </div>
+
+    <div id="photobox-line">
+      <div class="photobox1">
+        <a href="#"></a>
+      </div>
+      <div class="photobox2">
+        <a href="#"></a>
+      </div>
+    </div>
+
+    <div id="bottom">
+      <button id="morebutton" class="btn btn-primary btn-sm" btn-sm>더보기</button>
+      <a href="#"></a>
+    </div>
+
+
 
 
 
