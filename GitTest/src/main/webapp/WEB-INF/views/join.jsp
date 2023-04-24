@@ -116,12 +116,6 @@ body {
 	margin: 0 auto;
 }
 
-#upbar {
-	width: 360px;
-	height: 50px;
-	background-color: rgba(243, 156, 18, 0.73);
-}
-
 h1 {
 	text-align: center;
 	color: rgba(243, 156, 18, 0.73);
