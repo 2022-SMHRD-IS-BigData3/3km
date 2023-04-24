@@ -27,7 +27,7 @@ public class FrontController extends HttpServlet {
 
 		map = new HashMap<>();
 		map.put("login.do", new LoginService());
-		map.put("Join.do", new JoinService());
+		map.put("join.do", new JoinService());
 	}
 
 	
@@ -55,7 +55,7 @@ public class FrontController extends HttpServlet {
 		}else if (finalpath.contains("redirect:/")) {
 			response.sendRedirect(finalpath.substring(10));
 		} else {
-			RequestDispatcher rd = request.getRequestDispatcher("WEB-INF/views/" + finalpath);
+			RequestDispatcher rd = request.getRequestDispatcher("WEB-INF/views" + finalpath);
 			rd.forward(request, response);
 		}
 		
