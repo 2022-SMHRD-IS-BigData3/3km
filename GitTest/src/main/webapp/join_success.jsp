@@ -13,6 +13,7 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <link href="https://getbootstrap.com/docs/5.2/assets/css/docs.css" rel="stylesheet">
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 
   
 
@@ -161,7 +162,7 @@
       <div id="blankarea"></div>
       <div> 회원가입이 완료되었습니다!</div>
       <br>
-      <button id="sucessbutton" href="#">로그인 하러가기</button>
+      <button id="sucessbutton" href="GoLogin.do">로그인 하러가기</button>
     </div>
 
 
@@ -169,6 +170,15 @@
 
   </div>
 
+
+
+
+	<script>
+		$(document).on("click")
+	
+	
+	
+	</script>
 </body>
 
 </html>
