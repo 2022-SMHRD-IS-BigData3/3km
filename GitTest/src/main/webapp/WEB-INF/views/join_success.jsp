@@ -162,7 +162,7 @@
       <div id="blankarea"></div>
       <div> 회원가입이 완료되었습니다!</div>
       <br>
-      <button id="sucessbutton" href="GoLogin.do">로그인 하러가기</button>
+      <input type="button" id="successlogin" value="로그인 하러가기">
     </div>
 
 
@@ -174,7 +174,7 @@
 
 
 	<script>
-		$(document).on("click")
+		
 	
 	
 	
