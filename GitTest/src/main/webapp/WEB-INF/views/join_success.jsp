@@ -151,7 +151,12 @@ form#mid {
 
 	#successbutton {
 	font-family: Katuri;
-	font-size: 20px;
+	font-size: 18px;
+	border-color: whitesmoke;
+	background-color: rgba(243, 156, 18, 0.73);
+	height: 30px;
+	width: 130px;
+	color: black;
 	}
 
 </style>
@@ -178,7 +183,7 @@ form#mid {
 	<div id="success">
 		<div id="blankarea"></div>
 		<div> 회원가입이 완료되었습니다!</div>
-		<br>
+		<br><br>
 		<button type="button" id="successbutton" onClick="location.href='Gologin.do'">로그인 하러가기</button>
 	  </div>
 
