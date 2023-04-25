@@ -8,6 +8,9 @@
 <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" href="./img/강아지로고.png" />
+<link rel="apple-touch-icon" href="./img/강아지로고.png" />
+<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 <title>Mypage_edit</title>
 <style>
 @font-face {
@@ -216,7 +219,7 @@ p {
 	text-align: center;
 }
 </style>
-<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+
 </head>
 
 <body>
@@ -224,7 +227,7 @@ p {
 		<header class="sangdan">
 			<button type="button" id="ham">
 				<li class="menu"><a class="aham"><img
-						src="./project/img/햄버거아이콘.png" /></a>
+						src="./img/햄버거아이콘.png" /></a>
 					<ul class="hide">
 						<div class="kateham">
 							<li class="menu"><a class="aham">Place</a>
@@ -254,17 +257,17 @@ p {
 					</ul></li>
 			</button>
 			<button type="button" id="withdogslogo">
-				<img src="./project/img/이름로고.png" width="180">
+				<img src="./img/이름로고.png" width="180">
 			</button>
 			<button type="button" id="person">
-				<img src="./project/img/프로필아이콘.png">
+				<img src="./img/프로필아이콘.png">
 			</button>
 		</header>
 		<div id="my_box">
 			<div>
 				<input type="file" name="uploadfile" id="img" style="display: none;" />
 				<div>
-					<label for="img"><img src="/project/icon/user.png"
+					<label for="img"><img src="./image/유저아이콘.png"
 						id="user"></label>
 				</div>
 
