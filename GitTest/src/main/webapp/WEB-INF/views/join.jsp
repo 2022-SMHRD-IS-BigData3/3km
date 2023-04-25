@@ -97,7 +97,7 @@ input {
 		<header class="sangdan">
 			<img src="./img/이름로고.png" width="240" id="withdogslogo">
 		</header>
-		<form action="Join.do" method="post" id="info">
+		<form action="JoinSuccess.do" method="post" id="info">
 			<h1>JOIN US</h1>
 			<div>
 				<span>방가와요 예비 사용자님</span>
