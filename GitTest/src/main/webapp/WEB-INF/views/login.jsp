@@ -316,7 +316,7 @@ li.list {
 				<div id="login">
 					<button id="loginbutton">Login</button>
 				</div>
-				<a href="#" id="join">Join</a>
+				<a href="join.jsp" id="join">Join</a>
 			</div>
 		</div>
 		<div class="bottom1">

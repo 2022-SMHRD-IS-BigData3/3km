@@ -208,7 +208,7 @@ form#mid {
 		<div id="blankarea"></div>
 		<div> 회원가입이 완료되었습니다!</div>
 		<br>
-		<button id="successbutton" href="#">로그인 하러가기</button>
+		<button type="button" id="sucessbutton" onClick="location.href='login.jsp'">로그인 하러가기</button>
 	  </div>
 
 
