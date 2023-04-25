@@ -19,6 +19,12 @@
 	font-weight: normal;
 	font-style: normal;
 }
+@font-face {
+    font-family: 'BookkGothic-Bd';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2302@1.0/BookkGothic-Bd.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+}
 
 body {
 	font-family: Katuri;
@@ -124,12 +130,16 @@ form#mid {
 	margin-left: 20px;
 	height: 30px;
 	width: 210px;
+    font-family: BookkGothic-Bd;
+    font-size: 18px;
 }
 
 #selgesi {
 	margin-left: 10px;
 	height: 35px;
 	width: 90px;
+    font-family: Katuri;
+    font-size: 16px;
 }
 
 textarea {
@@ -139,6 +149,8 @@ textarea {
 	height: 400px;
 	background-color: rgba(128, 128, 128, 0.085);
 	border: none;
+    font-family: BookkGothic-Bd;
+    font-size: 18px;
 }
 
 #subbut {
@@ -147,11 +159,12 @@ textarea {
 	margin-top: 5px;
 	width: 70px;
 	height: 30px;
-	background-color: #6d6969;
-	color: aliceblue;
-	font-weight: bold;
+	background-color: rgba(243, 156, 18, 0.73);
+	color: black;
 	border-radius: 5px;
-	border: none;
+	border-color: whitesmoke;
+    font-family: Katuri;
+    font-size: 15px;
 }
 
 #imgbut {
@@ -165,6 +178,10 @@ textarea {
 	background-color: rgb(0, 0, 0, 0);
 	border: none;
 }
+
+
+
+
 </style>
 <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 </head>
@@ -174,7 +191,7 @@ textarea {
 			<header class="sangdan">
 				<button type="button" id="ham">
 					<li class="menu"><a class="aham"><img
-							src="./project/img/햄버거아이콘.png" /></a>
+							src="./img/햄버거아이콘.png" /></a>
 						<ul class="hide">
 							<div class="kateham">
 								<li class="menu"><a class="aham">Place</a>
@@ -204,24 +221,34 @@ textarea {
 						</ul></li>
 				</button>
 				<button type="button" id="withdogslogo">
-					<img src="./project/img/이름로고.png" width="180">
+					<img src="./img/이름로고.png" width="180">
 				</button>
 				<button type="button" id="person">
-					<img src="./project/img/프로필아이콘.png">
+					<img src="./img/프로필아이콘.png">
 				</button>
 			</header>
 			<br> <input type="text" id="intitle" placeholder="제목을 입력해주세요">
 			<select id="selgesi">
-				<option value="">게시물</option>
+				<option value="">카페/식당</option>
+				<option value="">산책</option>
+				<option value="">기타</option>
+				<option value="">Puppy</option>
+				<option value="">Adult</option>
+				<option value="">Senior</option>
+				<option value="">Items</option>
+				<option value="">나눔</option>
+				<option value="">Q & A</option>
 			</select> <br>
-			<textarea></textarea>
+			<textarea ></textarea>
 			<br>
-			<br> <input type="submit" id="subbut" value="작성">
+			<br> 
+            <button input type="submit" id="subbut" value="작성">작성
+            </button>
 			<button id="imgbut">
-				<img src="./img/image.png" alt="대충사진">
+				<img src="./img/사진첨부아이콘.png" alt="대충사진">
 			</button>
 			<button id="imgmap">
-				<img src="./img/pin.png" alt="대충지도">
+				<img src="./img/위치아이콘.png" alt="대충지도">
 			</button>
 	</form>
 	<script>
