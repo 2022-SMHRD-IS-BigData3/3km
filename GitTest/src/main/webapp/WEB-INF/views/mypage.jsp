@@ -267,8 +267,7 @@ p {
 			<div>
 				<input type="file" name="uploadfile" id="img" style="display: none;" />
 				<div>
-					<label for="img"><img src="./image/유저아이콘.png"
-						id="user"></label>
+					<label for="img"><img src="./img/유저아이콘.png"	id="user"></label>
 				</div>
 
 

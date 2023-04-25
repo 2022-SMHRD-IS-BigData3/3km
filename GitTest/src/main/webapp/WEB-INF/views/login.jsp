@@ -88,6 +88,7 @@ input {
 	height: 30px;
 	background-color: rgba(243, 156, 18, 0.73);
 	border: 0px;
+	font-family: 'Katuri';
 }
 
 .join {
