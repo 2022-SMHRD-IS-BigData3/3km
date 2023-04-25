@@ -5,220 +5,207 @@
 <html lang="en">
 
 <head>
-<meta charset="UTF-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="icon" href="./img/강아지로고.png" />
-<link rel="apple-touch-icon" href="./img/강아지로고.png" />
-<title>로그인</title>
-<style>
-/* div의 스타일 */
-@font-face {
-	font-family: 'Katuri';
-	src:
-		url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_13@1.0/Katuri.woff')
-		format('woff');
-	font-weight: normal;
-	font-style: normal;
-}
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./img/강아지로고.png" />
+    <link rel="apple-touch-icon" href="./img/강아지로고.png" />
+    <title>로그인</title>
+    <style>
+        /* div의 스타일 */
+        @font-face {
+            font-family: 'Katuri';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_13@1.0/Katuri.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+        body {
+            font-family: Katuri;
+        }
+        #bodybody{
+            text-align: center;
+        }
+        form#mid {
+            text-align: center;
+            display: inline-block;
+            background-color: rgba(249, 230, 191, 0.15);
+            border: 1px solid #ccc;
+            border-bottom: none;
+            height: 450px;
+        }
 
-body {
-	font-family: Katuri;
-}
+        .sangdan {
+            height: 50px;
+            background: rgba(243, 156, 18, 0.73);
+            margin: 0;
+        }
 
-form#mid {
-	text-align: center;
-	display: inline-block;
-	background-color: rgba(249, 230, 191, 0.15);
-	border: 1px solid #ccc;
-	border-bottom: none;
-	height: 450px;
-}
+        .sangdan div {
+            padding: 13px;
+            margin: 0 auto;
+        }
 
-.sangdan {
-	height: 50px;
-	background: rgba(243, 156, 18, 0.73);
-	margin: 0;
-	display: flex;
-}
+        #cate-list {
+            font-family: Katuri;
+        }
 
-.sangdan div {
-	padding: 13px;
-	margin: 0 auto;
-}
+        #enter1 {
+            width: 360px;
+            height: 310px;
+            margin-top: 60px;
+            text-align: center;
+        }
 
-#cate-list {
-	font-family: Katuri;
-}
+        #enter1 div {
+            padding-bottom: 30px;
+        }
 
-#enter1 {
-	width: 360px;
-	height: 310px;
-	margin-top: 60px;
-	text-align: center;
-}
+        input {
+            background-color: #eee;
+            border: gray;
+            padding: 12px 15px;
+            margin: 8px 0;
+            width: 230px;
+        }
 
-#enter1 div {
-	padding-bottom: 30px;
-}
+        #pw {
+            margin-left: 33px;
+            font-family: 'Katuri';
+        }
+        #email {
+            margin-left: 5px;
+            font-family: 'Katuri';
+        }
+        #login {
+            width: 320px;
+            height: 0px;
+            margin: 0 auto;
+            text-align: center;
+            font-size: large;
+        }
 
-input {
-	background-color: #eee;
-	border: gray;
-	padding: 12px 15px;
-	margin: 8px 0;
-	width: 230px;
-}
+        #loginbutton {
+            width: 320px;
+            height: 35px;
+            background-color: rgba(243, 156, 18, 0.73);
+            border: 0px;
+            margin-top: 10px;
+            font-family: 'Katuri';
+        }
 
-#pw {
-	margin-left: 25px;
-}
+        #join {
+            background-color: rgba(249, 230, 191, 0.15);
+            width: 360px;
+            border: 1px solid #ccc;
+            border-top: none; 
+            border-bottom: none;
+        }
 
-#login {
-	width: 320px;
-	height: 0px;
-	margin: 0 auto;
-	background-color: rgba(243, 156, 18, 0.73);
-	text-align: center;
-	font-size: large;
-}
+        .Join {
+            float: right;
+            margin-right: 30px;
+            text-decoration: none;
+            color: inherit;
+        }
 
-#loginbutton {
-	width: 320px;
-	height: 30px;
-	background-color: rgba(243, 156, 18, 0.73);
-	border: 0px;
-	font-family: 'Katuri';
-}
+        .empty {
+            background-color: rgba(249, 230, 191, 0.15);
+            width: 360px;
+            height: 150px;
+            border: 1px solid #ccc;
+            border-top: none;
+            border-bottom: none;
+            margin: auto;
+        }
 
-.join {
-	background-color: rgba(249, 230, 191, 0.15);
-	width: 360px;
-	border: 1px solid #ccc;
-	border-top: none;
-	border-bottom: none;
-}
+        #bottom1 {
+            background-color: rgba(243, 156, 18, 0.73);
+            border: 1px solid #ccc;
+            border-top: rgba(0, 0, 0, 0);
+            border-bottom: rgba(0, 0, 0, 0);
+            width: 360px;
+            height: 420px;
+            text-align: left;
+            color: #eee;
+            display: inline-block;
+        }
 
-#Join {
-	float: right;
-	margin-right: 20px;
-	text-decoration: none;
-	color: inherit;
-}
+        h1 {
+            text-align: center;
+            margin-bottom: 0;
+        }
 
-.empty {
-	background-color: rgba(249, 230, 191, 0.15);
-	width: 360px;
-	height: 100px;
-	border: 1px solid #ccc;
-	border-top: none;
-	border-bottom: none;
-}
+        h2 {
+            margin-bottom: 5;
+        }
 
-#bottom1 {
-	background-color: rgba(243, 156, 18, 0.73);
-	border: 1px solid #ccc;
-	border-top: rgba(0, 0, 0, 0);
-	border-bottom: rgba(0, 0, 0, 0);
-	width: 360px;
-	height: 420px;
-	text-align: left;
-	color: #eee;
-	display: inline-block;
-}
+        p {
+            text-align: center;
+        }
 
-h1 {
-	text-align: center;
-	margin-bottom: 0;
-}
+        .bottomli {
+            list-style: none;
+            margin: 10px;
+            padding: 5px;
+        }
 
-h2 {
-	margin-bottom: 5;
-}
+        li {
+            height: 30px;
+            
+        }
 
-p {
-	text-align: center;
-}
-
-.bottomli {
-	list-style: none;
-	margin: 10px;
-	padding: 5px;
-}
-
-li {
-	height: 30px;
-	list-style: none;
-}
-
-.loginInfo {
-	list-style: none;
-}
-</style>
+    </style>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 </head>
 
 <body>
-	<form action="#" id="mid" method="post">
-		<header class="sangdan">
-			<div>
-				<img src="./img/이름로고.png" width="180">
-			</div>
-		</header>
-		<div id="enter1">
-			<div>
-				<img src="./img/강아지로고.png" width="120px" height="100px"></img>
-			</div>
-			<form action="Gologin.do" method="post">
-				<li class="loginInfo">E-mail<input id="email" name="email"
-					type="email" placeholder="이메일 주소를 입력하세요"></li> <br> <br>
-				<li class="loginInfo">PW<input id="pw" name="pw"
-					type="password" placeholder="8자 이내 비밀번호를 입력하세요"></li> <br>
-				<br>
-				<li class="loginInfo"><input type="submit" value="LogIn"
-					class="button fit" id="loginbutton"></li>
-			</form>
-		</div>
-	</form>
-	<div class="join">
-		<a href="Gojoin.do" id="Join">Join</a>
-	</div>
-	<div class="empty" />
-	<div id="bottom1">
-		<ul class=" bottomli">
-			<h2>My ACCOUNT</h2>
-			<li><a href="Gologin.do">- 로그인</a></li>
-			<li><a>- 계정관리</a></li>
-		</ul>
+    <div id="bodybody" >
+    <form action="" id="mid">
 
-		<ul class=" bottomli">
-			<h2>Help</h2>
-			<li><a>- 공지사항</a></li>
-			<li><a>- 1:1문의</a></li>
-		</ul>
-		<br>
-		<h1>With Dogs!</h1>
-		<p>Copyright@with Dogs All Rights Reserved</p>
-	</div>
+        <header class="sangdan">
+            <div>
+                <img src="./img/이름로고.png" width="180">
+            </div>
+        </header>
+        <div id="enter1">
+            <div>
+                <img src="./img/강아지로고.png" width="120px" height="100px"></img>
+            </div>
+            <p>
+                E-mail  <input id="email" name="email" type="email" placeholder="이메일 주소를 입력하세요" /><br>
+            </p>
+            <p>
+                PW<input id="pw" name="pw" type="password" placeholder="8자 이내 비밀번호를 입력하세요" /><br>
+            </p>
+            <div id="login">
+                <button id="loginbutton" type="submit">Login</button>
+            </div>
+        </div>
+    </form>
+    
+    <div class="empty">
+        <br>
+        <div id="join">
+            <a href="#" class="Join">Join</a>
+        </div>
+    </div>
+    <div id="bottom1">
+        <ul class=" bottomli">
+            <h2>My ACCOUNT</h2>
+            <li>- 로그인</li>
+            <li>- 계정관리</li>
+        </ul>
+        <ul class=" bottomli">
+            <h2>Help</h2>
+            <li>- 공지사항</li>
+            <li>- 1:1문의</li>
+        </ul>
+        <br>
+        <h1>With Dogs!</h1>
+        <p>Copyright@with Dogs All Rights Reserved</p>
+    </div>
+    </form>
 
-	<script>
-		$(document).ready(function() {
-			$('#loginbutton').on('click',function() {
-				var email = $('#email').val();
-				var password = $('#pw').val();
-
-				if (email == '' || password == '') {
-					alert('이메일과 비밀번호를 입력해주세요.');
-					return;
-				}else if (`${member.email}` != email || `${member.pw}` != password) {
-					alert('이메일 또는 비밀번호가 잘못되었습니다.');
-					return;
-				}else if (`${member.email}` == email && $`{member.pw}` == password) {
-					location.href = 'Gomain.do';
-				}
-			});
-		});
-	</script>
-
+</div>
 </body>
-
 </html>
