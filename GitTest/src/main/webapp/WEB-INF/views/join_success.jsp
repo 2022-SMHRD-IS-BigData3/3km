@@ -25,6 +25,34 @@ body{
       font-family: Katuri;
     }
     
+
+<!-- 상단바 css -->
+
+form#mid {
+	text-align: center;
+}
+
+.sangdan {
+	height: 50px;
+	background: rgba(243, 156, 18, 0.73);
+	margin: 0;
+	display: flex;
+}
+
+.aham {
+	padding-right: 50px;
+	font-weight: bold;
+	font-size: 15px;
+}
+
+#ham {
+	border: none;
+	background-color: rgba(9, 9, 9, 0);
+	float: left;
+	display: flex;
+	margin-top: 10px;
+}
+
 #withdogslogo {
 	background-color: rgb(0, 0, 0, 0);
 	border: none;
@@ -33,6 +61,59 @@ body{
 	margin-left: -10px;
 	display: flex;
 }
+
+#person {
+	border: none;
+	background-color: rgba(0, 0, 0, 0);
+	float: right;
+}
+
+.menu {
+	cursor: pointer;
+	list-style: none;
+}
+
+.menu .hide {
+	display: none;
+	font-size: 5px;
+}
+
+.hide {
+	list-style: none;
+	padding-left: 0px;
+	text-align: left;
+}
+
+.hidelist {
+	list-style: none;
+	padding-left: 0px;
+}
+
+.hide .hidelist {
+	height: 30px;
+  font-size: 20px;
+  margin-top: 10px;
+	list-style: none;
+}
+
+.kateham {
+	background-color: bisque;
+	width: 350px;
+	height: auto;
+	position: absolute;
+  font-family: Katuri;
+}
+
+.aham {
+	font-size: 25px;
+}
+
+#cate-list {
+  font-family: Katuri;
+}
+
+
+
 /* div의 스타일 */
 #enter {
       width: 360px;
@@ -43,6 +124,7 @@ body{
       box-sizing: border-box;
       margin: 0 auto;
     }
+
 
     #top-area {
       width: 360px;
@@ -73,18 +155,47 @@ body{
 	}
 
 </style>
+
+
 </head>
+
 <body>
-	<header class="sangdan">
-			<img src="./img/이름로고.png" width="240" id="withdogslogo">
-		</header>
+
+	<form action="#">
+		<div id="enter">
+			<header class="sangdan">
+
+							
+						
+				<button type="button" id="withdogslogo">
+					<img src="./img/이름로고.png" width="180">
+				</button>
+				
+			</header>
+			
+	</form>
+
 	<div id="success">
 		<div id="blankarea"></div>
 		<div> 회원가입이 완료되었습니다!</div>
 		<br>
-		<button type="button" id="sucessbutton" onClick="location.href='Gologin.do'">로그인 하러가기</button>
+		<button type="button" id="successbutton" onClick="location.href='Gologin.do'">로그인 하러가기</button>
 	  </div>
+
+
+	</div>
+
 	<script>
+		$(document).ready(function() {
+			$(".menu>.aham").click(function() {
+				var submenu = $(this).next(".hide");
+				if (submenu.is(":visible")) {
+					submenu.slideUp();
+				} else {
+					submenu.slideDown();
+				}
+			})
+		})
 	</script>
 
 </body>
