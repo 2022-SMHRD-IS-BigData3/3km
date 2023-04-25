@@ -8,9 +8,6 @@
 <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="icon" href="./img/강아지로고.png" />
-<link rel="apple-touch-icon" href="./img/강아지로고.png" />
-<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 <title>Mypage_edit</title>
 <style>
 @font-face {
@@ -122,6 +119,10 @@ form#mid {
 }
 
 /* 상단바 css */
+#mypageimg{
+    width: 50px;
+	height: 50px;
+}
 #my_box {
 	background-color: rgba(243, 156, 18, 0.73);
 	width: 300px;
@@ -155,11 +156,11 @@ form#mid {
 	margin-left: 10px;
 }
 
-#white {
+#text {
 	background-color: white;
 	width: 180px;
 	height: 80px;
-	margin-left: 90px;
+	margin-left: 100px;
 	margin-top: -30px;
 }
 
@@ -219,7 +220,7 @@ p {
 	text-align: center;
 }
 </style>
-
+<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 </head>
 
 <body>
@@ -227,7 +228,7 @@ p {
 		<header class="sangdan">
 			<button type="button" id="ham">
 				<li class="menu"><a class="aham"><img
-						src="./img/햄버거아이콘.png" /></a>
+						src="./project/img/햄버거아이콘.png" /></a>
 					<ul class="hide">
 						<div class="kateham">
 							<li class="menu"><a class="aham">Place</a>
@@ -257,20 +258,19 @@ p {
 					</ul></li>
 			</button>
 			<button type="button" id="withdogslogo">
-				<img src="./img/이름로고.png" width="180">
+				<img src="./project/img/이름로고.png" width="180">
 			</button>
 			<button type="button" id="person">
-				<img src="./img/프로필아이콘.png">
+				<img src="./project/img/프로필아이콘.png">
 			</button>
 		</header>
 		<div id="my_box">
 			<div>
 				<input type="file" name="uploadfile" id="img" style="display: none;" />
-				<div>
-					<label for="img"><img src="./img/유저아이콘.png"	id="user"></label>
+				<div id="mypageimg">
+					<label for="img"><img src="/project/img/마이페이지프로필.png"
+						id="user"></label>
 				</div>
-
-
 			</div>
 			<div id="text">
 				<div id="white">
