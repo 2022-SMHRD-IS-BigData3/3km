@@ -267,37 +267,8 @@ li.list {
 	<form action="#" id="mid">
 		<div id="enter">
 			<header class="sangdan">
-				<button type="button" id="ham">
-					<li class="menu"><a class="aham"><img
-							src="./img/햄버거아이콘.png" /></a>
-						<ul class="hide">
-							<div class="kateham">
-								<li class="menu"><a class="aham">Place</a>
-									<ul class="hide">
-										<li class="hidelist">카페/식당</li>
-										<li class="hidelist">산책</li>
-										<li class="hidelist">기타</li>
-									</ul></li> <br>
-								<li class="menu"><a class="aham">Feed</a>
-									<ul class="hide">
-										<li class="hidelist">puppy</li>
-										<li class="hidelist">adult</li>
-										<li class="hidelist">senior</li>
-									</ul></li> <br>
-								<li class="aham"><a>Items</a></li> <br>
-								<li class="menu"><a class="aham">Board</a>
-									<ul class="hide">
-										<li class="hidelist">나눔</li>
-										<li class="hidelist">Q&A</li>
-									</ul></li> <br>
-								<li class="menu"><a class="aham">MyPage</a>
-									<ul class="hide">
-										<li class="hidelist">계정 관리</li>
-										<li class="hidelist">내 정보 수정</li>
-									</ul></li>
-							</div>
-						</ul></li>
-				</button>
+			<img src="./img/이름로고.png" width="240" id="withdogslogo">
+		</header>
 				<button type="button" id="withdogslogo">
 					<img src="./img/이름로고.png" width="180">
 				</button>

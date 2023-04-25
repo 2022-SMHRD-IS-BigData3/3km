@@ -112,11 +112,11 @@ input {
 				<br><br> 
 				<input name="date" type="date" class="date" size="30" />
 				<br> <br> 
-				<input name="age" type="number" class="date" placeholder="*강아지 나이" size="30" /> 
+				<input name="dog_name" type="text" placeholder="*강아지 이름" size="30" /> 
 				<br> <br> 
-				<input name="name" type="text" placeholder="*강아지 이름" size="30" /> 
+				<input name="dog_age" type="number" class="date" placeholder="*강아지 나이" size="30" /> 
 				<br><br> 
-				<input name="breed" type="text" placeholder="견종" size="30" />
+				<input name="dog_breed" type="text" placeholder="견종" size="30" />
 			</div>
 			<br> <input type="submit" class="btn" value="확인">
 		</form>
