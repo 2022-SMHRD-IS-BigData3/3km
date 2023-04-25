@@ -195,24 +195,7 @@ form#mid {
 	background-color: rgb(194, 192, 192);
 	width: 90px;
 	height: 30px;
-	margin-top: 30px;
-	margin-left: 30px;
-}
-
-.add2 {
-	background-color: rgb(194, 192, 192);
-	width: 90px;
-	height: 30px;
-	margin-top: -50px;
-	margin-left: 140px;
-}
-
-.add3 {
-	background-color: rgb(194, 192, 192);
-	width: 90px;
-	height: 30px;
-	margin-top: -50px;
-	margin-left: 250px;
+	margin:0 auto;
 }
 
 p {
@@ -228,7 +211,7 @@ p {
 		<header class="sangdan">
 			<button type="button" id="ham">
 				<li class="menu"><a class="aham"><img
-						src="./project/img/햄버거아이콘.png" /></a>
+						src="./img/햄버거아이콘.png" /></a>
 					<ul class="hide">
 						<div class="kateham">
 							<li class="menu"><a class="aham">Place</a>
@@ -258,17 +241,17 @@ p {
 					</ul></li>
 			</button>
 			<button type="button" id="withdogslogo">
-				<img src="./project/img/이름로고.png" width="180">
+				<img src="./img/이름로고.png" width="180">
 			</button>
 			<button type="button" id="person">
-				<img src="./project/img/프로필아이콘.png">
+				<img src="./img/프로필아이콘.png">
 			</button>
 		</header>
 		<div id="my_box">
 			<div>
 				<input type="file" name="uploadfile" id="img" style="display: none;" />
 				<div id="mypageimg">
-					<label for="img"><img src="/project/img/마이페이지프로필.png"
+					<label for="img"><img src="./img/마이페이지프로필.png"
 						id="user"></label>
 				</div>
 			</div>
@@ -284,22 +267,11 @@ p {
 		</div>
 
 		<div>
-			<div>
+			<div >
 				<div class="add1">
 					<p>강쥐1</p>
 				</div>
 			</div>
-			<div>
-				<div class="add2">
-					<p>강쥐2</p>
-				</div>
-			</div>
-			<div>
-				<div class="add3">
-					<p>강쥐3</p>
-				</div>
-			</div>
-
 		</div>
 
 		<div id="picture_box">
