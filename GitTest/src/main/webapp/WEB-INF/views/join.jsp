@@ -104,15 +104,19 @@ input {
 			</div>
 			<br>
 			<div>
-				<input name="email" type="text" placeholder="*Email" size="30" /> <br>
-				<br> <input name="password" type="password" placeholder="*비밀번호"
-					size="30" maxlength=8 /> <br> <br> <input
-					name="nickname" type="text" placeholder="*닉네임" size="30" /> <br>
-				<br> <input name="date" type="date" class="date" size="30" />
-				<br> <br> <input name="age" type="number" class="date"
-					placeholder="*강아지 나이" size="30" /> <br> <br> <input
-					name="name" type="text" placeholder="*강아지 이름" size="30" /> <br>
-				<br> <input name="breed" type="text" placeholder="견종" size="30" />
+				<input name="email" type="text" placeholder="*Email" size="30" /> 
+				<br><br> 
+				<input name="password" type="password" placeholder="*비밀번호" size="30" maxlength=8 /> 
+				<br> <br> 
+				<input name="nickname" type="text" placeholder="*닉네임" size="30" /> 
+				<br><br> 
+				<input name="date" type="date" class="date" size="30" />
+				<br> <br> 
+				<input name="age" type="number" class="date" placeholder="*강아지 나이" size="30" /> 
+				<br> <br> 
+				<input name="name" type="text" placeholder="*강아지 이름" size="30" /> 
+				<br><br> 
+				<input name="breed" type="text" placeholder="견종" size="30" />
 			</div>
 			<br> <input type="submit" class="btn" value="확인">
 		</form>
