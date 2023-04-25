@@ -1,5 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 
@@ -38,7 +40,7 @@
 		}
 
 		.aham {
-			padding-right: 50px;
+			padding-right: 30px;
 			font-weight: bold;
 			font-size: 15px;
 		}
@@ -55,7 +57,6 @@
 			background-color: rgb(0, 0, 0, 0);
 			border: none;
 			margin-top: 10px;
-			margin-left: -10px;
 			display: flex;
 		}
 
@@ -63,6 +64,7 @@
 			border: none;
 			background-color: rgba(0, 0, 0, 0);
 			float: right;
+			margin-left: -6px;
 		}
 
 		.menu {
@@ -127,6 +129,7 @@
 			float: left;
 			margin: 10px;
 			margin-left: 16px;
+			margin-top: 35px;
 		}
 
 		div.photobox2 {
@@ -136,6 +139,7 @@
 			float: right;
 			margin: 10px;
 			margin-right: 16px;
+			margin-top: 35px;
 		}
 
 		#top-area {
@@ -146,16 +150,58 @@
 			margin-left: 190px;
 		}
 
+
+		#photobox-line {
+			height: 190px;
+		}
+
+		#photobox-line2 {
+			height: 190px;
+			clear: left;
+		}
+
+
+		.boxbottomleft {
+			width: 160px;
+			height: 30px;
+			float: left;
+			text-align: right;
+			
+		}
+		
+		.boxbottomright {
+			width: 150px;
+			height: 30px;
+			float: right;
+			text-align: right;
+			margin-right: 20px;
+		}
+
+
+
+		.like {
+			border: rgb(0, 0, 0, 0);
+			background-color: rgb(0, 0, 0, 0);
+		}
+
+		
+		.comment {
+			border: rgb(0, 0, 0, 0);
+			background-color: rgb(0, 0, 0, 0);
+		}
+
 		#bottom {
 			text-align: center;
-			font-size: 10px
+			font-size: 10px;
+			height: 50px;
+			clear: left;
 		}
 
 		#write {
 			border: rgb(0, 0, 0, 0);
 			background-color: rgb(0, 0, 0, 0);
+			margin-right: -5px;
 		}
-
 
 		#morebutton {
 			width: 50px;
@@ -164,7 +210,11 @@
 			border-color: whitesmoke;
 			height: 25px;
 			background: rgba(243, 156, 18, 0.73);
+			margin-top: 13px;
+			
 		}
+
+
 	</style>
 
 
@@ -235,12 +285,25 @@
 		<div class="photobox1">
 			<a href="#"></a>
 		</div>
+		
 		<div class="photobox2">
 			<a href="#"></a>
 		</div>
 	</div>
-
-	<div id="photobox-line">
+	<div class="boxbottomleft">
+		<span class="like"><img src="./img/좋아요아이콘.png" width="15px"></span>
+		<span class="likenum">0</span>
+		<span class="comment"><img src="./img/댓글아이콘.png" width="17px"></span>
+		<span class="commentnum">0</span>
+	</div>
+	<div class="boxbottomright">
+		<span class="like"><img src="./img/좋아요아이콘.png" width="15px"></span>
+		<span class="likenum">0</span>
+		<span class="comment"><img src="./img/댓글아이콘.png" width="17px"></span>
+		<span class="commentnum">0</span>
+	</div>
+	
+	<div id="photobox-line2">
 		<div class="photobox1">
 			<a href="#"></a>
 		</div>
@@ -248,15 +311,20 @@
 			<a href="#"></a>
 		</div>
 	</div>
-
-	<div id="photobox-line">
-		<div class="photobox1">
-			<a href="#"></a>
-		</div>
-		<div class="photobox2">
-			<a href="#"></a>
-		</div>
+	<div class="boxbottomleft">
+		<span class="like"><img src="./img/좋아요아이콘.png" width="15px"></span>
+		<span class="likenum">0</span>
+		<span class="comment"><img src="./img/댓글아이콘.png" width="17px"></span>
+		<span class="commentnum">0</span>
 	</div>
+	<div class="boxbottomright">
+		<span class="like"><img src="./img/좋아요아이콘.png" width="15px"></span>
+		<span class="likenum">0</span>
+		<span class="comment"><img src="./img/댓글아이콘.png" width="17px"></span>
+		<span class="commentnum">0</span>
+	</div>
+
+	
 
 	<div id="bottom">
 		<button id="morebutton" class="btn btn-primary btn-sm" btn-sm>더보기</button>
@@ -276,6 +344,9 @@
 				}
 			})
 		})
+
+
+		
 	</script>
 
 </body>
