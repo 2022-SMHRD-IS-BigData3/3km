@@ -8,7 +8,7 @@
 	</insert>
 	
 	<select id="login" parameterType="km.model.MemberVO" resultType="km.model.MemberVO">
-  		select *
+  		select email,birthday,nickname,dog_name,dog_age,dog_breed
   		from USER_INFO
   		where email = #{email} and pw = #{pw}
   	</select>

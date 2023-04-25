@@ -189,10 +189,9 @@ input {
 }
 
 #account {
-	padding: 0px;
 	float: left;
-	margin-top: 15px;
 	margin-left: -25px;
+	padding-left: 0px;
 }
 
 #help {
@@ -325,15 +324,12 @@ li.list {
 				<ul>
 					<li class="menu1"><a class="ahelp">MY ACCOUNT</a>
 						<ul class="hide1">
+							<br>
 							<li class="list">-로그인</li>
 						</ul></li>
 				</ul>
 			</div>
-			<br>
-			<br>
-			<br>
-			<br>
-			<br>
+			<br> <br> <br> <br> <br>
 			<div id="help">
 				<ul>
 					<li class="menu1"><a class="ahelp">Help</a>
@@ -363,6 +359,15 @@ li.list {
 				}
 			})
 		})
+		$('#person').click(function() {
+			alert("로그인 후에 이용해주세요.");
+		});
+
+		$('#loginbutton').click(function() {
+			if(${member} == null){
+			alert("이메일과 비밀번호를 입력해주세요");
+			}
+		});
 	</script>
 </body>
 
