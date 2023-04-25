@@ -54,7 +54,6 @@
 		#withdogslogo {
 			background-color: rgb(0, 0, 0, 0);
 			border: none;
-			margin-right: 25px;
 			margin-top: 10px;
 			margin-left: -10px;
 			display: flex;
