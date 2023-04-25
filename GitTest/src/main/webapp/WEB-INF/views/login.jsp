@@ -25,7 +25,7 @@
         #bodybody{
             text-align: center;
         }
-        form#mid {
+        #mid {
             text-align: center;
             display: inline-block;
             background-color: rgba(249, 230, 191, 0.15);
@@ -41,6 +41,7 @@
         }
 
         .sangdan div {
+
             padding: 13px;
             margin: 0 auto;
         }
@@ -160,8 +161,7 @@
 
 <body>
     <div id="bodybody" >
-    <form action="" id="mid">
-
+    <div action="" id="mid">
         <header class="sangdan">
             <div>
                 <img src="./img/이름로고.png" width="180">
@@ -171,17 +171,20 @@
             <div>
                 <img src="./img/강아지로고.png" width="120px" height="100px"></img>
             </div>
+            <form action="">
             <p>
                 E-mail  <input id="email" name="email" type="email" placeholder="이메일 주소를 입력하세요" /><br>
             </p>
             <p>
                 PW<input id="pw" name="pw" type="password" placeholder="8자 이내 비밀번호를 입력하세요" /><br>
             </p>
+            
             <div id="login">
                 <button id="loginbutton" type="submit">Login</button>
             </div>
+            </form>
         </div>
-    </form>
+    </div>
     
     <div class="empty">
         <br>
