@@ -40,21 +40,6 @@ form#mid {
 	background: rgba(243, 156, 18, 0.73);
 	margin: 0;
 	display: flex;
-	flex-direction: column;
-	align-items: center;
-}
-
-.sangdan img {
-	margin: auto;
-}
-
-#withdogslogo {
-	background-color: rgb(0, 0, 0, 0);
-	border: none;
-	margin-right: 25px;
-	margin-top: 10px;
-	margin-left: -10px;
-	display: flex;
 }
 
 .sangdan div {
@@ -106,10 +91,6 @@ input {
 	font-family: 'Katuri';
 }
 
-.bottom1 {
-	background-color: rgba(243, 156, 18, 0.73);
-}
-
 .join {
 	background-color: rgba(249, 230, 191, 0.15);
 	width: 360px;
@@ -159,17 +140,6 @@ p {
 	text-align: center;
 }
 
-#withdogs {
-	color: azure;
-	font-size: 30px;
-	font-weight: bold;
-}
-
-#copyright {
-	color: gray;
-	font-size: smaller;
-}
-
 .bottomli {
 	list-style: none;
 	margin: 10px;
@@ -183,49 +153,53 @@ li {
 </head>
 
 <body>
-	<form action="#" id="mid">
-		<div id="enter">
-			<header class="sangdan">
-				<img src="./img/이름로고.png" width="240" id="withdogslogo">
-			</header>
-					<div id="enter1">
-						<div>
-							<img src="./img/강아지로고.png" width="120px" height="100px"></img>
-						</div>
-						<p>
-							E-mail <input id="email" name="email" type="email"
-								placeholder="이메일 주소를 입력하세요" /><br>
-						</p>
-						<p>
-							PW<input id="pw" name="pw" type="password"
-								placeholder="8자 이내 비밀번호를 입력하세요" /><br>
-						</p>
-						<div id="login">
-							<button id="loginbutton">Login</button>
-						</div>
-					</div>
-				</form>
-				<div class="join">
-					<a href="Gojoin.do" id="Join">Join</a>
-				</div>
-				<div class="empty"></div>
-				<div id="bottom1">
-					<ul class=" bottomli">
-						<h2>My ACCOUNT</h2>
-						<li><a>- 로그인</a></li>
-						<li><a>- 계정관리</a></li>
-					</ul>
-					<ul class=" bottomli">
-						<h2>Help</h2>
-						<li><a>- 공지사항</a></li>
-						<li><a>- 1:1문의</a></li>
-					</ul>
-					<br>
-					<h1>With Dogs!</h1>
-					<p>Copyright@with Dogs All Rights Reserved</p>
-				</div>
+	<form action="" id="mid">
+
+		<header class="sangdan">
+			<div>
+				<img src="./img/이름로고.png" width="180">
+			</div>
+		</header>
+		<div id="enter1">
+			<div>
+				<img src="./img/강아지로고.png" width="120px"
+					height="100px"></img>
+			</div>
+			<p>
+				E-mail <input id="email" name="email" type="email"
+					placeholder="이메일 주소를 입력하세요" /><br>
+			</p>
+			<p>
+				PW<input id="pw" name="pw" type="password"
+					placeholder="8자 이내 비밀번호를 입력하세요" /><br>
+			</p>
+			<div id="login">
+				<button type="button" id="loginbutton" onClick="location.href='main.do'">Login</button>
+			</div>
+		</div>
 	</form>
-</body>
+	<div class="join">
+		<a href="join.do" id="Join">Join</a>
+	</div>
+	<div class="empty"></div>
+	<div id="bottom1">
+		<ul class=" bottomli">
+			<h2>My ACCOUNT</h2>
+			<li><a>- 로그인</a></li>
+			<li><a>- 계정관리</a></li>
+		</ul>
+
+		<ul class=" bottomli">
+			<h2>Help</h2>
+			<li><a>- 공지사항</a></li>
+			<li><a>- 1:1문의</a></li>
+		</ul>
+		<br>
+		<h1>With Dogs!</h1>
+		<p>Copyright@with Dogs All Rights Reserved</p>
+	</div>
+	</form>
+
 <script>
 			  $(document).ready(function() {
 				  $('#loginbutton').on('click', function() {
@@ -248,4 +222,7 @@ li {
 				  });
 				});
 	</script>
+
+</body>
+
 </html>
