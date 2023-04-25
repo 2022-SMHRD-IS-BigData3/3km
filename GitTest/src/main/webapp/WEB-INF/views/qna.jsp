@@ -175,6 +175,11 @@
             border-color: whitesmoke;
             height: 25px;
         }
+        
+        #write {
+			border: rgb(0, 0, 0, 0);
+			background-color: rgb(0, 0, 0, 0);
+		}
 
 
     </style>
@@ -221,6 +226,9 @@
                 <button type="button" id="withdogslogo">
                     <img src="./img/이름로고.png" width="180">
                 </button>
+                <button type="button" id="write" onClick="location.href='writepostpage.jsp'">
+					<img src="./img/글쓰기아이콘.png">
+				</button>
                 <button type="button" id="person">
                     <img src="./img/프로필아이콘.png">
                 </button>
@@ -264,7 +272,7 @@
 
             </div>
 
-            <input type="button" id="btn" value="더보기"">
+            <input type="button" id="btn" value="더보기">
     </div>
 
     <script>
