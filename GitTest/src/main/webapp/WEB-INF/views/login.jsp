@@ -26,18 +26,13 @@ body {
 	font-family: Katuri;
 }
 
-div#enter {
-	width: 360px;
-	height: 500px;
-	padding: 0px;
-	background-color: rgba(249, 230, 191, 0.15);
-	border: 1px solid #ccc;
-	box-sizing: border-box;
-	margin: 0 auto;
-}
-
 form#mid {
 	text-align: center;
+	display: inline-block;
+	background-color: rgba(249, 230, 191, 0.15);
+	border: 1px solid #ccc;
+	border-bottom: none;
+	height: 450px;
 }
 
 .sangdan {
@@ -62,9 +57,24 @@ form#mid {
 	display: flex;
 }
 
+.sangdan div {
+	padding: 13px;
+	margin: 0 auto;
+}
+
+#cate-list {
+	font-family: Katuri;
+}
+
 #enter1 {
-	padding-top: 100px;
+	width: 360px;
+	height: 310px;
+	margin-top: 60px;
 	text-align: center;
+}
+
+#enter1 div {
+	padding-bottom: 30px;
 }
 
 input {
@@ -81,7 +91,7 @@ input {
 
 #login {
 	width: 320px;
-	height: 30px;
+	height: 0px;
 	margin: 0 auto;
 	background-color: rgba(243, 156, 18, 0.73);
 	text-align: center;
@@ -97,42 +107,54 @@ input {
 
 .bottom1 {
 	background-color: rgba(243, 156, 18, 0.73);
+}
+
+.join {
+	background-color: rgba(249, 230, 191, 0.15);
 	width: 360px;
-	height: 320px;
-	padding: 0px;
+	border: 1px solid #ccc;
+	border-top: none;
+	border-bottom: none;
+}
+
+#Join {
+	float: right;
+	margin-right: 20px;
+	text-decoration: none;
+	color: inherit;
+}
+
+.empty {
+	background-color: rgba(249, 230, 191, 0.15);
+	width: 360px;
+	height: 100px;
+	border: 1px solid #ccc;
+	border-top: none;
+	border-bottom: none;
+}
+
+#bottom1 {
+	background-color: rgba(243, 156, 18, 0.73);
 	border: 1px solid #ccc;
 	border-top: rgba(0, 0, 0, 0);
 	border-bottom: rgba(0, 0, 0, 0);
-	box-sizing: border-box;
-	margin: 0 auto;
-	color: azure;
-	font-size: 25px;
-	font-weight: bold;
-}
-
-#account {
-	float: left;
-	margin-left: -25px;
-	padding-left: 0px;
-}
-
-#help {
-	float: left;
-	margin-left: -25px;
-	padding-left: 0px;
-}
-
-#join {
-	float: right;
-	font-size: small;
-	color: gray;
-	margin-right: 20px;
-}
-
-.end {
-	background-color: rgba(243, 156, 18, 0.73);
 	width: 360px;
-	margin: 0 auto;
+	height: 420px;
+	text-align: left;
+	color: #eee;
+	display: inline-block;
+}
+
+h1 {
+	text-align: center;
+	margin-bottom: 0;
+}
+
+h2 {
+	margin-bottom: 5;
+}
+
+p {
 	text-align: center;
 }
 
@@ -146,8 +168,17 @@ input {
 	color: gray;
 	font-size: smaller;
 }
+
+.bottomli {
+	list-style: none;
+	margin: 10px;
+	padding: 5px;
+}
+
+li {
+	height: 30px;;
+}
 </style>
-<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 </head>
 
 <body>
@@ -156,71 +187,64 @@ input {
 			<header class="sangdan">
 				<img src="./img/이름로고.png" width="240" id="withdogslogo">
 			</header>
-			<div id="enter1">
-				<img src="./img/강아지로고.png" width="120px" height="100px"></img>
-				<p>
-					E-mail <input id="email" type="email" placeholder="이메일 주소를 입력하세요" /><br>
-				</p>
-				<p>
-					PW<input id="pw" type="password" placeholder="8자 이내 비밀번호를 입력하세요" /><br>
-				</p>
-				<div id="login">
-					<button id="loginbutton">Login</button>
+					<div id="enter1">
+						<div>
+							<img src="./img/강아지로고.png" width="120px" height="100px"></img>
+						</div>
+						<p>
+							E-mail <input id="email" name="email" type="email"
+								placeholder="이메일 주소를 입력하세요" /><br>
+						</p>
+						<p>
+							PW<input id="pw" name="pw" type="password"
+								placeholder="8자 이내 비밀번호를 입력하세요" /><br>
+						</p>
+						<div id="login">
+							<button id="loginbutton">Login</button>
+						</div>
+					</div>
+				</form>
+				<div class="join">
+					<a href="Gojoin.do" id="Join">Join</a>
 				</div>
-				<a href="Gojoin.do" id="join">Join</a>
-			</div>
-		</div>
-		<div class="bottom1">
-			<div id="account">
-				<ul>
-					<li class="menu1"><a class="ahelp">MY ACCOUNT</a>
-						<ul class="hide1">
-							<br>
-							<li class="list">-로그인</li>
-						</ul></li>
-				</ul>
-			</div>
-			<br> <br> <br> <br> <br>
-			<div id="help">
-				<ul>
-					<li class="menu1"><a class="ahelp">Help</a>
-						<ul class="hide1">
-							<br>
-							<li class="hidelist1">-공지사항</li>
-							<br>
-							<li class="hidelist2">-1:1문의</li>
-						</ul></li>
-				</ul>
-			</div>
-		</div>
-		<div class="end">
-			<div id="withdogs">With Dogs!</div>
-			<div id="copyright">Copyright@with Dogs All Rights Reserved</div>
-			<br>
-		</div>
+				<div class="empty"></div>
+				<div id="bottom1">
+					<ul class=" bottomli">
+						<h2>My ACCOUNT</h2>
+						<li><a>- 로그인</a></li>
+						<li><a>- 계정관리</a></li>
+					</ul>
+					<ul class=" bottomli">
+						<h2>Help</h2>
+						<li><a>- 공지사항</a></li>
+						<li><a>- 1:1문의</a></li>
+					</ul>
+					<br>
+					<h1>With Dogs!</h1>
+					<p>Copyright@with Dogs All Rights Reserved</p>
+				</div>
 	</form>
-	<script>
+</body>
+<script>
 			  $(document).ready(function() {
 				  $('#loginbutton').on('click', function() {
 				    var email = $('#email').val();
 				    var password = $('#pw').val();
 				    
 				    if (email === '' || password === '') {
-				      alert('이메일과 비밀번호를 모두 입력해주세요.');
+				      alert('이메일과 비밀번호를 입력해주세요.');
 				      return;
 				    }
 				    
-				    // DB에서 이메일과 비밀번호를 확인하는 로직 작성
-				    if (/* 이메일과 비밀번호가 일치하지 않는다면 */) {
+				    if (`${member.email} != email || ${member.pw} != password`) {
 				      alert('이메일 또는 비밀번호가 잘못되었습니다.');
 				      return;
 				    }
 				    
-				    // 로그인 성공 시 메인 페이지로 이동
-				    location.href = 'main.jsp';
+				    if (`${member.email} == email && ${member.pw} == password`){
+				    	location.href = 'Gomain.do';
+				    }
 				  });
 				});
 	</script>
-</body>
-
 </html>
