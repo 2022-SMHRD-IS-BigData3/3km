@@ -27,7 +27,6 @@ public class MemberDAO {
 	int row = 0;
 	
 	public int join(MemberVO vo) {
-		
 		try {
 			session = sqlSessionFactory.openSession(true);
 			row = session.insert("join", vo);

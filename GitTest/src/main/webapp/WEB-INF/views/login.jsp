@@ -45,19 +45,12 @@ form#mid {
 	background: rgba(243, 156, 18, 0.73);
 	margin: 0;
 	display: flex;
+	flex-direction: column;
+	align-items: center;
 }
 
-.aham {
-	padding-right: 50px;
-	font-weight: bold;
-	font-size: 15px;
-}
-
-#ham {
-	border: none;
-	background-color: rgba(9, 9, 9, 0);
-	float: left;
-	display: flex;
+.sangdan img {
+	margin: auto;
 }
 
 #withdogslogo {
@@ -67,56 +60,6 @@ form#mid {
 	margin-top: 10px;
 	margin-left: -10px;
 	display: flex;
-}
-
-#person {
-	border: none;
-	background-color: rgba(0, 0, 0, 0);
-	float: right;
-}
-
-.menu {
-	cursor: pointer;
-	list-style: none;
-}
-
-.menu .hide {
-	display: none;
-	font-size: 5px;
-}
-
-.hide {
-	list-style: none;
-	padding-left: 0px;
-	text-align: left;
-}
-
-.hidelist {
-	list-style: none;
-	padding-left: 0px;
-}
-
-.hide .hidelist {
-	height: 30px;
-	font-size: 20px;
-	margin-top: 10px;
-	list-style: none;
-}
-
-.kateham {
-	background-color: bisque;
-	width: 350px;
-	height: auto;
-	position: absolute;
-	font-family: Katuri;
-}
-
-.aham {
-	font-size: 25px;
-}
-
-#cate-list {
-	font-family: Katuri;
 }
 
 #enter1 {
@@ -150,27 +93,6 @@ input {
 	height: 30px;
 	background-color: rgba(243, 156, 18, 0.73);
 	border: 0px;
-}
-
-#ham {
-	border: none;
-	background-color: rgba(0, 0, 0, 0);
-	padding: 13px;
-	float: left;
-}
-
-#withdogslogo {
-	background-color: rgb(0, 0, 0, 0);
-	border: none;
-	margin-left: -20px;
-	margin-top: 10px;
-}
-
-#person {
-	border: none;
-	background-color: rgba(0, 0, 0, 0);
-	float: right;
-	margin-left: -10px;
 }
 
 .bottom1 {
@@ -224,41 +146,6 @@ input {
 	color: gray;
 	font-size: smaller;
 }
-
-ul.hide1 {
-	margin-left: 0px;
-	padding: 0;
-}
-
-li.list {
-	float: left;
-	margin-left: 0;
-	margin-top: 10px;
-}
-
-.ahelp {
-	margin-right: 50px;
-}
-
-.menu1 {
-	list-style: none;
-	float: left;
-	margin: 0;
-}
-
-.hide1 {
-	list-style: none;
-	font-size: medium;
-}
-
-.hidelist1 {
-	margin-left: 0px;
-	text-indent: -40px;
-}
-
-.hidelist2 {
-	text-indent: -45px;
-}
 </style>
 <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 </head>
@@ -267,19 +154,12 @@ li.list {
 	<form action="#" id="mid">
 		<div id="enter">
 			<header class="sangdan">
-			<img src="./img/이름로고.png" width="240" id="withdogslogo">
-		</header>
-				<button type="button" id="withdogslogo">
-					<img src="./img/이름로고.png" width="180">
-				</button>
-				<button type="button" id="person">
-					<img src="./img/프로필아이콘.png">
-				</button>
+				<img src="./img/이름로고.png" width="240" id="withdogslogo">
 			</header>
 			<div id="enter1">
 				<img src="./img/강아지로고.png" width="120px" height="100px"></img>
 				<p>
-					E-mail <input type="email" placeholder="이메일 주소를 입력하세요" /><br>
+					E-mail <input id="email" type="email" placeholder="이메일 주소를 입력하세요" /><br>
 				</p>
 				<p>
 					PW<input id="pw" type="password" placeholder="8자 이내 비밀번호를 입력하세요" /><br>
@@ -287,7 +167,7 @@ li.list {
 				<div id="login">
 					<button id="loginbutton">Login</button>
 				</div>
-				<a href="join.jsp" id="join">Join</a>
+				<a href="Gojoin.do" id="join">Join</a>
 			</div>
 		</div>
 		<div class="bottom1">
@@ -320,25 +200,26 @@ li.list {
 		</div>
 	</form>
 	<script>
-		$(document).ready(function() {
-			$(".menu>.aham").click(function() {
-				var submenu = $(this).next(".hide");
-				if (submenu.is(":visible")) {
-					submenu.slideUp();
-				} else {
-					submenu.slideDown();
-				}
-			})
-		})
-		$('#person').click(function() {
-			alert("로그인 후에 이용해주세요.");
-		});
-
-		$('#loginbutton').click(function() {
-			if(${member} == null){
-			alert("이메일과 비밀번호를 입력해주세요");
-			}
-		});
+			  $(document).ready(function() {
+				  $('#loginbutton').on('click', function() {
+				    var email = $('#email').val();
+				    var password = $('#pw').val();
+				    
+				    if (email === '' || password === '') {
+				      alert('이메일과 비밀번호를 모두 입력해주세요.');
+				      return;
+				    }
+				    
+				    // DB에서 이메일과 비밀번호를 확인하는 로직 작성
+				    if (/* 이메일과 비밀번호가 일치하지 않는다면 */) {
+				      alert('이메일 또는 비밀번호가 잘못되었습니다.');
+				      return;
+				    }
+				    
+				    // 로그인 성공 시 메인 페이지로 이동
+				    location.href = 'main.jsp';
+				  });
+				});
 	</script>
 </body>
 
