@@ -147,7 +147,11 @@ p {
 }
 
 li {
-	height: 30px;;
+	height: 30px;
+	list-style:none;
+}
+.loginInfo{
+	list-style:none;
 }
 </style>
 </head>
@@ -162,30 +166,25 @@ li {
 		</header>
 		<div id="enter1">
 			<div>
-				<img src="./img/강아지로고.png" width="120px"
-					height="100px"></img>
+				<img src="./img/강아지로고.png" width="120px" height="100px"></img>
 			</div>
-			<p>
-				E-mail <input id="email" name="email" type="email"
-					placeholder="이메일 주소를 입력하세요" /><br>
-			</p>
-			<p>
-				PW<input id="pw" name="pw" type="password"
-					placeholder="8자 이내 비밀번호를 입력하세요" /><br>
-			</p>
-			<div id="login">
-				<button type="button" id="loginbutton" onClick="location.href='main.do'">Login</button>
-			</div>
+			<form action="login.do" method="post">
+				<li class="loginInfo">E-mail<input id="email" name="email" type="email" placeholder="이메일 주소를 입력하세요"></li>
+				<br><br>
+				<li class="loginInfo">PW<input id="pw" name="pw" type="password" placeholder="8자 이내 비밀번호를 입력하세요"></li>
+				<br><br>
+				<li class="loginInfo"><input type="submit" value="LogIn" class="button fit" id="loginbutton"></li>
+			</form>
 		</div>
 	</form>
 	<div class="join">
-		<a href="join.do" id="Join">Join</a>
+		<a href="Gojoin.do" id="Join">Join</a>
 	</div>
-	<div class="empty"></div>
+	<div class="empty"/>
 	<div id="bottom1">
 		<ul class=" bottomli">
 			<h2>My ACCOUNT</h2>
-			<li><a>- 로그인</a></li>
+			<li><a href="Gologin.do">- 로그인</a></li>
 			<li><a>- 계정관리</a></li>
 		</ul>
 
@@ -198,25 +197,20 @@ li {
 		<h1>With Dogs!</h1>
 		<p>Copyright@with Dogs All Rights Reserved</p>
 	</div>
-	</form>
 
-<script>
+	<script>
 			  $(document).ready(function() {
 				  $('#loginbutton').on('click', function() {
 				    var email = $('#email').val();
 				    var password = $('#pw').val();
 				    
-				    if (email === '' || password === '') {
+				    if (email == null || password == null) {
 				      alert('이메일과 비밀번호를 입력해주세요.');
 				      return;
-				    }
-				    
-				    if (`${member.email} != email || ${member.pw} != password`) {
-				      alert('이메일 또는 비밀번호가 잘못되었습니다.');
-				      return;
-				    }
-				    
-				    if (`${member.email} == email && ${member.pw} == password`){
+				    }else if(`${member.email} != email || ${member.pw} != password`) {
+					      alert('이메일 또는 비밀번호가 잘못되었습니다.');
+					      return;
+					}else if (`${member.email} == email && ${member.pw} == password`){
 				    	location.href = 'Gomain.do';
 				    }
 				  });
