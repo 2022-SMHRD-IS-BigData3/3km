@@ -68,10 +68,11 @@
         }
 
         .infoput {
-            height: 2em;
+            height: 35px;
             line-height: 2em;
             border-color: white;
             width: 235px;
+            font-size: medium;
             font-family: 'Katuri';
         }
 
@@ -91,13 +92,13 @@
     <div id="enter">
         <header class="sangdan">
             <div>
-                <img src="./project/img/이름로고.png" width="180" id="withdogslogo">
+                <img src="./img/이름로고.png" width="180" id="withdogslogo">
             </div>
         </header>
         <form action="JoinSuccess.do" method="post" id="info">
             <h1>JOIN US</h1>
             <div>
-                <span>방가와요 예비 사용자님</span>
+                <span>방가와요 예비 사용자님💖</span>
             </div>
             <br>
             <div>
