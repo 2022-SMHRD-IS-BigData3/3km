@@ -38,7 +38,6 @@ public class MemberDAO {
 
 	public MemberVO login(MemberVO vo) {
 		MemberVO result =null;
-		
 		try {
 			session = sqlSessionFactory.openSession(true);
 			result = session.selectOne("login", vo);

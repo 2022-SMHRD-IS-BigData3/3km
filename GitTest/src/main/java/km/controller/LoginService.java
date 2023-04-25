@@ -25,11 +25,18 @@ public class LoginService implements Command {
 		MemberDAO dao = new MemberDAO();
 		MemberVO result = dao.login(vo);
 		
+		System.out.println(result.getEmail());
+		System.out.println(result.getPw());
+		
 		if(result!=null) {
 			HttpSession session = request.getSession();
 			session.setAttribute("member", result);
+			
+			return "main.jsp";
+		}else {
+			return "redirect:/login.do";
+			
 		}
-		return "redirect:/Gologin.do";
 	}
 	
 

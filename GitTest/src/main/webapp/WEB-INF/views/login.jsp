@@ -176,7 +176,7 @@ li {
 				<div>
 					<img src="./img/강아지로고.png" width="120px" height="100px"></img>
 				</div>
-				<form action="Gologin.do">
+				<form action="Login.do" method="post">
 					<p>
 						E-mail <input id="email" name="email" type="email"
 							placeholder="이메일 주소를 입력하세요" /> <br>
@@ -224,9 +224,9 @@ li {
 			if (email == '' || password == '') {
 				alert('이메일과 비밀번호를 입력해주세요.');
 				return;
-			}else if (`${member.email}` == email && `${member.pw}` == password) {
+			}else if (${member.email}.equals(email) && ${member.pw}.equals(password)) {
 				location.href = 'Gomain.do';
-			} else if(`${member.email}` != email || `${member.pw}` != password) {
+			} else{
 				alert('이메일 또는 비밀번호가 잘못되었습니다.');
 				return;
 			} 

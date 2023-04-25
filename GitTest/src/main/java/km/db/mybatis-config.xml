@@ -26,6 +26,6 @@
   <!-- SQL구문을 우리는 이제부터 mapper.xml이라는 곳에 작성! -->
   <mappers>
   <!-- mapper파일이 추가될 때마다, 하나씩 추가해서 기술해줄 것! -->
-    <mapper resource="km/db/MemberMapper.xml"/>
+    <mapper resource="km/db/mapper.xml"/>
   </mappers>
 </configuration>

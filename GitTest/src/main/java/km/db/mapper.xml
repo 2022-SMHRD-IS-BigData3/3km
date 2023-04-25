@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="km/model/MemberDAO.java">
+<mapper namespace="km/model/MemberDAO">
 
 	<insert id="join" parameterType="km.model.MemberVO">
 		INSERT INTO USER_INFO
@@ -10,7 +10,7 @@
 	<select id="login" parameterType="km.model.MemberVO" resultType="km.model.MemberVO">
   		select *
   		from USER_INFO
-  		where email = #{email} and pw = #{pw}
+  		where email=#{email} and pw=#{pw}
   	</select>
 
 
