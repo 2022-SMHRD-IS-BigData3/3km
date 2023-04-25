@@ -11,6 +11,7 @@
 <link rel="icon" href="./img/강아지로고.png" />
 <link rel="apple-touch-icon" href="./img/강아지로고.png" />
 <title>로그인</title>
+<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 <style>
 /* div의 스타일 */
 @font-face {
@@ -156,7 +157,6 @@ li {
 }
 </style>
 </head>
-
 <body>
 	<form action="#" id="mid" method="post">
 		<header class="sangdan">
@@ -168,13 +168,13 @@ li {
 			<div>
 				<img src="./img/강아지로고.png" width="120px" height="100px"></img>
 			</div>
-			<form action="Gologin.do" method="post">
-				<li class="loginInfo">E-mail<input id="email" name="email"
-					type="email" placeholder="이메일 주소를 입력하세요"></li> <br> <br>
-				<li class="loginInfo">PW<input id="pw" name="pw"
+			<form action="login.do" method="post">
+				<li>E-mail<input id="email" name="email"
+					type="text" placeholder="이메일 주소를 입력하세요"></li> <br> <br>
+				<li>PW<input id="pw" name="pw"
 					type="password" placeholder="8자 이내 비밀번호를 입력하세요"></li> <br>
 				<br>
-				<li class="loginInfo"><input type="submit" value="LogIn"
+				<li><input type="submit" value="LogIn"
 					class="button fit" id="loginbutton"></li>
 			</form>
 		</div>
@@ -212,7 +212,7 @@ li {
 				}else if (`${member.email}` != email || `${member.pw}` != password) {
 					alert('이메일 또는 비밀번호가 잘못되었습니다.');
 					return;
-				}else if (`${member.email}` == email && $`{member.pw}` == password) {
+				}else if (`${member.email}` == email && `${member.pw}` == password) {
 					location.href = 'Gomain.do';
 				}
 			});
