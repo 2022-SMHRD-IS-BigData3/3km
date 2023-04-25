@@ -27,7 +27,11 @@ body {
 	font-family: Katuri;
 }
 
-form#mid {
+#bodybody {
+	text-align: center;
+}
+
+#mid {
 	text-align: center;
 	display: inline-block;
 	background-color: rgba(249, 230, 191, 0.15);
@@ -40,7 +44,6 @@ form#mid {
 	height: 50px;
 	background: rgba(243, 156, 18, 0.73);
 	margin: 0;
-	display: flex;
 }
 
 .sangdan div {
@@ -72,27 +75,33 @@ input {
 }
 
 #pw {
-	margin-left: 25px;
+	margin-left: 33px;
+	font-family: 'Katuri';
+}
+
+#email {
+	margin-left: 5px;
+	font-family: 'Katuri';
 }
 
 #login {
 	width: 320px;
 	height: 0px;
 	margin: 0 auto;
-	background-color: rgba(243, 156, 18, 0.73);
 	text-align: center;
 	font-size: large;
 }
 
 #loginbutton {
 	width: 320px;
-	height: 30px;
+	height: 35px;
 	background-color: rgba(243, 156, 18, 0.73);
 	border: 0px;
+	margin-top: 10px;
 	font-family: 'Katuri';
 }
 
-.join {
+#join {
 	background-color: rgba(249, 230, 191, 0.15);
 	width: 360px;
 	border: 1px solid #ccc;
@@ -100,9 +109,9 @@ input {
 	border-bottom: none;
 }
 
-#Join {
+.Join {
 	float: right;
-	margin-right: 20px;
+	margin-right: 30px;
 	text-decoration: none;
 	color: inherit;
 }
@@ -110,10 +119,11 @@ input {
 .empty {
 	background-color: rgba(249, 230, 191, 0.15);
 	width: 360px;
-	height: 100px;
+	height: 150px;
 	border: 1px solid #ccc;
 	border-top: none;
 	border-bottom: none;
+	margin: auto;
 }
 
 #bottom1 {
@@ -149,76 +159,78 @@ p {
 
 li {
 	height: 30px;
-	list-style: none;
-}
-
-.loginInfo {
-	list-style: none;
 }
 </style>
+<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 </head>
+
 <body>
-	<form action="#" id="mid" method="post">
-		<header class="sangdan">
-			<div>
-				<img src="./img/이름로고.png" width="180">
+	<div id="bodybody">
+		<div id="mid">
+			<header class="sangdan">
+				<div>
+					<img src="./img/이름로고.png" width="180">
+				</div>
+			</header>
+			<div id="enter1">
+				<div>
+					<img src="./img/강아지로고.png" width="120px" height="100px"></img>
+				</div>
+				<form action="Gologin.do">
+					<p>
+						E-mail <input id="email" name="email" type="email"
+							placeholder="이메일 주소를 입력하세요" /> <br>
+					</p>
+					<p>
+						PW<input id="pw" name="pw" type="password"
+							placeholder="8자 이내 비밀번호를 입력하세요" /> <br>
+					</p>
+					<div id="login">
+						<button id="loginbutton" type="submit">Login</button>
+					</div>
+				</form>
 			</div>
-		</header>
-		<div id="enter1">
-			<div>
-				<img src="./img/강아지로고.png" width="120px" height="100px"></img>
-			</div>
-			<form action="login.do" method="post">
-				<li>E-mail<input id="email" name="email"
-					type="text" placeholder="이메일 주소를 입력하세요"></li> <br> <br>
-				<li>PW<input id="pw" name="pw"
-					type="password" placeholder="8자 이내 비밀번호를 입력하세요"></li> <br>
-				<br>
-				<li><input type="submit" value="LogIn"
-					class="button fit" id="loginbutton"></li>
-			</form>
 		</div>
-	</form>
-	<div class="join">
-		<a href="Gojoin.do" id="Join">Join</a>
+
+		<div class="empty">
+			<br>
+			<div id="join">
+				<a href="Gojoin.do" class="Join">Join</a>
+			</div>
+		</div>
+		<div id="bottom1">
+			<ul class=" bottomli">
+				<h2>My ACCOUNT</h2>
+				<li>- 로그인</li>
+				<li>- 계정관리</li>
+			</ul>
+			<ul class=" bottomli">
+				<h2>Help</h2>
+				<li>- 공지사항</li>
+				<li>- 1:1문의</li>
+			</ul>
+			<br>
+			<h1>With Dogs!</h1>
+			<p>Copyright@with Dogs All Rights Reserved</p>
+		</div>
 	</div>
-	<div class="empty" />
-	<div id="bottom1">
-		<ul class=" bottomli">
-			<h2>My ACCOUNT</h2>
-			<li><a href="Gologin.do">- 로그인</a></li>
-			<li><a>- 계정관리</a></li>
-		</ul>
-
-		<ul class=" bottomli">
-			<h2>Help</h2>
-			<li><a>- 공지사항</a></li>
-			<li><a>- 1:1문의</a></li>
-		</ul>
-		<br>
-		<h1>With Dogs!</h1>
-		<p>Copyright@with Dogs All Rights Reserved</p>
-	</div>
-
-	<script>
-		$(document).ready(function() {
-			$('#loginbutton').on('click',function() {
-				var email = $('#email').val();
-				var password = $('#pw').val();
-
-				if (email == '' || password == '') {
-					alert('이메일과 비밀번호를 입력해주세요.');
-					return;
-				}else if (`${member.email}` != email || `${member.pw}` != password) {
-					alert('이메일 또는 비밀번호가 잘못되었습니다.');
-					return;
-				}else if (`${member.email}` == email && `${member.pw}` == password) {
-					location.href = 'Gomain.do';
-				}
-			});
-		});
-	</script>
-
 </body>
+<script>
+	$(document).ready(function() {
+		$('#loginbutton').on('click',function() {
+			var email = $('#email').val();
+			var password = $('#pw').val();
 
+			if (email == '' || password == '') {
+				alert('이메일과 비밀번호를 입력해주세요.');
+				return;
+			}else if (`${member.email}` == email && `${member.pw}` == password) {
+				location.href = 'Gomain.do';
+			} else if(`${member.email}` != email || `${member.pw}` != password) {
+				alert('이메일 또는 비밀번호가 잘못되었습니다.');
+				return;
+			} 
+		});
+	});
+</script>
 </html>
