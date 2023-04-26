@@ -9,8 +9,7 @@ import javax.servlet.http.HttpServletResponse;
 public class MainService implements Command {
 
 	@Override
-	public String execute(HttpServletRequest request, HttpServletResponse response)
-			throws ServletException, IOException {
+	public String execute(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
 		return "main.jsp";
 	}

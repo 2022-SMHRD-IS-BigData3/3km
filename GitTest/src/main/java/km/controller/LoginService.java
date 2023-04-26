@@ -35,8 +35,10 @@ public class LoginService implements Command {
 			return "main.jsp";
 		}else {
 			return "redirect:/login.do";
-			
 		}
+		
+			
+		
 	}
 	
 
