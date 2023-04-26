@@ -210,6 +210,7 @@
                                 <ul class="hide">
                                     <li class="hidelist">계정 관리</li>
                                     <li class="hidelist">내 정보 수정</li>
+                                    <li class="hidelist">로그아웃</li>
                                 </ul>
                             </li>
                         </div>
