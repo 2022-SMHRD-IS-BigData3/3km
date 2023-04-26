@@ -1,6 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -33,9 +32,6 @@
 			margin: 0 auto;
 		}
 
-		form#mid {
-			text-align: center;
-		}
 
 		.sangdan {
 			height: 50px;
@@ -239,8 +235,10 @@
 
 
 		p {
-			font-size: 20px;
+			font-size: 18px;
 			text-align: center;
+			margin-top: 20px;
+			padding: 5.5px;
 		}
 	</style>
 	<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>

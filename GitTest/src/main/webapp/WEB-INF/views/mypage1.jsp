@@ -33,10 +33,6 @@ body {
 	margin: 0 auto;
 }
 
-form#mid {
-	text-align: center;
-}
-
 .sangdan {
 	height: 50px;
 	background: rgba(243, 156, 18, 0.73);
@@ -196,7 +192,7 @@ form#mid {
 	background-color: rgb(194, 192, 192);
 	width: 90px;
 	height: 30px;
-	margin:0 auto;
+	margin: 0 auto;
 }
 .myinfo {
   margin-top: 20px;
@@ -218,8 +214,10 @@ form#mid {
 }
 
 p {
-	font-size: 20px;
+	font-size: 18px;
 	text-align: center;
+	margin-top: 20px;
+	padding: 5.5px;
 }
 </style>
 <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
