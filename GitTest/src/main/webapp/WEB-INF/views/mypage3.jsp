@@ -114,18 +114,27 @@
 		}
 
 		/* 상단바 css */
-		#mypageimg {
-			width: 50px;
-			height: 50px;
-		}
 
 		#my_box {
 			background-color: rgba(243, 156, 18, 0.73);
 			width: 300px;
-			height: 160px;
-			margin-top: 30px;
+			height: 140px;
+			margin-top: 0px;
 			margin-left: 30px;
 			border-radius: 13%;
+		}
+
+		#inupbox {
+			padding-top: 30px;
+			height: 50px;
+			width: 300px;
+		}
+
+		#mypageimg {
+			width: 50px;
+			height: 50px;
+			float: left;
+			margin-left: 30px;
 		}
 
 		#file {
@@ -135,16 +144,39 @@
 		}
 
 		#user {
-			width: 70px;
-			margin-top: 30px;
-			margin-left: 20px;
+			width: 100%;
+			height: 100%;
 		}
 
+		.myinfo {
+			display: flex;
+			float: right;
+		}
+
+
+		.myinfo div {
+			justify-content: center;
+			flex-direction: column;
+			margin-left: 15px;
+			margin-right: 15px;
+			float: right;
+			text-align: center;
+		}
+
+		.myinfo span {
+			text-align: center;
+		}
+
+
 		#modify {
-			margin-top: px;
 			border-radius: 4%;
 			background-color: rgb(52, 152, 219);
 			color: white;
+			width: 70px;
+			height: 26px;
+			border-color: rgb(0, 0, 0, 0);
+			font-family: Katuri;
+			margin-right: 10px;
 		}
 
 		#word {
@@ -155,10 +187,18 @@
 		#text {
 			border-radius: 10px;
 			background-color: white;
-			width: 180px;
-			height: 80px;
-			margin-left: 100px;
-			margin-top: -30px;
+			width: 255px;
+			height: 20px;
+			margin-left: 25px;
+			margin-top: 20px;
+			border: none;
+		}
+
+		#eapleak{
+			margin-left: 10px;
+			text-decoration: none;
+			color: black;
+			font-size: small;
 		}
 
 		#btn {
@@ -171,7 +211,7 @@
 			background-color: rgba(243, 156, 18, 0.73);
 			width: 360px;
 			height: 248px;
-			margin-top: 47px;
+			margin-top: 70px;
 		}
 
 		.post_img {
@@ -190,55 +230,61 @@
 		}
 
 		.add {
+			margin-top: 20px;
 			display: flex;
 			justify-content: space-between;
 		}
 
 		.add1 {
-			background-color: rgb(194, 192, 192);
-			width: 90px;
-			height: 30px;
+			background-color: rgba(194, 192, 192, 0.709);
+			width: 85px;
+			height: 100px;
+			padding: 5px;
 			margin-left: 30px;
+		}
+
+		.dogpageimg {
+			border-radius: 100px;
+			margin-top: 5px;
+			margin: 0 auto;
+			width: 50px;
+			height: 50px;
+			background-color: #D3C9B5;
+		}
+
+		.doginfo {
+			text-align: center;
 		}
 
 		.add2 {
-			background-color: rgb(194, 192, 192);
-			width: 90px;
-			height: 30px;
+			background-color: rgba(194, 192, 192, 0.709);
+			width: 85px;
+			height: 100px;
+			padding: 5px;
 		}
 
 		.add3 {
-			background-color: rgb(194, 192, 192);
-			width: 90px;
+			background-color: rgba(194, 192, 192, 0.709);
+			width: 85px;
+			height: 100px;
+			padding: 5px;
+			margin-right: 30px;
+		}
+
+		#dogname {
+			border-radius: 10px;
+			font-family: Katuri;
+			color: gray;
+		}
+
+		#dogage {
+			border-radius: 10px;
+			font-family: Katuri;
+			color: gray;
+		}
+
+		.empty {
 			height: 30px;
-			margin-right: 30px;
-		}
-
-		.myinfo {
-			margin-top: 20px;
-			display: flex;
-			justify-content: center;
-		}
-
-		.myinfo div {
-			display: flex;
-			justify-content: center;
-			flex-direction: column;
-			align-items: center;
-			margin-left: 30px;
-			margin-right: 30px;
-		}
-
-		.myinfo span {
-			text-align: center;
-		}
-
-
-		p {
-			font-size: 18px;
-			text-align: center;
-			margin-top: 20px;
-			padding: 5.5px;
 		}
 	</style>
 	<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
@@ -290,49 +336,78 @@
 				<img src="./img/프로필아이콘.png">
 			</button>
 		</header>
+		<div class="empty">
+
+		</div>
 		<div id="my_box">
-			<div>
-				<input type="file" name="uploadfile" id="img" style="display: none;" />
+			<div id="inupbox">
 				<div id="mypageimg">
+					<input type="file" name="uploadfile" id="img" style="display: none;" />
 					<label for="img"><img src="./img/마이페이지프로필.png" id="user"></label>
 				</div>
-			</div>
-			<div id="text">
-				<div id="white">
-					<div id="word">글을 써요 글을 쓰는 중이에요 여기는 글이 작성되는 곳 입니다.</div>
+				<div class="myinfo">
+					<div class="gesi">게시물 <br><span id="gesisu">0</span></div>
+					<div class="follow">팔로워 <br><span id="followsu">0</span></div>
+					<div class="following">팔로잉 <br><span id="followingsu">0</span></div>
 				</div>
 			</div>
-			<div id="btn">
-				<input type="button" id="modify" value="정보수정"
-					style="width: 84px; height: 26px; border-color: rgb(0, 0, 0, 0);">
-			</div>
+			<p id="text">
+				<a href="" id="eapleak">
+					자기소개를 입력하세요
+				</a>
+			</p>
 		</div>
 
 		<div class="add">
 			<div>
 				<div class="add1">
-					<p>강쥐1</p>
+					<input type="file" name="uploadfile" style="display: none;" />
+					<div class="dogpageimg">
+						<label for="img"><img src="./img/강아지프로필아이콘.png" class="dogpageimg" /></label>
+					</div>
+					<div class="doginfo">
+						<span>이름</span>
+					</div>
+					<div class="doginfo">
+						<span>나이</span>
+					</div>
 				</div>
 			</div>
 			<div>
 				<div class="add2">
-					<p>강쥐2</p>
+					<input type="file" name="uploadfile" style="display: none;" />
+					<div class="dogpageimg">
+						<label for="img"><img src="./img/강아지프로필아이콘.png" class="dogpageimg" /></label>
+					</div>
+					<div class="doginfo">
+						<span>이름</span>
+					</div>
+					<div class="doginfo">
+						<span>나이</span>
+					</div>
 				</div>
 			</div>
 			<div>
 				<div class="add3">
-					<p>강쥐3</p>
+					<input type="file" name="uploadfile" style="display: none;" />
+					<div class="dogpageimg">
+						<label for="img"><img src="./img/강아지프로필아이콘.png" class="dogpageimg" /></label>
+					</div>
+					<div class="doginfo">
+						<span>이름</span>
+					</div>
+					<div class="doginfo">
+						<span>나이</span>
+					</div>
 				</div>
 			</div>
 
 		</div>
 
-		<div class="myinfo">
-			<div class="gesi">게시물 <br><span id="gesisu">0</span></div>
-			<div class="follow">팔로워 <br><span id="followsu">0</span></div>
-			<div class="following">팔로잉 <br><span id="followingsu">0</span></div>
-		</div>
 
+		<div id="btn">
+			<input type="button" id="modify" value="정보수정" />
+		</div>
 		<div id="picture_box">
 			<div id="picture" style="overflow-y: scroll;">
 				<div class="post_img">
