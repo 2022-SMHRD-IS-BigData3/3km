@@ -244,9 +244,10 @@ textarea {
 			<br> 
             <button input type="submit" id="subbut" value="작성">작성
             </button>
-			<button id="imgbut">
-				<img src="./img/사진첨부아이콘.png" alt="대충사진">
-			</button>
+            <input type="file" name="uploadfile" id="img" style="display: none;">
+			<label for="img"><img src="./img/사진첨부아이콘.png"
+                id="imgbut"></label>
+            </input>
 			<button id="imgmap">
 				<img src="./img/위치아이콘.png" alt="대충지도">
 			</button>
