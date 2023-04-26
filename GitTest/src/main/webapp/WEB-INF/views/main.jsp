@@ -263,10 +263,10 @@
 				<button type="button" id="withdogslogo">
 					<img src="./img/이름로고.png" width="180">
 				</button>
-				<button type="button" id="write" onClick="location.href='Gowritepostpage.jsp'">
+				<button type="button" id="write" onClick="location.href='Gowritepostpage.do'">
 					<img src="./img/글쓰기아이콘.png">
 				</button>
-				<button type="button" id="person" onClick="location.href='Gomypage.jsp'">
+				<button type="button" id="person" onClick="location.href='Gomypage1.do'">
 					<img src="./img/프로필아이콘.png">
 				</button>
 			</header>
