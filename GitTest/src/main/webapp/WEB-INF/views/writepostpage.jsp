@@ -186,7 +186,7 @@ textarea {
 <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 </head>
 <body>
-	<form action="#">
+	<div action="#">
 		<div id="enter">
 			<header class="sangdan">
 				<button type="button" id="ham">
@@ -251,7 +251,7 @@ textarea {
 			<button id="imgmap">
 				<img src="./img/위치아이콘.png" alt="대충지도">
 			</button>
-	</form>
+	</div>
 	<script>
 		$(document).ready(function() {
 			$(".menu>.aham").click(function() {
