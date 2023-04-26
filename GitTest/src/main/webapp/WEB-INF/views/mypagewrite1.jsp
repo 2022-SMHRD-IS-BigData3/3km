@@ -341,10 +341,10 @@
 						<label for="img"><img src="./img/강아지프로필아이콘.png" class="dogpageimg" /></label>
 					</div>
 					<div class="doginfo">
-						<textarea name="강아지나이" id="dogname" cols="5" rows="1">이름</textarea>
+						<textarea name="강아지나이" id="dogname" cols="5" rows="1" placeholder="이름"></textarea>
 					</div>
 					<div class="doginfo">
-						<textarea name="강아지나이" id="dogage" cols="5" rows="1">나이</textarea>
+						<textarea name="강아지나이" id="dogage" cols="5" rows="1" placeholder="나이"></textarea>
 
 					</div>
 				</div>
@@ -353,7 +353,7 @@
 
 
 		<div id="btn">
-			<input type="button" id="modify" value="정보수정" />
+			<input type="button" id="modify" value="완료" />
 		</div>
 		<div id="picture_box">
 			<div id="picture" style="overflow-y: scroll;">
