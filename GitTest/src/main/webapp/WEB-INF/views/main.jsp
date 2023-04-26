@@ -230,7 +230,7 @@
 							<div class="kateham">
 								<li class="menu"><a class="aham">Place</a>
 									<ul class="hide">
-										<li class="hidelist">카페/식당</li>
+										<li class="hidelist" onClick="location.href='Goplace_cafe.do'">카페/식당</li>
 										<li class="hidelist">산책</li>
 										<li class="hidelist">기타</li>
 									</ul>
@@ -246,7 +246,7 @@
 								<li class="menu"><a class="aham">Board</a>
 									<ul class="hide">
 										<li class="hidelist">나눔</li>
-										<li class="hidelist">Q&A</li>
+										<li class="hidelist" onClick="location.href='Goqna.do'">Q&A</li>
 									</ul>
 								</li> <br>
 								<li class="menu"><a class="aham">MyPage</a>
@@ -263,10 +263,10 @@
 				<button type="button" id="withdogslogo">
 					<img src="./img/이름로고.png" width="180">
 				</button>
-				<button type="button" id="write" onClick="location.href='writepostpage.jsp'">
+				<button type="button" id="write" onClick="location.href='Gowritepostpage.jsp'">
 					<img src="./img/글쓰기아이콘.png">
 				</button>
-				<button type="button" id="person" onClick="location.href='mypage.jsp'">
+				<button type="button" id="person" onClick="location.href='Gomypage.jsp'">
 					<img src="./img/프로필아이콘.png">
 				</button>
 			</header>
