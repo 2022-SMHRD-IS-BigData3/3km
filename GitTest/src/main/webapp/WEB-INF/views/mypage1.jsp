@@ -278,7 +278,7 @@ p {
 				</div>
 			</div>
 			<div id="btn">
-				<input type="button" id="modify" value="정보수정"
+				<input type="button" id="modify" value="정보수정" onClick="location.href='Goinfo.do'"
 					style="width: 84px; height: 26px; border-color: rgb(0, 0, 0, 0);">
 			</div>
 		</div>
