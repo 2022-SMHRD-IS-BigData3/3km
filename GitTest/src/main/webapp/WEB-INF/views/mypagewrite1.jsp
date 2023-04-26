@@ -4,239 +4,275 @@
 <html lang="en">
 
 <head>
-<meta charset="UTF-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Mypage_edit</title>
-<style>
-@font-face {
-	font-family: 'Katuri';
-	src:
-		url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_13@1.0/Katuri.woff')
-		format('woff');
-	font-weight: normal;
-	font-style: normal;
-}
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Mypage_edit</title>
+	<style>
+		@font-face {
+			font-family: 'Katuri';
+			src:
+				url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_13@1.0/Katuri.woff') format('woff');
+			font-weight: normal;
+			font-style: normal;
+		}
 
-body {
-	font-family: Katuri;
-}
+		body {
+			font-family: Katuri;
+		}
 
-/* 상단바 css */
-#enter {
-	width: 360px;
-	height: 640px;
-	padding: 0px;
-	background-color: rgba(249, 230, 191, 0.15);
-	border: 1px solid #ccc;
-	box-sizing: border-box;
-	margin: 0 auto;
-}
+		/* 상단바 css */
+		#enter {
+			width: 360px;
+			height: 640px;
+			padding: 0px;
+			background-color: rgba(249, 230, 191, 0.15);
+			border: 1px solid #ccc;
+			box-sizing: border-box;
+			margin: 0 auto;
+		}
 
-.sangdan {
-	height: 50px;
-	background: rgba(243, 156, 18, 0.73);
-	margin: 0;
-	display: flex;
-}
 
-.aham {
-	padding-right: 50px;
-	font-weight: bold;
-	font-size: 15px;
-}
+		.sangdan {
+			height: 50px;
+			background: rgba(243, 156, 18, 0.73);
+			margin: 0;
+			display: flex;
+		}
 
-#ham {
-	border: none;
-	background-color: rgba(9, 9, 9, 0);
-	float: left;
-	display: flex;
-	margin-top: 10px;
-}
+		.aham {
+			padding-right: 50px;
+			font-weight: bold;
+			font-size: 15px;
+		}
 
-#withdogslogo {
-	background-color: rgb(0, 0, 0, 0);
-	border: none;
-	margin-right: 25px;
-	margin-top: 10px;
-	margin-left: -10px;
-	display: flex;
-}
+		#ham {
+			border: none;
+			background-color: rgba(9, 9, 9, 0);
+			float: left;
+			display: flex;
+			margin-top: 10px;
+		}
 
-#person {
-	border: none;
-	background-color: rgba(0, 0, 0, 0);
-	float: right;
-}
+		#withdogslogo {
+			background-color: rgb(0, 0, 0, 0);
+			border: none;
+			margin-right: 25px;
+			margin-top: 10px;
+			margin-left: -10px;
+			display: flex;
+		}
 
-.menu {
-	cursor: pointer;
-	list-style: none;
-}
+		#person {
+			border: none;
+			background-color: rgba(0, 0, 0, 0);
+			float: right;
+		}
 
-.menu .hide {
-	display: none;
-	font-size: 5px;
-}
+		.menu {
+			cursor: pointer;
+			list-style: none;
+		}
 
-.hide {
-	list-style: none;
-	padding-left: 0px;
-	text-align: left;
-}
+		.menu .hide {
+			display: none;
+			font-size: 5px;
+		}
 
-.hidelist {
-	list-style: none;
-	padding-left: 0px;
-}
+		.hide {
+			list-style: none;
+			padding-left: 0px;
+			text-align: left;
+		}
 
-.hide .hidelist {
-	height: 30px;
-	font-size: 20px;
-	margin-top: 10px;
-	list-style: none;
-}
+		.hidelist {
+			list-style: none;
+			padding-left: 0px;
+		}
 
-.kateham {
-	background-color: bisque;
-	width: 350px;
-	height: auto;
-	position: absolute;
-	font-family: Katuri;
-}
+		.hide .hidelist {
+			height: 30px;
+			font-size: 20px;
+			margin-top: 10px;
+			list-style: none;
+		}
 
-.aham {
-	font-size: 25px;
-}
+		.kateham {
+			background-color: bisque;
+			width: 350px;
+			height: auto;
+			position: absolute;
+			font-family: Katuri;
+		}
 
-#cate-list {
-	font-family: Katuri;
-}
+		.aham {
+			font-size: 25px;
+		}
 
-/* 상단바 css */
-#mypageimg{
-    width: 50px;
-	height: 50px;
-}
-#my_box {
-	background-color: rgba(243, 156, 18, 0.73);
-	width: 300px;
-	height: 160px;
-	margin-top: 30px;
-	margin-left: 30px;
-	border-radius: 13%;
-}
+		#cate-list {
+			font-family: Katuri;
+		}
 
-#file {
-	border-radius: 4%;
-	background-color: rgb(52, 152, 219);
-	color: white;
-}
+		/* 상단바 css */
 
-#user {
-	width: 70px;
-	margin-top: 30px;
-	margin-left: 20px;
-}
+		#my_box {
+			background-color: rgba(243, 156, 18, 0.73);
+			width: 300px;
+			height: 140px;
+			margin-top: 0px;
+			margin-left: 30px;
+			border-radius: 13%;
+		}
 
-#modify {
-	margin-top: px;
-	border-radius: 4%;
-	background-color: rgb(52, 152, 219);
-	color: white;
-}
+		#inupbox {
+			padding-top: 30px;
+			height: 50px;
+			width: 300px;
+		}
 
-#word {
-	width: 170px;
-	margin-left: 10px;
-}
+		#mypageimg {
+			width: 50px;
+			height: 50px;
+			float: left;
+			margin-left: 30px;
+		}
 
-#text {
-	border-radius: 10px;
-	background-color: white;
-	width: 175px;
-	height: 73px;
-	margin-left: 100px;
-	margin-top: -30px;
-	border: none;
-}
+		#file {
+			border-radius: 4%;
+			background-color: rgb(52, 152, 219);
+			color: white;
+		}
 
-#btn {
-	margin-top: 17px;
-	margin-right: 20px;
-	float: right;
-}
+		#user {
+			width: 100%;
+			height: 100%;
+		}
 
-#picture {
-	background-color: rgba(243, 156, 18, 0.73);
-	width: 360px;
-	height: 248px;
-	margin-top: 47px;
-}
+		.myinfo {
+			display: flex;
+			float: right;
+		}
 
-.post_img {
-	background-color: whitesmoke;
-	width: 130px;
-	height: 110px;
-	margin-top: 20px;
-	margin-left: 30px;
-}
 
-.post_img2 {
-	background-color: whitesmoke;
-	width: 130px;
-	height: 110px;
-	margin-left: 160px;
-}
-.add{
-	margin-top: 20px;
-}
-.add1 {
-	width: 90px;
-	height: 30px;
-	margin:0 auto;
-}
-.add1 button{
-	background-color: rgb(194, 192, 192);
-	width: 90px;
-	height: 30px;
-	font-size: large;
-	border: none;
-	font-family: Katuri;
-}
-.myinfo {
-  margin-top: 20px;
-  display: flex;
-  justify-content: center;
-}
+		.myinfo div {
+			justify-content: center;
+			flex-direction: column;
+			margin-left: 15px;
+			margin-right: 15px;
+			float: right;
+			text-align: center;
+		}
 
-.myinfo div {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  align-items: center;
-  margin-left: 30px;
-  margin-right: 30px;
-}
+		.myinfo span {
+			text-align: center;
+		}
 
-.myinfo span {
-  text-align: center;
-}
 
-p {
-	font-size: 20px;
-	text-align: center;
-}
-</style>
-<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+		#modify {
+			border-radius: 4%;
+			background-color: rgb(52, 152, 219);
+			color: white;
+			width: 70px;
+			height: 26px;
+			border-color: rgb(0, 0, 0, 0);
+			font-family: Katuri;
+			margin-right: 10px;
+		}
+
+		#word {
+			width: 170px;
+			margin-left: 10px;
+		}
+
+		#text {
+			border-radius: 10px;
+			background-color: white;
+			width: 255px;
+			height: 20px;
+			margin-left: 25px;
+			margin-top: 20px;
+			border: none;
+		}
+
+		#btn {
+			margin-top: 17px;
+			margin-right: 20px;
+			float: right;
+		}
+
+		#picture {
+			background-color: rgba(243, 156, 18, 0.73);
+			width: 360px;
+			height: 248px;
+			margin-top: 70px;
+		}
+
+		.post_img {
+			background-color: whitesmoke;
+			width: 130px;
+			height: 110px;
+			margin-top: 20px;
+			margin-left: 30px;
+		}
+
+		.post_img2 {
+			background-color: whitesmoke;
+			width: 130px;
+			height: 110px;
+			margin-left: 160px;
+		}
+
+		.add {
+			margin-top: 20px;
+			display: flex;
+			justify-content: space-between;
+		}
+
+		.add1 {
+			background-color: rgba(194, 192, 192, 0.709);
+			width: 85px;
+			height: 100px;
+			padding: 5px;
+			margin-left: 30px;
+		}
+
+		.dogpageimg {
+			border-radius: 100px;
+			margin-top: 5px;
+			margin: 0 auto;
+			width: 50px;
+			height: 50px;
+			background-color: #D3C9B5;
+		}
+
+		.doginfo {
+			text-align: center;
+		}
+
+		#dogname {
+			border-radius: 10px;
+			font-family: Katuri;
+			color: gray;
+		}
+
+		#dogage {
+			border-radius: 10px;
+			font-family: Katuri;
+			color: gray;
+		}
+
+		.empty {
+			height: 30px;
+		}
+	</style>
+	<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 </head>
 
 <body>
 	<div id="enter">
 		<header class="sangdan">
 			<button type="button" id="ham">
-				<li class="menu"><a class="aham"><img
-						src="./img/햄버거아이콘.png" /></a>
+				<li class="menu"><a class="aham"><img src="./img/햄버거아이콘.png" /></a>
 					<ul class="hide">
 						<div class="kateham">
 							<li class="menu"><a class="aham">Place</a>
@@ -244,26 +280,31 @@ p {
 									<li class="hidelist">카페/식당</li>
 									<li class="hidelist">산책</li>
 									<li class="hidelist">기타</li>
-								</ul></li> <br>
+								</ul>
+							</li> <br>
 							<li class="menu"><a class="aham">Feed</a>
 								<ul class="hide">
 									<li class="hidelist">Puppy</li>
 									<li class="hidelist">Adult</li>
 									<li class="hidelist">Senior</li>
-								</ul></li> <br>
+								</ul>
+							</li> <br>
 							<li class="aham"><a>Items</a></li> <br>
 							<li class="menu"><a class="aham">Board</a>
 								<ul class="hide">
 									<li class="hidelist">나눔</li>
 									<li class="hidelist">Q&A</li>
-								</ul></li> <br>
+								</ul>
+							</li> <br>
 							<li class="menu"><a class="aham">MyPage</a>
 								<ul class="hide">
 									<li class="hidelist">계정 관리</li>
 									<li class="hidelist">내 정보 수정</li>
-								</ul></li>
+								</ul>
+							</li>
 						</div>
-					</ul></li>
+					</ul>
+				</li>
 			</button>
 			<button type="button" id="withdogslogo">
 				<img src="./img/이름로고.png" width="180">
@@ -272,32 +313,46 @@ p {
 				<img src="./img/프로필아이콘.png">
 			</button>
 		</header>
+		<div class="empty">
+
+		</div>
 		<div id="my_box">
-			<div>
-				<input type="file" name="uploadfile" id="img" style="display: none;" />
+			<div id="inupbox">
 				<div id="mypageimg">
-					<label for="img"><img src="./img/마이페이지프로필.png"
-						id="user"></label>
+					<input type="file" name="uploadfile" id="img" style="display: none;" />
+					<label for="img"><img src="./img/마이페이지프로필.png" id="user"></label>
+				</div>
+				<div class="myinfo">
+					<div class="gesi">게시물 <br><span id="gesisu">0</span></div>
+					<div class="follow">팔로워 <br><span id="followsu">0</span></div>
+					<div class="following">팔로잉 <br><span id="followingsu">0</span></div>
 				</div>
 			</div>
 			<textarea id="text">
 			</textarea>
-			<div id="btn">
-				<input type="button" id="modify" value="정보수정"
-					style="width: 84px; height: 26px; border-color: rgb(0, 0, 0, 0);">
-			</div>
 		</div>
 
 		<div class="add">
-			<div class="add1">
-				<button >강쥐1
-				</button>
+			<div>
+				<div class="add1">
+					<input type="file" name="uploadfile" style="display: none;" />
+					<div class="dogpageimg">
+						<label for="img"><img src="./img/강아지프로필아이콘.png" class="dogpageimg" /></label>
+					</div>
+					<div class="doginfo">
+						<textarea name="강아지나이" id="dogname" cols="5" rows="1">이름</textarea>
+					</div>
+					<div class="doginfo">
+						<textarea name="강아지나이" id="dogage" cols="5" rows="1">나이</textarea>
+
+					</div>
+				</div>
 			</div>
 		</div>
-		<div class="myinfo">
-			<div class="gesi">게시물 <br><span id="gesisu">0</span></div>
-			<div class="follow">팔로워 <br><span id="followsu">0</span></div>
-			<div class="following">팔로잉 <br><span id="followingsu">0</span></div>
+
+
+		<div id="btn">
+			<input type="button" id="modify" value="정보수정" />
 		</div>
 		<div id="picture_box">
 			<div id="picture" style="overflow-y: scroll;">
@@ -326,8 +381,8 @@ p {
 	</div>
 	</header>
 	<script>
-		$(document).ready(function() {
-			$(".menu>.aham").click(function() {
+		$(document).ready(function () {
+			$(".menu>.aham").click(function () {
 				var submenu = $(this).next(".hide");
 				if (submenu.is(":visible")) {
 					submenu.slideUp();
