@@ -6,6 +6,8 @@
 		INSERT INTO USER_INFO(USER_ID,EMAIL,PW,NICKNAME,BRITHDAY)
 		VALUES(USER_SEQ.nextval,#{email},#{pw},#{nickname},#{birthday})
 		
+	</insert>
+	<insert id="join2" parameterType="km.model.MemberVO">
 		INSERT INTO DOG_INFO(DOG_ID,DOG_NAME,DOG_AGE,DOG_BREED)
 		VALUES(DOG_INFO_SEQ.nextval,#{dog_name},#{dog_age},#{dog_breed})
 	</insert>
