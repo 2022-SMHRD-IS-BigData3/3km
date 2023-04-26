@@ -1,6 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -157,6 +156,7 @@ form#mid {
 }
 
 #text {
+	border-radius: 10px;
 	background-color: white;
 	width: 180px;
 	height: 80px;
@@ -166,14 +166,15 @@ form#mid {
 
 #btn {
 	margin-top: 17px;
-	margin-left: 90px;
+	margin-right: 20px;
+	float: right;
 }
 
 #picture {
 	background-color: rgba(243, 156, 18, 0.73);
 	width: 360px;
 	height: 248px;
-	margin-top: 90px;
+	margin-top: 47px;
 }
 
 .post_img {
@@ -196,6 +197,24 @@ form#mid {
 	width: 90px;
 	height: 30px;
 	margin:0 auto;
+}
+.myinfo {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.myinfo div {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  margin-left: 30px;
+  margin-right: 30px;
+}
+
+.myinfo span {
+  text-align: center;
 }
 
 p {
@@ -273,7 +292,11 @@ p {
 				</div>
 			</div>
 		</div>
-
+		<div class="myinfo">
+			<div class="gesi">게시물 <br><span id="gesisu">0</span></div>
+			<div class="follow">팔로워 <br><span id="followsu">0</span></div>
+			<div class="following">팔로잉 <br><span id="followingsu">0</span></div>
+		</div>
 		<div id="picture_box">
 			<div id="picture" style="overflow-y: scroll;">
 				<div class="post_img">
