@@ -8,3 +8,5 @@ SELECT * FROM post_comment;
 SELECT * FROM comment_to;
 SELECT * FROM follow;
 
+
+
