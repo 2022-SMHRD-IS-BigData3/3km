@@ -175,7 +175,7 @@ li {
 				<div>
 					<img src="./img/강아지로고.png" width="120px" height="100px"></img>
 				</div>
-				<form action="Login.do" method="post">
+				<form id="myForm" action="Login.do" method="post">
 					<p>
 						E-mail <input id="email" name="email" type="email"
 							placeholder="이메일 주소를 입력하세요" /> <br>
@@ -215,21 +215,29 @@ li {
 	</div>
 </body>
 <script>
-	$(document).ready(function() {
-		$('#loginbutton').on('click',function() {
-			var email = $('#email').val();
-			var password = $('#pw').val();
+	function validateForm() {
+		var email = document.getElementById("email").value;
+		var pw = document.getElementById("pw").value;
+		console.log(email);
+		console.log(pw);
+		console.log(`${member.email}`);
+		console.log(`${member.pw}`);
+		if (email === "" || pw === "") {
+			alert("이메일, 비밀번호를 입력해주세요");
+			return false;
+		}else if(email !== `${member.email}` || pw !== `${member.pw}`){
+			alert("이메일, 비밀번호를 잘못 입력하셨습니다.")
+			return false;
+		}
+		return true;
+	} 
 
-			if (email == '' || password == '') {
-				alert('이메일과 비밀번호를 입력해주세요.');
-				return;
-			}else if (`${member.email}`.equals(email) && `${member.pw}`.equals(password)) {
-				location.href = 'Gomain.do';
-			} else{
-				alert('이메일 또는 비밀번호가 잘못되었습니다.');
-				return;
-			} 
-		});
+	const form = document.getElementById("myForm");
+
+	form.addEventListener("submit", function(event) {
+		if (!validateForm()) {
+			event.preventDefault(); 
+		}
 	});
 </script>
 </html>
