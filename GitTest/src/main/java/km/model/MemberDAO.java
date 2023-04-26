@@ -30,6 +30,7 @@ public class MemberDAO {
 		try {
 			session = sqlSessionFactory.openSession(true);
 			row = session.insert("join", vo);
+			row = session.insert("join2", vo);
 		}finally {
 			session.close();
 		}
