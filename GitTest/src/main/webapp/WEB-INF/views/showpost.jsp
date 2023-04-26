@@ -27,7 +27,7 @@
 			font-style: normal;
 		}
 
-		
+
 		/* div의 스타일 */
 		#enter {
 			width: 360px;
@@ -132,8 +132,9 @@
 
 		#allcontents {
 			width: 300px;
-			height: 750px;
+			height: 570px;
 			margin: 30px;
+			margin-bottom: 10px;
 			background-color: whitesmoke;
 		}
 
@@ -146,29 +147,65 @@
 		}
 
 		#photo {
-			height: 300px;
+			width: 200px;
+			height: 200px;
 			padding: 20px;
+			margin-left: 30px;
 		}
 
 		#content {
 			width: 280px;
-			height: 350px;
+			height: 250px;
 			font-size: 15px;
 			padding: 10px;
 		}
 
-		#backbutton {
-			float: right;
-			margin-right: 40px;
+
+
+
+		.bottom {
+			text-align: right;
+			width: 320px;
+		}
+
+		#comment {
+			margin-left: 30px;
 			margin-top: 5px;
-			width: 70px;
-			height: 30px;
+			width: 250px;
+			float: left;
+		}
+
+
+		#okbutton {
+			width: 34px;
+			margin-left: 10px;
+			height: 20px;
 			background-color: rgba(243, 156, 18, 0.73);
 			color: black;
 			border-radius: 5px;
 			border-color: whitesmoke;
 			font-family: Katuri;
-			font-size: 15px;
+			font-size: 10px;
+		}
+
+		#commentarea {
+			width: 300px;
+			height: 180px;
+			margin-left: 30px;
+			background-color: whitesmoke;
+		}
+
+		#backbutton {
+			float: right;
+			margin-right: 15px;
+			width: 43px;
+			height: 20px;
+			background-color: rgba(243, 156, 18, 0.73);
+			color: black;
+			border-radius: 5px;
+			border-color: whitesmoke;
+			font-family: Katuri;
+			font-size: 13px;
 		}
 	</style>
 	<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
@@ -176,87 +213,102 @@
 
 <body>
 	<div id="enter">
-		<div>
-			<header class="sangdan">
-				<button type="button" id="ham">
-					<li class="menu"><a class="aham"><img src="./img/햄버거아이콘.png" /></a>
-						<ul class="hide">
-							<div class="kateham">
-								<li class="menu"><a class="aham">Place</a>
-									<ul class="hide">
-										<li class="hidelist">카페/식당</li>
-										<li class="hidelist">산책</li>
-										<li class="hidelist">기타</li>
-									</ul>
-								</li> <br>
-								<li class="menu"><a class="aham">Feed</a>
-									<ul class="hide">
-										<li class="hidelist">Puppy</li>
-										<li class="hidelist">Adult</li>
-										<li class="hidelist">Senior</li>
-									</ul>
-								</li> <br>
-								<li class="aham"><a>Items</a></li> <br>
-								<li class="menu"><a class="aham">Board</a>
-									<ul class="hide">
-										<li class="hidelist">나눔</li>
-										<li class="hidelist">Q&A</li>
-									</ul>
-								</li> <br>
-								<li class="menu"><a class="aham">MyPage</a>
-									<ul class="hide">
-										<li class="hidelist">계정 관리</li>
-										<li class="hidelist">내 정보 수정</li>
-									</ul>
-								</li>
-							</div>
-						</ul>
-					</li>
-				</button>
-				<button type="button" id="withdogslogo">
-					<img src="./img/이름로고.png" width="180">
-				</button>
-				<button type="button" id="person">
-					<img src="./img/프로필아이콘.png">
-				</button>
-			</header>
-			<div>
+		<header class="sangdan">
+			<button type="button" id="ham">
+				<li class="menu"><a class="aham"><img src="./img/햄버거아이콘.png" /></a>
+					<ul class="hide">
+						<div class="kateham">
+							<li class="menu"><a class="aham">Place</a>
+								<ul class="hide">
+									<li class="hidelist">카페/식당</li>
+									<li class="hidelist">산책</li>
+									<li class="hidelist">기타</li>
+								</ul>
+							</li> <br>
+							<li class="menu"><a class="aham">Feed</a>
+								<ul class="hide">
+									<li class="hidelist">Puppy</li>
+									<li class="hidelist">Adult</li>
+									<li class="hidelist">Senior</li>
+								</ul>
+							</li> <br>
+							<li class="aham"><a>Items</a></li> <br>
+							<li class="menu"><a class="aham">Board</a>
+								<ul class="hide">
+									<li class="hidelist">나눔</li>
+									<li class="hidelist">Q&A</li>
+								</ul>
+							</li> <br>
+							<li class="menu"><a class="aham">MyPage</a>
+								<ul class="hide">
+									<li class="hidelist">계정 관리</li>
+									<li class="hidelist">내 정보 수정</li>
+								</ul>
+							</li>
+						</div>
+					</ul>
+				</li>
+			</button>
+			<button type="button" id="withdogslogo">
+				<img src="./img/이름로고.png" width="180">
+			</button>
+			<button type="button" id="person">
+				<img src="./img/프로필아이콘.png">
+			</button>
+		</header>
 
-				<div id="midempty"></div>
+		<div id="midempty"></div>
 
-				<div id="allcontents">
-					<div id="title">여기는 제목입니다.
-
-					</div>
-					<hr align="left" style="border:solid 1px rgb(233, 228, 228); width: 295px;">
-					<div id="photo">사진 불러올 자리 
-						<img src="./img/강아지로고.png" alt="" width="280" height="280">
-					 </div>
-					<div id="content"> 
-						어제는 강아지랑 코딩을 했다 오늘은 강아지랑 코딩을 했다 내일은 강아지랑 코딩을 할거야
-					</div>
-				</div>
-				<button input type="submit" id="backbutton" value="작성">뒤로가기
-				</button>
-
-
-
-
-
+		<div id="allcontents">
+			<div id="title">여기는 제목입니다.
 
 			</div>
-			<script>
-				$(document).ready(function () {
-					$(".menu>.aham").click(function () {
-						var submenu = $(this).next(".hide");
-						if (submenu.is(":visible")) {
-							submenu.slideUp();
-						} else {
-							submenu.slideDown();
-						}
-					})
-				})
-			</script>
+			<hr align="left" style="border:solid 1px rgb(233, 228, 228); width: 295px;">
+			<div id="photo">사진 불러올 자리
+				<img src="./img/강아지로고.png" alt="" width="200" height="200">
+			</div>
+			<div id="content">
+				어제는 강아지랑 산책을 했다 오늘은 강아지랑 산책을 하고있다 내일은 강아지랑 산책을 할거야
+			</div>
+		</div>
+
+		<div class="bottom">
+			<span class="like"><img src="/img/좋아요아이콘.png" width="15px"></span>
+			<span class="likenum">0</span>
+			<span class="comment"><img src="/img/댓글아이콘.png" width="17px"></span>
+			<span class="commentnum">0</span>
+		</div>
+
+		<br>
+		<div>
+			<input id="comment" placeholder="write a comment...">
+			</input>
+			<button id="okbutton" value="확인">확인</button>
+		</div>
+		<br>
+		<div id="commentarea">댓글 공간</div>
+		<br>
+		<button id="backbutton" value="뒤로">back
+		</button>
+	</div>
+
+
+
+
+
+
+	<script>
+		$(document).ready(function () {
+			$(".menu>.aham").click(function () {
+				var submenu = $(this).next(".hide");
+				if (submenu.is(":visible")) {
+					submenu.slideUp();
+				} else {
+					submenu.slideDown();
+				}
+			})
+		})
+	</script>
 </body>
 
 </html>
