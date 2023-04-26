@@ -222,10 +222,10 @@ li {
 		console.log(pw);
 		console.log(`${member.email}`);
 		console.log(`${member.pw}`);
-		if (email === "" || pw === "") {
+		if (email == "" || pw == "") {
 			alert("이메일, 비밀번호를 입력해주세요");
 			return false;
-		}else if(email !== `${member.email}` || pw !== `${member.pw}`){
+		}else if(email != `${member.email}` || pw != `${member.pw}`){
 			alert("이메일, 비밀번호를 잘못 입력하셨습니다.")
 			return false;
 		}
