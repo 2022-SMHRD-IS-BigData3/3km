@@ -14,6 +14,7 @@ import km.controller.Command;
 import km.controller.JoinService;
 import km.controller.JoinSuccess;
 import km.controller.LoginService;
+import km.controller.MainService;
 
 
 
@@ -28,8 +29,8 @@ public class FrontController extends HttpServlet {
 
 		map = new HashMap<>();
 		map.put("Login.do", new LoginService());
-		map.put("main.do", new JoinService());
-		map.put("join.do", new JoinService());
+		map.put("Main.do", new MainService());
+		map.put("Join.do", new JoinService());
 		map.put("JoinSuccess.do", new JoinSuccess());
 	}
 

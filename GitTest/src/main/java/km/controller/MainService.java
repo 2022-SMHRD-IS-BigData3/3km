@@ -6,7 +6,7 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-public class mainService implements Command {
+public class MainService implements Command {
 
 	@Override
 	public String execute(HttpServletRequest request, HttpServletResponse response)
