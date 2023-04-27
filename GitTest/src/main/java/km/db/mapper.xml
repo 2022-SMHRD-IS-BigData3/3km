@@ -17,8 +17,16 @@
 		from USER_INFO
 		where email=#{email} and pw=#{pw}
 	</select>
-
-
+	
+	<insert id="write" parameterType="km.model.MemberVO">
+		INSERT INTO POST(POST_ID,TITLE,POST_CONTENTS,POSTING_DATE,USER_ID,KATEGORY)
+		VALUES(POST_SEQ.nextval,#{title},#{POST_CONTENTS},sysdate,1,#{postType})
+	</insert>
+	
+	<insert id="write2" parameterType="km.model.MemberVO">
+		INSERT INTO POST_IMG(IMG_ID,IMG_ROOT,POST_ID)
+		VALUES(IMG_SEQ.nextval,#{m_fileFullPath},POST_SEQ.CURRVAL)
+	</insert>
 
 
 

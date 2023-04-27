@@ -6,21 +6,40 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import com.oreilly.servlet.multipart.DefaultFileRenamePolicy;
+
 import km.model.BoardVO;
+import km.model.MemberDAO;
 
 
 public class WriteService implements Command{
 
 	public String execute (HttpServletRequest request, HttpServletResponse response)throws ServletException, IOException {
+			String savePath = request.getServletContext().getRealPath("/GitTest/src/main/webapp/img");
 			
 			String title = request.getParameter("title");
 			String postType = request.getParameter("postType");
-			String content = request.getParameter("content");
-			
+			String POST_CONTENTS = request.getParameter("POST_CONTENTS");
+			String imgfile = request.getParameter("imgfile");
+			String m_fileFullPath = savePath + "\\" + imgfile;
 			
 			BoardVO vo = new BoardVO();
 			
-			return "writepostpage.jsp";
+			vo.setTitle(title);
+			vo.setPost_contents(POST_CONTENTS);
+			vo.setPostType(postType);
+			vo.setImgfile(m_fileFullPath);
+			
+			MemberDAO dao = new MemberDAO();
+			
+			int row = dao.write(vo);
+			
+			if(row>0) {
+				request.setAttribute("title",title);
+				return "Gomain.do";
+			}else {
+				return "redirect:/GoLogin.do";
+			}
 		}
 
 	}

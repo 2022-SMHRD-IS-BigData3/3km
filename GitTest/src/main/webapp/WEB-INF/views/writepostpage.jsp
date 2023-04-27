@@ -176,16 +176,15 @@ textarea {
 	border: none;
 }
 
-#imgmap {
-	margin-left: -15px;
-	background-color: rgb(0, 0, 0, 0);
+#img {
+	margin-left: 20px;
 	border: none;
 }
 </style>
 <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 </head>
 <body>
-	<div action="#">
+	<form action="#">
 		<div id="enter">
 			<header class="sangdan">
 				<button type="button" id="ham">
@@ -195,7 +194,7 @@ textarea {
 							<div class="kateham">
 								<li class="menu"><a class="aham">Place</a>
 									<ul class="hide">
-										<li class="hidelist">카페/식당</li>
+										<li class="hidelist" onClick="location.href='Goplace_cafe.do'">카페/식당</li>
 										<li class="hidelist">산책</li>
 										<li class="hidelist">기타</li>
 									</ul></li> <br>
@@ -209,13 +208,13 @@ textarea {
 								<li class="menu"><a class="aham">Board</a>
 									<ul class="hide">
 										<li class="hidelist">나눔</li>
-										<li class="hidelist">Q&A</li>
+										<li class="hidelist" onClick="location.href='Goqna.do'">Q&A</li>
 									</ul></li> <br>
 								<li class="menu"><a class="aham">MyPage</a>
 									<ul class="hide">
-										<li class="hidelist">계정 관리</li>
-										<li class="hidelist">내 정보 수정</li>
-										<li class="hidelist">로그아웃</li>
+										<li class="hidelist" onClick="location.href='Gomypage1.do'">‍계정관리</li>
+										<li class="hidelist" onClick="location.href='Goinfo.do'">내정보 수정</li>
+										<li class="hidelist" onClick="location.href='Gologout.do'">로그아웃</li>
 									</ul></li>
 							</div>
 						</ul></li>
@@ -223,51 +222,46 @@ textarea {
 				<button type="button" id="withdogslogo">
 					<img src="./img/이름로고.png" width="180">
 				</button>
-				<button type="button" id="person">
+				<button type="button" id="write"
+					onClick="location.href='Gowritepostpage.do'">
+					<img src="./img/글쓰기아이콘.png">
+				</button>
+				<button type="button" id="person"
+					onClick="location.href='Gomypage1.do'">
 					<img src="./img/프로필아이콘.png">
 				</button>
 			</header>
-			<br>
-			<form action="Write.do" method="post">
-				<input type="text" id="intitle" placeholder="제목을 입력해주세요" name="title"> 
-				<select	id="selgesi" name="postType">
-					<option value="cafe">카페/식당</option>
-					<option value="walk">산책</option>
-					<option value="etc">기타</option>
-					<option value="puppy">Puppy</option>
-					<option value="adult">Adult</option>
-					<option value="senior">Senior</option>
-					<option value="items">Items</option>
-					<option value="share">나눔</option>
-					<option value="question">Q & A</option>
-				</select> <br>
-				<textarea id="content"name="content"></textarea>
-				<br> <br>
-<<<<<<< HEAD
-				<button input type="submit" id="subbut" value="작성">작성</button>
-				<input type="file" name="uploadfile" id="img" style="display: none;"/>
-=======
-				<button type="submit" id="subbut" value="작성" >작성</button>
-				<input type="file" name="uploadfile" id="img" style="display: none;">
->>>>>>> branch 'master' of https://github.com/2022-SMHRD-IS-BigData3/3km.git
-				<label for="img"><img src="./img/사진첨부아이콘.png" id="imgbut"></label>
-				</input>
-				<button id="imgmap">
-					<img src="./img/위치아이콘.png" alt="대충지도">
-				</button>
-			</form>
-		</div>
-		<script>
-			$(document).ready(function() {
-				$(".menu>.aham").click(function() {
-					var submenu = $(this).next(".hide");
-					if (submenu.is(":visible")) {
-						submenu.slideUp();
-					} else {
-						submenu.slideDown();
-					}
-				})
+	</form>
+	<br>
+	<form action="Write.do" method="post">
+		<input type="text" id="intitle" placeholder="제목을 입력해주세요" name="title">
+		<select id="selgesi" name="postType">
+			<option value="cafe">카페/식당</option>
+			<option value="walk">산책</option>
+			<option value="etc">기타</option>
+			<option value="puppy">Puppy</option>
+			<option value="adult">Adult</option>
+			<option value="senior">Senior</option>
+			<option value="items">Items</option>
+			<option value="share">나눔</option>
+			<option value="question">Q & A</option>
+		</select> <br>
+		<textarea id="content" name="POST_CONTENTS"></textarea>
+		<br> <br> <input type="file" name="imgfile" id="img" />
+		<button type="submit" id="subbut" value="작성">작성</button>
+	</form>
+	</div>
+	<script>
+		$(document).ready(function() {
+			$(".menu>.aham").click(function() {
+				var submenu = $(this).next(".hide");
+				if (submenu.is(":visible")) {
+					submenu.slideUp();
+				} else {
+					submenu.slideDown();
+				}
 			})
-		</script>
+		})
+	</script>
 </body>
 </html>

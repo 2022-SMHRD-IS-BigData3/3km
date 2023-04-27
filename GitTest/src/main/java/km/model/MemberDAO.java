@@ -57,7 +57,17 @@ public class MemberDAO {
 		}
 		return row;
 	}
-
+	
+	public int write(BoardVO vo) {
+		try {
+			session = sqlSessionFactory.openSession(true);
+			row = session.insert("write", vo);
+			session.insert("write2", vo);
+		}finally {
+			session.close();
+		}
+		return row;
+	}
 	
 	
 	

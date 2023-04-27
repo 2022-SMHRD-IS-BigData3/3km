@@ -240,7 +240,7 @@ write {
 					<input type="password" id="pw" value=`${member.pw}` size="30"
 						maxlength=8 /> <input type="checkbox" id="check" />
 				</div>
-				<br> <br> <input type="text" placeholder="닉네임" size="30" />
+				<br> <br> <input type="text" placeholder=`${member.nickname}` size="30" />
 				<br> <br> <input type="date" id="date" size="30" /> <br>
 				<br>
 				<div class="infobody2">
