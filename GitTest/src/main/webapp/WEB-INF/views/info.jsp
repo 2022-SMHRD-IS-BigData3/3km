@@ -288,7 +288,7 @@ body {
 				$('input#pw').attr("readonly",false); 
 			}
 			
-		}
+		})
 		
 	</script>
 </body>
