@@ -228,22 +228,22 @@ textarea {
 				</button>
 			</header>
 			<br>
-			<form action="" method="post">
-				<input type="text" id="intitle" placeholder="제목을 입력해주세요"> <select
-					id="selgesi">
-					<option value="">카페/식당</option>
-					<option value="">산책</option>
-					<option value="">기타</option>
-					<option value="">Puppy</option>
-					<option value="">Adult</option>
-					<option value="">Senior</option>
-					<option value="">Items</option>
-					<option value="">나눔</option>
-					<option value="">Q & A</option>
+			<form action="Write.do" method="post">
+				<input type="text" id="intitle" placeholder="제목을 입력해주세요" name="title"> 
+				<select	id="selgesi" name="postType">
+					<option value="cafe">카페/식당</option>
+					<option value="walk">산책</option>
+					<option value="etc">기타</option>
+					<option value="puppy">Puppy</option>
+					<option value="adult">Adult</option>
+					<option value="senior">Senior</option>
+					<option value="items">Items</option>
+					<option value="share">나눔</option>
+					<option value="question">Q & A</option>
 				</select> <br>
-				<textarea></textarea>
+				<textarea id="content"name="content"></textarea>
 				<br> <br>
-				<button input type="submit" id="subbut" value="작성">작성</button>
+				<button type="submit" id="subbut" value="작성" >작성</button>
 				<input type="file" name="uploadfile" id="img" style="display: none;">
 				<label for="img"><img src="./img/사진첨부아이콘.png" id="imgbut"></label>
 				</input>
