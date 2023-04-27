@@ -22,8 +22,10 @@ public class LoginService implements Command {
 		vo.setEmail(email);
 		vo.setPw(pw);
 		
+		
 		MemberDAO dao = new MemberDAO();
 		MemberVO result = dao.login(vo);
+		
 		
 		if(result!=null) {
 			HttpSession session = request.getSession();
