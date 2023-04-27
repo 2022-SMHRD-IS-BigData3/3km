@@ -274,7 +274,7 @@
 		</div>
 
 		<div class="bottom">
-			<span class="like"><img src="/img/좋아요아이콘.png" width="15px"></span>
+			<span class="like">❤</button><!-- <img src="/img/좋아요아이콘.png" width="15px"> --></span>
 			<span class="likenum">0</span>
 			<span class="comment"><img src="/img/댓글아이콘.png" width="17px"></span>
 			<span class="commentnum">0</span>
@@ -308,6 +308,19 @@
 					submenu.slideDown();
 				}
 			})
+		})
+		
+		$(document).on('click','.like',(e)=>{
+			$(e.target).text('💔');
+			$('.likenum').text('1');
+			$(e.target).attr('class','dislike');
+			$(e.target).removeClass('like');
+		})
+		$(document).on('click','.dislike',function(){
+			$(this).text('❤');	
+			$('.dislike+span').text('0');
+			$(this).removeClass('dislike');
+			$(this).attr('class','like');
 		})
 	</script>
 </body>
