@@ -54,7 +54,11 @@ public class FrontController extends HttpServlet {
 			finalpath = finaluri.replaceAll("Go", "").toLowerCase().replaceAll(".do", ".jsp");
 		} else {
 			com = map.get(finaluri);
-			finalpath = com.execute(request, response);
+			if(com == null) {
+				finalpath = "login.jsp";
+			}else {
+				finalpath = com.execute(request, response);
+			}
 		}
 
 		
