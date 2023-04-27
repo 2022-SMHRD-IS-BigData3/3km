@@ -69,7 +69,7 @@ body {
 	display: flex;
 }
 
-write {
+#write {
 	border: none;
 	background-color: rgba(0, 0, 0, 0);
 	float: right;
