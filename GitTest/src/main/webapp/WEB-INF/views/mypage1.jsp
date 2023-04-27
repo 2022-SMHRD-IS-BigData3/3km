@@ -381,7 +381,7 @@ li.menu {
 
 
 	<div id="btn">
-		<input type="button" id="modify" value="정보수정" />
+		<input type="button" id="modify" value="정보수정" onClick="location.href='Goinfo.do'"/>
 	</div>
 	<div id="picture_box">
 		<div id="picture" style="overflow-y: scroll;">

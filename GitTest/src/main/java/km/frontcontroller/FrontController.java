@@ -11,6 +11,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import km.controller.Command;
+import km.controller.InfoService;
 import km.controller.JoinService;
 import km.controller.JoinSuccess;
 import km.controller.LoginService;
@@ -34,6 +35,7 @@ public class FrontController extends HttpServlet {
 		map.put("Main.do", new MainService());
 		map.put("Join.do", new JoinService());
 		map.put("JoinSuccess.do", new JoinSuccess());
+		map.put("Info.do", new InfoService());
 	}
 
 	
