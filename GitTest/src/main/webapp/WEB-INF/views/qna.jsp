@@ -23,96 +23,103 @@
         body {
             font-family: Katuri;
         }
-
-
         
-        form#mid {
-            text-align: center;
-        }
+        #enter {
+			width: 360px;
+			height: 640px;
+			padding: 0px;
+			background-color: rgba(249, 230, 191, 0.15);
+			border: 1px solid #ccc;
+			box-sizing: border-box;
+			margin: 0 auto;
+		}
 
-        .sangdan {
-            width: 360px;
-            height: 50px;
-            background: rgba(243, 156, 18, 0.73);
-            margin: 0;
-            display: flex;
-        }
 
-        .aham {
-            padding-right: 50px;
-            font-weight: bold;
-            font-size: 15px;
-        }
+		.sangdan {
+			height: 50px;
+			background: rgba(243, 156, 18, 0.73);
+			margin: 0;
+			display: flex;
+		}
 
-        #ham {
+		.aham {
+			padding-right: 30px;
+			font-weight: bold;
+			font-size: 15px;
+		}
+
+		#ham {
+			border: none;
+			background-color: rgba(9, 9, 9, 0);
+			float: left;
+			display: flex;
+			margin-top: 10px;
+		}
+
+		#withdogslogo {
+			background-color: rgb(0, 0, 0, 0);
+			border: none;
+			margin-right: 0px;
+			margin-top: 10px;
+			display: flex;
+		}
+
+        #write{
             border: none;
-            background-color: rgba(9, 9, 9, 0);
-            float: left;
-            display: flex;
-            margin-top: 10px;
-        }
-
-        #withdogslogo {
-            background-color: rgb(0, 0, 0, 0);
-            border: none;
-            margin-right: 25px;
-            margin-top: 10px;
-            margin-left: -10px;
-            display: flex;
-        }
-
-        #person {
-            border: none;
-            background-color: rgba(0, 0, 0, 0);
+			background-color: rgba(0, 0, 0, 0);
             float: right;
         }
 
-        .menu {
-            cursor: pointer;
-            list-style: none;
-        }
-
-        .menu .hide {
-            display: none;
-            font-size: 5px;
-        }
-
-        .hide {
-            list-style: none;
+		#person {
+			border: none;
+			background-color: rgba(0, 0, 0, 0);
+            margin-left: -5px;
             padding-left: 0px;
-            text-align: left;
-        }
+		}
 
-        .hidelist {
-            list-style: none;
-            padding-left: 0px;
-        }
+		.menu {
+			cursor: pointer;
+			list-style: none;
+		}
 
-        .hide .hidelist {
-            height: 30px;
-            font-size: 20px;
-            margin-top: 10px;
-            list-style: none;
-        }
+		.menu .hide {
+			display: none;
+			font-size: 5px;
+		}
 
-        .kateham {
-            background-color: bisque;
-            width: 350px;
-            height: auto;
-            position: absolute;
-            font-family: Katuri;
-        }
+		.hide {
+			list-style: none;
+			padding-left: 0px;
+			text-align: left;
+		}
 
-        .aham {
-            font-size: 25px;
-        }
+		.hidelist {
+			list-style: none;
+			padding-left: 0px;
+		}
 
-        #cate-list {
-            font-family: Katuri;
-        }
+		.hide .hidelist {
+			height: 30px;
+			font-size: 20px;
+			margin-top: 10px;
+			list-style: none;
+		}
 
+		.kateham {
+			background-color: bisque;
+			width: 350px;
+			height: auto;
+			position: absolute;
+			font-family: Katuri;
+		}
 
-        
+		.aham {
+			font-size: 25px;
+		}
+
+		#cate-list {
+			font-family: Katuri;
+		}
         
         #enter {
             width: 360px;
