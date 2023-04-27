@@ -363,7 +363,7 @@ li.menu {
 			</div>
 		</div>
 		<p id="text">
-			<a href="" id="eapleak"> 자기소개를 입력하세요 </a>
+			<span id="eapleak"> 자기소개를 입력하세요 </span>
 		</p>
 	</div>
 
