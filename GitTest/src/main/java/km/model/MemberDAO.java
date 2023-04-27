@@ -15,8 +15,8 @@ public class MemberDAO {
 	private static SqlSessionFactory sqlSessionFactory;
 	static {
 		try {
-			String resuource = "km/db/mybatis-config.xml";
-			InputStream inputStream = Resources.getResourceAsStream(resuource);
+			String resource = "km/db/mybatis-config.xml";
+			InputStream inputStream = Resources.getResourceAsStream(resource);
 			sqlSessionFactory = new SqlSessionFactoryBuilder().build(inputStream);
 		}catch (Exception e) {
 			e.printStackTrace();
@@ -25,6 +25,17 @@ public class MemberDAO {
 	
 	SqlSession session =null;
 	int row = 0;
+	
+	public MemberVO login(MemberVO vo) {
+		MemberVO result =null;
+		try {
+			session = sqlSessionFactory.openSession(true);
+			result = session.selectOne("login", vo);
+		}finally {
+			session.close();
+		}
+		return result;
+	}
 	
 	public int join(MemberVO vo) {
 		try {
@@ -37,16 +48,17 @@ public class MemberDAO {
 		return row;
 	}
 
-	public MemberVO login(MemberVO vo) {
-		MemberVO result =null;
+	public int info(MemberVO vo) {
 		try {
 			session = sqlSessionFactory.openSession(true);
-			result = session.selectOne("login", vo);
+			row = session.insert("info", vo);
 		}finally {
 			session.close();
 		}
-		return result;
+		return row;
 	}
+
+	
 	
 	
 	

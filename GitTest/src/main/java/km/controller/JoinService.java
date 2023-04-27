@@ -24,13 +24,6 @@ public class JoinService implements Command {
 		MemberVO vo  = new MemberVO(email, pw, birthday,nickname, dog_name, dog_age, dog_breed);
 		
 		MemberDAO dao = new MemberDAO();
-		System.out.println(email);
-		System.out.println(pw);
-		System.out.println(birthday);
-		System.out.println(nickname);
-		System.out.println(dog_name);
-		System.out.println(dog_age);
-		System.out.println(dog_breed);
 		
 		int row = dao.join(vo);
 		
