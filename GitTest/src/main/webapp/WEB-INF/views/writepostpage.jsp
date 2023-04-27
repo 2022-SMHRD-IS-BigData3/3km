@@ -249,7 +249,6 @@ textarea {
 				<textarea></textarea>
 				<br><br>
 				<input id="file" type="file" name="uploadfile" id="img">
-				<button input type="submit" id="subbut" value="작성">작성</button>
 				<button type="submit" id="subbut" value="작성" >작성</button>
 				</input>
 				
