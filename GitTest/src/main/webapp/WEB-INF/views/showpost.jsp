@@ -39,9 +39,6 @@
 			margin: 0 auto;
 		}
 
-		form#mid {
-			text-align: center;
-		}
 
 		.sangdan {
             height: 50px;

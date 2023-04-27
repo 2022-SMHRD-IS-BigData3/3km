@@ -24,9 +24,6 @@
             font-family: Katuri;
         }
 
-
-
-
         .sangdan {
             height: 50px;
             background: rgba(243, 156, 18, 0.73);
