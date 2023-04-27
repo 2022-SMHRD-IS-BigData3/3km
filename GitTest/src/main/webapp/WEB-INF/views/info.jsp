@@ -33,10 +33,6 @@ body {
 	margin: 0 auto;
 }
 
-form#mid {
-	text-align: center;
-}
-
 .sangdan {
 	height: 50px;
 	background: rgba(243, 156, 18, 0.73);
@@ -45,7 +41,7 @@ form#mid {
 }
 
 .aham {
-	padding-right: 40px;
+	padding-right: 30px;
 	font-weight: bold;
 	font-size: 15px;
 }
@@ -61,15 +57,22 @@ form#mid {
 #person {
 	border: none;
 	background-color: rgba(0, 0, 0, 0);
-	float: right;
+	margin-left: -5px;
+	padding-left: 0px;
 }
 
 #withdogslogo {
 	background-color: rgb(0, 0, 0, 0);
 	border: none;
+	margin-right: 0px;
 	margin-top: 10px;
 	display: flex;
-	margin-right: 25px;
+}
+
+write {
+	border: none;
+	background-color: rgba(0, 0, 0, 0);
+	float: right;
 }
 
 .menu {
@@ -201,13 +204,15 @@ form#mid {
 							<li class="menu"><a class="aham">Board</a>
 								<ul class="hide">
 									<li class="hidelist">나눔</li>
-									<li class="hidelist">Q&A</li>
+									<li class="hidelist" onClick="location.href='Goqna.do'">Q&A</li>
 								</ul></li> <br>
 							<li class="menu"><a class="aham">MyPage</a>
 								<ul class="hide">
-									<li class="hidelist">계정 관리</li>
-									<li class="hidelist">내 정보 수정</li>
-									<li class="hidelist">로그아웃</li>
+									<li class="hidelist" onClick="location.href='Gomypage1.do'">계정
+										관리</li>
+									<li class="hidelist" onClick="location.href='Goinfo.do'">내
+										정보 수정</li>
+									<li class="hidelist" onClick="location.href='Gologout.do'">로그아웃</li>
 								</ul></li>
 						</div>
 					</ul></li>
@@ -215,28 +220,31 @@ form#mid {
 			<button type="button" id="withdogslogo">
 				<img src="./img/이름로고.png" width="180">
 			</button>
-			<button type="button" id="person">
+			<button type="button" id="write"
+				onClick="location.href='Gowritepostpage.do'">
+				<img src="./img/글쓰기아이콘.png">
+			</button>
+			<button type="button" id="person"
+				onClick="location.href='Gomypage1.do'">
 				<img src="./img/프로필아이콘.png">
 			</button>
 		</header>
-		<h1 id="info">info</h1>
+		<div class="empty"></div>
 		<br> <br>
-		
+
 		<form action="info.do">
 			<div class="infobody">
 				<input type="email" placeholder=`${member.email}` size="30" readonly />
 				<br> <br>
 				<div class="infobody2">
-					<input type="password" id="pw" value=`${member.pw}` size="30" maxlength=8 /> 
-					<input type="checkbox" id="check" />
+					<input type="password" id="pw" value=`${member.pw}` size="30"
+						maxlength=8 /> <input type="checkbox" id="check" />
 				</div>
-				<br> <br> 
-				<input type="text" placeholder="닉네임" size="30" /> 
-				<br> <br> 
-				<input type="date" id="date" size="30" />
-				<br> <br>
+				<br> <br> <input type="text" placeholder="닉네임" size="30" />
+				<br> <br> <input type="date" id="date" size="30" /> <br>
+				<br>
 				<div class="infobody2">
-					<input type="text" placeholder="강아지 나이" size="30"/>
+					<input type="text" placeholder="강아지 나이" size="30" />
 					<button name="" class="plusbut">
 						<img src="./img/플러스버튼이미지.png" alt="" height="30px" width="30px" />
 					</button>
@@ -250,10 +258,9 @@ form#mid {
 					<input type="text" placeholder="DogBreed" size="30" />
 				</div>
 			</div>
-			<br> <br> 
-			<input type="submit" class="btn" value="완료">
+			<br> <br> <input type="submit" class="btn" value="완료">
 		</form>
-	<script>
+		<script>
 		$(document).ready(function() {
 			$(".menu>.aham").click(function() {
 				var submenu = $(this).next(".hide");

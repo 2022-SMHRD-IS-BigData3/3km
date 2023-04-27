@@ -244,7 +244,7 @@ textarea {
 				<textarea></textarea>
 				<br> <br>
 				<button input type="submit" id="subbut" value="작성">작성</button>
-				<input type="file" name="uploadfile" id="img" style="display: none;">
+				<input type="file" name="uploadfile" id="img" style="display: none;"/>
 				<label for="img"><img src="./img/사진첨부아이콘.png" id="imgbut"></label>
 				</input>
 				<button id="imgmap">

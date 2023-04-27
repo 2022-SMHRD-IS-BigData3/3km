@@ -289,7 +289,7 @@
 						<div class="kateham">
 							<li class="menu"><a class="aham">Place</a>
 								<ul class="hide">
-									<li class="hidelist">카페/식당</li>
+									<li class="hidelist" onClick="location.href='Goplace_cafe.do'">카페/식당</li>
 									<li class="hidelist">산책</li>
 									<li class="hidelist">기타</li>
 								</ul>
@@ -305,14 +305,14 @@
 							<li class="menu"><a class="aham">Board</a>
 								<ul class="hide">
 									<li class="hidelist">나눔</li>
-									<li class="hidelist">Q&A</li>
+									<li class="hidelist" onClick="location.href='Goqna.do'">Q&A</li>
 								</ul>
 							</li> <br>
 							<li class="menu"><a class="aham">MyPage</a>
 								<ul class="hide">
-									<li class="hidelist">계정 관리</li>
-									<li class="hidelist">내 정보 수정</li>
-									<li class="hidelist">로그아웃</li>
+									<li class="hidelist" onClick="location.href='Gomypage1.do'">‍계정관리</li>
+									<li class="hidelist" onClick="location.href='Goinfo.do'">내정보 수정</li>
+									<li class="hidelist" onClick="location.href='Gologout.do'">로그아웃</li>
 								</ul>
 							</li>
 						</div>

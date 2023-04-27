@@ -317,10 +317,8 @@ li.menu {
 								<li class="menu"><a class="aham">MyPage</a>
 
 									<ul class="hide">
-										<li class="hidelist" onClick="location.href='Gomypage1.do'">‍계정
-											관리</li>
-										<li class="hidelist" onClick="location.href='Goinfo.do'">내
-											정보 수정</li>
+										<li class="hidelist" onClick="location.href='Gomypage1.do'">‍계정관리</li>
+										<li class="hidelist" onClick="location.href='Goinfo.do'">내정보 수정</li>
 										<li class="hidelist" onClick="location.href='Gologout.do'">로그아웃</li>
 									</ul></li>
 							</div>
