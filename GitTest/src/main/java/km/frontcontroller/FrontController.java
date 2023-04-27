@@ -61,7 +61,6 @@ public class FrontController extends HttpServlet {
 			if(com == null) {
 				finalpath = "login.jsp";
 			}else {
-				System.out.println(finalpath);
 				finalpath = com.execute(request, response);
 			}
 		}

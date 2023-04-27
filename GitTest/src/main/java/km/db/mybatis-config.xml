@@ -15,6 +15,7 @@
       <!-- 6) dataSource : connection객체 생성 후 관리 설정
       		  POOLED >> 미리 connection객체를 생성해서 필요할 때마다 빌려주기! 
       	-->
+      
       <dataSource type="POOLED">
         <property name="driver" value="${driver}"/>
         <property name="url" value="${url}"/>
