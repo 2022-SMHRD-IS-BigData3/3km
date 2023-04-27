@@ -243,13 +243,10 @@ textarea {
 				</select> <br>
 				<textarea id="content"name="content"></textarea>
 				<br> <br>
-<<<<<<< HEAD
 				<button input type="submit" id="subbut" value="작성">작성</button>
 				<input type="file" name="uploadfile" id="img" style="display: none;"/>
-=======
 				<button type="submit" id="subbut" value="작성" >작성</button>
 				<input type="file" name="uploadfile" id="img" style="display: none;">
->>>>>>> branch 'master' of https://github.com/2022-SMHRD-IS-BigData3/3km.git
 				<label for="img"><img src="./img/사진첨부아이콘.png" id="imgbut"></label>
 				</input>
 				<button id="imgmap">

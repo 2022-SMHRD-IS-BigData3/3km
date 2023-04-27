@@ -210,14 +210,14 @@
                                 <li class="menu"><a class="aham">Board</a>
                                     <ul class="hide">
                                         <li class="hidelist">나눔</li>
-                                        <li class="hidelist">Q&A</li>
+                                        <li class="hidelist" onClick="location.href='Goqna.do'">Q&A</li>
                                     </ul>
                                 </li> <br>
                                 <li class="menu"><a class="aham">MyPage</a>
                                     <ul class="hide">
-                                        <li class="hidelist">‍계정 관리</li>
-                                        <li class="hidelist">내 정보 수정</li>
-                                        <li class="hidelist">로그아웃</li>
+                                        <li class="hidelist" onClick="location.href='Gomypage1.do'">‍계정 관리</li>
+                                        <li class="hidelist"  onClick="location.href='Goinfo.do'">내 정보 수정</li>
+                                        <li class="hidelist" onClick="location.href='Gologout.do'">로그아웃</li>
                                     </ul>
                                 </li>
                             </div>
@@ -230,7 +230,7 @@
                 <button type="button" id="write" onClick="location.href='writepostpage.jsp'">
 					<img src="./img/글쓰기아이콘.png">
 				</button>
-                <button type="button" id="person">
+                <button type="button" id="person" onClick="location.href='Gomypage1.do'">
                     <img src="./img/프로필아이콘.png">
                 </button>
             </header>
