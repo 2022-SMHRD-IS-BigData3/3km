@@ -402,7 +402,7 @@ li.menu {
 
 
 	<div id="btn">
-		<input type="button" id="modify" value="팔로우" />
+		<input type="button" id="modify" value="정보수정" />
 	</div>
 	<div id="picture_box">
 		<div id="picture" style="overflow-y: scroll;">
