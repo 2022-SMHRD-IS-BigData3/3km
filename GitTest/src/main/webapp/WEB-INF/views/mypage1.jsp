@@ -345,9 +345,9 @@
 				</div>
 			</div>
 			<p id="text">
-				<a href="" id="eapleak">
+				<span id="eapleak">
 					자기소개를 입력하세요
-				</a>
+				</span>
 			</p>
 		</div>
 
