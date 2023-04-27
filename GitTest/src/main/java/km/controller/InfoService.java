@@ -35,9 +35,13 @@ public class InfoService implements Command {
 		
 		int row = dao.info(vo);
 		
+		if(row>0) {
+			request.setAttribute("email", email);
+			return "join_success.jsp";
+		}else {
+			return "redirect:/GoLogin.do";
+		}
 		
-		
-		return null;
 	}
 
 }
