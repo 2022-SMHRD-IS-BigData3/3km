@@ -7,7 +7,10 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Mypage_edit</title>
+	<title>마이페이지3</title>
+<link rel="icon" href="./img/강아지로고.png" />
+<link rel="apple-touch-icon" href="./img/강아지로고.png" />
+<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 	<style>
 		@font-face {
 			font-family: 'Katuri';
@@ -294,7 +297,6 @@
 			height: 30px;
 		}
 	</style>
-	<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 </head>
 
 <body>
