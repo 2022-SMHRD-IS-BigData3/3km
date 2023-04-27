@@ -149,11 +149,11 @@
 
         #successbutton {
             font-family: Katuri;
-            font-size: 18px;
+            font-size: 16px;
             border-color: whitesmoke;
             background-color: rgba(243, 156, 18, 0.73);
             height: 30px;
-            width: 130px;
+            width: 170px;
             color: black;
         }
     </style>
