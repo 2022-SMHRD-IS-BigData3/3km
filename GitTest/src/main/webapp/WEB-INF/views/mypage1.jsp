@@ -326,7 +326,7 @@
 				<img src="./img/글쓰기아이콘.png">
 			</button>
 			<button type="button" id="person"  onClick="location.href='Gomypage1.do'">
-				<img src="./img/유저아이콘.png">
+				<img src="./img/프로필아이콘.png">
 			</button>
 		</header>
 		<div class="empty">
@@ -336,7 +336,7 @@
 			<div id="inupbox">
 				<div id="mypageimg">
 					<input type="file" name="uploadfile" id="img" style="display: none;" />
-					<label for="img"><img src="./img/마이페이지프로필.png" id="user"></label>
+					<label for="img"><img src="./img/유저아이콘.png" id="user"></label>
 				</div>
 				<div class="myinfo">
 					<div class="gesi">게시물 <br><span id="gesisu">0</span></div>
