@@ -24,11 +24,6 @@
             font-family: Katuri;
         }
 
-
-        form#mid {
-            text-align: center;
-        }
-
         .sangdan {
             height: 50px;
             background: rgba(243, 156, 18, 0.73);
@@ -58,6 +53,8 @@
             background-color: rgb(0, 0, 0, 0);
             border: none;
             display: flex;
+            margin-top:-2px;
+            margin-right: 1px;
         }
 
         #person {

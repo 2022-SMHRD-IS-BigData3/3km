@@ -39,90 +39,93 @@
 			margin: 0 auto;
 		}
 
-		form#mid {
-			text-align: center;
-		}
 
 		.sangdan {
-			height: 50px;
-			background: rgba(243, 156, 18, 0.73);
-			margin: 0;
-			display: flex;
-		}
+            height: 50px;
+            background: rgba(243, 156, 18, 0.73);
+            margin: 0;
+            display: flex;
+        }
 
-		.aham {
-			padding-right: 50px;
-			font-weight: bold;
-			font-size: 15px;
-		}
+        .aham {
+            padding-right: 30px;
+            font-weight: bold;
+            font-size: 15px;
+        }
 
-		#ham {
-			border: none;
-			background-color: rgba(9, 9, 9, 0);
-			float: left;
-			display: flex;
-			margin-top: 10px;
-		}
+        #ham {
+            border: none;
+            background-color: rgba(9, 9, 9, 0);
+            float: left;
+            display: flex;
+            margin-top: 10px;
+        }
 
-		#withdogslogo {
-			background-color: rgb(0, 0, 0, 0);
-			border: none;
-			margin-right: 25px;
-			margin-top: 10px;
-			margin-left: -10px;
-			display: flex;
-		}
+        #person {
+            border: none;
+            background-color: rgba(0, 0, 0, 0);
+            margin-left: -5px;
+            padding-left: 0px;
+        }
 
-		#person {
-			border: none;
-			background-color: rgba(0, 0, 0, 0);
-			float: right;
-		}
+        #withdogslogo {
+            background-color: rgb(0, 0, 0, 0);
+            border: none;
+            margin-right: 0px;
+            margin-top: 10px;
+            display: flex;
+        }
 
-		.menu {
-			cursor: pointer;
-			list-style: none;
-		}
+        #write {
+            border: none;
+            background-color: rgba(0, 0, 0, 0);
+            float: right;
+        }
 
-		.menu .hide {
-			display: none;
-			font-size: 5px;
-		}
+        .menu {
+            cursor: pointer;
+            list-style: none;
+        }
 
-		.hide {
-			list-style: none;
-			padding-left: 0px;
-			text-align: left;
-			list-style: none;
-		}
+        .menu .hide {
+            display: none;
+            font-size: 5px;
+        }
 
-		.hidelist {
-			list-style: none;
-			padding-left: 0px;
-		}
+        .hide {
+            list-style: none;
+            padding-left: 0px;
+            text-align: left;
+        }
 
-		.hide .hidelist {
-			height: 30px;
-			font-size: 20px;
-			margin-top: 10px;
-			list-style: none;
-		}
+        .hidelist {
+            list-style: none;
+            padding-left: 0px;
+        }
 
-		.kateham {
-			background-color: bisque;
-			width: 350px;
-			height: auto;
-			position: absolute;
-			font-family: Katuri;
-		}
+        .hide .hidelist {
+            height: 30px;
+            font-size: 20px;
+            margin-top: 10px;
+            list-style: none;
+        }
 
-		.aham {
-			font-size: 25px;
-		}
+        .kateham {
+            background-color: bisque;
+            width: 350px;
+            height: auto;
+            position: absolute;
+            font-family: Katuri;
+        }
 
-		#cate-list {
-			font-family: Katuri;
-		}
+        .aham {
+            font-size: 25px;
+        }
+
+        #cate-list {
+            font-family: Katuri;
+        }
+
 
 
 
@@ -236,14 +239,14 @@
 							<li class="menu"><a class="aham">Board</a>
 								<ul class="hide">
 									<li class="hidelist">나눔</li>
-									<li class="hidelist">Q&A</li>
+									<li class="hidelist" onClick="location.href='Goqna.do'">Q&A</li>
 								</ul>
 							</li> <br>
 							<li class="menu"><a class="aham">MyPage</a>
 								<ul class="hide">
-									<li class="hidelist">계정 관리</li>
-									<li class="hidelist">내 정보 수정</li>
-									<li class="hidelist">로그아웃</li>
+									<li class="hidelist" onClick="location.href='Gomypage1.do'">계정 관리</li>
+									<li class="hidelist" onClick="location.href='Goinfo.do'">내 정보 수정</li>
+									<li class="hidelist" onClick="location.href='Gologout.do'">로그아웃</li>
 								</ul>
 							</li>
 						</div>
@@ -253,7 +256,10 @@
 			<button type="button" id="withdogslogo">
 				<img src="./img/이름로고.png" width="180">
 			</button>
-			<button type="button" id="person">
+            <button type="button" id="write" onClick="location.href='Gowritepostpage.do'">
+                <img src="./img/글쓰기아이콘.png">
+            </button>
+			<button type="button" id="person" onClick="location.href='Gomypage1.do'">
 				<img src="./img/프로필아이콘.png">
 			</button>
 		</header>
@@ -274,7 +280,7 @@
 		</div>
 
 		<div class="bottom">
-			<span class="like"><img src="/img/좋아요아이콘.png" width="15px"></span>
+			<span class="like">❤</button><!-- <img src="/img/좋아요아이콘.png" width="15px"> --></span>
 			<span class="likenum">0</span>
 			<span class="comment"><img src="/img/댓글아이콘.png" width="17px"></span>
 			<span class="commentnum">0</span>
@@ -308,6 +314,19 @@
 					submenu.slideDown();
 				}
 			})
+		})
+		
+		$(document).on('click','.like',(e)=>{
+			$(e.target).text('💔');
+			$('.likenum').text('1');
+			$(e.target).attr('class','dislike');
+			$(e.target).removeClass('like');
+		})
+		$(document).on('click','.dislike',function(){
+			$(this).text('❤');	
+			$('.dislike+span').text('0');
+			$(this).removeClass('dislike');
+			$(this).attr('class','like');
 		})
 	</script>
 </body>

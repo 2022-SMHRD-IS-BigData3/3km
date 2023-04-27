@@ -7,7 +7,10 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Mypage_edit</title>
+<title>마이페이지 수정3</title>
+<link rel="icon" href="./img/강아지로고.png" />
+<link rel="apple-touch-icon" href="./img/강아지로고.png" />
+<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 	<style>
 		@font-face {
 			font-family: 'Katuri';
@@ -280,7 +283,6 @@
 			height: 30px;
 		}
 	</style>
-	<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 </head>
 
 <body>
@@ -308,14 +310,14 @@
 							<li class="menu"><a class="aham">Board</a>
 								<ul class="hide">
 									<li class="hidelist">나눔</li>
-									<li class="hidelist">Q&A</li>
+									<li class="hidelist" onClick="location.href='Goqna.do'">Q&A</li>
 								</ul>
 							</li> <br>
 							<li class="menu"><a class="aham">MyPage</a>
 								<ul class="hide">
-									<li class="hidelist">계정 관리</li>
-									<li class="hidelist">내 정보 수정</li>
-									<li class="hidelist">로그아웃</li>
+									<li class="hidelist"  onClick="location.href='Gomypage1.do'">계정 관리</li>
+									<li class="hidelist" onClick="location.href='Goinfo.do'">내 정보 수정</li>
+									<li class="hidelist" onClick="location.href='Gologout.do'">로그아웃</li>
 								</ul>
 							</li>
 						</div>
@@ -325,7 +327,7 @@
 			<button type="button" id="withdogslogo">
 				<img src="./img/이름로고.png" width="180">
 			</button>
-			<button type="button" id="person">
+			<button type="button" id="person" onClick="location.href='Gomypage1.do'">
 				<img src="./img/프로필아이콘.png">
 			</button>
 		</header>

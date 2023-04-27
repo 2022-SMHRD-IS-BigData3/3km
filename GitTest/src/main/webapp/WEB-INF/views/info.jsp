@@ -8,6 +8,10 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>회원정보</title>
+<link rel="icon" href="./img/강아지로고.png" />
+<link rel="apple-touch-icon" href="./img/강아지로고.png" />
+<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+
 <style>
 @font-face {
 	font-family: 'Katuri';
@@ -69,7 +73,7 @@ body {
 	display: flex;
 }
 
-write {
+#write {
 	border: none;
 	background-color: rgba(0, 0, 0, 0);
 	float: right;
@@ -123,6 +127,7 @@ write {
 	color: rgba(243, 156, 18, 0.73);
 	font-weight: bold;
 	text-align: center;
+	font-size: 30px;
 }
 
 .hide .hidelist {
@@ -177,7 +182,7 @@ write {
 	background-color: rgb(0, 0, 0, 0);
 }
 </style>
-<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+
 </head>
 
 <body>
@@ -233,14 +238,20 @@ write {
 		<br> <br>
 
 		<form action="info.do">
+		<h1 id="info">info</h1>
+		<br>
 			<div class="infobody">
-				<input type="email" placeholder=`${member.email}` size="30" readonly />
+				<input type="email" value="${member.email}" size="30" readonly />
 				<br> <br>
 				<div class="infobody2">
-					<input type="password" id="pw" value=`${member.pw}` size="30"
-						maxlength=8 /> <input type="checkbox" id="check" />
+					<input type="password" id="pw" value="${member.pw}" size="30"
+						maxlength=8 readonly/> 
 				</div>
+<<<<<<< HEAD
 				<br> <br> <input type="text" placeholder=`${member.nickname}` size="30" />
+=======
+				<br> <br> <input type="text" value="${member.nickname}" size="30" />
+>>>>>>> branch 'master' of https://github.com/2022-SMHRD-IS-BigData3/3km.git
 				<br> <br> <input type="date" id="date" size="30" /> <br>
 				<br>
 				<div class="infobody2">
@@ -251,11 +262,11 @@ write {
 				</div>
 				<br> <br>
 				<div class="infobody2">
-					<input type="text" placeholder="DogName" size="30" />
+					<input type="text" placeholder="강아지 이름" size="30" />
 				</div>
 				<br> <br>
 				<div class="infobody2">
-					<input type="text" placeholder="DogBreed" size="30" />
+					<input type="text" placeholder="견종" size="30" />
 				</div>
 			</div>
 			<br> <br> <input type="submit" class="btn" value="완료">
@@ -281,7 +292,7 @@ write {
 				$('input#pw').attr("readonly",false); 
 			}
 			
-		}
+		})
 		
 	</script>
 </body>
