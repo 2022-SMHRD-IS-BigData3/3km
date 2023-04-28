@@ -191,6 +191,7 @@
             height: 15px;
             margin-left: 25px;
             margin-top: 10px;
+            font-family: Katuri;
             border: none;
             resize: none;
         }
@@ -365,7 +366,7 @@
                         <textarea name="강아지나이" id="dogage" cols="5" rows="1" placeholder="나이"></textarea>
                     </div>
                     <div class="doginfo">
-                        <textarea name="강아지종" id="dogbreed" cols="5" rows="1" placeholder="강아지종"></textarea>
+                        <textarea name="견종" id="dogbreed" cols="5" rows="1" placeholder="견종"></textarea>
                     </div>
                 </div>
             </div>
@@ -413,6 +414,21 @@
             })
         })
     </script>
+</body>
+
+</html>
+	<script>
+		$(document).ready(function() {
+			$(".menu>.aham").click(function() {
+				var submenu = $(this).next(".hide");
+				if (submenu.is(":visible")) {
+					submenu.slideUp();
+				} else {
+					submenu.slideDown();
+				}
+			})
+		})
+	</script>
 </body>
 
 </html>
