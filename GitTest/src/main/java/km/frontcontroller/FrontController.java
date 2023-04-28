@@ -46,6 +46,7 @@ public class FrontController extends HttpServlet {
 			throws ServletException, IOException {
 
 		String uri = request.getRequestURI();
+		System.out.println("애는 uri" + uri);
 		String cp = request.getContextPath();
 		String finaluri = uri.substring(cp.length() + 1);
 		// 한글인코딩
@@ -65,7 +66,6 @@ public class FrontController extends HttpServlet {
 			}
 		}
 
-		
 		if(finalpath == null) {
 		}else if (finalpath.contains("redirect:/")) {
 			response.sendRedirect(finalpath.substring(10));
