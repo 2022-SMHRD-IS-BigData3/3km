@@ -39,93 +39,90 @@
 			margin: 0 auto;
 		}
 
+		form#mid {
+			text-align: center;
+		}
 
 		.sangdan {
-            height: 50px;
-            background: rgba(243, 156, 18, 0.73);
-            margin: 0;
-            display: flex;
-        }
+			height: 50px;
+			background: rgba(243, 156, 18, 0.73);
+			margin: 0;
+			display: flex;
+		}
 
-        .aham {
-            padding-right: 30px;
-            font-weight: bold;
-            font-size: 15px;
-        }
+		.aham {
+			padding-right: 50px;
+			font-weight: bold;
+			font-size: 15px;
+		}
 
-        #ham {
-            border: none;
-            background-color: rgba(9, 9, 9, 0);
-            float: left;
-            display: flex;
-            margin-top: 10px;
-        }
+		#ham {
+			border: none;
+			background-color: rgba(9, 9, 9, 0);
+			float: left;
+			display: flex;
+			margin-top: 10px;
+		}
 
-        #person {
-            border: none;
-            background-color: rgba(0, 0, 0, 0);
-            margin-left: -5px;
-            padding-left: 0px;
-        }
+		#withdogslogo {
+			background-color: rgb(0, 0, 0, 0);
+			border: none;
+			margin-right: 25px;
+			margin-top: 10px;
+			margin-left: -10px;
+			display: flex;
+		}
 
-        #withdogslogo {
-            background-color: rgb(0, 0, 0, 0);
-            border: none;
-            margin-right: 0px;
-            margin-top: 10px;
-            display: flex;
-        }
+		#person {
+			border: none;
+			background-color: rgba(0, 0, 0, 0);
+			float: right;
+		}
 
-        #write {
-            border: none;
-            background-color: rgba(0, 0, 0, 0);
-            float: right;
-        }
+		.menu {
+			cursor: pointer;
+			list-style: none;
+		}
 
-        .menu {
-            cursor: pointer;
-            list-style: none;
-        }
+		.menu .hide {
+			display: none;
+			font-size: 5px;
+		}
 
-        .menu .hide {
-            display: none;
-            font-size: 5px;
-        }
+		.hide {
+			list-style: none;
+			padding-left: 0px;
+			text-align: left;
+			list-style: none;
+		}
 
-        .hide {
-            list-style: none;
-            padding-left: 0px;
-            text-align: left;
-        }
+		.hidelist {
+			list-style: none;
+			padding-left: 0px;
+		}
 
-        .hidelist {
-            list-style: none;
-            padding-left: 0px;
-        }
+		.hide .hidelist {
+			height: 30px;
+			font-size: 20px;
+			margin-top: 10px;
+			list-style: none;
+		}
 
-        .hide .hidelist {
-            height: 30px;
-            font-size: 20px;
-            margin-top: 10px;
-            list-style: none;
-        }
+		.kateham {
+			background-color: bisque;
+			width: 350px;
+			height: auto;
+			position: absolute;
+			font-family: Katuri;
+		}
 
-        .kateham {
-            background-color: bisque;
-            width: 350px;
-            height: auto;
-            position: absolute;
-            font-family: Katuri;
-        }
+		.aham {
+			font-size: 25px;
+		}
 
-        .aham {
-            font-size: 25px;
-        }
-
-        #cate-list {
-            font-family: Katuri;
-        }
-
+		#cate-list {
+			font-family: Katuri;
+		}
 
 
 
@@ -256,9 +253,6 @@
 			<button type="button" id="withdogslogo">
 				<img src="./img/이름로고.png" width="180">
 			</button>
-            <button type="button" id="write" onClick="location.href='Gowritepostpage.do'">
-                <img src="./img/글쓰기아이콘.png">
-            </button>
 			<button type="button" id="person" onClick="location.href='Gomypage1.do'">
 				<img src="./img/프로필아이콘.png">
 			</button>
