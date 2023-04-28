@@ -40,7 +40,7 @@ public class WriteService implements Command{
 			
 			if(row>0) {
 				request.setAttribute("filePath",m_fileFullPath);
-				return "main.do";
+				return "redirect:/GoMain.do";
 			}else {
 				return "redirect:/GoLogin.do";
 			}
