@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE html>
 <html>
 
@@ -23,103 +24,96 @@
         body {
             font-family: Katuri;
         }
+
+
         
-        #enter {
-			width: 360px;
-			height: 640px;
-			padding: 0px;
-			background-color: rgba(249, 230, 191, 0.15);
-			border: 1px solid #ccc;
-			box-sizing: border-box;
-			margin: 0 auto;
-		}
+        form#mid {
+            text-align: center;
+        }
 
+        .sangdan {
+            width: 360px;
+            height: 50px;
+            background: rgba(243, 156, 18, 0.73);
+            margin: 0;
+            display: flex;
+        }
 
-		.sangdan {
-			height: 50px;
-			background: rgba(243, 156, 18, 0.73);
-			margin: 0;
-			display: flex;
-		}
+        .aham {
+            padding-right: 50px;
+            font-weight: bold;
+            font-size: 15px;
+        }
 
-		.aham {
-			padding-right: 30px;
-			font-weight: bold;
-			font-size: 15px;
-		}
-
-		#ham {
-			border: none;
-			background-color: rgba(9, 9, 9, 0);
-			float: left;
-			display: flex;
-			margin-top: 10px;
-		}
-
-		#withdogslogo {
-			background-color: rgb(0, 0, 0, 0);
-			border: none;
-			margin-right: 0px;
-			margin-top: 10px;
-			display: flex;
-		}
-
-        #write{
+        #ham {
             border: none;
-			background-color: rgba(0, 0, 0, 0);
+            background-color: rgba(9, 9, 9, 0);
+            float: left;
+            display: flex;
+            margin-top: 10px;
+        }
+
+        #withdogslogo {
+            background-color: rgb(0, 0, 0, 0);
+            border: none;
+            margin-right: 25px;
+            margin-top: 10px;
+            margin-left: -10px;
+            display: flex;
+        }
+
+        #person {
+            border: none;
+            background-color: rgba(0, 0, 0, 0);
             float: right;
         }
 
-		#person {
-			border: none;
-			background-color: rgba(0, 0, 0, 0);
-            margin-left: -5px;
+        .menu {
+            cursor: pointer;
+            list-style: none;
+        }
+
+        .menu .hide {
+            display: none;
+            font-size: 5px;
+        }
+
+        .hide {
+            list-style: none;
             padding-left: 0px;
-		}
+            text-align: left;
+        }
 
-		.menu {
-			cursor: pointer;
-			list-style: none;
-		}
+        .hidelist {
+            list-style: none;
+            padding-left: 0px;
+        }
 
-		.menu .hide {
-			display: none;
-			font-size: 5px;
-		}
+        .hide .hidelist {
+            height: 30px;
+            font-size: 20px;
+            margin-top: 10px;
+            list-style: none;
+        }
 
-		.hide {
-			list-style: none;
-			padding-left: 0px;
-			text-align: left;
-		}
+        .kateham {
+            background-color: bisque;
+            width: 350px;
+            height: auto;
+            position: absolute;
+            font-family: Katuri;
+        }
 
-		.hidelist {
-			list-style: none;
-			padding-left: 0px;
-		}
+        .aham {
+            font-size: 25px;
+        }
 
-		.hide .hidelist {
-			height: 30px;
-			font-size: 20px;
-			margin-top: 10px;
-			list-style: none;
-		}
+        #cate-list {
+            font-family: Katuri;
+        }
 
-		.kateham {
-			background-color: bisque;
-			width: 350px;
-			height: auto;
-			position: absolute;
-			font-family: Katuri;
-		}
 
-		.aham {
-			font-size: 25px;
-		}
-
-		#cate-list {
-			font-family: Katuri;
-		}
+        
         
         #enter {
             width: 360px;
@@ -217,14 +211,14 @@
                                 <li class="menu"><a class="aham">Board</a>
                                     <ul class="hide">
                                         <li class="hidelist">나눔</li>
-                                        <li class="hidelist" onClick="location.href='Goqna.do'">Q&A</li>
+                                        <li class="hidelist">Q&A</li>
                                     </ul>
                                 </li> <br>
                                 <li class="menu"><a class="aham">MyPage</a>
                                     <ul class="hide">
-                                        <li class="hidelist" onClick="location.href='Gomypage1.do'">‍계정 관리</li>
-                                        <li class="hidelist"  onClick="location.href='Goinfo.do'">내 정보 수정</li>
-                                        <li class="hidelist" onClick="location.href='Gologout.do'">로그아웃</li>
+                                        <li class="hidelist">‍계정 관리</li>
+                                        <li class="hidelist">내 정보 수정</li>
+                                        <li class="hidelist">로그아웃</li>
                                     </ul>
                                 </li>
                             </div>
@@ -237,7 +231,7 @@
                 <button type="button" id="write" onClick="location.href='writepostpage.jsp'">
 					<img src="./img/글쓰기아이콘.png">
 				</button>
-                <button type="button" id="person" onClick="location.href='Gomypage1.do'">
+                <button type="button" id="person">
                     <img src="./img/프로필아이콘.png">
                 </button>
             </header>
@@ -247,10 +241,17 @@
                 <div class="post1">
                     <div class="post1-white">
                         <div class="title">
-                            <span class="post-title">제목:</span>
-                            <span class="post-title-content">저장받은 글을 출력</span>
+                           
+                            							
+							
                             <hr align="left" style="border:solid 2px rgb(233, 228, 228); width: 80%;">
-                            <p class="content">사용자가 입력한 내용이 출력된다</p>
+                            
+                            	<c:forEach items="${post}" var="item">
+                            		 <span class="post-title">제목:</span><div>${item.title}</div>
+                            		 <br>
+                            		 <br>
+                                </c:forEach>
+                            
                         </div>
                     </div>
                     <div class="like-comment">
@@ -261,26 +262,10 @@
                     </div>
                 </div>
 
-                <div class="post1">
-                    <div class="post1-white">
-                        <div class="title">
-                            <span class="post-title">제목:</span>
-                            <span class="post-title-content">저장받은 글을 출력</span>
-                            <hr align="left" style="border:solid 2px rgb(233, 228, 228); width: 80%;">
-                            <p class="content">사용자가 입력한 내용이 출력된다</p>
-                        </div>
-                    </div>
-                    <div class="like-comment">
-                        <form action="#">
-                            <button class="comment"><img src="/project/icon/comment_b_sm.png" width="15px"></button>
-                            <button class="like"><img src="/project/icon/like.png" width="15px"></button>
-                        </form>
-                    </div>
-                </div>
+                
 
             </div>
 
-            <input type="button" id="btn" value="더보기">
     </div>
 
     <script>
