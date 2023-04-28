@@ -61,8 +61,8 @@ body {
 #person {
 	border: none;
 	background-color: rgba(0, 0, 0, 0);
-	margin-left: -5px;
-	padding-left: 0px;
+    margin-left: 41px;
+    float: right;
 }
 
 #withdogslogo {
@@ -73,11 +73,6 @@ body {
 	display: flex;
 }
 
-#write {
-	border: none;
-	background-color: rgba(0, 0, 0, 0);
-	float: right;
-}
 
 .menu {
 	cursor: pointer;
@@ -225,10 +220,6 @@ body {
 			<button type="button" id="withdogslogo">
 				<img src="./img/이름로고.png" width="180">
 			</button>
-			<button type="button" id="write"
-				onClick="location.href='Gowritepostpage.do'">
-				<img src="./img/글쓰기아이콘.png">
-			</button>
 			<button type="button" id="person"
 				onClick="location.href='Gomypage1.do'">
 				<img src="./img/프로필아이콘.png">
@@ -247,11 +238,7 @@ body {
 					<input type="password" id="pw" value="${member.pw}" size="30"
 						maxlength=8 readonly/> 
 				</div>
-<<<<<<< HEAD
-				<br> <br> <input type="text" placeholder=`${member.nickname}` size="30" />
-=======
 				<br> <br> <input type="text" value="${member.nickname}" size="30" />
->>>>>>> branch 'master' of https://github.com/2022-SMHRD-IS-BigData3/3km.git
 				<br> <br> <input type="date" id="date" size="30" /> <br>
 				<br>
 				<div class="infobody2">

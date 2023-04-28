@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="km/model/MemberDAO">
+	
+	<insert id="join" parameterType="km.model.MemberVO">
+		INSERT INTO USER_INFO(USER_ID,EMAIL,PW,NICKNAME,BRITHDAY)
+		VALUES(USER_SEQ.nextval,#{email},#{pw},#{nickname},#{birthday})
+	</insert>
+	
+	<insert id="join2" parameterType="km.model.MemberVO">
+		INSERT INTO DOG_INFO(DOG_ID,DOG_NAME,DOG_AGE,DOG_BREED,USER_ID)
+		VALUES(DOG_INFO_SEQ.nextval,#{dog_name},#{dog_age},#{dog_breed},USER_SEQ.CURRVAL)
+	</insert>
+
+	<select id="login" parameterType="km.model.MemberVO" resultType="km.model.MemberVO">
+		select *
+		from USER_INFO
+		where email=#{email} and pw=#{pw}
+	</select>
+	
+	<insert id="write" parameterType="km.model.MemberVO">
+		INSERT INTO POST(POST_ID,TITLE,POST_CONTENTS,POSTING_DATE,USER_ID,KATEGORY)
+		VALUES(POST_SEQ.nextval,#{title},#{POST_CONTENTS},sysdate,1,#{postType})
+	</insert>
+	
+	<insert id="write2" parameterType="km.model.MemberVO">
+		INSERT INTO POST_IMG
+		VALUES(IMG_SEQ.nextval,'원래이름2','저장된이름2',#{m_fileFullPath ,jdbcType=VARCHAR},'파일크기','JPG',SYSDATE,POST_SEQ.CURRVAL)
+	</insert>
+
+
+
+
+</mapper>
