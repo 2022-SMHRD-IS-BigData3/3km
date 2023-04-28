@@ -27,6 +27,8 @@ public class WriteService implements Command{
 			vo.setKategory(kategory);
 			vo.setPost_contents(post_contents);
 			vo.setImg_root(img_root);
+			vo.setOrgin_img_name(imgfile);
+			vo.setSave_img_name("./img"+imgfile);
 			
 			
 			PostDAO dao = new PostDAO();

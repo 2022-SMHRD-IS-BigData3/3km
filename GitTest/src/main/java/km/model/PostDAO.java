@@ -44,6 +44,19 @@ public class PostDAO {
 		}
 		return row;
 	}
+
+	public PostVO showmain(PostVO vo) {
+		PostVO result =null;
+		try {
+			session = sqlSessionFactory.openSession(true);
+			result = session.selectOne("showmain", vo);
+		}finally {
+			session.close();
+		}
+		return result;
+		
+		
+	}
 	
 	
 	
