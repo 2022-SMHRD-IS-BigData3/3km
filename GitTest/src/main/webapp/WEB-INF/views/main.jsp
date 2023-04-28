@@ -244,7 +244,7 @@ div.photobox2 {
 								<li class="menu"><a class="aham">Board</a>
 									<ul class="hide">
 										<li class="hidelist">나눔</li>
-										<li class="hidelist" onClick="location.href='Goqna.do'">Q&A</li>
+										<li class="hidelist" onClick="location.href='Qna.do'">Q&A</li>
 									</ul></li> <br>
 								<li class="menu"><a class="aham">MyPage</a>
 

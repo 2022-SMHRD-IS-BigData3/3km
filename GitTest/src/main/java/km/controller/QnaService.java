@@ -34,7 +34,7 @@ public class QnaService implements Command {
 		if(result!=null) {
 			
 			request.setAttribute("post", result);
-			System.out.println("result "+ result.get(0));
+			System.out.println("result "+ result);
 			
 			return "qna.jsp";
 		}else {
