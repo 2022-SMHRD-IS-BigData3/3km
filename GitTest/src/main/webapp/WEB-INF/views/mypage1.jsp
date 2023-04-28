@@ -133,14 +133,14 @@ body {
 }
 
 #inupbox {
-	padding-top: 30px;
+	padding-top: 25px;
 	height: 50px;
 	width: 300px;
 }
 
 #mypageimg {
-	width: 50px;
-	height: 50px;
+	width: 60px;
+	height: 60px;
 	float: left;
 	margin-left: 30px;
 }
@@ -159,6 +159,7 @@ body {
 .myinfo {
 	display: flex;
 	float: right;
+    margin-top: 10px;
 }
 
 .myinfo div {

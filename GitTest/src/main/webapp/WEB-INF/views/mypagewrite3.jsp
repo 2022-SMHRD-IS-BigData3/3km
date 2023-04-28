@@ -1,5 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+	pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -127,18 +127,18 @@
 			border-radius: 13%;
 		}
 
-		#inupbox {
-			padding-top: 30px;
-			height: 50px;
-			width: 300px;
-		}
+        #inupbox {
+            padding-top: 25px;
+            height: 50px;
+            width: 300px;
+        }
 
-		#mypageimg {
-			width: 50px;
-			height: 50px;
-			float: left;
-			margin-left: 30px;
-		}
+        #mypageimg {
+            width: 60px;
+            height: 60px;
+            float: left;
+            margin-left: 30px;
+        }
 
 		#file {
 			border-radius: 4%;
@@ -149,6 +149,7 @@
 		#user {
 			width: 100%;
 			height: 100%;
+            padding-top: 10px;
 		}
 
 		.myinfo {
@@ -195,6 +196,7 @@
 			margin-left: 25px;
 			margin-top: 20px;
 			border: none;
+            resize: none;
 		}
 
 		#btn {
@@ -271,12 +273,14 @@
 			border-radius: 10px;
 			font-family: Katuri;
 			color: gray;
+            resize: none;
 		}
 
 		#dogage {
 			border-radius: 10px;
 			font-family: Katuri;
 			color: gray;
+            resize: none;
 		}
 
 		.empty {
