@@ -31,6 +31,7 @@
 	<select id="post" parameterType="km.model.PostVO" resultType="km.model.PostVO">
   		select *
   		from POST
+  		where kategory='question'
   	</select>
 	
 	<select id="showmain" parameterType="km.model.PostVO" resultType="km.model.PostVO">

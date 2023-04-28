@@ -232,9 +232,9 @@ form#mid {
 				<div class="post1-white">
 					<div class="title">
 						<hr align="left" style="border: solid 2px rgb(233, 228, 228); width: 80%;">
-						<c:forEach items="${post.title}" var="item">
+						<c:forEach items="${post}" var="item">
 							<span class="post-title">제목:</span>
-							<div>${item}</div>
+							<div>${item.title}</div>
 							<br>
 							<br>
 						</c:forEach>

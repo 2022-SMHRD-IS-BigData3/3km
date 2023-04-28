@@ -283,7 +283,7 @@ div.photobox2 {
 			<div id="photobox">
 				<div id="photobox-line">
 					<div class="photobox1">
-						<img class="showphoto" src="${member.dog_img1}">
+						<img class="showphoto" src="${showmain.img_root}">
 					</div>
 					<div class="photobox2">
 						<a href="#"></a>
@@ -339,6 +339,7 @@ div.photobox2 {
 				}
 			})
 		})
+		
 	</script>
 
 </body>

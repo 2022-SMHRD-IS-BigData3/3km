@@ -40,7 +40,6 @@ public class FrontController extends HttpServlet {
 		map.put("Info.do", new InfoService());
 		map.put("Write.do", new WriteService());
 		map.put("Qna.do", new QnaService());
-		
 	}
 
 	
