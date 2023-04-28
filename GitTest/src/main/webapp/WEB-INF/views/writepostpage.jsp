@@ -176,14 +176,13 @@ textarea {
 	border: none;
 }
 
-<<<<<<< HEAD
 #img {
 	margin-left: 20px;
 	border: none;
-=======
+	}
+	
 #file {
 	margin-left: 20px;
->>>>>>> branch 'master' of https://github.com/2022-SMHRD-IS-BigData3/3km.git
 }
 
 
@@ -222,13 +221,8 @@ textarea {
 									</ul></li> <br>
 								<li class="menu"><a class="aham">MyPage</a>
 									<ul class="hide">
-<<<<<<< HEAD
 										<li class="hidelist" onClick="location.href='Gomypage1.do'">‍계정관리</li>
-										<li class="hidelist" onClick="location.href='Goinfo.do'">내정보 수정</li>
-=======
-										<li class="hidelist" onClick="location.href='Gomypage1.do'">계정 관리</li>
 										<li class="hidelist" onClick="location.href='Goinfo.do'">내 정보 수정</li>
->>>>>>> branch 'master' of https://github.com/2022-SMHRD-IS-BigData3/3km.git
 										<li class="hidelist" onClick="location.href='Gologout.do'">로그아웃</li>
 									</ul></li>
 							</div>
@@ -237,20 +231,13 @@ textarea {
 				<button type="button" id="withdogslogo">
 					<img src="./img/이름로고.png" width="180">
 				</button>
-<<<<<<< HEAD
-				<button type="button" id="write"
-					onClick="location.href='Gowritepostpage.do'">
-					<img src="./img/글쓰기아이콘.png">
-				</button>
+				
 				<button type="button" id="person"
 					onClick="location.href='Gomypage1.do'">
-=======
 				<button type="button" id="person" onClick="location.href='Gomypage1.do'">
->>>>>>> branch 'master' of https://github.com/2022-SMHRD-IS-BigData3/3km.git
 					<img src="./img/프로필아이콘.png">
 				</button>
 			</header>
-<<<<<<< HEAD
 	</form>
 	<br>
 	<form action="Write.do" method="post">
@@ -267,43 +254,16 @@ textarea {
 			<option value="question">Q & A</option>
 		</select> <br>
 		<textarea id="content" name="POST_CONTENTS"></textarea>
-		<br> <br> <input type="file" name="imgfile" id="img" />
-		<button type="submit" id="subbut" value="작성">작성</button>
+		<br><br>
+				<input id="file" type="file" name="uploadfile" id="img">
+				<button input type="submit" id="subbut" value="작성">작성</button>
+				</input>
 	</form>
 	</div>
-	<script>
-		$(document).ready(function() {
-			$(".menu>.aham").click(function() {
-				var submenu = $(this).next(".hide");
-				if (submenu.is(":visible")) {
-					submenu.slideUp();
-				} else {
-					submenu.slideDown();
-				}
-=======
+	
+		
 			<br>
-			<form action="" method="post">
-				<input type="text" id="intitle" placeholder="제목을 입력해주세요"> <select
-					id="selgesi">
-					<option value="">카페/식당</option>
-					<option value="">산책</option>
-					<option value="">기타</option>
-					<option value="">Puppy</option>
-					<option value="">Adult</option>
-					<option value="">Senior</option>
-					<option value="">Items</option>
-					<option value="">나눔</option>
-					<option value="">Q & A</option>
-				</select> <br>
-				<textarea id="content"name="content"></textarea>
-				<br> <br>
-				<textarea></textarea>
-				<br><br>
-				<input id="file" type="file" name="uploadfile" id="img">
-				<button type="submit" id="subbut" value="작성" >작성</button>
-				</input>
-				
-			</form>
+			
 		</div>
 		<script>
 			$(document).ready(function() {
@@ -315,15 +275,10 @@ textarea {
 						submenu.slideDown();
 					}
 				})
->>>>>>> branch 'master' of https://github.com/2022-SMHRD-IS-BigData3/3km.git
 			})
-<<<<<<< HEAD
 		})
 	</script>
-=======
 			
 			
-		</script>
->>>>>>> branch 'master' of https://github.com/2022-SMHRD-IS-BigData3/3km.git
 </body>
 </html>
