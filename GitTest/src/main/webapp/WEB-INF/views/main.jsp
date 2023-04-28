@@ -280,10 +280,11 @@ div.photobox2 {
 					<option value="최신순">최신순</option>
 				</select>
 			</div>
+			<c:forEach items="${post_img}" var="item">
 			<div id="photobox">
 				<div id="photobox-line">
 					<div class="photobox1">
-						<img class="showphoto" src="${showmain.img_root}">
+						<img class="showphoto" src="${item.img_root}">
 					</div>
 					<div class="photobox2">
 						<a href="#"></a>
@@ -325,6 +326,7 @@ div.photobox2 {
 				<button id="morebutton" class="btn btn-primary btn-sm" btn-sm>더보기</button>
 				<a href="#"></a>
 			</div>
+			</c:forEach>
 		</div>
 	</div>
 
@@ -339,6 +341,8 @@ div.photobox2 {
 				}
 			})
 		})
+		
+		
 		
 	</script>
 

@@ -46,15 +46,15 @@ public class PostDAO {
 		return row;
 	}
 
-	public PostVO showmain(PostVO vo) {
-		PostVO result =null;
+	public List<PostVO> showmain() {
+		List<PostVO> list =null;
 		try {
 			session = sqlSessionFactory.openSession(true);
-			result = session.selectOne("showmain", vo);
+			list = session.selectList("showmain");
 		}finally {
 			session.close();
 		}
-		return result;
+		return list;
 		
 		
 	}

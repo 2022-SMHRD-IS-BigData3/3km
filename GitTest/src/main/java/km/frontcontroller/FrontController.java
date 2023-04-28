@@ -55,6 +55,10 @@ public class FrontController extends HttpServlet {
 
 		String finalpath = null;
 		Command com = null;
+		
+		System.out.println("uri >> " + uri);
+		System.out.println("cp >> " + cp);
+		System.out.println("finaluri >> " + finaluri);
 
 		if (finaluri.contains("Go")) {
 			finalpath = finaluri.replaceAll("Go", "").toLowerCase().replaceAll(".do", ".jsp");
@@ -70,7 +74,7 @@ public class FrontController extends HttpServlet {
 		if(finalpath == null) {
 		}else if (finalpath.contains("redirect:/")) {
 			response.sendRedirect(finalpath.substring(10));
-		} else {
+		}else {
 			RequestDispatcher rd = request.getRequestDispatcher("WEB-INF/views/" + finalpath.replace("WEB-INF/views/", ""));
 			rd.forward(request, response);
 		}
