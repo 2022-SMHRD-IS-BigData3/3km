@@ -204,7 +204,7 @@
         #picture {
             background-color: rgba(243, 156, 18, 0.73);
             width: 360px;
-            height: 248px;
+            height: 200px;
             margin-top: 70px;
         }
 
@@ -232,7 +232,7 @@
         .add1 {
             background-color: rgba(194, 192, 192, 0.709);
             width: 85px;
-            height: 100px;
+            height: 120px;
             padding: 5px;
             margin-left: 30px;
         }
@@ -259,6 +259,13 @@
 
         #dogage {
             border-radius: 10px;
+            font-family: Katuri;
+            color: gray;
+            resize: none;
+        }
+        
+        #dogbreed{
+        	border-radius: 10px;
             font-family: Katuri;
             color: gray;
             resize: none;
@@ -352,11 +359,13 @@
                         <label for="img"><img src="./img/강아지프로필아이콘.png" class="dogpageimg" /></label>
                     </div>
                     <div class="doginfo">
-                        <textarea name="강아지나이" id="dogname" cols="5" rows="1" placeholder="이름"></textarea>
+                        <textarea name="강아지이름" id="dogname" cols="5" rows="1" placeholder="이름"></textarea>
                     </div>
                     <div class="doginfo">
                         <textarea name="강아지나이" id="dogage" cols="5" rows="1" placeholder="나이"></textarea>
-
+                    </div>
+                    <div class="doginfo">
+                        <textarea name="강아지종" id="dogbreed" cols="5" rows="1" placeholder="강아지종"></textarea>
                     </div>
                 </div>
             </div>
