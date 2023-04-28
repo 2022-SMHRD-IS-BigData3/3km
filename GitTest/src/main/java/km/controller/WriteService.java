@@ -20,13 +20,13 @@ public class WriteService implements Command{
 			String kategory = request.getParameter("kategory");
 			String post_contents = request.getParameter("post_contents");
 			String imgfile = request.getParameter("imgfile");
-			String m_fileFullPath = savePath + "/" + imgfile;
+			String img_root = savePath + "/" + imgfile;
 			
 			PostVO vo = new PostVO();
 			vo.setTitle(title);
 			vo.setKategory(kategory);
 			vo.setPost_contents(post_contents);
-			vo.setImg_root(m_fileFullPath);
+			vo.setImg_root(img_root);
 			
 			
 			PostDAO dao = new PostDAO();
