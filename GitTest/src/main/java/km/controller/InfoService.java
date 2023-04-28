@@ -18,20 +18,14 @@ public class InfoService implements Command {
 		String pw = request.getParameter("pw");
 		String birthday = request.getParameter("birthday");
 		String nickname = request.getParameter("nickname");
-		String dog_name = request.getParameter("dog_name");
-		String dog_age = request.getParameter("dog_age");
-		String dog_breed = request.getParameter("dog_breed");
 		
-		MemberVO vo  = new MemberVO(email, pw, birthday,nickname, dog_name, dog_age, dog_breed);
+		MemberVO vo  = new MemberVO();
 		
 		MemberDAO dao = new MemberDAO();
-		System.out.println(email);
-		System.out.println(pw);
-		System.out.println(birthday);
-		System.out.println(nickname);
-		System.out.println(dog_name);
-		System.out.println(dog_age);
-		System.out.println(dog_breed);
+		vo.setEmail(email);
+		vo.setPw(pw);
+		vo.setBirthday(birthday);
+		vo.setNickname(nickname);
 		
 		int row = dao.info(vo);
 		

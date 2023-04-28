@@ -21,7 +21,15 @@ public class JoinService implements Command {
 		String dog_age = request.getParameter("dog_age");
 		String dog_breed = request.getParameter("dog_breed");
 		
-		MemberVO vo  = new MemberVO(email, pw, birthday,nickname, dog_name, dog_age, dog_breed);
+		MemberVO vo  = new MemberVO();
+		vo.setEmail(email);
+		vo.setPw(pw);
+		vo.setBirthday(birthday);
+		vo.setNickname(nickname);
+		vo.setDog_name(dog_name);
+		vo.setDog_age(dog_age);
+		vo.setDog_breed(dog_breed);
+		
 		
 		MemberDAO dao = new MemberDAO();
 		
