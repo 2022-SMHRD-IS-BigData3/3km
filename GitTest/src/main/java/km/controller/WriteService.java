@@ -6,8 +6,9 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import km.model.BoardVO;
-import km.model.MemberDAO;
+import km.model.PostVO;
+import km.model.MemberVO;
+import km.model.PostDAO;
 
 
 public class WriteService implements Command{
@@ -16,24 +17,25 @@ public class WriteService implements Command{
 			String savePath = "/GitTest/src/main/webapp/img";
 			
 			String title = request.getParameter("title");
-			String postType = request.getParameter("postType");
-			String POST_CONTENTS = request.getParameter("POST_CONTENTS");
+			String kategory = request.getParameter("kategory");
+			String post_contents = request.getParameter("post_contents");
 			String imgfile = request.getParameter("imgfile");
 			String m_fileFullPath = savePath + "/" + imgfile;
-			BoardVO vo = new BoardVO();
 			
+			PostVO vo = new PostVO();
 			vo.setTitle(title);
-			vo.setPOST_CONTENTS(POST_CONTENTS);
-			vo.setPostType(postType);
-			vo.setImgfile(m_fileFullPath);
+			vo.setKategory(kategory);
+			vo.setPost_contents(post_contents);
+			vo.setImg_root(m_fileFullPath);
 			
 			
-			MemberDAO dao = new MemberDAO();
+			PostDAO dao = new PostDAO();
 			
 			int row = dao.write(vo);
 			
 			if(row>0) {
 				request.setAttribute("title",title);
+				
 				return "redirect:/GoMain.do";
 			}else {
 				return "redirect:/GoLogin.do";

@@ -1,7 +1,6 @@
 package km.model;
 
 import java.io.InputStream;
-import java.util.List;
 
 import org.apache.ibatis.io.Resources;
 import org.apache.ibatis.session.SqlSession;
@@ -20,18 +19,40 @@ public class PostDAO {
 			e.printStackTrace();
 		}
 	}
-	
 	SqlSession session =null;
-	List<PostVO> qnalist=null;
-	public List<PostVO> selectQna() {
-		System.out.println("Post DAO 안");
+	int row = 0;
+	
+	
+	public PostVO selectQna(PostVO vo) {
+		PostVO result =null;
 		try {
-			session=sqlSessionFactory.openSession();
-			qnalist = session.selectList("select");
-			
+			session = sqlSessionFactory.openSession(true);
+			result = session.selectOne("post", vo);
 		}finally {
 			session.close();
 		}
-		return qnalist;
+		return result;
 	}
+	
+	public int write(PostVO vo) {
+		try {
+			session = sqlSessionFactory.openSession(true);
+			row = session.insert("write", vo);
+			session.insert("write2", vo);
+		}finally {
+			session.close();
+		}
+		return row;
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 }

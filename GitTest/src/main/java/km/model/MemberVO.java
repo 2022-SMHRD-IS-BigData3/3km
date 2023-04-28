@@ -1,8 +1,9 @@
 package km.model;
 
+
 public class MemberVO {
 	
-	private String user_id;
+	private int user_id;
 	private String email;
 	private String pw;
 	private String birthday;
@@ -17,7 +18,7 @@ public class MemberVO {
 	private String dog_img3;
 	
 	// 필드를 전부 초기화시키는 생성자
-	public MemberVO(String user_id,String email, String pw, String birthday, String nickname, String dog_name, String dog_age,
+	public MemberVO(int user_id,String email, String pw, String birthday, String nickname, String dog_name, String dog_age,
 			String dog_breed, String introduce, String profil_img, String dog_img1, String dog_img2, String dog_img3) {
 		this.user_id = user_id;
 		this.email = email;
@@ -135,7 +136,7 @@ public class MemberVO {
 		this.dog_img3 = dog_img3;
 	}
 
-	public String getUser_id() {
+	public int getUser_id() {
 		return user_id;
 	}
 	

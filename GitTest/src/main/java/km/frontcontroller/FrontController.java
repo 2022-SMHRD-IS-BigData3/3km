@@ -16,6 +16,7 @@ import km.controller.JoinService;
 import km.controller.JoinSuccess;
 import km.controller.LoginService;
 import km.controller.MainService;
+import km.controller.QnaService;
 import km.controller.WriteService;
 
 
@@ -38,13 +39,15 @@ public class FrontController extends HttpServlet {
 		map.put("JoinSuccess.do", new JoinSuccess());
 		map.put("Info.do", new InfoService());
 		map.put("Write.do", new WriteService());
+		map.put("Qna.do", new QnaService());
+		
 	}
 
 	
 	
 	protected void service(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-
+		
 		String uri = request.getRequestURI();
 		String cp = request.getContextPath();
 		String finaluri = uri.substring(cp.length() + 1);
