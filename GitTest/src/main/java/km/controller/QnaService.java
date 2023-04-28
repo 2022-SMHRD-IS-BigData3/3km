@@ -30,6 +30,9 @@ public class QnaService implements Command {
 			HttpSession session = request.getSession();
 			session.setAttribute("post", result);
 			
+			request.setAttribute("post", result);
+			System.out.println("result "+ result);
+			
 			return "qna.jsp";
 		}else {
 			return "redirect:/main.do";
