@@ -28,9 +28,10 @@
 		VALUES(IMG_SEQ.NEXTVAL,#{orgin_img_name},#{save_img_name},#{img_root ,jdbcType=VARCHAR},'157543(bytes)','JPG',SYSDATE,POST_SEQ.CURRVAL)
 	</insert>
 	
-	<select id="post" parameterType="km.model.PostVO" resultType="km.model.PostVO">
-  		select *
+	<select id="select" parameterType="km.model.PostVO" resultType="km.model.PostVO">
+  		select TITLE, POST_CONTENTS
   		from POST
+  		where Kategory= 'question'
   	</select>
 	
 	<select id="showmain" parameterType="km.model.PostVO" resultType="km.model.PostVO">
