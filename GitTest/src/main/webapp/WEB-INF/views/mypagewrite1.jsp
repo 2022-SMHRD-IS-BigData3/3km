@@ -187,10 +187,10 @@
         #text {
             border-radius: 10px;
             background-color: white;
-            width: 255px;
-            height: 20px;
+            width: 252px;
+            height: 15px;
             margin-left: 25px;
-            margin-top: 20px;
+            margin-top: 10px;
             border: none;
             resize: none;
         }
@@ -323,7 +323,7 @@
             <div id="inupbox">
                 <div id="mypageimg">
                     <input type="file" name="uploadfile" id="img" style="display: none;" /> <label for="img"><img
-                            src="./img/마이페이지프로필.png" id="user"></label>
+                            src="./img/유저아이콘.png" id="user"></label>
                 </div>
                 <div class="myinfo">
                     <div class="gesi">
@@ -364,7 +364,7 @@
 
 
         <div id="btn">
-            <input type="button" id="modify" value="완료" />
+            <input type="button" id="modify" value="완료" onClick="location.href='Gomypage1.do'" />
         </div>
         <div id="picture_box">
             <div id="picture" style="overflow-y: scroll;">
