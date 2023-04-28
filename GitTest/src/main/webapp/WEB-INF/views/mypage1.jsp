@@ -245,7 +245,7 @@ body {
 .add1 {
 	background-color: rgba(194, 192, 192, 0.709);
 	width: 85px;
-	height: 100px;
+	height: 120px;
 	padding: 5px;
 	margin-left: 30px;
 }
@@ -371,6 +371,9 @@ body {
 					</div>
 					<div class="doginfo">
 						<span>나이</span>
+					</div>
+					<div class="doginfo">
+						<span>견종</span>
 					</div>
 				</div>
 			</div>
