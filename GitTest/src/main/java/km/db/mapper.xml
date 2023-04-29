@@ -38,6 +38,12 @@
   		select *
   		from POST_IMG
   	</select>
+  	
+  	<select id="selectDoginfo" parameterType="km.model.DogVO" resultType="km.model.DogVO">
+		select *
+		from DOG_INFO
+		where DOG_ID=1
+	</select>
 
 
 

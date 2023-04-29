@@ -266,7 +266,7 @@ div.photobox2 {
 					<img src="./img/글쓰기아이콘.png">
 				</button>
 				<button type="button" id="person"
-					onClick="location.href='Gomypage1.do'">
+					onClick="location.href='Mypage.do'">
 					<img src="./img/프로필아이콘.png">
 				</button>
 			</header>

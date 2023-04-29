@@ -58,7 +58,19 @@ public class MemberDAO {
 		return row;
 	}
 	
-	
+	public DogVO selectDoginfo(DogVO vo) {
+		DogVO result = null;
+		System.out.println("dao안");
+		
+		try {
+			session = sqlSessionFactory.openSession(true);
+			result = session.selectOne("selectDoginfo", vo);
+		}finally {
+			session.close();
+		}
+		return result;
+		
+	}
 	
 	
 	
