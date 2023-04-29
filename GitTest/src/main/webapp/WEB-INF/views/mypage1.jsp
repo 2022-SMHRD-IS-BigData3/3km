@@ -318,7 +318,7 @@ body {
 						</div>
 					</ul></li>
 			</button>
-			<button type="button" id="withdogslogo">
+			<button type="button" id="withdogslogo" onClick="location.href='Gomain.do'">
 				<img src="./img/이름로고.png" width="180">
 			</button>
 			<button type="button" id="write"
