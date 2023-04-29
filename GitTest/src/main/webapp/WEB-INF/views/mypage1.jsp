@@ -367,13 +367,13 @@ body {
 							class="dogpageimg" /></label>
 					</div>
 					<div class="doginfo">
-						<span>이름</span>
+						이름 : ${doginfo.dog_name}
 					</div>
 					<div class="doginfo">
-						<span>나이</span>
+						나이 : ${doginfo.dog_age}
 					</div>
 					<div class="doginfo">
-						<span>견종</span>
+						견종 : ${doginfo.dog_breed}
 					</div>
 				</div>
 			</div>
