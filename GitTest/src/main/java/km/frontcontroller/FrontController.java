@@ -15,13 +15,9 @@ import km.controller.InfoService;
 import km.controller.JoinService;
 import km.controller.JoinSuccess;
 import km.controller.LoginService;
-import km.controller.MainService;
 import km.controller.MypageService;
 import km.controller.QnaService;
 import km.controller.WriteService;
-
-
-
 
 
 @WebServlet("*.do")
@@ -35,7 +31,6 @@ public class FrontController extends HttpServlet {
 
 		map = new HashMap<>();
 		map.put("Login.do", new LoginService());
-		map.put("Main.do", new MainService());
 		map.put("Join.do", new JoinService());
 		map.put("JoinSuccess.do", new JoinSuccess());
 		map.put("Info.do", new InfoService());
@@ -58,9 +53,9 @@ public class FrontController extends HttpServlet {
 		String finalpath = null;
 		Command com = null;
 		
-		System.out.println("uri >> " + uri);
-		System.out.println("cp >> " + cp);
-		System.out.println("finaluri >> " + finaluri);
+//		System.out.println("uri >> " + uri);
+//		System.out.println("cp >> " + cp);
+//		System.out.println("finaluri >> " + finaluri);
 
 		if (finaluri.contains("Go")) {
 			finalpath = finaluri.replaceAll("Go", "").toLowerCase().replaceAll(".do", ".jsp");

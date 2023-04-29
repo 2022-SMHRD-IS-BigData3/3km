@@ -218,19 +218,19 @@ li {
 	function validateForm() {
 		var email = document.getElementById("email").value;
 		var pw = document.getElementById("pw").value;
-		
+
 		if (email == null || pw == null) {
-		alert("이메일, 비밀번호를 잘못 입력하셨습니다.");
-		return false;
-	}
+			alert("이메일, 비밀번호를 잘못 입력하셨습니다.");
+			return false;
+		}
 		return true;
-	} 
+	}
 
 	const form = document.getElementById("myForm");
 
 	form.addEventListener("submit", function(event) {
 		if (!validateForm()) {
-			event.preventDefault(); 
+			event.preventDefault();
 		}
 	});
 </script>

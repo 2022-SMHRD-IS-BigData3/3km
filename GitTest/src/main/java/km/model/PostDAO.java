@@ -46,20 +46,6 @@ public class PostDAO {
 		return row;
 	}
 
-	public List<PostVO> showmain() {
-		List<PostVO> list =null;
-		try {
-			session = sqlSessionFactory.openSession(true);
-			list = session.selectList("showmain");
-		}finally {
-			session.close();
-		}
-		return list;
-		
-		
-	}
-	
-	
 	
 	
 	

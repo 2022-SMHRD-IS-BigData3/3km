@@ -139,7 +139,7 @@ div.photobox1 {
 	float: left;
 	margin: 10px;
 	margin-left: 16px;
-    overflow:hidden;
+	overflow: hidden;
 }
 
 div.photobox2 {
@@ -280,11 +280,10 @@ div.photobox2 {
 					<option value="최신순">최신순</option>
 				</select>
 			</div>
-			<c:forEach items="${post_img}" var="item">
 			<div id="photobox">
 				<div id="photobox-line">
-					<div class="photobox1">
-						<img class="showphoto" src="${item.img_root}">
+					<div class="photobox1" onclick="location.href='Goshowpost.do'">
+						<img id="showphoto1" class="showphoto">
 					</div>
 					<div class="photobox2">
 						<a href="#"></a>
@@ -326,7 +325,6 @@ div.photobox2 {
 				<button id="morebutton" class="btn btn-primary btn-sm" btn-sm>더보기</button>
 				<a href="#"></a>
 			</div>
-			</c:forEach>
 		</div>
 	</div>
 
@@ -340,10 +338,27 @@ div.photobox2 {
 					submenu.slideDown();
 				}
 			})
+
+			$.ajax({
+				url : "/GetImg",
+				type : "POST",
+				dataType : "json",
+				success : function(data) {
+					console.log(data);
+					$("#postList1").attr("src", data[0].img_root);
+					$("#postList2").attr("src", data[1].img_root);
+					$("#postList3").attr("src", data[2].img_root);
+					$("#postList4").attr("src", data[3].img_root);
+				},
+				error : function(xhr, status, error) {
+					console.log(data);
+					console.log("xhr >> " + xhr);
+					console.log("status >> " + status);
+					console.log("error >> " + error);
+				}
+			})
+
 		})
-		
-		
-		
 	</script>
 
 </body>
