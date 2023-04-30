@@ -9,8 +9,6 @@
 <body>
 
 <% 
-	   session.removeAttribute("member");
-	   
 	   session.invalidate();
 	   
 	   response.sendRedirect("Gologin.do");

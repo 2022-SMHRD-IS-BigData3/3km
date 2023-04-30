@@ -1,5 +1,5 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-	pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -7,7 +7,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>마이페이지3</title>
+    <title>마이페이지</title>
     <link rel="icon" href="./img/강아지로고.png" />
     <link rel="apple-touch-icon" href="./img/강아지로고.png" />
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
@@ -229,14 +229,14 @@
             width: 130px;
             height: 110px;
             margin-top: 20px;
-            margin-left: 30px;
+            margin-left: 27px;
         }
 
         .post_img2 {
             background-color: whitesmoke;
             width: 130px;
             height: 110px;
-            margin-left: 160px;
+            margin-left: 27px;
         }
 
         .add {
@@ -247,13 +247,29 @@
             display: flex;
         }
 
-        .add1 {
-            background-color: rgba(194, 192, 192, 0.709);
-            width: 85px;
-            height: 100px;
-            padding: 5px;
-            margin-left: 30px;
-        }
+	.add1 {
+		background-color: rgba(194, 192, 192, 0.709);
+		width: 85px;
+		height: 120px;
+		padding: 5px;
+		margin-left: 17.5px;
+	}
+
+	.add2 {
+		background-color: rgba(194, 192, 192, 0.709);
+		width: 85px;
+		height: 120px;
+		padding: 5px;
+		margin-left: 17.5px;
+	}
+	
+	.add3 {
+		background-color: rgba(194, 192, 192, 0.709);
+		width: 85px;
+		height: 120px;
+		padding: 5px;
+		margin-left: 17.5px;
+	}
 
         .dogpageimg {
             border-radius: 100px;
@@ -268,22 +284,7 @@
             text-align: center;
         }
 
-        .add2 {
-            background-color: rgba(194, 192, 192, 0.709);
-            width: 85px;
-            height: 100px;
-            padding: 5px;
-            margin-left: 7px;
-        }
-
-        .add3 {
-            background-color: rgba(194, 192, 192, 0.709);
-            width: 85px;
-            height: 100px;
-            padding: 5px;
-            margin-right: 30px;
-            margin-left: 6.5px;
-        }
+        
 
         #dogname {
             border-radius: 10px;
@@ -300,6 +301,9 @@
         .empty {
             height: 30px;
         }
+        #picname{
+        	text-align: center;
+        }
     </style>
 </head>
 
@@ -312,7 +316,7 @@
                         <div class="kateham">
                             <li class="menu"><a class="aham">Place</a>
                                 <ul class="hide">
-                                    <li class="hidelist">카페/식당</li>
+                                    <li class="hidelist" onClick="location.href='Goplace_cafe.do'">카페/식당</li>
                                     <li class="hidelist">산책</li>
                                     <li class="hidelist">기타</li>
                                 </ul>
@@ -333,7 +337,7 @@
                             </li> <br>
                             <li class="menu"><a class="aham">MyPage</a>
                                 <ul class="hide">
-                                    <li class="hidelist" onClick="location.href='Gomypage1.do'">계정 관리</li>
+                                    <li class="hidelist" onClick="location.href='Gomypage.do'">마이페이지</li>
                                     <li class="hidelist" onClick="location.href='Goinfo.do'">내 정보 수정</li>
                                     <li class="hidelist" onClick="location.href='Gologout.do'">로그아웃</li>
                                 </ul>
@@ -342,13 +346,13 @@
                     </ul>
                 </li>
             </button>
-            <button type="button" id="withdogslogo">
+            <button type="button" id="withdogslogo" onClick="location.href='Gomain.do'">
                 <img src="./img/이름로고.png" width="180">
             </button>
             <button type="button" id="write" onClick="location.href='Gowritepostpage.do'">
                 <img src="./img/글쓰기아이콘.png">
             </button>
-            <button type="button" id="person" onClick="location.href='Gomypage1.do'">
+            <button type="button" id="person" onClick="location.href='Gomypage.do'">
                 <img src="./img/프로필아이콘.png">
             </button>
         </header>
@@ -358,7 +362,6 @@
         <div id="my_box">
             <div id="inupbox">
                 <div id="mypageimg">
-                    <input type="file" name="uploadfile" id="img" style="display: none;" />
                     <label for="img"><img src="./img/유저아이콘.png" id="user"></label>
                 </div>
                 <div class="myinfo">
@@ -368,79 +371,50 @@
                 </div>
             </div>
             <p id="text">
-                <span id="eapleak">
-                    자기소개를 입력하세요
-                </span>
+                <span id="eapleak">${member.introduce}</span>
             </p>
         </div>
 
         <div class="add">
             <div class="add-wrapper">
                 <div class="add1">
-                    <input type="file" name="uploadfile" style="display: none;" />
-                    <div class="dogpageimg">
-                        <label for="img"><img src="./img/강아지프로필아이콘.png" class="dogpageimg" /></label>
-                    </div>
-                    <div class="doginfo">
-                        <span>이름</span>
-                    </div>
-                    <div class="doginfo">
-                        <span>나이</span>
-                    </div>
+                    <div class="dogpageimg"><label for="img"><img src="./img/강아지프로필아이콘.png" class="dogpageimg" /></label></div>
+                    <div class="doginfo"> <span>이름</span></div>
+                    <div class="doginfo"><span>나이</span></div>
+                    <div class="doginfo"><span>견종</span></div>
                 </div>
-
                 <div class="add2">
-                    <input type="file" name="uploadfile" style="display: none;" />
-                    <div class="dogpageimg">
-                        <label for="img"><img src="./img/강아지프로필아이콘.png" class="dogpageimg" /></label>
-                    </div>
-                    <div class="doginfo">
-                        <span>이름</span>
-                    </div>
-                    <div class="doginfo">
-                        <span>나이</span>
-                    </div>
+                    <div class="dogpageimg"><label for="img"><img src="./img/강아지프로필아이콘.png" class="dogpageimg" /></label></div>
+                    <div class="doginfo"> <span>이름</span></div>
+                    <div class="doginfo"><span>나이</span></div>
+                    <div class="doginfo"><span>견종</span></div>
                 </div>
-
                 <div class="add3">
-                    <input type="file" name="uploadfile" style="display: none;" />
-                    <div class="dogpageimg">
-                        <label for="img"><img src="./img/강아지프로필아이콘.png" class="dogpageimg" /></label>
-                    </div>
-                    <div class="doginfo">
-                        <span>이름</span>
-                    </div>
-                    <div class="doginfo">
-                        <span>나이</span>
-                    </div>
+                    <div class="dogpageimg"><label for="img"><img src="./img/강아지프로필아이콘.png" class="dogpageimg" /></label></div>
+                    <div class="doginfo"> <span>이름</span></div>
+                    <div class="doginfo"><span>나이</span></div>
+                    <div class="doginfo"><span>견종</span></div>
                 </div>
             </div>
         </div>
 
         <div id="btn">
-            <input type="button" id="modify" value="정보수정" />
+            <input type="button" id="modify" value="정보수정" onClick="location.href='Gomypagewrite.do'"/>
         </div>
         <div id="picture_box">
             <div id="picture" style="overflow-y: scroll;">
-                <div class="post_img">
-                    <div>
-                        <div class="post_img2"></div>
-                    </div>
+        	<p id="picname">${member.nickname}님이 올린 게시글 사진</p>
+            	<div>
+	                <img class="post_img" src="./img/포켓몬1.jpg">
+	                <img class="post_img2" src="./img/포켓몬2.jpg">
                 </div>
-                <div class="post_img">
-                    <div>
-                        <div class="post_img2"></div>
-                    </div>
+                <div>
+                    <img class="post_img" src="./img/포켓몬3.jpg">
+                	<img class="post_img2" src="./img/포켓몬4.jpg">	
                 </div>
-                <div class="post_img">
-                    <div>
-                        <div class="post_img2"></div>
-                    </div>
-                </div>
-                <div class="post_img">
-                    <div>
-                        <div class="post_img2"></div>
-                    </div>
+                <div>
+                    <img class="post_img" src="./img/포켓몬5.jpg">
+                	<img class="post_img2" src="./img/포켓몬6.jpg">	
                 </div>
             </div>
         </div>

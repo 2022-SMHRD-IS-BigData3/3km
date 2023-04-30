@@ -7,8 +7,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
-import km.model.MemberDAO;
-import km.model.MemberVO;
+import km.model.SNSDAO;
+import km.model.UserVO;
 
 public class LoginService implements Command {
 
@@ -18,13 +18,13 @@ public class LoginService implements Command {
 		String email = request.getParameter("email");
 		String pw = request.getParameter("pw");
 		
-		MemberVO vo = new MemberVO();
+		UserVO vo = new UserVO();
 		vo.setEmail(email);
 		vo.setPw(pw);
 		
 		
-		MemberDAO dao = new MemberDAO();
-		MemberVO result = dao.login(vo);
+		SNSDAO dao = new SNSDAO();
+		UserVO result = dao.login(vo);
 		
 		
 		if(result!=null) {

@@ -1,15 +1,15 @@
 package km.model;
 
 public class DogVO {
+	private int dog_id;
 	private String dog_name;
 	private String dog_age;
 	private String dog_breed;
-	private int dog_id;
+	private int user_id;
 	
 	
 	public DogVO() {
 	}
-	private int user_id;
 	public DogVO(String dog_name, String dog_age, String dog_breed, int dog_id, int user_id) {
 		super();
 		this.dog_name = dog_name;
@@ -44,8 +44,5 @@ public class DogVO {
 	}
 	public int getUser_id() {
 		return user_id;
-	}
-	public void setUser_id(int user_id) {
-		this.user_id = user_id;
 	}
 }

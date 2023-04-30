@@ -7,29 +7,23 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import km.model.PostDAO;
 import km.model.PostVO;
+import km.model.SNSDAO;
 
 public class QnaService implements Command {
 
-
 	@Override
 	public String execute(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		PostDAO dao = new PostDAO();
-		List<PostVO> list = dao.selectQna();
+		SNSDAO dao = new SNSDAO();
+		List<PostVO> list = dao.getqna();
 		
 		if(list!=null) {
-			request.setAttribute("post", list);
+			request.setAttribute("qna", list);
 			
 			return "qna.jsp";
 		}else {
 			return "redirect:/main.do";
 		}
-		
-		
-		
-		
-		
 	}
 
 }

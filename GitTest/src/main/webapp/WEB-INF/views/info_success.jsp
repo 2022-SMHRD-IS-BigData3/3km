@@ -181,6 +181,23 @@ body {
 	margin-left: 5px;
 	background-color: rgb(0, 0, 0, 0);
 }
+#blankarea {
+            height: 100px;
+        }
+#success {
+            height: 200px;
+            text-align: center;
+            font-size: 23px;
+        }
+#successbutton {
+            font-family: Katuri;
+            font-size: 18px;
+            border-color: whitesmoke;
+            background-color: rgba(243, 156, 18, 0.73);
+            height: 30px;
+            width: auto 0;
+            color: black;
+        }
 </style>
 
 </head>
@@ -213,16 +230,14 @@ body {
 								</ul></li> <br>
 							<li class="menu"><a class="aham">MyPage</a>
 								<ul class="hide">
-									<li class="hidelist" onClick="location.href='Gomypage1.do'">계정
-										관리</li>
-									<li class="hidelist" onClick="location.href='Goinfo.do'">내
-										정보 수정</li>
+									<li class="hidelist" onClick="location.href='Gomypage.do'">계정 관리</li>
+									<li class="hidelist" onClick="location.href='Goinfo.do'">내정보 수정</li>
 									<li class="hidelist" onClick="location.href='Gologout.do'">로그아웃</li>
 								</ul></li>
 						</div>
 					</ul></li>
 			</button>
-			<button type="button" id="withdogslogo">
+			<button type="button" id="withdogslogo" onClick="location.href='Gomain.do'">
 				<img src="./img/이름로고.png" width="180">
 			</button>
 			<button type="button" id="write"
@@ -230,43 +245,19 @@ body {
 				<img src="./img/글쓰기아이콘.png">
 			</button>
 			<button type="button" id="person"
-				onClick="location.href='Gomypage1.do'">
+				onClick="location.href='Gomypage.do'">
 				<img src="./img/프로필아이콘.png">
 			</button>
 		</header>
-		<div class="empty"></div>
-		<br> <br>
 
-		<form action="info.do">
-		<h1 id="info">info</h1>
-		<br>
-			<div class="infobody">
-				<input type="email" value="${member.email}" size="30" readonly />
-				<br> <br>
-				<div class="infobody2">
-					<input type="password" id="pw" value="${member.pw}" size="30"
-						maxlength=8 readonly/> 
-				</div>
-				<br> <br> <input type="text" value="${member.nickname}" size="30" />
-				<br> <br> <input type="date" id="date" size="30" /> <br>
-				<br>
-				<div class="infobody2">
-					<input type="text" placeholder="강아지 나이" size="30" />
-					<button name="" class="plusbut">
-						<img src="./img/플러스버튼이미지.png" alt="" height="30px" width="30px" />
-					</button>
-				</div>
-				<br> <br>
-				<div class="infobody2">
-					<input type="text" placeholder="강아지 이름" size="30" />
-				</div>
-				<br> <br>
-				<div class="infobody2">
-					<input type="text" placeholder="견종" size="30" />
-				</div>
-			</div>
-			<br> <br> <input type="submit" class="btn" value="완료">
-		</form>
+    <div id="success">
+        <div id="blankarea"></div>
+        <div> 정보수정이 완료되었습니다!</div>
+        <br><br>
+        <button type="button" id="successbutton" onClick="location.href='Gomypage.do'">마이페이지 돌아가기</button>
+    </div>
+    </div>
+
 		<script>
 		$(document).ready(function() {
 			$(".menu>.aham").click(function() {
@@ -278,18 +269,6 @@ body {
 				}
 			})
 		})
-		
-		$(document).ready(function() {
-			var checked = $("#check").is(':checked');
-			
-			if(checked){
-				$('input#pw').attr("readonly",true); 
-			}else{
-				$('input#pw').attr("readonly",false); 
-			}
-			
-		})
-		
 	</script>
 </body>
 

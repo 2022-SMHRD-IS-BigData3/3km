@@ -8,8 +8,7 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 import km.model.DogVO;
-import km.model.MemberDAO;
-import km.model.MemberVO;
+import km.model.SNSDAO;
 
 public class MypageService implements Command {
 
@@ -27,7 +26,7 @@ public class MypageService implements Command {
 		vo.setDog_age(dog_age);
 		vo.setDog_breed(dog_breed);
 		
-		MemberDAO dao = new MemberDAO();
+		SNSDAO dao = new SNSDAO();
 		DogVO result = dao.selectDoginfo(vo);
 		
 		if(result!=null) {

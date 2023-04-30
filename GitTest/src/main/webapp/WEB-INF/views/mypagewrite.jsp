@@ -7,7 +7,7 @@
 <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>마이페이지1</title>
+<title>마이페이지 수정</title>
 <link rel="icon" href="./img/강아지로고.png" />
 <link rel="apple-touch-icon" href="./img/강아지로고.png" />
 <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
@@ -44,7 +44,7 @@ body {
 }
 
 .aham {
-	padding-right: 30px;
+	padding-right: 50px;
 	font-weight: bold;
 	font-size: 15px;
 }
@@ -60,22 +60,17 @@ body {
 #withdogslogo {
 	background-color: rgb(0, 0, 0, 0);
 	border: none;
-	margin-right: 0px;
+	margin-right: 25px;
 	margin-top: 10px;
+	margin-left: -20px;
 	display: flex;
-}
-
-#write {
-	border: none;
-	background-color: rgba(0, 0, 0, 0);
-	float: right;
 }
 
 #person {
 	border: none;
 	background-color: rgba(0, 0, 0, 0);
-	margin-left: -5px;
-	padding-left: 0px;
+	float: right;
+	margin-left: 16px;
 }
 
 .menu {
@@ -154,12 +149,12 @@ body {
 #user {
 	width: 100%;
 	height: 100%;
+	padding-top: 10px;
 }
 
 .myinfo {
 	display: flex;
 	float: right;
-    margin-top: 10px;
 }
 
 .myinfo div {
@@ -199,13 +194,7 @@ body {
 	margin-left: 25px;
 	margin-top: 20px;
 	border: none;
-}
-
-#eapleak {
-	margin-left: 10px;
-	text-decoration: none;
-	color: black;
-	font-size: small;
+	resize: none;
 }
 
 #btn {
@@ -217,8 +206,8 @@ body {
 #picture {
 	background-color: rgba(243, 156, 18, 0.73);
 	width: 360px;
-	height: 220px;
-	margin-top: 68px;
+	height: 248px;
+	margin-top: 70px;
 }
 
 .post_img {
@@ -239,7 +228,6 @@ body {
 .add {
 	margin-top: 20px;
 	display: flex;
-	justify-content: space-between;
 }
 
 .add1 {
@@ -247,7 +235,23 @@ body {
 	width: 85px;
 	height: 120px;
 	padding: 5px;
-	margin-left: 30px;
+	margin-left: 17.5px;
+}
+
+.add2 {
+	background-color: rgba(194, 192, 192, 0.709);
+	width: 85px;
+	height: 120px;
+	padding: 5px;
+	margin-left: 17.5px;
+}
+
+.add3 {
+	background-color: rgba(194, 192, 192, 0.709);
+	width: 85px;
+	height: 120px;
+	padding: 5px;
+	margin-left: 17.5px;
 }
 
 .dogpageimg {
@@ -267,27 +271,34 @@ body {
 	border-radius: 10px;
 	font-family: Katuri;
 	color: gray;
+	resize: none;
 }
 
 #dogage {
 	border-radius: 10px;
 	font-family: Katuri;
 	color: gray;
+	resize: none;
+}
+
+#dogbreed {
+	border-radius: 10px;
+	font-family: Katuri;
+	color: gray;
+	resize: none;
 }
 
 .empty {
 	height: 30px;
 }
 </style>
-<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 </head>
 
 <body>
 	<div id="enter">
 		<header class="sangdan">
 			<button type="button" id="ham">
-				<li class="menu"><a class="aham"><img
-						src="./img/햄버거아이콘.png" /></a>
+				<li class="menu"><a class="aham"><img src="./img/햄버거아이콘.png" /></a>
 					<ul class="hide">
 						<div class="kateham">
 							<li class="menu"><a class="aham">Place</a>
@@ -310,105 +321,91 @@ body {
 								</ul></li> <br>
 							<li class="menu"><a class="aham">MyPage</a>
 								<ul class="hide">
-									<li class="hidelist" onClick="location.href='Gomypage1.do'">‍계정관리</li>
-									<li class="hidelist" onClick="location.href='Goinfo.do'">내정보
-										수정</li>
+									<li class="hidelist" onClick="location.href='Gomypage1.do'">마이페이지</li>
+									<li class="hidelist" onClick="location.href='Goinfo.do'">내정보 수정</li>
 									<li class="hidelist" onClick="location.href='Gologout.do'">로그아웃</li>
-								</ul></li>
+								</ul>
+							</li>
 						</div>
-					</ul></li>
+					</ul>
+				</li>
 			</button>
 			<button type="button" id="withdogslogo" onClick="location.href='Gomain.do'">
 				<img src="./img/이름로고.png" width="180">
 			</button>
-			<button type="button" id="write"
-				onClick="location.href='Gowritepostpage.do'">
-				<img src="./img/글쓰기아이콘.png">
-			</button>
-			<button type="button" id="person"
-				onClick="location.href='Gomypage1.do'">
+			<button type="button" id="person" onClick="location.href='Gomypage.do'">
 				<img src="./img/프로필아이콘.png">
 			</button>
 		</header>
+		<!-- 상단바 아래 메인페이지 -->
 		<div class="empty"></div>
-		<div id="my_box">
-			<div id="inupbox">
-				<div id="mypageimg">
-					<input type="file" name="uploadfile" id="img"
-						style="display: none;" /> <label for="img"><img
-						src="./img/유저아이콘.png" id="user"></label>
+		<form action="#" method="post">
+			<div id="my_box">
+				<div id="inupbox">
+					<div id="mypageimg">
+						<input type="file" name="profilimg" id="img" style="display: none;" /> 
+						<label for="img"><img src="./img/유저아이콘.png" id="user"></label>
+					</div>
+					<div class="myinfo">
+						<div class="gesi">게시물 <br> <span id="gesisu">0</span></div>
+						<div class="follow">팔로워 <br> <span id="followsu">0</span></div>
+						<div class="following">팔로잉 <br> <span id="followingsu">0</span></div>
+					</div>
 				</div>
-				<div class="myinfo">
-					<div class="gesi">
-						게시물 <br>
-						<span id="gesisu">0</span>
+				<textarea id="text" name="introduce"></textarea>
+			</div>
+			<!-- 마이박스 div끝 -->
+
+			<div class="add">
+				<div>
+					<div class="add1">
+						<input type="file" name="dogimg1" style="display: none;" />
+						<div class="dogpageimg"><label for="img"><img src="./img/강아지프로필아이콘.png" class="dogpageimg" /></label>
+						</div>
+						<div class="doginfo">
+							<textarea name="dogname1" id="dogname" cols="5" rows="1" placeholder="이름"></textarea>
+						</div>
+						<div class="doginfo">
+							<textarea name="dogage1" id="dogage" cols="5" rows="1" placeholder="나이"></textarea>
+						</div>
+						<div class="doginfo">
+							<textarea name="dogbreed1" id="dogbreed" cols="5" rows="1" placeholder="견종"></textarea>
+						</div>
 					</div>
-					<div class="follow">
-						팔로워 <br>
-						<span id="followsu">0</span>
+				</div>
+				<div class="add2">
+					<input type="file" name="dogimg2" style="display: none;" />
+					<div class="dogpageimg"><label for="img"><img src="./img/강아지프로필아이콘.png" class="dogpageimg" /></label>
 					</div>
-					<div class="following">
-						팔로잉 <br>
-						<span id="followingsu">0</span>
+					<div class="doginfo">
+						<textarea name="dogname2" id="dogname" cols="5" rows="1" placeholder="이름"></textarea>
+					</div>
+					<div class="doginfo">
+						<textarea name="dogage2" id="dogage" cols="5" rows="1" placeholder="나이"></textarea>
+					</div>
+					<div class="doginfo">
+						<textarea name="dogbreed2" id="dogbreed" cols="5" rows="1" placeholder="견종"></textarea>
+					</div>
+				</div>
+				<div class="add3">
+					<input type="file" name="dogimg3" style="display: none;" />
+					<div class="dogpageimg"><label for="img"><img src="./img/강아지프로필아이콘.png" class="dogpageimg" /></label>
+					</div>
+					<div class="doginfo">
+						<textarea name="dogname3" id="dogname" cols="5" rows="1" placeholder="이름"></textarea>
+					</div>
+					<div class="doginfo">
+						<textarea name="dogage3" id="dogage" cols="5" rows="1" placeholder="나이"></textarea>
+					</div>
+					<div class="doginfo">
+						<textarea name="dogbreed3" id="dogbreed" cols="5" rows="1" placeholder="견종"></textarea>
 					</div>
 				</div>
 			</div>
-			<p id="text">
-				<span id="eapleak"> 자기소개를 입력하세요 </span>
-			</p>
-		</div>
-
-		<div class="add">
-			<div>
-				<div class="add1">
-					<input type="file" name="uploadfile" style="display: none;" />
-					<div class="dogpageimg">
-						<label for="img"><img src="./img/강아지프로필아이콘.png"
-							class="dogpageimg" /></label>
-					</div>
-					<div class="doginfo">
-						이름  ${doginfo.dog_name}
-					</div>
-					<div class="doginfo">
-						나이  ${doginfo.dog_age}
-					</div>
-					<div class="doginfo">
-						견종  ${doginfo.dog_breed}
-					</div>
-				</div>
-			</div>
-		</div>
-
-
-		<div id="btn">
-			<input type="button" id="modify" value="정보수정" onClick="location.href='Gomypagewrite1.do'"/>
-		</div>
-		<div id="picture_box">
-			<div id="picture" style="overflow-y: scroll;">
-				<div class="post_img">
-					<div>
-						<div class="post_img2"></div>
-					</div>
-				</div>
-				<div class="post_img">
-					<div>
-						<div class="post_img2"></div>
-					</div>
-				</div>
-				<div class="post_img">
-					<div>
-						<div class="post_img2"></div>
-					</div>
-				</div>
-				<div class="post_img">
-					<div>
-						<div class="post_img2"></div>
-					</div>
-				</div>
-			</div>
-		</div>
+		</form>
 	</div>
-	</header>
+	
+	
 	<script>
 		$(document).ready(function() {
 			$(".menu>.aham").click(function() {

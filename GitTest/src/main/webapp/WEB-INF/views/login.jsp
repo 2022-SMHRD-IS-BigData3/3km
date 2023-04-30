@@ -176,14 +176,10 @@ li {
 					<img src="./img/강아지로고.png" width="120px" height="100px"></img>
 				</div>
 				<form id="myForm" action="Login.do" method="post">
-					<p>
-						E-mail <input id="email" name="email" type="text"
-							placeholder="이메일 주소를 입력하세요" /> <br>
-					</p>
-					<p>
-						PW<input id="pw" name="pw" type="password"
-							placeholder="8자 이내 비밀번호를 입력하세요" /> <br>
-					</p>
+					<p>E-mail <input id="email" name="email" type="text" placeholder="이메일 주소를 입력하세요" autocomplete="on"/> 
+					<br></p>
+					<p>PW<input id="pw" name="pw" type="password" placeholder="8자 이내 비밀번호를 입력하세요" /> 
+					<br></p>
 					<div id="login">
 						<button id="loginbutton" type="submit">Login</button>
 					</div>
@@ -218,19 +214,19 @@ li {
 	function validateForm() {
 		var email = document.getElementById("email").value;
 		var pw = document.getElementById("pw").value;
-
+		
 		if (email == null || pw == null) {
-			alert("이메일, 비밀번호를 잘못 입력하셨습니다.");
-			return false;
-		}
-		return true;
+		alert("이메일, 비밀번호를 잘못 입력하셨습니다.");
+		return false;
 	}
+		return true;
+	} 
 
 	const form = document.getElementById("myForm");
 
 	form.addEventListener("submit", function(event) {
 		if (!validateForm()) {
-			event.preventDefault();
+			event.preventDefault(); 
 		}
 	});
 </script>

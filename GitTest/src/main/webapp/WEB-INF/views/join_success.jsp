@@ -171,12 +171,11 @@
 
     <div id="success">
         <div id="blankarea"></div>
-        <div> 회원가입이 완료되었습니다!</div>
+        <div>회원가입이 완료되었습니다!</div>
+        <div> ${nickname}님 환영합니다!</div>
         <br><br>
         <button type="button" id="successbutton" onClick="location.href='Gologin.do'">로그인 하러가기</button>
     </div>
-
-
     </div>
 
     <script>

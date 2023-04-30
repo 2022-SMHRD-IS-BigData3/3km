@@ -6,8 +6,8 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import km.model.MemberDAO;
-import km.model.MemberVO;
+import km.model.SNSDAO;
+import km.model.UserVO;
 
 public class InfoService implements Command {
 
@@ -19,9 +19,9 @@ public class InfoService implements Command {
 		String birthday = request.getParameter("birthday");
 		String nickname = request.getParameter("nickname");
 		
-		MemberVO vo  = new MemberVO();
+		UserVO vo  = new UserVO();
 		
-		MemberDAO dao = new MemberDAO();
+		SNSDAO dao = new SNSDAO();
 		vo.setEmail(email);
 		vo.setPw(pw);
 		vo.setBirthday(birthday);

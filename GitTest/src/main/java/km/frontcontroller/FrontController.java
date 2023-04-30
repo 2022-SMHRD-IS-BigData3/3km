@@ -11,10 +11,12 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import km.controller.Command;
+import km.controller.GetpostService;
 import km.controller.InfoService;
 import km.controller.JoinService;
 import km.controller.JoinSuccess;
 import km.controller.LoginService;
+import km.controller.MainService;
 import km.controller.MypageService;
 import km.controller.QnaService;
 import km.controller.WriteService;
@@ -23,7 +25,6 @@ import km.controller.WriteService;
 @WebServlet("*.do")
 public class FrontController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-
 	private HashMap<String, Command> map = null;
 
 	@Override
@@ -35,14 +36,15 @@ public class FrontController extends HttpServlet {
 		map.put("JoinSuccess.do", new JoinSuccess());
 		map.put("Info.do", new InfoService());
 		map.put("Write.do", new WriteService());
-		map.put("Qna.do", new QnaService());
+		map.put("showpost.do", new GetpostService());
 		map.put("Mypage.do", new MypageService());
+		map.put("Qna.do", new QnaService());
+		map.put("Main.do", new MainService());
 	}
 
 	
 	
-	protected void service(HttpServletRequest request, HttpServletResponse response)
-			throws ServletException, IOException {
+	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
 		String uri = request.getRequestURI();
 		String cp = request.getContextPath();
@@ -53,9 +55,6 @@ public class FrontController extends HttpServlet {
 		String finalpath = null;
 		Command com = null;
 		
-//		System.out.println("uri >> " + uri);
-//		System.out.println("cp >> " + cp);
-//		System.out.println("finaluri >> " + finaluri);
 
 		if (finaluri.contains("Go")) {
 			finalpath = finaluri.replaceAll("Go", "").toLowerCase().replaceAll(".do", ".jsp");
@@ -72,7 +71,7 @@ public class FrontController extends HttpServlet {
 		}else if (finalpath.contains("redirect:/")) {
 			response.sendRedirect(finalpath.substring(10));
 		}else {
-			RequestDispatcher rd = request.getRequestDispatcher("WEB-INF/views/" + finalpath.replace("WEB-INF/views/", ""));
+			RequestDispatcher rd = request.getRequestDispatcher("WEB-INF/views/" + finalpath);
 			rd.forward(request, response);
 		}
 		

@@ -25,6 +25,7 @@
 
 body {
 	font-family: Katuri;
+	font-size: 20px;
 }
 
 form#mid {
@@ -32,7 +33,6 @@ form#mid {
 }
 
 .sangdan {
-	width: 360px;
 	height: 50px;
 	background: rgba(243, 156, 18, 0.73);
 	margin: 0;
@@ -40,7 +40,7 @@ form#mid {
 }
 
 .aham {
-	padding-right: 50px;
+	padding-right: 30px;
 	font-weight: bold;
 	font-size: 15px;
 }
@@ -56,9 +56,7 @@ form#mid {
 #withdogslogo {
 	background-color: rgb(0, 0, 0, 0);
 	border: none;
-	margin-right: 25px;
 	margin-top: 10px;
-	margin-left: -10px;
 	display: flex;
 }
 
@@ -66,6 +64,7 @@ form#mid {
 	border: none;
 	background-color: rgba(0, 0, 0, 0);
 	float: right;
+	margin-left: -11px;
 }
 
 .menu {
@@ -129,7 +128,7 @@ form#mid {
 	margin-top: 50px;
 	margin-left: 18px;
 	width: 320px;
-	height: 200px;
+	height: auto 0;
 }
 
 .post1-white {
@@ -139,7 +138,7 @@ form#mid {
 	margin-top: 20px;
 	margin-left: 9px;
 	width: 300px;
-	height: 160px;
+	height: auto;
 }
 
 .title {
@@ -180,50 +179,55 @@ form#mid {
 
 <body>
 	<div id="enter">
-		<header class="sangdan">
-			<button type="button" id="ham">
-				<li class="menu"><a class="aham"><img
-						src="./img/햄버거아이콘.png" /></a>
-					<ul class="hide">
-						<div class="kateham">
-							<li class="menu"><a class="aham">Place</a>
-								<ul class="hide">
-									<li class="hidelist">카페/식당</li>
-									<li class="hidelist">산책</li>
-									<li class="hidelist">기타</li>
-								</ul></li> <br>
-							<li class="menu"><a class="aham">Feed</a>
-								<ul class="hide">
-									<li class="hidelist">Puppy</li>
-									<li class="hidelist">Adult</li>
-									<li class="hidelist">Senior</li>
-								</ul></li> <br>
-							<li class="aham"><a>Items</a></li> <br>
-							<li class="menu"><a class="aham">Board</a>
-								<ul class="hide">
-									<li class="hidelist">나눔</li>
-									<li class="hidelist">Q&A</li>
-								</ul></li> <br>
-							<li class="menu"><a class="aham">MyPage</a>
-								<ul class="hide">
-									<li class="hidelist">‍계정 관리</li>
-									<li class="hidelist">내 정보 수정</li>
-									<li class="hidelist">로그아웃</li>
-								</ul></li>
-						</div>
-					</ul></li>
-			</button>
-			<button type="button" id="withdogslogo">
-				<img src="./img/이름로고.png" width="180">
-			</button>
-			<button type="button" id="write"
-				onClick="location.href='writepostpage.jsp'">
-				<img src="./img/글쓰기아이콘.png">
-			</button>
-			<button type="button" id="person">
-				<img src="./img/프로필아이콘.png">
-			</button>
-		</header>
+		<form action="#">
+			<header class="sangdan">
+				<button type="button" id="ham">
+					<li class="menu"><a class="aham"><img
+							src="./img/햄버거아이콘.png" /></a>
+						<ul class="hide">
+							<div class="kateham">
+								<li class="menu"><a class="aham">Place</a>
+									<ul class="hide">
+										<li class="hidelist" onClick="location.href='Goplace_cafe.do'">카페/식당</li>
+										<li class="hidelist">산책</li>
+										<li class="hidelist">기타</li>
+									</ul></li> <br>
+								<li class="menu"><a class="aham">Feed</a>
+									<ul class="hide">
+										<li class="hidelist">Puppy</li>
+										<li class="hidelist">Adult</li>
+										<li class="hidelist">Senior</li>
+									</ul></li> <br>
+								<li class="aham"><a>Items</a></li> <br>
+								<li class="menu"><a class="aham">Board</a>
+									<ul class="hide">
+										<li class="hidelist">나눔</li>
+										<li class="hidelist" onClick="location.href='Qna.do'">Q&A</li>
+									</ul></li> <br>
+								<li class="menu"><a class="aham">MyPage</a>
+									<ul class="hide">
+										<li class="hidelist" onClick="location.href='Gomypage.do'">‍마이페이지</li>
+										<li class="hidelist" onClick="location.href='Goinfo.do'">내정보
+											수정</li>
+										<li class="hidelist" onClick="location.href='Gologout.do'">로그아웃</li>
+									</ul></li>
+							</div>
+						</ul></li>
+				</button>
+				<button type="button" id="withdogslogo"
+					onClick="location.href='Gomain.do'">
+					<img src="./img/이름로고.png" width="180">
+				</button>
+				<button type="button" id="write"
+					onClick="location.href='Gowritepostpage.do'">
+					<img src="./img/글쓰기아이콘.png">
+				</button>
+				<button type="button" id="person"
+					onClick="location.href='Gomypage.do'">
+					<img src="./img/프로필아이콘.png">
+				</button>
+			</header>
+		</form>
 
 
 
@@ -231,8 +235,9 @@ form#mid {
 			<div class="post1">
 				<div class="post1-white">
 					<div class="title">
-						<hr align="left" style="border: solid 2px rgb(233, 228, 228); width: 80%;">
-						<c:forEach items="${post}" var="item">
+						<hr align="left"
+							style="border: solid 2px rgb(233, 228, 228); width: 80%;">
+						<c:forEach items="${qna}" var="item">
 							<span class="post-title">제목:</span>
 							<div>${item.title}</div>
 							<br>

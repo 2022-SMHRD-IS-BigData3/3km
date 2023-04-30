@@ -103,27 +103,18 @@ div {
 			</div>
 			<br>
 			<div>
-				<input id="email" class="infoput" name="email" type="email"
-					placeholder="*Email" size="30" /> <br>
-				<br> <input id="pw" class="infoput" name="pw"
-					type="password" placeholder="*비밀번호" size="30" maxlength=8 /> <br>
-				<br> <input id="nickname" class="infoput" name="nickname"
-					type="text" placeholder="*닉네임" size="30" /> <br>
-				<br> <input id="date" class="infoput" name="birthday" type="date"
-					size="30" /> <br> <br> <input id="dog_name"
-					class="infoput" name="dog_name" type="text" placeholder="*강아지 이름"
-					size="30" /> <br> <br> <input id="dog_age"
-					class="infoput" name="dog_age" type="number" placeholder="*강아지 나이"
-					size="30" /> <br>
-				<br> <input id="dog_breed" class="infoput" name="dog_breed"
-					type="text" placeholder="견종" size="30" />
+				<input id="email" class="infoput" name="email" type="email" placeholder="*Email" size="30" autocomplete="off" /> 
+				<br><br> 
+				<input id="pw" class="infoput" name="pw" type="password" placeholder="*비밀번호" size="30" maxlength=8 /> 
+				<br><br> 
+				<input id="nickname" class="infoput" name="nickname" type="text" placeholder="*닉네임" size="30" autocomplete="off"/> 
+				<br><br> 
+				<input id="date" class="infoput" name="birthday" type="date" size="30" /> 
 			</div>
-			<br> <input type="submit" class="btn" value="확인">
+			<br>
+			<input type="submit" class="btn" value="확인">
 		</form>
 	</div>
-	<script>
-		
-	</script>
 </body>
 
 </html>

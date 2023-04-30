@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <!DOCTYPE html>
 <html>
 
@@ -132,7 +132,7 @@ form#mid {
 	margin-top: 30px;
 }
 
-div.photobox1 {
+div.photobox {
 	width: 150px;
 	height: 150px;
 	background-color: gainsboro;
@@ -142,21 +142,12 @@ div.photobox1 {
 	overflow: hidden;
 }
 
-div.photobox2 {
-	width: 150px;
-	height: 150px;
-	background-color: gainsboro;
-	float: right;
-	margin: 10px;
-	margin-right: 16px;
-}
-
 #photobox-line {
-	height: 190px;
+	height: 170px;
 }
 
 #photobox-line2 {
-	height: 190px;
+	height: 170px;
 	clear: left;
 }
 
@@ -214,12 +205,9 @@ div.photobox2 {
 	object-fit: cover;
 }
 </style>
-
-
 </head>
 
 <body>
-
 	<div id="enter">
 		<form action="#">
 			<header class="sangdan">
@@ -247,18 +235,17 @@ div.photobox2 {
 										<li class="hidelist" onClick="location.href='Qna.do'">Q&A</li>
 									</ul></li> <br>
 								<li class="menu"><a class="aham">MyPage</a>
-
 									<ul class="hide">
-										<li class="hidelist" onClick="location.href='Gomypage1.do'">‍계정
-											관리</li>
-										<li class="hidelist" onClick="location.href='Goinfo.do'">내
-											정보 수정</li>
+										<li class="hidelist" onClick="location.href='Gomypage.do'">‍마이페이지</li>
+										<li class="hidelist" onClick="location.href='Goinfo.do'">내정보
+											수정</li>
 										<li class="hidelist" onClick="location.href='Gologout.do'">로그아웃</li>
 									</ul></li>
 							</div>
 						</ul></li>
 				</button>
-				<button type="button" id="withdogslogo">
+				<button type="button" id="withdogslogo"
+					onClick="location.href='Main.do'">
 					<img src="./img/이름로고.png" width="180">
 				</button>
 				<button type="button" id="write"
@@ -266,11 +253,12 @@ div.photobox2 {
 					<img src="./img/글쓰기아이콘.png">
 				</button>
 				<button type="button" id="person"
-					onClick="location.href='Mypage.do'">
+					onClick="location.href='Gomypage.do'">
 					<img src="./img/프로필아이콘.png">
 				</button>
 			</header>
 		</form>
+		<!-- 상단바 끝나는 지점 -->
 		<div id="medium">
 			<div id="top-area">
 				<label for="cate-list">정렬방식</label> <select name="cate-list"
@@ -280,32 +268,37 @@ div.photobox2 {
 					<option value="최신순">최신순</option>
 				</select>
 			</div>
+			<!-- 여기는 게시물 나오는 곳입니다. -->
+			<!-- 첫번째 게시물  -->
+			
 			<div id="photobox">
 				<div id="photobox-line">
-					<div class="photobox1" onclick="location.href='Goshowpost.do'">
-						<img id="showphoto1" class="showphoto">
+					<div class="photobox">
+						<img class="showphoto" src="${img[0].img_root}" onClick="location.href='showpost.do'">
 					</div>
-					<div class="photobox2">
-						<a href="#"></a>
+					<!-- 두번째 게시물  -->
+					<div class="photobox">
+						<img class="showphoto" src="${img[1].img_root}" onClick="location.href='showpost.do'">
 					</div>
 				</div>
+				<!-- 첫번째 게시물 좋아요/댓글 -->
 				<div class="boxbottomleft">
 					<span class="like"><img src="./img/좋아요아이콘.png" width="15px"></span>
 					<span class="likenum">0</span> <span class="comment"><img
 						src="./img/댓글아이콘.png" width="17px"></span> <span class="commentnum">0</span>
 				</div>
+				<!-- 두번째 게시물 좋아요/댓글 -->
 				<div class="boxbottomright">
 					<span class="like"><img src="./img/좋아요아이콘.png" width="15px"></span>
 					<span class="likenum">0</span> <span class="comment"><img
 						src="./img/댓글아이콘.png" width="17px"></span> <span class="commentnum">0</span>
 				</div>
-
 				<div id="photobox-line2">
-					<div class="photobox1">
-						<a href="#"></a>
+					<div class="photobox">
+						<img class="showphoto" src="./img/하울이1.jpg" onClick="location.href='showpost.do'">
 					</div>
-					<div class="photobox2">
-						<a href="#"></a>
+					<div class="photobox">
+						<img class="showphoto" src="${item.img_root}" onClick="location.href='showpost.do'">
 					</div>
 				</div>
 				<div class="boxbottomleft">
@@ -338,26 +331,6 @@ div.photobox2 {
 					submenu.slideDown();
 				}
 			})
-
-			$.ajax({
-				url : "/GetImg",
-				type : "POST",
-				dataType : "json",
-				success : function(data) {
-					console.log(data);
-					$("#postList1").attr("src", data[0].img_root);
-					$("#postList2").attr("src", data[1].img_root);
-					$("#postList3").attr("src", data[2].img_root);
-					$("#postList4").attr("src", data[3].img_root);
-				},
-				error : function(xhr, status, error) {
-					console.log(data);
-					console.log("xhr >> " + xhr);
-					console.log("status >> " + status);
-					console.log("error >> " + error);
-				}
-			})
-
 		})
 	</script>
 

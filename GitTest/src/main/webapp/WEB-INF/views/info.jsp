@@ -61,16 +61,21 @@ body {
 #person {
 	border: none;
 	background-color: rgba(0, 0, 0, 0);
-    margin-left: 41px;
-    float: right;
+	float: right;
+	margin-left: 21px;
 }
 
 #withdogslogo {
 	background-color: rgb(0, 0, 0, 0);
 	border: none;
-	margin-right: 0px;
 	margin-top: 10px;
+	margin-right : 20px;
 	display: flex;
+}
+#write {
+	border: rgb(0, 0, 0, 0);
+	background-color: rgb(0, 0, 0, 0);
+	margin-right: -5px;
 }
 
 
@@ -182,53 +187,59 @@ body {
 
 <body>
 	<div id="enter">
-		<header class="sangdan">
-			<button type="button" id="ham">
-				<li class="menu"><a class="aham"><img
-						src="./img/햄버거아이콘.png" /></a>
-					<ul class="hide">
-						<div class="kateham">
-							<li class="menu"><a class="aham">Place</a>
-								<ul class="hide">
-									<li class="hidelist">카페/식당</li>
-									<li class="hidelist">산책</li>
-									<li class="hidelist">기타</li>
-								</ul></li> <br>
-							<li class="menu"><a class="aham">Feed</a>
-								<ul class="hide">
-									<li class="hidelist">Puppy</li>
-									<li class="hidelist">Adult</li>
-									<li class="hidelist">Senior</li>
-								</ul></li> <br>
-							<li class="aham"><a>Items</a></li> <br>
-							<li class="menu"><a class="aham">Board</a>
-								<ul class="hide">
-									<li class="hidelist">나눔</li>
-									<li class="hidelist" onClick="location.href='Goqna.do'">Q&A</li>
-								</ul></li> <br>
-							<li class="menu"><a class="aham">MyPage</a>
-								<ul class="hide">
-									<li class="hidelist" onClick="location.href='Gomypage1.do'">계정
-										관리</li>
-									<li class="hidelist" onClick="location.href='Goinfo.do'">내
-										정보 수정</li>
-									<li class="hidelist" onClick="location.href='Gologout.do'">로그아웃</li>
-								</ul></li>
-						</div>
-					</ul></li>
-			</button>
-			<button type="button" id="withdogslogo">
-				<img src="./img/이름로고.png" width="180">
-			</button>
-			<button type="button" id="person"
-				onClick="location.href='Gomypage1.do'">
-				<img src="./img/프로필아이콘.png">
-			</button>
-		</header>
+		<form action="#">
+			<header class="sangdan">
+				<button type="button" id="ham">
+					<li class="menu"><a class="aham"><img src="./img/햄버거아이콘.png" /></a>
+						<ul class="hide">
+							<div class="kateham">
+								<li class="menu"><a class="aham">Place</a>
+									<ul class="hide">
+										<li class="hidelist" onClick="location.href='Goplace_cafe.do'">카페/식당</li>
+										<li class="hidelist">산책</li>
+										<li class="hidelist">기타</li>
+									</ul>
+								</li> 
+								<br>
+								<li class="menu"><a class="aham">Feed</a>
+									<ul class="hide">
+										<li class="hidelist">Puppy</li>
+										<li class="hidelist">Adult</li>
+										<li class="hidelist">Senior</li>
+									</ul>
+								</li> 
+								<br>
+								<li class="aham"><a>Items</a></li> 
+								<br>
+								<li class="menu"><a class="aham">Board</a>
+									<ul class="hide">
+										<li class="hidelist">나눔</li>
+										<li class="hidelist" onClick="location.href='Qna.do'">Q&A</li>
+									</ul>
+								</li> 
+								<br>
+								<li class="menu"><a class="aham">MyPage</a>
+									<ul class="hide">
+										<li class="hidelist" onClick="location.href='Gomypage.do'">‍계정 관리</li>
+										<li class="hidelist" onClick="location.href='Goinfo.do'">내정보 수정</li>
+										<li class="hidelist" onClick="location.href='Gologout.do'">로그아웃</li>
+									</ul>
+								</li>
+							</div>
+						</ul>
+					</li>
+				</button>
+				<button type="button" id="withdogslogo" onClick="location.href='Gomain.do'">
+					<img src="./img/이름로고.png" width="180">
+				</button>
+				<button type="button" id="person" onClick="location.href='Gomypage.do'">
+					<img src="./img/프로필아이콘.png">
+				</button>
+			</header>
+		</form>
 		<div class="empty"></div>
 		<br> <br>
-
-		<form action="info.do">
+		<form action="Info.do">
 		<h1 id="info">info</h1>
 		<br>
 			<div class="infobody">
@@ -241,22 +252,7 @@ body {
 				<br> <br> <input type="text" value="${member.nickname}" size="30" />
 				<br> <br> <input type="date" id="date" size="30" /> <br>
 				<br>
-				<div class="infobody2">
-					<input type="text" placeholder="강아지 나이" size="30" />
-					<button name="" class="plusbut">
-						<img src="./img/플러스버튼이미지.png" alt="" height="30px" width="30px" />
-					</button>
-				</div>
-				<br> <br>
-				<div class="infobody2">
-					<input type="text" placeholder="강아지 이름" size="30" />
-				</div>
-				<br> <br>
-				<div class="infobody2">
-					<input type="text" placeholder="견종" size="30" />
-				</div>
-			</div>
-			<br> <br> <input type="submit" class="btn" value="완료">
+				<br> <input type="submit" class="btn" value="완료">
 		</form>
 		<script>
 		$(document).ready(function() {

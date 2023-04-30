@@ -7,8 +7,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import km.model.PostVO;
-import km.model.MemberVO;
-import km.model.PostDAO;
+import km.model.SNSDAO;
 
 
 public class WriteService implements Command{
@@ -26,12 +25,9 @@ public class WriteService implements Command{
 			vo.setTitle(title);
 			vo.setKategory(kategory);
 			vo.setPost_contents(post_contents);
-			vo.setImg_root(img_root);
-			vo.setOrgin_img_name(imgfile);
-			vo.setSave_img_name("./img"+imgfile);
 			
 			
-			PostDAO dao = new PostDAO();
+			SNSDAO dao = new SNSDAO();
 			
 			int row = dao.write(vo);
 			
