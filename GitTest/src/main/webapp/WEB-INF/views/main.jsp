@@ -274,11 +274,11 @@ div.photobox {
 			<div id="photobox">
 				<div id="photobox-line">
 					<div class="photobox">
-						<img class="showphoto" src="${img[0].img_root}" onClick="location.href='showpost.do'">
+						<img class="showphoto" src="./img/하울이.jpg" onClick="location.href='showpost.do'">
 					</div>
 					<!-- 두번째 게시물  -->
 					<div class="photobox">
-						<img class="showphoto" src="${img[1].img_root}" onClick="location.href='showpost.do'">
+						<img class="showphoto" src="./img/하울이1.jpg" onClick="location.href='showpost.do'">
 					</div>
 				</div>
 				<!-- 첫번째 게시물 좋아요/댓글 -->

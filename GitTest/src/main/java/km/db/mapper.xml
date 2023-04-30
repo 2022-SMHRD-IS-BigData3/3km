@@ -27,18 +27,19 @@
 	<select id="img" resultType="km.model.ImgVO">
 		select *
 		from POST_IMG
-		ORDER BY post_id
 	</select>
 	
 	<select id="post" resultType="km.model.PostVO">
 		select *
 		from POST
+		ORDER BY post_id
 	</select>
 	
 	<select id="qna" resultType="km.model.PostVO">
 		select *
 		from POST
 		where kategory = 'question'
+		ORDER BY post_id
 	</select>
 
 
