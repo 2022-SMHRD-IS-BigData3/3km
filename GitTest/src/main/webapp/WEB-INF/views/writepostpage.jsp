@@ -242,11 +242,10 @@ textarea {
 							</div>
 						</ul></li>
 				</button>
-				<button type="button" id="withdogslogo">
+				<button type="button" id="withdogslogo" onClick="location.href='Gomain.do'">
 					<img src="./img/이름로고.png" width="180">
 				</button>
-				<button type="button" id="person"
-					onClick="location.href='Gomypage1.do'">
+				<button type="button" id="person" onClick="location.href='Gomypage.do'">
 					<img src="./img/프로필아이콘.png">
 				</button>
 			</header>
