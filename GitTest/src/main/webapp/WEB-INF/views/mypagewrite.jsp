@@ -321,7 +321,7 @@ body {
 								</ul></li> <br>
 							<li class="menu"><a class="aham">MyPage</a>
 								<ul class="hide">
-									<li class="hidelist" onClick="location.href='Gomypage1.do'">마이페이지</li>
+									<li class="hidelist" onClick="location.href='Gomypage.do'">마이페이지</li>
 									<li class="hidelist" onClick="location.href='Goinfo.do'">내정보 수정</li>
 									<li class="hidelist" onClick="location.href='Gologout.do'">로그아웃</li>
 								</ul>
