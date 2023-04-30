@@ -257,10 +257,10 @@ form#mid {
 		<div id="midempty"></div>
 
 		<div id="allcontents">
-			<div id="title">${post[0].title}</div>
+			<div id="title">${show1[0].title}</div>
 			<hr align="left" style="border: solid 1px rgb(233, 228, 228); width: 295px;">
-			<div id="photo">사진 불러올 자리 <img src="./img/강아지로고.png" alt="" width="200" height="200"></div>
-			<div id="content">어제는 강아지랑 산책을 했다 오늘은 강아지랑 산책을 하고있다 내일은 강아지랑 산책을 할거야</div>
+			<div id="photo"><img src="./img/하울이.jpg" alt="" width="200" height="200"></div>
+			<div id="content">${show1[0].post_contents}</div>
 		</div>
 		<div class="bottom">
 			<!-- <img src="/img/좋아요아이콘.png" width="15px"> -->

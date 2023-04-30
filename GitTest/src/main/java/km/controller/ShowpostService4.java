@@ -10,18 +10,18 @@ import javax.servlet.http.HttpServletResponse;
 import km.model.SNSDAO;
 import km.model.PostVO;
 
-public class GetpostService implements Command {
+public class ShowpostService4 implements Command {
 
 
 	@Override
 	public String execute(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		SNSDAO dao = new SNSDAO();
-		List<PostVO> list = dao.getpost();
+		List<PostVO> list = dao.showpost4();
 		
 		if(list!=null) {
-			request.setAttribute("post", list);
+			request.setAttribute("show4", list);
 			
-			return "showpost.jsp";
+			return "showpost4.jsp";
 		}else {
 			return "redirect:/main.do";
 		}

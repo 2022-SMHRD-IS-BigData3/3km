@@ -20,7 +20,6 @@ public class MypageService implements Command {
 		String dog_age = (String) session.getAttribute("dog_age");
 		String dog_breed = (String) session.getAttribute("dog_breed");
 		
-		System.out.println(1);
 		DogVO vo = new DogVO();
 		vo.setDog_name(dog_name);
 		vo.setDog_age(dog_age);

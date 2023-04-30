@@ -11,7 +11,10 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import km.controller.Command;
-import km.controller.GetpostService;
+import km.controller.ShowpostService1;
+import km.controller.ShowpostService2;
+import km.controller.ShowpostService3;
+import km.controller.ShowpostService4;
 import km.controller.InfoService;
 import km.controller.JoinService;
 import km.controller.JoinSuccess;
@@ -36,7 +39,10 @@ public class FrontController extends HttpServlet {
 		map.put("JoinSuccess.do", new JoinSuccess());
 		map.put("Info.do", new InfoService());
 		map.put("Write.do", new WriteService());
-		map.put("showpost.do", new GetpostService());
+		map.put("showpost1.do", new ShowpostService1());
+		map.put("showpost2.do", new ShowpostService2());
+		map.put("showpost3.do", new ShowpostService3());
+		map.put("showpost4.do", new ShowpostService4());
 		map.put("Mypage.do", new MypageService());
 		map.put("Qna.do", new QnaService());
 		map.put("Main.do", new MainService());

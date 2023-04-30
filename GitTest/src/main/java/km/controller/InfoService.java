@@ -14,23 +14,19 @@ public class InfoService implements Command {
 	@Override
 	public String execute(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
-		String email = request.getParameter("email");
-		String pw = request.getParameter("pw");
 		String birthday = request.getParameter("birthday");
 		String nickname = request.getParameter("nickname");
 		
 		UserVO vo  = new UserVO();
 		
 		SNSDAO dao = new SNSDAO();
-		vo.setEmail(email);
-		vo.setPw(pw);
 		vo.setBirthday(birthday);
 		vo.setNickname(nickname);
 		
 		int row = dao.info(vo);
 		
 		if(row>0) {
-			request.setAttribute("email", email);
+			request.setAttribute("nickname", nickname);
 			return "join_success.jsp";
 		}else {
 			return "redirect:/GoLogin.do";

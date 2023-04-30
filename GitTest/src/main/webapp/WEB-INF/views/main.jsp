@@ -274,42 +274,42 @@ div.photobox {
 			<div id="photobox">
 				<div id="photobox-line">
 					<div class="photobox">
-						<img class="showphoto" src="./img/하울이.jpg" onClick="location.href='showpost.do'">
+						<img class="showphoto" src="./img/하울이.jpg" onClick="location.href='showpost1.do'">
 					</div>
 					<!-- 두번째 게시물  -->
 					<div class="photobox">
-						<img class="showphoto" src="./img/하울이1.jpg" onClick="location.href='showpost.do'">
+						<img class="showphoto" src="./img/하울이1.jpg" onClick="location.href='showpost2.do'">
 					</div>
 				</div>
 				<!-- 첫번째 게시물 좋아요/댓글 -->
 				<div class="boxbottomleft">
 					<span class="like"><img src="./img/좋아요아이콘.png" width="15px"></span>
-					<span class="likenum">0</span> <span class="comment"><img
-						src="./img/댓글아이콘.png" width="17px"></span> <span class="commentnum">0</span>
+					<span class="likenum">11</span> <span class="comment">
+					<img src="./img/댓글아이콘.png" width="17px"></span> <span class="commentnum">3</span>
 				</div>
 				<!-- 두번째 게시물 좋아요/댓글 -->
 				<div class="boxbottomright">
 					<span class="like"><img src="./img/좋아요아이콘.png" width="15px"></span>
-					<span class="likenum">0</span> <span class="comment"><img
-						src="./img/댓글아이콘.png" width="17px"></span> <span class="commentnum">0</span>
+					<span class="likenum">7</span> <span class="comment"><img
+						src="./img/댓글아이콘.png" width="17px"></span> <span class="commentnum">5</span>
 				</div>
 				<div id="photobox-line2">
 					<div class="photobox">
-						<img class="showphoto" src="./img/하울이1.jpg" onClick="location.href='showpost.do'">
+						<img class="showphoto" src="./img/메인1.jpg" onClick="location.href='showpost3.do'">
 					</div>
 					<div class="photobox">
-						<img class="showphoto" src="${item.img_root}" onClick="location.href='showpost.do'">
+						<img class="showphoto" src="./img/달리는사진.jpg" onClick="location.href='showpost4.do'">
 					</div>
 				</div>
 				<div class="boxbottomleft">
 					<span class="like"><img src="./img/좋아요아이콘.png" width="15px"></span>
-					<span class="likenum">0</span> <span class="comment"><img
-						src="./img/댓글아이콘.png" width="17px"></span> <span class="commentnum">0</span>
+					<span class="likenum">2</span> <span class="comment"><img
+						src="./img/댓글아이콘.png" width="17px"></span> <span class="commentnum">1</span>
 				</div>
 				<div class="boxbottomright">
 					<span class="like"><img src="./img/좋아요아이콘.png" width="15px"></span>
-					<span class="likenum">0</span> <span class="comment"><img
-						src="./img/댓글아이콘.png" width="17px"></span> <span class="commentnum">0</span>
+					<span class="likenum">5</span> <span class="comment"><img
+						src="./img/댓글아이콘.png" width="17px"></span> <span class="commentnum">1</span>
 				</div>
 			</div>
 

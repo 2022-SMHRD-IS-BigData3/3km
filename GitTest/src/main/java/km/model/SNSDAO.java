@@ -67,11 +67,41 @@ public class SNSDAO {
 	}
 	
 	
-	public List<PostVO> getpost() {
+	public List<PostVO> showpost1() {
 		List<PostVO> list =null;
 		try {
 			session = sqlSessionFactory.openSession(true);
-			list = session.selectList("post");
+			list = session.selectList("post1");
+		}finally {
+			session.close();
+		}
+		return list;
+	}
+	public List<PostVO> showpost2() {
+		List<PostVO> list =null;
+		try {
+			session = sqlSessionFactory.openSession(true);
+			list = session.selectList("post2");
+		}finally {
+			session.close();
+		}
+		return list;
+	}
+	public List<PostVO> showpost3() {
+		List<PostVO> list =null;
+		try {
+			session = sqlSessionFactory.openSession(true);
+			list = session.selectList("post3");
+		}finally {
+			session.close();
+		}
+		return list;
+	}
+	public List<PostVO> showpost4() {
+		List<PostVO> list =null;
+		try {
+			session = sqlSessionFactory.openSession(true);
+			list = session.selectList("post4");
 		}finally {
 			session.close();
 		}
@@ -93,7 +123,6 @@ public class SNSDAO {
 		try {
 			session = sqlSessionFactory.openSession(true);
 			row = session.insert("write", vo);
-			session.insert("write2", vo);
 		}finally {
 			session.close();
 		}

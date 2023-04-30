@@ -246,8 +246,7 @@ body {
 				<input type="email" value="${member.email}" size="30" readonly />
 				<br> <br>
 				<div class="infobody2">
-					<input type="password" id="pw" value="${member.pw}" size="30"
-						maxlength=8 readonly/> 
+					<input type="password" id="pw" value="${member.pw}" size="30" maxlength=8 readonly/> 
 				</div>
 				<br> <br> <input type="text" value="${member.nickname}" size="30" />
 				<br> <br> <input type="date" id="date" size="30" /> <br>

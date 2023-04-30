@@ -7,27 +7,25 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import km.model.PostVO;
+import km.model.ImgVO;
 import km.model.SNSDAO;
 
 
 public class WriteService implements Command{
 
 	public String execute (HttpServletRequest request, HttpServletResponse response)throws ServletException, IOException {
+			PostVO vo = new PostVO();
+			ImgVO vo2 = new ImgVO();
+			SNSDAO dao = new SNSDAO();
 			String savePath = "/GitTest/src/main/webapp/img";
 			
 			String title = request.getParameter("title");
 			String kategory = request.getParameter("kategory");
 			String post_contents = request.getParameter("post_contents");
-			String imgfile = request.getParameter("imgfile");
-			String img_root = savePath + "/" + imgfile;
 			
-			PostVO vo = new PostVO();
 			vo.setTitle(title);
 			vo.setKategory(kategory);
 			vo.setPost_contents(post_contents);
-			
-			
-			SNSDAO dao = new SNSDAO();
 			
 			int row = dao.write(vo);
 			

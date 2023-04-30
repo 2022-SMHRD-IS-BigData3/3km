@@ -253,7 +253,7 @@ textarea {
 	<br>
 	<form action="Write.do" method="post">
 		<input type="text" id="intitle" placeholder="제목을 입력해주세요" name="title">
-		<select id="selgesi" name="kategoey">
+		<select id="selgesi" name="kategory">
 			<option value="cafe">카페/식당</option>
 			<option value="walk">산책</option>
 			<option value="etc">기타</option>
