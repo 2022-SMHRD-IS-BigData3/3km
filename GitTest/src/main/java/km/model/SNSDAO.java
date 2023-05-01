@@ -157,5 +157,51 @@ public class SNSDAO {
 	}
 
 	
+	
+	//게시글에 댓글 달기
+	
+	public int commentwrite(CommentVO vo) {
+		try {
+			session = sqlSessionFactory.openSession(true);
+			row = session.insert("commentwrite", vo);
+		}finally {
+			session.close();
+		}
+		return row;
+	}
+
+	
+	 // 게시글에 댓글 불러오기
+List<CommentVO> commentlist= null;
+	
+	public List<CommentVO> selectcomment() {
+		System.out.println("listcomment DAO 안");
+		try {
+			session=sqlSessionFactory.openSession();
+			commentlist = session.selectList("commentprint");
+			
+			
+		}finally {
+			session.close();
+		}
+		return commentlist;
+	}
+
+	
+	//댓글에서 닉네임 가져오기
+		List<UserVO> nicknamelist= null;
+		
+		public List<UserVO> nickname() {
+			System.out.println("nicknamelist DAO 안");
+			try {
+				session=sqlSessionFactory.openSession();
+				nicknamelist = session.selectList("selectnickname");
+				
+			}finally {
+				session.close();
+			}
+			return nicknamelist;
+		}
+	
 
 }

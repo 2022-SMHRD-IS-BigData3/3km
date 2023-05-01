@@ -21,6 +21,9 @@ public class CommentVO {
 		this.post_id = post_id;
 	}
 
+	public CommentVO() {
+		
+	}
 
 	public String getComment_content() {
 		return comment_content;

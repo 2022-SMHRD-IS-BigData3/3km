@@ -277,7 +277,12 @@ form#mid {
 		</form>
 		</div>
 		<br>
-		<div id="commentarea">댓글 공간</div>
+		<div id="commentarea">댓글 공간
+		<c:forEach items="${selectcomment}" var="item" varStatus="status">
+						<div>${selectnickname[status.index].nickname}</div>
+						<div>${item.comment_content}</div>
+					</c:forEach>
+					</div>
 		<br>
 		<button id="backbutton" value="뒤로" onClick="location.href='Gomain.do'">back</button>
 	</div>
