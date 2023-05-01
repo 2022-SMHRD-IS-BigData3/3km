@@ -236,7 +236,7 @@ div.photobox {
 									</ul></li> <br>
 								<li class="menu"><a class="aham">MyPage</a>
 									<ul class="hide">
-										<li class="hidelist" onClick="location.href='Gomypage.do'">‍마이페이지</li>
+										<li class="hidelist" onClick="location.href='Mypage.do'">‍마이페이지</li>
 										<li class="hidelist" onClick="location.href='Goinfo.do'">내정보
 											수정</li>
 										<li class="hidelist" onClick="location.href='Gologout.do'">로그아웃</li>
@@ -253,7 +253,7 @@ div.photobox {
 					<img src="./img/글쓰기아이콘.png">
 				</button>
 				<button type="button" id="person"
-					onClick="location.href='Gomypage.do'">
+					onClick="location.href='Mypage.do'">
 					<img src="./img/프로필아이콘.png">
 				</button>
 			</header>

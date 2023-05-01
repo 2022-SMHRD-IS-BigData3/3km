@@ -131,16 +131,16 @@ public class SNSDAO {
 
 	
 	//마이페이지에 내 강아지 정보 보여주기
-	public DogVO selectDoginfo(DogVO vo) { 
-		DogVO result = null;
+	public List<DogVO> selectDoginfo(){ 
+		List<DogVO> list = null;
 		
 		try {
 			session = sqlSessionFactory.openSession(true);
-			result = session.selectOne("selectDoginfo", vo);
+			list = session.selectList("selectDoginfo");
 		}finally {
 			session.close();
 		}
-		return result;
+		return list;
 		
 	}
 

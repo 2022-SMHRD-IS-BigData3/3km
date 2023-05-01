@@ -266,8 +266,8 @@ form#mid {
 			<!-- <img src="/img/좋아요아이콘.png" width="15px"> -->
 			<button id="like">❤</button>
 			<span id="likenum">0</span> 
-			<span class="comment"><img src="/img/댓글아이콘.png" width="17px"></span> 
-			<span class="commentnum">0</span>
+			<span class="comment"><img src="./img/댓글아이콘.png" width="17px"></span> 
+			<span class="commentnum">5</span>
 		</div>
 		<br>
 		<div>

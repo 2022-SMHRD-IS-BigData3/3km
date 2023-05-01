@@ -26,6 +26,11 @@
 	</update>
 	
 	
+	<select id="selectDoginfo" resultType="km.model.DogVO">
+		select *
+		from DOG_INFO
+	</select>
+	
 	<select id="img" resultType="km.model.ImgVO">
 		select *
 		from POST_IMG

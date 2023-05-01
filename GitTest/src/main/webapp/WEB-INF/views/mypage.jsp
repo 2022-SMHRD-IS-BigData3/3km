@@ -377,24 +377,16 @@
 
         <div class="add">
             <div class="add-wrapper">
+            <c:forEach items="${doginfo}" var="item">
+            	<c:if test="${item.user_id == member.user_id}">
                 <div class="add1">
                     <div class="dogpageimg"><label for="img"><img src="./img/강아지프로필아이콘.png" class="dogpageimg" /></label></div>
-                    <div class="doginfo"> <span>이름</span></div>
-                    <div class="doginfo"><span>나이</span></div>
-                    <div class="doginfo"><span>견종</span></div>
+                    <div class="doginfo"> <span>${item.dog_name}</span></div>
+                    <div class="doginfo"><span>${item.dog_age}살</span></div>
+                    <div class="doginfo"><span>${item.dog_breed}</span></div>
                 </div>
-                <div class="add2">
-                    <div class="dogpageimg"><label for="img"><img src="./img/강아지프로필아이콘.png" class="dogpageimg" /></label></div>
-                    <div class="doginfo"> <span>이름</span></div>
-                    <div class="doginfo"><span>나이</span></div>
-                    <div class="doginfo"><span>견종</span></div>
-                </div>
-                <div class="add3">
-                    <div class="dogpageimg"><label for="img"><img src="./img/강아지프로필아이콘.png" class="dogpageimg" /></label></div>
-                    <div class="doginfo"> <span>이름</span></div>
-                    <div class="doginfo"><span>나이</span></div>
-                    <div class="doginfo"><span>견종</span></div>
-                </div>
+                </c:if>
+            </c:forEach>
             </div>
         </div>
 
@@ -405,16 +397,16 @@
             <div id="picture" style="overflow-y: scroll;">
         	<p id="picname">${member.nickname}님이 올린 게시글 사진</p>
             	<div>
-	                <img class="post_img" src="./img/포켓몬1.jpg">
-	                <img class="post_img2" src="./img/포켓몬2.jpg">
+	                <img class="post_img" src="./img/하울이.jpg">
+	                <img class="post_img2" src="./img/하울이1.jpg">
                 </div>
                 <div>
-                    <img class="post_img" src="./img/포켓몬3.jpg">
-                	<img class="post_img2" src="./img/포켓몬4.jpg">	
+                    <img class="post_img" src="./img/이미지없음.jpg">
+                	<img class="post_img2" src="./img/이미지없음.jpg">	
                 </div>
                 <div>
-                    <img class="post_img" src="./img/포켓몬5.jpg">
-                	<img class="post_img2" src="./img/포켓몬6.jpg">	
+                    <img class="post_img" src="./img/이미지없음.jpg">
+                	<img class="post_img2" src="./img/이미지없음.jpg">	
                 </div>
             </div>
         </div>
