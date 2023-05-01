@@ -15,8 +15,8 @@
 	
 	
 	<insert id="write" parameterType="km.model.PostVO">
-		INSERT INTO POST(POST_ID,TITLE,POST_CONTENTS,POSTING_DATE,USER_ID,KATEGORY)
-		VALUES(POST_SEQ.nextval,#{title},#{post_contents},sysdate,1,#{kategory})
+		INSERT INTO POST(POST_ID,TITLE,POST_CONTENTS,POSTING_DATE,USER_ID,KATEGORY,IMG_ROOT)
+		VALUES(POST_SEQ.nextval,#{title},#{post_contents},sysdate,2,#{kategory},#{img_root})
 	</insert>
 	
 	<update id="info" parameterType="km.model.UserVO">
@@ -62,6 +62,13 @@
 		from POST
 		where kategory = 'question'
 		ORDER BY post_id
+	</select>
+	
+	<select id="cafe" resultType="km.model.ImgVO">
+		select *
+		from POST_img
+		where kategory = 'cafe'
+		ORDER BY img_id
 	</select>
 
 

@@ -9,14 +9,16 @@ public class PostVO {
 	private String kategory;
 	private String posting_date;
 	private String mody_date;
+	private String img_root;
 	private int user_id;
 	private int like_id;
 	private int like_count;
 	private String like_date;
 	
 	
+	
 	public PostVO(int post_id, String title, String post_contents, String kategory, String posting_date,
-			String mody_date, int user_id,int like_id,int like_count,String like_date) {
+			String mody_date, int user_id,int like_id,int like_count,String like_date,String img_root) {
 		this.post_id = post_id;
 		this.title = title;
 		this.post_contents = post_contents;
@@ -26,9 +28,19 @@ public class PostVO {
 		this.like_id = like_id;
 		this.like_count = like_count;
 		this.like_date = like_date;
+		this.img_root = img_root;
+	}
+	
+	public PostVO() {}
+
+	public String getImg_root() {
+		return img_root;
 	}
 
-	public PostVO() {}
+	public void setImg_root(String img_root) {
+		this.img_root = img_root;
+	}
+
 
 	public int getPost_id() {
 		return post_id;
@@ -96,6 +108,18 @@ public class PostVO {
 
 	public void setLike_date(String like_date) {
 		this.like_date = like_date;
+	}
+
+	public void setPost_id(int post_id) {
+		this.post_id = post_id;
+	}
+
+	public void setUser_id(int user_id) {
+		this.user_id = user_id;
+	}
+
+	public void setLike_id(int like_id) {
+		this.like_id = like_id;
 	}
 	
 }

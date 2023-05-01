@@ -252,6 +252,7 @@ textarea {
 	</form>
 	<br>
 	<form action="Write.do" method="post">
+		<input type="number" id="user_id" name="user_id" value="${member.user_id}" style="display:none">
 		<input type="text" id="intitle" placeholder="제목을 입력해주세요" name="title">
 		<select id="selgesi" name="kategory">
 			<option value="cafe">카페/식당</option>
@@ -267,7 +268,7 @@ textarea {
 		<textarea id="content" name="post_contents"></textarea>
 		<br> <br>
 		<div>
-			<label for="image_uploads"></label> <input id="file" type="file" name="imgfile" accept=".jpg, .jpeg, .png">
+			<label for="image_uploads"></label> <input id="file" type="file" name="img_root" accept=".jpg, .jpeg, .png">
 		</div>
 		<button input type="submit" id="subbut" value="작성">작성</button>
 		</input>

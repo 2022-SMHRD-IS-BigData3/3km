@@ -144,6 +144,18 @@ public class SNSDAO {
 		
 	}
 
+	public List<ImgVO> cafe() {
+		List<ImgVO> list = null;
+		
+		try {
+			session = sqlSessionFactory.openSession(true);
+			list = session.selectList("cafe");
+		}finally {
+			session.close();
+		}
+		return list;
+	}
+
 	
 
 }

@@ -218,7 +218,7 @@ div.photobox {
 							<div class="kateham">
 								<li class="menu"><a class="aham">Place</a>
 									<ul class="hide">
-										<li class="hidelist" onClick="location.href='Goplace_cafe.do'">카페/식당</li>
+										<li class="hidelist" onClick="location.href='Cafe.do'">카페/식당</li>
 										<li class="hidelist">산책</li>
 										<li class="hidelist">기타</li>
 									</ul></li> <br>
@@ -270,22 +270,23 @@ div.photobox {
 			</div>
 			<!-- 여기는 게시물 나오는 곳입니다. -->
 			<!-- 첫번째 게시물  -->
-			
-			<div id="photobox">
-				<div id="photobox-line">
-					<div class="photobox">
-						<img class="showphoto" src="./img/하울이.jpg" onClick="location.href='showpost1.do'">
-					</div>
+				<div id="photobox">
+					<div id="photobox-line">
+						<div class="photobox">
+							<img class="showphoto" src="./img/하울이.jpg"
+								onClick="location.href='showpost1.do'">
+						</div>
 					<!-- 두번째 게시물  -->
 					<div class="photobox">
-						<img class="showphoto" src="./img/하울이1.jpg" onClick="location.href='showpost2.do'">
+						<img class="showphoto" src="./img/하울이1.jpg"
+							onClick="location.href='showpost2.do'">
 					</div>
 				</div>
 				<!-- 첫번째 게시물 좋아요/댓글 -->
 				<div class="boxbottomleft">
 					<span class="like"><img src="./img/좋아요아이콘.png" width="15px"></span>
-					<span class="likenum">11</span> <span class="comment">
-					<img src="./img/댓글아이콘.png" width="17px"></span> <span class="commentnum">3</span>
+					<span class="likenum">11</span> <span class="comment"> <img
+						src="./img/댓글아이콘.png" width="17px"></span> <span class="commentnum">3</span>
 				</div>
 				<!-- 두번째 게시물 좋아요/댓글 -->
 				<div class="boxbottomright">
@@ -295,10 +296,12 @@ div.photobox {
 				</div>
 				<div id="photobox-line2">
 					<div class="photobox">
-						<img class="showphoto" src="./img/메인1.jpg" onClick="location.href='showpost3.do'">
+						<img class="showphoto" src="./img/메인1.jpg"
+							onClick="location.href='showpost3.do'">
 					</div>
 					<div class="photobox">
-						<img class="showphoto" src="./img/달리는사진.jpg" onClick="location.href='showpost4.do'">
+						<img class="showphoto" src="./img/달리는사진.jpg"
+							onClick="location.href='showpost4.do'">
 					</div>
 				</div>
 				<div class="boxbottomleft">
@@ -332,6 +335,7 @@ div.photobox {
 				}
 			})
 		})
+			
 	</script>
 
 </body>

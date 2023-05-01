@@ -285,7 +285,6 @@ div.photobox {
 				</select>
 			</div>
 			<!-- 여기는 게시물 나오는 곳입니다. -->
-			<c:forEach items="${post_img}" var="item">
 				<!-- 첫번째 게시물  -->
 				<div id="photobox">
 					<div id="photobox-line">
@@ -338,7 +337,6 @@ div.photobox {
 					<button id="morebutton" class="btn btn-primary btn-sm" btn-sm>더보기</button>
 					<a href="#"></a>
 				</div>
-			</c:forEach>
 		</div>
 	</div>
 

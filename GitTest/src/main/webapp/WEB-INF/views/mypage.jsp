@@ -365,7 +365,7 @@
                     <label for="img"><img src="./img/유저아이콘.png" id="user"></label>
                 </div>
                 <div class="myinfo">
-                    <div class="gesi">게시물 <br><span id="gesisu">0</span></div>
+                    <div class="gesi">게시물 <br><span id="gesisu">2</span></div>
                     <div class="follow">팔로워 <br><span id="followsu">0</span></div>
                     <div class="following">팔로잉 <br><span id="followingsu">0</span></div>
                 </div>
