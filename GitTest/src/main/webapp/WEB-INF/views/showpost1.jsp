@@ -204,6 +204,10 @@ form#mid {
 	font-family: Katuri;
 	font-size: 13px;
 }
+#like{
+	border: none;
+	background-color: rgba(0, 0, 0, 0);
+}
 </style>
 <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 </head>
@@ -271,7 +275,7 @@ form#mid {
 		</div>
 		<br>
 		<div>
-		<form action="#"><!-- 댓글 기능단으로 보내기 -->
+		<form action="Comment.do" method="get"><!-- 댓글 기능단으로 보내기 -->
 			<input id="comment" placeholder="댓글 입력"/>
 			<button id="okbutton" value="확인">확인</button>
 		</form>
@@ -300,13 +304,13 @@ form#mid {
 		
 		
 		$(document).on('click','#like',(e)=>{
-			$(e.target).text('💔');
+			$(e.target).text('❤');
 			$('#likenum').text('1');
 			$(e.target).attr('id','dislike');
 			$(e.target).removeClass('like');
 		})
 		$(document).on('click','#dislike',function(){
-			$(this).text('❤');	
+			$(this).text('🖤');	
 			$('#dislike+span').text('0');
 			$(this).removeClass('dislike');
 			$(this).attr('id','like');
