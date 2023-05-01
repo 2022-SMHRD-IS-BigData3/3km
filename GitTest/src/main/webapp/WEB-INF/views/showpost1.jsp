@@ -275,9 +275,9 @@ form#mid {
 		</div>
 		<br>
 		<div>
-		<form action="Comment.do" method="get"><!-- 댓글 기능단으로 보내기 -->
-			<input id="comment" placeholder="댓글 입력"/>
-			<button id="okbutton" value="확인">확인</button>
+		<form action="Comment.do" method="post"><!-- 댓글 기능단으로 보내기 -->
+			<input name="comment_content" id="comment" placeholder="댓글 입력"/>
+			<button type="submit" id="okbutton" value="확인">확인</button>
 		</form>
 		</div>
 		<br>

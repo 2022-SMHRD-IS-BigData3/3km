@@ -161,9 +161,11 @@ public class SNSDAO {
 	//게시글에 댓글 달기
 	
 	public int commentwrite(CommentVO vo) {
+		
 		try {
 			session = sqlSessionFactory.openSession(true);
 			row = session.insert("commentwrite", vo);
+			System.out.println("row확인"+row);
 		}finally {
 			session.close();
 		}

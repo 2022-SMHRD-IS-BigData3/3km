@@ -72,20 +72,17 @@
 	</select>
 	
 	<insert id="commentwrite" parameterType="km.model.CommentVO">
-		INSERT INTO
-		POST_COMMENT(COMMENT_ID,COMMENT_CONTENT,USER_ID,POST_ID)
-		VALUES(COMMENT_SEQ.NEXTVAL,#{comment_content},1,2)
+		INSERT INTO POST_COMMENT(COMMENT_ID,COMMENT_CONTENT,USER_ID,POST_ID)
+		VALUES(COMMENT_SEQ.NEXTVAL,#{comment_content},USER_SEQ.CURRVAL,POST_SEQ.CURRVAL)
 	</insert>
 
-	<select id="commentprint" parameterType="km.model.CommentVO"
-		resultType="km.model.CommentVO">
+	<select id="commentprint" parameterType="km.model.CommentVO" resultType="km.model.CommentVO">
 		SELECT COMMENT_CONTENT
 		FROM POST_COMMENT
 		WHERE POST_ID = 1
 	</select>
 
-	<select id="selectnickname" parameterType="km.model.UserVO"
-		resultType="km.model.UserVO">
+	<select id="selectnickname" parameterType="km.model.UserVO" resultType="km.model.UserVO">
 		SELECT A.NICKNAME as nickname
 		FROM USER_INFO A, post_comment B
 		where A.user_id = B.user_id
