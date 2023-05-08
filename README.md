@@ -93,7 +93,18 @@
 게시물 작성
 
 <span>
-    ![image](https://user-images.githubusercontent.com/129910972/236712737-006ee53a-502c-4027-82d8-9052adcf5f87.png)
+    
+![image](https://user-images.githubusercontent.com/129910972/236712737-006ee53a-502c-4027-82d8-9052adcf5f87.png)
+    
+</span>
+
+메인페이지
+
+<span>
+ 
+    ![image](https://user-images.githubusercontent.com/129910972/236712888-ba78aeda-351d-449d-951d-b28651af28bd.png)
+
+    
 </span>
 
 ## 👨‍👩‍👦‍👦 팀원역할
