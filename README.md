@@ -90,3 +90,33 @@
     
 </span>
 <br>
+
+게시물 작성
+
+<span>
+ 
+</span>
+## 👨‍👩‍👦‍👦 팀원역할
+
+<table>
+ 
+  <tr>
+    <td align="center"><strong>김소정</strong></td>
+    <td align="center"><strong>김윤</strong></td>
+    <td align="center"><strong>고주진</strong></td>
+    <td align="center"><strong>문동현</strong></td>
+  </tr>
+  <tr>
+    <td align="center"><b>PM</b></td>
+    <td align="center"><b>Frontend</b></td>
+    <td align="center"><b>Frontend</b></td>
+    <td align="center"><b>Backend</b></td>
+  </tr>
+  <tr>
+    <td align="center"><a href="https://github.com/자신의username작성해주세요" target='_blank'>github</a></td>
+    <td align="center"><a href="https://github.com/자신의username작성해주세요" target='_blank'>github</a></td>
+    <td align="center"><a href="https://github.com/자신의username작성해주세요" target='_blank'>github</a></td>
+    <td align="center"><a href="https://github.com/자신의username작성해주세요" target='_blank'>github</a></td>
+    <td align="center"><a href="https://github.com/자신의username작성해주세요" target='_blank'>github</a></td>
+  </tr>
+</table>
