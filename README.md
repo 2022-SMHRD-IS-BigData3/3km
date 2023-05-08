@@ -102,8 +102,7 @@
 
 <span>
  
-    ![image](https://user-images.githubusercontent.com/129910972/236712888-ba78aeda-351d-449d-951d-b28651af28bd.png)
-
+![image](https://user-images.githubusercontent.com/129910972/236712888-ba78aeda-351d-449d-951d-b28651af28bd.png)
     
 </span>
 
