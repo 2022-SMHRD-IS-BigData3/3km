@@ -64,7 +64,10 @@
 </table>
 
 ###### ⚙ 서비스 아키텍쳐
+![image](https://user-images.githubusercontent.com/129910972/236709101-ff4183a0-8886-4899-9cc1-132a78f8d137.png)
 
 
 ####### 📌유스케이스 
 ![image](https://user-images.githubusercontent.com/129910972/236709054-5aaa97eb-a4c0-44fe-af8b-c7f8d61a5ea1.png)
+
+
