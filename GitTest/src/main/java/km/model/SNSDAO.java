@@ -204,17 +204,48 @@ public class SNSDAO {
 		return list;
 	}
 	
-	public List<UserVO> nickname() {
-		List<UserVO> list =null;
+	//게시글에 댓글 달기
+	public int commentwrite(CommentVO vo) {
+		
 		try {
 			session = sqlSessionFactory.openSession(true);
-			list = session.selectList("nickname");
+			row = session.insert("commentwrite", vo);
+			System.out.println("row확인"+row);
 		}finally {
 			session.close();
 		}
-		return list;
+		return row;
 	}
 
+	
+	 // 게시글에 댓글 불러오기
+	List<CommentVO> commentlist= null;
+	
+	public List<CommentVO> selectcomment() {
+		try {
+			session=sqlSessionFactory.openSession();
+			commentlist = session.selectList("commentprint");
+		}finally {
+			session.close();
+		}
+		return commentlist;
+	}
+
+	
+	//댓글에서 닉네임 가져오기
+		List<UserVO> nicknamelist= null;
+		
+		public List<UserVO> nickname() {
+			System.out.println("nicknamelist DAO 안");
+			try {
+				session=sqlSessionFactory.openSession();
+				nicknamelist = session.selectList("selectnickname");
+				
+			}finally {
+				session.close();
+			}
+			return nicknamelist;
+		}
 	
 
 }
