@@ -82,6 +82,8 @@
 
 ## 🖥 화면구성
 로그인 / 회원가입
-![image](https://user-images.githubusercontent.com/129910972/236709310-d906b37a-22a9-4a54-aff3-0d17d2a63cb3.png)
-![image](https://user-images.githubusercontent.com/129910972/236709440-35141e16-0593-4d31-aeb0-2a324e17ae75.png)
 
+![image](https://user-images.githubusercontent.com/129910972/236711893-49a23e79-23ba-43bc-abab-d7602c347de4.png)
+
+![image](https://user-images.githubusercontent.com/129910972/236709440-35141e16-0593-4d31-aeb0-2a324e17ae75.png)
+<br>
