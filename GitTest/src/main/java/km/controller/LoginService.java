@@ -31,7 +31,7 @@ public class LoginService implements Command {
 			HttpSession session = request.getSession();
 			session.setAttribute("member", result);
 			
-			return "main.jsp";
+			return "redirect:/Main.do";
 		}else {
 			return "redirect:/login.do";
 		}

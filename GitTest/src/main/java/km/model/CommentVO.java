@@ -6,11 +6,12 @@ public class CommentVO {
 	private String comment_content;
 	private String comment_date;
 	private String comment_mody_date;
+	private String nickname;
 	private int user_id;
 	private int post_id;
 	
 	
-	public CommentVO(int comment_id, String comment_content, String comment_date, String comment_mody_date, int user_id,
+	public CommentVO(int comment_id, String comment_content, String comment_date, String comment_mody_date,String nickname, int user_id,
 			int post_id) {
 		super();
 		this.comment_id = comment_id;
@@ -19,7 +20,10 @@ public class CommentVO {
 		this.comment_mody_date = comment_mody_date;
 		this.user_id = user_id;
 		this.post_id = post_id;
+		this.nickname = nickname;
 	}
+	
+	public CommentVO() {}
 
 
 	public String getComment_content() {
@@ -65,9 +69,26 @@ public class CommentVO {
 	public int getPost_id() {
 		return post_id;
 	}
-	
-	
-	
+
+	public void setComment_id(int comment_id) {
+		this.comment_id = comment_id;
+	}
+
+	public void setUser_id(int user_id) {
+		this.user_id = user_id;
+	}
+
+	public void setPost_id(int post_id) {
+		this.post_id = post_id;
+	}
+
+	public String getNickname() {
+		return nickname;
+	}
+
+	public void setNickname(String nickname) {
+		this.nickname = nickname;
+	}
 	
 	
 

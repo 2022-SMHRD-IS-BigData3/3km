@@ -34,6 +34,7 @@
 body {
 	font-family: Katuri;
 	font-size: 20px;
+	height: auto;
 }
 
 /* div의 스타일 */
@@ -206,79 +207,79 @@ textarea {
 </head>
 
 <body>
-	<form action="#">
-		<div id="enter">
-			<header class="sangdan">
-				<button type="button" id="ham">
-					<li class="menu"><a class="aham"><img
-							src="./img/햄버거아이콘.png" /></a>
-						<ul class="hide">
-							<div class="kateham">
-								<li class="menu"><a class="aham">Place</a>
-									<ul class="hide">
-										<li class="hidelist" onClick="location.href='Goplace_cafe.do'">카페/식당</li>
-										<li class="hidelist">산책</li>
-										<li class="hidelist">기타</li>
-									</ul></li> <br>
-								<li class="menu"><a class="aham">Feed</a>
-									<ul class="hide">
-										<li class="hidelist">Puppy</li>
-										<li class="hidelist">Adult</li>
-										<li class="hidelist">Senior</li>
-									</ul></li> <br>
-								<li class="aham"><a>Items</a></li> <br>
-								<li class="menu"><a class="aham">Board</a>
-									<ul class="hide">
-										<li class="hidelist">나눔</li>
-										<li class="hidelist" onClick="location.href='Goqna.do'">Q&A</li>
-									</ul></li> <br>
-								<li class="menu"><a class="aham">MyPage</a>
-									<ul class="hide">
-										<li class="hidelist" onClick="location.href='Gomypage1.do'">‍계정관리</li>
-										<li class="hidelist" onClick="location.href='Goinfo.do'">내
-											정보 수정</li>
-										<li class="hidelist" onClick="location.href='Gologout.do'">로그아웃</li>
-									</ul></li>
-							</div>
-						</ul></li>
-				</button>
-				<button type="button" id="withdogslogo" onClick="location.href='Gomain.do'">
+	<div id="enter">
+		<header class="sangdan">
+			<button type="button" id="ham">
+				<li class="menu"><a class="aham"><img src="./img/햄버거아이콘.png" /></a>
+					<ul class="hide">
+						<div class="kateham">
+							<li class="menu"><a class="aham">Place</a>
+								<ul class="hide">
+									<li class="hidelist" onClick="location.href='Goplace_cafe.do'">카페/식당</li>
+									<li class="hidelist">산책</li>
+									<li class="hidelist">기타</li>
+								</ul>
+							</li> 
+							<br>
+							<li class="menu"><a class="aham">Feed</a>
+								<ul class="hide">
+									<li class="hidelist">Puppy</li>
+									<li class="hidelist">Adult</li>
+									<li class="hidelist">Senior</li>
+								</ul>
+							</li> 
+							<br>
+							<li class="aham"><a>Items</a></li> <br>
+							<li class="menu"><a class="aham">Board</a>
+								<ul class="hide">
+									<li class="hidelist">나눔</li>
+									<li class="hidelist" onClick="location.href='Goqna.do'">Q&A</li>
+								</ul>
+							</li>
+							<br>
+							<li class="menu"><a class="aham">MyPage</a>
+								<ul class="hide">
+									<li class="hidelist" onClick="location.href='Gomypage1.do'">‍계정관리</li>
+									<li class="hidelist" onClick="location.href='Goinfo.do'">내정보 수정</li>
+									<li class="hidelist" onClick="location.href='Gologout.do'">로그아웃</li>
+								</ul>
+							</li>
+						</div>
+					</ul>
+				</li>
+			</button>
+				<button type="button" id="withdogslogo" onClick="location.href='Main.do'">
 					<img src="./img/이름로고.png" width="180">
 				</button>
 				<button type="button" id="person" onClick="location.href='Gomypage.do'">
 					<img src="./img/프로필아이콘.png">
 				</button>
-			</header>
-	</form>
-	<br>
-	<form action="Write.do" method="post">
-		<input type="number" id="user_id" name="user_id" value="${member.user_id}" style="display:none">
-		<input type="text" id="intitle" placeholder="제목을 입력해주세요" name="title">
-		<select id="selgesi" name="kategory">
-			<option value="cafe">카페/식당</option>
-			<option value="walk">산책</option>
-			<option value="etc">기타</option>
-			<option value="puppy">Puppy</option>
-			<option value="adult">Adult</option>
-			<option value="senior">Senior</option>
-			<option value="items">Items</option>
-			<option value="share">나눔</option>
-			<option value="question">Q & A</option>
-		</select> <br>
-		<textarea id="content" name="post_contents"></textarea>
-		<br> <br>
-		<div>
-			<label for="image_uploads"></label> <input id="file" type="file" name="img_root" accept=".jpg, .jpeg, .png">
-		</div>
-		<button input type="submit" id="subbut" value="작성">작성</button>
-		</input>
-	</form>
-	</div>
-
-
-	<br>
-
-	</div>
+		</header>
+		<br>
+		<form action="Write.do" method="post" class="wrfrom">
+			<input type="number" id="user_id" name="user_id" value="${member.user_id}" style="display: none"> 
+			<input type="text" id="intitle" placeholder="제목을 입력해주세요" name="title">
+			<select id="selgesi" name="kategory">
+				<option value="cafe">카페/식당</option>
+				<option value="walk">산책</option>
+				<option value="etc">기타</option>
+				<option value="puppy">Puppy</option>
+				<option value="adult">Adult</option>
+				<option value="senior">Senior</option>
+				<option value="items">Items</option>
+				<option value="share">나눔</option>
+				<option value="question">Q & A</option>
+			</select> 
+			<br>
+			<textarea id="content" name="post_contents" ></textarea>
+			<br> <br>
+			<div>
+				<label for="image_uploads"></label> 
+				<input id="file" type="file" name="img_root" accept=".jpg, .jpeg, .png">
+			</div>
+			<button type="submit" id="subbut" value="작성">작성</button>
+		</form>
+	</div>	
 	<script>
 		$(document).ready(function() {
 			$(".menu>.aham").click(function() {
@@ -290,10 +291,7 @@ textarea {
 				}
 			})
 		})
-
 	</script>
-
-
 </body>
 
 </html>

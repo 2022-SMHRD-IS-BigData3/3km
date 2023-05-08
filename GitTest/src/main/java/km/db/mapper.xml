@@ -7,33 +7,37 @@
 		from USER_INFO
 		where email=#{email} and pw=#{pw}
 	</select>
-	
+
 	<insert id="join" parameterType="km.model.UserVO">
-		INSERT INTO USER_INFO(USER_ID,EMAIL,PW,NICKNAME,BRITHDAY)
+		INSERT INTO
+		USER_INFO(USER_ID,EMAIL,PW,NICKNAME,BRITHDAY)
 		VALUES(USER_SEQ.nextval,#{email},#{pw},#{nickname},#{birthday})
 	</insert>
-	
-	
+
+
 	<insert id="write" parameterType="km.model.PostVO">
-		INSERT INTO POST(POST_ID,TITLE,POST_CONTENTS,POSTING_DATE,USER_ID,KATEGORY,IMG_ROOT)
-		VALUES(POST_SEQ.nextval,#{title},#{post_contents},sysdate,2,#{kategory},#{img_root})
+		INSERT INTO
+		POST(POST_ID,TITLE,POST_CONTENTS,POSTING_DATE,USER_ID,KATEGORY,IMG_ROOT)
+		VALUES(POST_SEQ.nextval,#{title},#{post_contents},sysdate,#{user_id},#{kategory},#{img_root})
 	</insert>
-	
+
 	<update id="info" parameterType="km.model.UserVO">
 		UPDATE USER_INFO
-		SET BRITHDAY=#{birthday},NICKNAME=#{nickname}
+		SET
+		BRITHDAY=#{birthday},NICKNAME=#{nickname}
 		WHERE USER_ID = 1
 	</update>
-	
-	
+
+
 	<select id="selectDoginfo" resultType="km.model.DogVO">
 		select *
 		from DOG_INFO
 	</select>
-	
-	<select id="img" resultType="km.model.ImgVO">
+
+	<select id="post" resultType="km.model.PostVO">
 		select *
-		from POST_IMG
+		from POST
+		ORDER BY post_id
 	</select>
 	
 	<select id="post1" resultType="km.model.PostVO">
@@ -44,33 +48,61 @@
 	<select id="post2" resultType="km.model.PostVO">
 		select *
 		from POST
-		where post_id = 2
+		where post_id = 33
 	</select>
-	<select id="post3" resultType="km.model.PostVO">
-		select *
-		from POST
-		where post_id = 3
-	</select>
-	<select id="post4" resultType="km.model.PostVO">
-		select *
-		from POST
-		where post_id = 4
-	</select>
-	
+
 	<select id="qna" resultType="km.model.PostVO">
 		select *
 		from POST
-		where kategory = 'question'
+		where kategory ='question'
+		ORDER BY post_id
+	</select>
+
+	<select id="cafe" resultType="km.model.PostVO">
+		select *
+		from POST
+		where kategory= 'cafe'
 		ORDER BY post_id
 	</select>
 	
-	<select id="cafe" resultType="km.model.ImgVO">
+	<insert id="pluscomment" parameterType="km.model.CommentVO">
+		INSERT INTO post_comment(comment_id,comment_content,comment_date,user_id,post_id)
+		VALUES(COMMENT_SEQ.nextval,#{comment_content},sysdate,#{user_id},1)
+	</insert>
+	
+	<update id="rewrite" parameterType="km.model.PostVO">
+		UPDATE post
+		SET 
+		title=#{title},post_contents=#{post_contents},mody_date=sysdate
+		WHERE post_id = 29
+	</update>
+	
+	<update id="mypagerewrite" parameterType="km.model.DogVO">
+		UPDATE dog_info
+		SET 
+		dog_id=DOG_SEQ.nextval,dog_name=#{dog_name},dog_age=#{dog_age},dog_breed=#{dog_breed},dog_img=#{dog_img}
+		WHERE user_id = 32
+	</update>
+	
+	<update id="introduce" parameterType="km.model.DogVO">
+		UPDATE user_info
+		SET 
+		introduce=#{introduce}
+		WHERE user_id = 32
+	</update>
+	
+	<select id="nanum" resultType="km.model.PostVO">
 		select *
-		from POST_img
-		where kategory = 'cafe'
-		ORDER BY img_id
+		from POST
+		where kategory ='share'
+		ORDER BY post_id
 	</select>
-
+	
+	<select id="nickname" resultType="km.model.UserVO">
+		select user_id,nickname
+		from user_info
+		ORDER BY user_id
+	</select>
 
 
 

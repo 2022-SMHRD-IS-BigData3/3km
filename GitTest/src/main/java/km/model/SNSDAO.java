@@ -45,11 +45,11 @@ public class SNSDAO {
 		return row;
 	}
 	
-	public List<ImgVO> getimg() {
-		List<ImgVO> list =null;
+	public List<PostVO> getpost() {
+		List<PostVO> list =null;
 		try {
 			session = sqlSessionFactory.openSession(true);
-			list = session.selectList("img");
+			list = session.selectList("post");
 		}finally {
 			session.close();
 		}
@@ -128,7 +128,6 @@ public class SNSDAO {
 		}
 		return row;
 	}
-
 	
 	//마이페이지에 내 강아지 정보 보여주기
 	public List<DogVO> selectDoginfo(){ 
@@ -144,12 +143,72 @@ public class SNSDAO {
 		
 	}
 
-	public List<ImgVO> cafe() {
-		List<ImgVO> list = null;
-		
+	public List<PostVO> cafe() {
+		List<PostVO> list = null;
 		try {
 			session = sqlSessionFactory.openSession(true);
 			list = session.selectList("cafe");
+		}finally {
+			session.close();
+		}
+		return list;
+	}
+
+	public int pluscomment(CommentVO vo) {
+		try {
+			session = sqlSessionFactory.openSession(true);
+			row = session.insert("pluscomment", vo);
+		}finally {
+			session.close();
+		}
+		return row;
+	}
+	
+	public int rewrite(PostVO vo) {
+		try {
+			session = sqlSessionFactory.openSession(true);
+			row = session.insert("rewrite", vo);
+		}finally {
+			session.close();
+		}
+		return row;
+	}
+
+	public int mypagewrite(List<DogVO> list) {
+		try {
+			session = sqlSessionFactory.openSession(true);
+			row = session.update("mypagerewrite", list);
+		}finally {
+			session.close();
+		}
+		return row;
+	}
+
+	public void introduce(UserVO vo2) {
+		try {
+			session = sqlSessionFactory.openSession(true);
+			session.update("introduce", vo2);
+		}finally {
+			session.close();
+		}
+	}
+
+	public List<PostVO> getnanum() {
+		List<PostVO> list =null;
+		try {
+			session = sqlSessionFactory.openSession(true);
+			list = session.selectList("nanum");
+		}finally {
+			session.close();
+		}
+		return list;
+	}
+	
+	public List<UserVO> nickname() {
+		List<UserVO> list =null;
+		try {
+			session = sqlSessionFactory.openSession(true);
+			list = session.selectList("nickname");
 		}finally {
 			session.close();
 		}

@@ -10,18 +10,18 @@ import javax.servlet.http.HttpServletResponse;
 
 import km.model.SNSDAO;
 import km.model.ImgVO;
+import km.model.PostVO;
 
 public class MainService implements Command {
 
 	@Override
 	public String execute(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		ImgVO vo = new ImgVO();
 		SNSDAO dao = new SNSDAO();
-
-		List<ImgVO> list = dao.getimg();
+		List<PostVO> list = dao.getpost();
 
 		if (list != null) {
-			request.setAttribute("img", list);
+			System.out.println(list);
+			request.setAttribute("post", list);
 			
 			return "main.jsp";
 		} else {

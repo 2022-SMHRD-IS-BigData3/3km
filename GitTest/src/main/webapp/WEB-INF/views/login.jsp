@@ -176,7 +176,7 @@ li {
 					<img src="./img/강아지로고.png" width="120px" height="100px"></img>
 				</div>
 				<form id="myForm" action="Login.do" method="post">
-					<p>E-mail <input id="email" name="email" type="text" placeholder="이메일 주소를 입력하세요" autocomplete="on"/> 
+					<p>E-mail <input id="email" name="email" type="text" placeholder="이메일 주소를 입력하세요" autocomplete="off"/> 
 					<br></p>
 					<p>PW<input id="pw" name="pw" type="password" placeholder="8자 이내 비밀번호를 입력하세요" /> 
 					<br></p>

@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -11,7 +11,7 @@
 <link rel="icon" href="./img/강아지로고.png" />
 <link rel="apple-touch-icon" href="./img/강아지로고.png" />
 <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
-<title>게시물 상세보기</title>
+<title>게시물 작성</title>
 <style>
 @font-face {
 	font-family: 'Katuri';
@@ -31,19 +31,20 @@
 	font-style: normal;
 }
 
+body {
+	font-family: Katuri;
+	font-size: 20px;
+}
+
 /* div의 스타일 */
 #enter {
 	width: 360px;
-	height: 1000px;
+	height: 640px;
 	padding: 0px;
 	background-color: rgba(249, 230, 191, 0.15);
 	border: 1px solid #ccc;
 	box-sizing: border-box;
 	margin: 0 auto;
-}
-
-form#mid {
-	text-align: center;
 }
 
 .sangdan {
@@ -54,7 +55,7 @@ form#mid {
 }
 
 .aham {
-	padding-right: 50px;
+	padding-right: 30px;
 	font-weight: bold;
 	font-size: 15px;
 }
@@ -67,19 +68,19 @@ form#mid {
 	margin-top: 10px;
 }
 
-#withdogslogo {
-	background-color: rgb(0, 0, 0, 0);
-	border: none;
-	margin-top: 10px;
-	display: flex;
-	margin-left: -20px;
-}
-
 #person {
 	border: none;
 	background-color: rgba(0, 0, 0, 0);
-	float: right;
 	margin-left: 41px;
+	float: right;
+}
+
+#withdogslogo {
+	background-color: rgb(0, 0, 0, 0);
+	border: none;
+	margin-right: 0px;
+	margin-top: 10px;
+	display: flex;
 }
 
 .menu {
@@ -96,7 +97,6 @@ form#mid {
 	list-style: none;
 	padding-left: 0px;
 	text-align: left;
-	list-style: none;
 }
 
 .hidelist {
@@ -127,94 +127,91 @@ form#mid {
 	font-family: Katuri;
 }
 
-#midempty {
-	height: 10px;
-}
-
-#allcontents {
-	width: 300px;
-	height: 570px;
-	margin: 30px;
-	margin-bottom: 10px;
-	background-color: whitesmoke;
-}
-
-#title {
-	height: 30px;
+#info {
+	color: rgba(243, 156, 18, 0.73);
+	font-weight: bold;
 	text-align: center;
+	font-size: 30px;
+}
+
+.hide .hidelist {
+	font-size: medium;
+}
+
+.aham {
 	font-size: 25px;
-	padding-top: 10px;
+}
+
+.infobody {
+	text-align: center;
+}
+
+#intitle {
+	margin-left: 20px;
+	height: 30px;
+	width: 210px;
 	font-family: BookkGothic-Bd;
+	font-size: 18px;
 }
 
-#photo {
-	width: 200px;
-	height: 200px;
-	padding: 20px;
-	margin-left: 30px;
-}
-
-#content {
-	width: 280px;
-	height: 250px;
-	font-size: 15px;
-	padding: 10px;
-}
-
-.bottom {
-	text-align: right;
-	width: 320px;
-}
-
-#comment {
-	margin-left: 30px;
-	margin-top: 5px;
-	width: 250px;
-	float: left;
-}
-
-#okbutton {
-	width: 34px;
+#selgesi {
 	margin-left: 10px;
-	height: 20px;
-	background-color: rgba(243, 156, 18, 0.73);
-	color: black;
-	border-radius: 5px;
-	border-color: whitesmoke;
+	height: 35px;
+	width: 90px;
 	font-family: Katuri;
-	font-size: 10px;
+	font-size: 16px;
 }
 
-#commentarea {
-	width: 300px;
-	height: 180px;
-	margin-left: 30px;
-	background-color: whitesmoke;
+textarea {
+	margin-left: 20px;
+	margin-top: 20px;
+	width: 316px;
+	height: 400px;
+	background-color: rgba(128, 128, 128, 0.085);
+	border: none;
+	font-family: BookkGothic-Bd;
+	font-size: 18px;
 }
 
-#backbutton {
+#subbut {
 	float: right;
-	margin-right: 15px;
-	width: 43px;
-	height: 20px;
+	margin-right: 20px;
+	margin-top: 5px;
+	width: 70px;
+	height: 30px;
 	background-color: rgba(243, 156, 18, 0.73);
 	color: black;
 	border-radius: 5px;
 	border-color: whitesmoke;
 	font-family: Katuri;
-	font-size: 13px;
+	font-size: 15px;
+}
+
+#imgbut {
+	margin-left: 20px;
+	background-color: rgb(0, 0, 0, 0);
+	border: none;
+}
+
+#img {
+	margin-left: 20px;
+	border: none;
+}
+
+#file {
+	margin-left: 20px;
 }
 </style>
 <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 </head>
 
 <body>
-	<div id="enter">
-		<form action="#">
+	<form action="#">
+		<div id="enter">
 			<header class="sangdan">
 				<button type="button" id="ham">
-					<li class="menu">
-					<a class="aham"><img src="./img/햄버거아이콘.png" /></a>
+					<li class="menu"><a class="aham"><img
+							src="./img/햄버거아이콘.png" /></a>
 						<ul class="hide">
 							<div class="kateham">
 								<li class="menu"><a class="aham">Place</a>
@@ -233,57 +230,58 @@ form#mid {
 								<li class="menu"><a class="aham">Board</a>
 									<ul class="hide">
 										<li class="hidelist">나눔</li>
-										<li class="hidelist" onClick="location.href='Qna.do'">Q&A</li>
+										<li class="hidelist" onClick="location.href='Goqna.do'">Q&A</li>
 									</ul></li> <br>
 								<li class="menu"><a class="aham">MyPage</a>
 									<ul class="hide">
-										<li class="hidelist" onClick="location.href='Gomypage.do'">‍마이페이지</li>
-										<li class="hidelist" onClick="location.href='Goinfo.do'">내정보 수정</li>
+										<li class="hidelist" onClick="location.href='Gomypage1.do'">‍계정관리</li>
+										<li class="hidelist" onClick="location.href='Goinfo.do'">내
+											정보 수정</li>
 										<li class="hidelist" onClick="location.href='Gologout.do'">로그아웃</li>
-									</ul>
-								</li>
+									</ul></li>
 							</div>
-						</ul>
-					</li>
+						</ul></li>
 				</button>
-				<button type="button" id="withdogslogo" onClick="location.href='Gomain.do'">
+				<button type="button" id="withdogslogo" onClick="location.href='Main.do'">
 					<img src="./img/이름로고.png" width="180">
 				</button>
 				<button type="button" id="person" onClick="location.href='Gomypage.do'">
 					<img src="./img/프로필아이콘.png">
 				</button>
 			</header>
-		</form>
-		<div id="midempty"></div>
-
-		<div id="allcontents">
-			<div id="title">${show3[0].title}</div>
-			<hr align="left" style="border: solid 1px rgb(233, 228, 228); width: 295px;">
-			<div id="photo"><img src="./img/메인1.jpg" alt="" width="200" height="200"></div>
-			<div id="content">${show3[0].post_contents}</div>
-		</div>
-		<div class="bottom">
-			<!-- <img src="/img/좋아요아이콘.png" width="15px"> -->
-			<button id="like">❤</button>
-			<span id="likenum">0</span> 
-			<span class="comment"><img src="./img/댓글아이콘.png" width="17px"></span> 
-			<span class="commentnum">1</span>
-		</div>
+	</form>
+	<br>
+	<form action="Rewrite.do" method="post">
+		<input type="text" id="intitle" placeholder="제목을 입력해주세요" name="title" value="상다리부러지게 먹어요~">
+		<select id="selgesi" name="kategory">
+			<option value="cafe">카페/식당</option>
+			<option value="walk">산책</option>
+			<option value="etc">기타</option>
+			<option value="puppy">Puppy</option>
+			<option value="adult">Adult</option>
+			<option value="senior">Senior</option>
+			<option value="items">Items</option>
+			<option value="share">나눔</option>
+			<option value="question">Q & A</option>
+		</select> 
 		<br>
+		<textarea id="content" name="post_contents">하남에 있는 식당에서 에티켓을 지키면서 즐겁게!</textarea>
+		<br> <br>
 		<div>
-		<form action="#"><!-- 댓글 기능단으로 보내기 -->
-			<input id="comment" placeholder="댓글 입력"/>
-			<button id="okbutton" value="확인">확인</button>
-		</form>
+			<label for="image_uploads"></label> 
+			<input id="file" type="file" name="img_root" accept=".jpg, .jpeg, .png">
 		</div>
-		<br>
-		<div id="commentarea">댓글 공간</div>
-		<br>
-		<button id="backbutton" value="뒤로" onClick="location.href='Gomain.do'">back</button>
+		<button type="submit" id="subbut" value="작성">작성</button>
+	</form>
+	</div>
+
+
+	<br>
+
 	</div>
 	<script>
-		$(document).ready(function () {
-			$(".menu>.aham").click(function () {
+		$(document).ready(function() {
+			$(".menu>.aham").click(function() {
 				var submenu = $(this).next(".hide");
 				if (submenu.is(":visible")) {
 					submenu.slideUp();
@@ -292,25 +290,10 @@ form#mid {
 				}
 			})
 		})
-		
-		
-		$(document).on('click','#like',(e)=>{
-			$(e.target).text('💔');
-			$('#likenum').text('1');
-			$(e.target).attr('id','dislike');
-			$(e.target).removeClass('like');
-		})
-		$(document).on('click','#dislike',function(){
-			$(this).text('❤');	
-			$('#dislike+span').text('0');
-			$(this).removeClass('dislike');
-			$(this).attr('id','like');
-		})
-		
-		
-		
-		
+
 	</script>
+
+
 </body>
 
 </html>

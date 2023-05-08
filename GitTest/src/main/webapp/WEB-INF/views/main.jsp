@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions"%>
 <!DOCTYPE html>
 <html>
 
@@ -114,7 +115,7 @@ form#mid {
 /* div의 스타일 */
 #enter {
 	width: 360px;
-	height: 640px;
+	height: auto;
 	padding: 0px;
 	background-color: rgba(249, 230, 191, 0.15);
 	border: 1px solid #ccc;
@@ -204,16 +205,55 @@ div.photobox {
 	height: 100%;
 	object-fit: cover;
 }
+
+#popup01 {
+	width: 200px;
+	height: 200px;
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	background-color: #fff;
+	z-index: 2;
+	display: none;
+}
+
+.backon {
+	content: "";
+	width: 100%;
+	height: 100%;
+	background: #00000054;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 1;
+}
+
+.close {
+	position: absolute;
+	top: -25px;
+	right: 0;
+	cursor: pointer;
+	size: 50px;
+}
+
+#nopost {
+	width: 200px;
+	height: 200px;
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
 </style>
 </head>
-
 <body>
 	<div id="enter">
 		<form action="#">
 			<header class="sangdan">
 				<button type="button" id="ham">
-					<li class="menu"><a class="aham"><img
-							src="./img/햄버거아이콘.png" /></a>
+					<li class="menu"><a class="aham">
+					<img src="./img/햄버거아이콘.png" /></a>
 						<ul class="hide">
 							<div class="kateham">
 								<li class="menu"><a class="aham">Place</a>
@@ -221,39 +261,45 @@ div.photobox {
 										<li class="hidelist" onClick="location.href='Cafe.do'">카페/식당</li>
 										<li class="hidelist">산책</li>
 										<li class="hidelist">기타</li>
-									</ul></li> <br>
+									</ul>
+								</li> 
+								<br>
 								<li class="menu"><a class="aham">Feed</a>
 									<ul class="hide">
 										<li class="hidelist">Puppy</li>
 										<li class="hidelist">Adult</li>
 										<li class="hidelist">Senior</li>
-									</ul></li> <br>
-								<li class="aham"><a>Items</a></li> <br>
+									</ul>
+								</li> 
+								<br>
+								<li class="aham"><a>Items</a></li> 
+								<br>
 								<li class="menu"><a class="aham">Board</a>
 									<ul class="hide">
-										<li class="hidelist">나눔</li>
+										<li class="hidelist" onClick="location.href='Nanum.do'">나눔</li>
 										<li class="hidelist" onClick="location.href='Qna.do'">Q&A</li>
-									</ul></li> <br>
+									</ul>
+								</li> 
+								<br>
 								<li class="menu"><a class="aham">MyPage</a>
 									<ul class="hide">
 										<li class="hidelist" onClick="location.href='Mypage.do'">‍마이페이지</li>
 										<li class="hidelist" onClick="location.href='Goinfo.do'">내정보
 											수정</li>
 										<li class="hidelist" onClick="location.href='Gologout.do'">로그아웃</li>
-									</ul></li>
+									</ul>
+								</li>
 							</div>
-						</ul></li>
+						</ul>
+					</li>
 				</button>
-				<button type="button" id="withdogslogo"
-					onClick="location.href='Main.do'">
+				<button type="button" id="withdogslogo" onClick="location.href='Main.do'">
 					<img src="./img/이름로고.png" width="180">
 				</button>
-				<button type="button" id="write"
-					onClick="location.href='Gowritepostpage.do'">
+				<button type="button" id="write" onClick="location.href='Gowritepostpage.do?user=${member}'">
 					<img src="./img/글쓰기아이콘.png">
 				</button>
-				<button type="button" id="person"
-					onClick="location.href='Mypage.do'">
+				<button type="button" id="person" onClick="location.href='Mypage.do'">
 					<img src="./img/프로필아이콘.png">
 				</button>
 			</header>
@@ -261,72 +307,66 @@ div.photobox {
 		<!-- 상단바 끝나는 지점 -->
 		<div id="medium">
 			<div id="top-area">
-				<label for="cate-list">정렬방식</label> <select name="cate-list"
-					id="cate-list">
-					<option value="조회순">조회순</option>
-					<option value="좋아요순">좋아요순</option>
-					<option value="최신순">최신순</option>
+				<label for="cate-list">정렬방식</label> 
+				<select name="cate-list" id="cate-list">
+					<option value='view'>조회순</option>
+					<option value="new">최신순</option>
+					<option value="like">좋아요순</option>
 				</select>
 			</div>
-			<!-- 여기는 게시물 나오는 곳입니다. -->
-			<!-- 첫번째 게시물  -->
-				<div id="photobox">
-					<div id="photobox-line">
-						<div class="photobox">
-							<img class="showphoto" src="./img/하울이.jpg"
-								onClick="location.href='showpost1.do'">
-						</div>
-					<!-- 두번째 게시물  -->
+			<div id="photobox">
+				<div id="photobox-line">
 					<div class="photobox">
-						<img class="showphoto" src="./img/하울이1.jpg"
-							onClick="location.href='showpost2.do'">
+						<img id="one" class="showphoto" onClick="location.href='Showpost1.do'" src="${post[0].img_root}">
+					</div>
+					<div class="photobox">
+						<img id="two" class="showphoto" onClick="location.href='showpost2.do'" src="${post[1].img_root}">
 					</div>
 				</div>
-				<!-- 첫번째 게시물 좋아요/댓글 -->
 				<div class="boxbottomleft">
 					<span class="like"><img src="./img/좋아요아이콘.png" width="15px"></span>
-					<span class="likenum">11</span> <span class="comment"> <img
-						src="./img/댓글아이콘.png" width="17px"></span> <span class="commentnum">3</span>
+					<span id="lone" class="likenum">${post[0].like_count} // ${member.user_id}</span> 
+					<span id="cone" class="commentnum">view: ${post[0].view_count}</span>
 				</div>
-				<!-- 두번째 게시물 좋아요/댓글 -->
 				<div class="boxbottomright">
 					<span class="like"><img src="./img/좋아요아이콘.png" width="15px"></span>
-					<span class="likenum">7</span> <span class="comment"><img
-						src="./img/댓글아이콘.png" width="17px"></span> <span class="commentnum">5</span>
+					<span id="ltwo" class="likenum">${post[1].like_count}</span> 
+					<span id="ctwo" class="commentnum">view: ${post[1].view_count}</span>
 				</div>
 				<div id="photobox-line2">
 					<div class="photobox">
-						<img class="showphoto" src="./img/메인1.jpg"
-							onClick="location.href='showpost3.do'">
+						<img id="three" class="showphoto" onClick="location.href='showpost3.do'" src="${post[2].img_root}">
 					</div>
 					<div class="photobox">
-						<img class="showphoto" src="./img/달리는사진.jpg"
-							onClick="location.href='showpost4.do'">
+						<img id="four" class="showphoto" onClick="location.href='showpost4.do'" src="${post[3].img_root}">
 					</div>
 				</div>
 				<div class="boxbottomleft">
 					<span class="like"><img src="./img/좋아요아이콘.png" width="15px"></span>
-					<span class="likenum">2</span> <span class="comment"><img
-						src="./img/댓글아이콘.png" width="17px"></span> <span class="commentnum">1</span>
+					<span id="lthree" class="likenum">${post[2].like_count}</span> 
+					<span id="cthree" class="commentnum">view: ${post[2].view_count}</span>
 				</div>
 				<div class="boxbottomright">
 					<span class="like"><img src="./img/좋아요아이콘.png" width="15px"></span>
-					<span class="likenum">5</span> <span class="comment"><img
-						src="./img/댓글아이콘.png" width="17px"></span> <span class="commentnum">1</span>
+					<span id="lfour" class="likenum">${post[3].like_count}</span> 
+					<span id="cfour" class="commentnum">view: ${post[3].view_count}</span>
 				</div>
 			</div>
-
-
 			<div id="bottom">
 				<button id="morebutton" class="btn btn-primary btn-sm" btn-sm>더보기</button>
-				<a href="#"></a>
 			</div>
 		</div>
 	</div>
+	<div id="popup01">
+		<div class="close">close</div>
+		<img id="nopost" src="./img/게시글없음.jpg">
+	</div>
+	<c:set var="post_length" value="${fn:length(post)}" />
+
 
 	<script>
-		$(document).ready(function() {
-			$(".menu>.aham").click(function() {
+		$(document).ready(function(){
+			$(".menu>.aham").click(function(){
 				var submenu = $(this).next(".hide");
 				if (submenu.is(":visible")) {
 					submenu.slideUp();
@@ -334,10 +374,206 @@ div.photobox {
 					submenu.slideDown();
 				}
 			})
+		
 		})
+		$('#cate-list').change(function() {
+			if ($(this).val() == 'view') {
+				$('#one').attr('src', `${post[0].img_root}`);
+				$('#lone').text(`${post[0].like_count}`);
+				$('#cone').text(`view:${post[0].view_count}`);
+				$('#two').attr('src', `${post[1].img_root}`);
+				$('#ltwo').text(`${post[1].like_count}`);
+				$('#ctwo').text(`view:${post[1].view_count}`);
+				$('#three').attr('src', `${post[2].img_root}`);
+				$('#lthree').text(`${post[2].like_count}`);
+				$('#cthree').text(`view:${post[2].view_count}`);
+				$('#four').attr('src', `${post[3].img_root}`);
+				$('#lfour').text(`${post[3].like_count}`);
+				$('#cfour').text(`view:${post[3].view_count}`);
+			} else if ($(this).val() == 'new') {
+				$('#one').attr('src', `${post[post_length-1].img_root}`);
+				$('#one').attr('onClick', "location.href='showpost2.do'");
+				$('#lone').text(`${post[post_length-1].like_count}`);
+				$('#cone').text(`view:${post[post_length-1].view_count}`);
+				$('#two').attr('src', `${post[post_length-2].img_root}`);
+				$('#ltwo').text(`${post[post_length-2].like_count}`);
+				$('#ctwo').text(`view:${post[post_length-2].view_count}`);
+				$('#three').attr('src',`${post[post_length-3].img_root}`);
+				$('#lthree').text(`${post[post_length-3].like_count}`);
+				$('#cthree').text(`view:${post[post_length-3].view_count}`);
+				$('#four').attr('src', `${post[post_length-4].img_root}`);
+				$('#lfour').text(`${post[post_length-4].like_count}`);
+				$('#cfour').text(`view:${post[post_length-4].view_count}`);
+			} else if ($(this).val() == 'like') {
+				$('#one').attr('src',`${post[0].img_root}`);
+				$('#lone').text(`${post[0].like_count}`);
+				$('#cone').text(`view:${post[0].view_count}`);
+				$('#two').attr('src', `${post[1].img_root}`);
+				$('#ltwo').text(`${post[1].like_count}`);
+				$('#ctwo').text(`view:${post[1].view_count}`);
+				$('#three').attr('src',`${post[2].img_root}`);
+				$('#lthree').text(`${post[2].like_count}`);
+				$('#cthree').text(`view:${post[2].view_count}`);
+				$('#four').attr('src',`${post[3].img_root}`);
+				$('#lfour').text(`${post[3].like_count}`);
+				$('#cfour').text(`view:${post[3].view_count}`);
+			}
+		})
+		
+		var morecnt = 0;
+		var moreButton = document.getElementById("morebutton");
+		
+		moreButton.addEventListener("click",function(){
+			morecnt += 1;
+			console.log(morecnt);
+			if(morecnt == 1){
+				var line2 = document.createElement("div");
+				line2.className = "photobox-line2";
+				line2.innerHTML = `<div id="photobox-line">
+										<div class="photobox">
+											<img id="one" class="showphoto" onClick="location.href='showpost1.do'" src="${post[4].img_root}">
+										</div>
+										<div class="photobox">
+											<img id="two" class="showphoto" onClick="location.href='showpost2.do'" src="${post[5].img_root}">
+										</div>
+									</div>
+									<div class="boxbottomleft">
+										<span class="like"><img src="./img/좋아요아이콘.png" width="15px"></span>
+										<span id="lone" class="likenum">${post[4].like_count}</span> 
+										<span id="cone" class="commentnum">view:${post[4].view_count}</span>
+									</div>
+									<div class="boxbottomright">
+										<span class="like"><img src="./img/좋아요아이콘.png" width="15px"></span>
+										<span id="ltwo" class="likenum">${post[5].like_count}</span> 
+										<span id="ctwo" class="commentnum">view:${post[5].view_count}</span>
+									</div>`;
+				
+				var photoboxDiv = document.getElementById("photobox");
+				photoboxDiv.appendChild(line2);
+				
+				var bottomDiv = document.getElementById("bottom");
+				bottomDiv.parentNode.insertBefore(photoboxDiv, bottomDiv);
+			}else if(morecnt == 2){
+				var line2 = document.createElement("div");
+				line2.className = "photobox-line2";
+				line2.innerHTML = `<div id="photobox-line">
+										<div class="photobox">
+											<img id="one" class="showphoto" onClick="location.href='showpost1.do'" src="${post[6].img_root}">
+										</div>
+										<div class="photobox">
+											<img id="two" class="showphoto" onClick="location.href='showpost2.do'" src="${post[7].img_root}">
+										</div>
+									</div>
+									<div class="boxbottomleft">
+										<span class="like"><img src="./img/좋아요아이콘.png" width="15px"></span>
+										<span id="lone" class="likenum">${post[6].like_count}</span> 
+										<span id="cone" class="commentnum">view:${post[6].view_count}</span>
+									</div>
+									<div class="boxbottomright">
+										<span class="like"><img src="./img/좋아요아이콘.png" width="15px"></span>
+										<span id="ltwo" class="likenum">${post[7].like_count}</span> 
+										<span id="ctwo" class="commentnum">view:${post[7].view_count}</span>
+									</div>`;
+				
+				var photoboxDiv = document.getElementById("photobox");
+				photoboxDiv.appendChild(line2);
+				
+				var bottomDiv = document.getElementById("bottom");
+				bottomDiv.parentNode.insertBefore(photoboxDiv, bottomDiv);
+			}else if(morecnt == 3){
+				var line2 = document.createElement("div");
+				line2.className = "photobox-line2";
+				line2.innerHTML = `<div id="photobox-line">
+										<div class="photobox">
+											<img id="one" class="showphoto" onClick="location.href='showpost1.do'" src="${post[8].img_root}">
+										</div>
+										<div class="photobox">
+											<img id="two" class="showphoto" onClick="location.href='showpost2.do'" src="${post[9].img_root}">
+										</div>
+									</div>
+									<div class="boxbottomleft">
+										<span class="like"><img src="./img/좋아요아이콘.png" width="15px"></span>
+										<span id="lone" class="likenum">${post[8].like_count}</span> 
+										<span id="cone" class="commentnum">view:${post[8].view_count}</span>
+									</div>
+									<div class="boxbottomright">
+										<span class="like"><img src="./img/좋아요아이콘.png" width="15px"></span>
+										<span id="ltwo" class="likenum">${post[9].like_count}</span> 
+										<span id="ctwo" class="commentnum">view:${post[9].view_count}</span>
+									</div>`;
+				
+				var photoboxDiv = document.getElementById("photobox");
+				photoboxDiv.appendChild(line2);
+				
+				var bottomDiv = document.getElementById("bottom");
+				bottomDiv.parentNode.insertBefore(photoboxDiv, bottomDiv);
+			}else if(morecnt == 4){
+				var line2 = document.createElement("div");
+				line2.className = "photobox-line2";
+				line2.innerHTML = `<div id="photobox-line">
+										<div class="photobox">
+											<img id="one" class="showphoto" onClick="location.href='showpost1.do'" src="${post[10].img_root}">
+										</div>
+										<div class="photobox">
+											<img id="two" class="showphoto" onClick="location.href='showpost2.do'" src="${post[11].img_root}">
+										</div>
+									</div>
+									<div class="boxbottomleft">
+										<span class="like"><img src="./img/좋아요아이콘.png" width="15px"></span>
+										<span id="lone" class="likenum">${post[10].like_count}</span> 
+										<span id="cone" class="commentnum">view:${post[10].view_count}</span>
+									</div>
+									<div class="boxbottomright">
+										<span class="like"><img src="./img/좋아요아이콘.png" width="15px"></span>
+										<span id="ltwo" class="likenum">${post[11].like_count}</span> 
+										<span id="ctwo" class="commentnum">view:${post[11].view_count}</span>
+									</div>`;
+				
+				var photoboxDiv = document.getElementById("photobox");
+				photoboxDiv.appendChild(line2);
+				
+				var bottomDiv = document.getElementById("bottom");
+				bottomDiv.parentNode.insertBefore(photoboxDiv, bottomDiv);
+			}else if(morecnt == 5){
+				var line2 = document.createElement("div");
+				line2.className = "photobox-line2";
+				line2.innerHTML = `<div id="photobox-line">
+										<div class="photobox">
+											<img id="one" class="showphoto" onClick="location.href='showpost1.do'" src="${post[12].img_root}">
+										</div>
+										<div class="photobox">
+											<img id="two" class="showphoto" onClick="location.href='showpost2.do'" src="./img/게시글없음.jpg">
+										</div>
+									</div>
+									<div class="boxbottomleft">
+										<span class="like"><img src="./img/좋아요아이콘.png" width="15px"></span>
+										<span id="lone" class="likenum">${post[12].like_count}</span> 
+										<span id="cone" class="commentnum">view:${post[12].view_count}</span>
+									</div>
+									<div class="boxbottomright">
+										<span class="like"><img src="./img/좋아요아이콘.png" width="15px"></span>
+										<span id="ltwo" class="likenum"></span> 
+										<span id="ctwo" class="commentnum">view:</span>
+									</div>`;
+				
+				var photoboxDiv = document.getElementById("photobox");
+				photoboxDiv.appendChild(line2);
+				
+				var bottomDiv = document.getElementById("bottom");
+				bottomDiv.parentNode.insertBefore(photoboxDiv, bottomDiv);
+			}else {
+				$("#popup01").show(); 
+			    $("body").append('<div class="backon"></div>');
+			}
+			$("body").on("click", function(event) { 
+		        if(event.target.className == 'close' || event.target.className == 'backon'){
+		            $("#popup01").hide(); 
+		              $(".backon").hide();
+		        }
+		      });
+		 
+		  });
 			
 	</script>
-
 </body>
-
 </html>

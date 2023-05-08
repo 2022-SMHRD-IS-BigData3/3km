@@ -13,12 +13,13 @@ public class PostVO {
 	private int user_id;
 	private int like_id;
 	private int like_count;
+	private int view_count;
 	private String like_date;
 	
 	
 	
 	public PostVO(int post_id, String title, String post_contents, String kategory, String posting_date,
-			String mody_date, int user_id,int like_id,int like_count,String like_date,String img_root) {
+			String mody_date, int user_id,int like_id,int like_count,int view_count,String like_date,String img_root) {
 		this.post_id = post_id;
 		this.title = title;
 		this.post_contents = post_contents;
@@ -27,6 +28,7 @@ public class PostVO {
 		this.mody_date = mody_date;
 		this.like_id = like_id;
 		this.like_count = like_count;
+		this.like_count = view_count;
 		this.like_date = like_date;
 		this.img_root = img_root;
 	}
@@ -121,5 +123,14 @@ public class PostVO {
 	public void setLike_id(int like_id) {
 		this.like_id = like_id;
 	}
+
+	public int getView_count() {
+		return view_count;
+	}
+
+	public void setView_count(int view_count) {
+		this.view_count = view_count;
+	}
+	
 	
 }

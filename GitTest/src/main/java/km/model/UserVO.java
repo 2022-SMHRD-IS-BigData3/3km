@@ -108,5 +108,6 @@ public class UserVO {
 	public void setDog_img3(String dog_img3) {
 		this.dog_img3 = dog_img3;
 	}
+	
 
 }

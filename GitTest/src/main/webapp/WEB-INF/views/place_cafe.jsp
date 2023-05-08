@@ -1,5 +1,6 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-	pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
 <!DOCTYPE html>
 <html>
 
@@ -218,6 +219,45 @@ div.photobox {
 	height: 100%;
 	object-fit: cover;
 }
+
+#popup01 {
+	width: 200px;
+	height: 200px;
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	background-color: #fff;
+	z-index: 2;
+	display: none;
+}
+
+.backon {
+	content: "";
+	width: 100%;
+	height: 100%;
+	background: #00000054;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 1;
+}
+
+.close {
+	position: absolute;
+	top: -25px;
+	right: 0;
+	cursor: pointer;
+	size: 50px;
+}
+#nopost{
+	width: 200px;
+	height: 200px;
+	position: fixed; 
+  	top: 50%; 
+  	left: 50%; 
+  	transform: translate(-50%, -50%);
+}
 </style>
 
 
@@ -233,7 +273,7 @@ div.photobox {
 							<div class="kateham">
 								<li class="menu"><a class="aham">Place</a>
 									<ul class="hide">
-										<li class="hidelist" onClick="location.href='Goplace_cafe.do'">카페/식당</li>
+										<li class="hidelist" onClick="location.href='Cafe.do'">카페/식당</li>
 										<li class="hidelist">산책</li>
 										<li class="hidelist">기타</li>
 									</ul>
@@ -251,7 +291,7 @@ div.photobox {
 								<br>
 								<li class="menu"><a class="aham">Board</a>
 									<ul class="hide">
-										<li class="hidelist">나눔</li>
+										<li class="hidelist" onClick="location.href='Nanum.do'">나눔</li>
 										<li class="hidelist" onClick="location.href='Qna.do'">Q&A</li>
 									</ul>
 								</li> 
@@ -267,7 +307,7 @@ div.photobox {
 						</ul>
 					</li>
 				</button>
-				<button type="button" id="withdogslogo"  onClick="location.href='Gomain.do'">
+				<button type="button" id="withdogslogo"  onClick="location.href='Main.do'">
 				<img src="./img/이름로고.png" width="180"></button>
 				<button type="button" id="write" onClick="location.href='Gowritepostpage.do'">
 				<img src="./img/글쓰기아이콘.png"></button>
@@ -275,71 +315,65 @@ div.photobox {
 				<img src="./img/프로필아이콘.png"></button>
 			</header>
 		</form>
-		<div id="medium">
+			<div id="medium">
 			<div id="top-area">
-				<label for="cate-list">정렬방식</label> <select name="cate-list"
-					id="cate-list">
-					<option value="조회순">조회순</option>
-					<option value="좋아요순">좋아요순</option>
-					<option value="최신순">최신순</option>
+				<label for="cate-list">정렬방식</label> <select name="cate-list" id="cate-list">
+					<option value='view'>조회순</option>
+					<option value="new">최신순</option>
+					<option value="like">좋아요순</option>
 				</select>
 			</div>
-			<!-- 여기는 게시물 나오는 곳입니다. -->
-				<!-- 첫번째 게시물  -->
-				<div id="photobox">
-					<div id="photobox-line">
-						<div class="photobox">
-							<img class="showphoto" src="${item.img_root}">
-						</div>
-						<!-- 두번째 게시물  -->
-						<div class="photobox">
-							<img class="showphoto" src="${item.img_root}">
-						</div>
+			<div id="photobox">
+				<div id="photobox-line">
+					<div class="photobox">
+						<img id="one" class="showphoto" onClick="location.href='showpost1.do'" src="${cafe[0].img_root}">
 					</div>
-					<!-- 첫번째 게시물 좋아요/댓글 -->
-					<div class="boxbottomleft">
-						<span class="like"><img src="./img/좋아요아이콘.png" width="15px"></span>
-						<span class="likenum">0</span> <span class="comment"><img
-							src="./img/댓글아이콘.png" width="17px"></span> <span
-							class="commentnum">0</span>
-					</div>
-					<!-- 두번째 게시물 좋아요/댓글 -->
-					<div class="boxbottomright">
-						<span class="like"><img src="./img/좋아요아이콘.png" width="15px"></span>
-						<span class="likenum">0</span> <span class="comment"><img
-							src="./img/댓글아이콘.png" width="17px"></span> <span
-							class="commentnum">0</span>
-					</div>
-					<div id="photobox-line2">
-						<div class="photobox">
-							<img class="showphoto" src="${item.img_root}">
-						</div>
-						<div class="photobox">
-							<img class="showphoto" src="${item.img_root}">
-						</div>
-					</div>
-					<div class="boxbottomleft">
-						<span class="like"><img src="./img/좋아요아이콘.png" width="15px"></span>
-						<span class="likenum">0</span> <span class="comment"><img
-							src="./img/댓글아이콘.png" width="17px"></span> <span
-							class="commentnum">0</span>
-					</div>
-					<div class="boxbottomright">
-						<span class="like"><img src="./img/좋아요아이콘.png" width="15px"></span>
-						<span class="likenum">0</span> <span class="comment"><img
-							src="./img/댓글아이콘.png" width="17px"></span> <span
-							class="commentnum">0</span>
+					<div class="photobox">
+						<img id="two" class="showphoto" onClick="location.href='showpost2.do'" src="${cafe[1].img_root}">
 					</div>
 				</div>
-
-
-				<div id="bottom">
-					<button id="morebutton" class="btn btn-primary btn-sm" btn-sm>더보기</button>
-					<a href="#"></a>
+				<div class="boxbottomleft">
+					<span class="like"><img src="./img/좋아요아이콘.png" width="15px"></span>
+					<span id="lone" class="likenum">${cafe[0].like_count}</span> 
+					<span id="cone" class="commentnum">view: ${cafe[0].view_count}</span>
 				</div>
+				<div class="boxbottomright">
+					<span class="like"><img src="./img/좋아요아이콘.png" width="15px"></span>
+					<span id="ltwo" class="likenum">${cafe[1].like_count}</span> 
+					<span id="ctwo" class="commentnum">view: ${cafe[1].view_count}</span>
+				</div>
+				<div id="photobox-line2">
+					<div class="photobox">
+						<img id="three" class="showphoto" onClick="location.href='showpost3.do'" src="${cafe[2].img_root}">
+					</div>
+					<div class="photobox">
+						<img id="four" class="showphoto" onClick="location.href='showpost4.do'" src="${cafe[3].img_root}">
+					</div>
+				</div>
+				<div class="boxbottomleft">
+					<span class="like"><img src="./img/좋아요아이콘.png" width="15px"></span>
+					<span id="lthree" class="likenum">${cafe[2].like_count}</span> 
+					<span id="cthree" class="commentnum">view: ${cafe[2].view_count}</span>
+				</div>
+				<div class="boxbottomright">
+					<span class="like"><img src="./img/좋아요아이콘.png" width="15px"></span>
+					<span id="lfour" class="likenum">${cafe[3].like_count}</span>
+					<span id="cfour" class="commentnum">view: ${cafe[3].view_count}</span>
+				</div>
+			</div>
+			<div id="bottom">
+				<button id="morebutton" class="btn btn-primary btn-sm" btn-sm>더보기</button>
+				<a href="#"></a>
+			</div>
 		</div>
 	</div>
-
+	<div id="popup01">
+		<div class="close">close</div>
+		<img id="nopost"src="./img/게시글없음.jpg">
+	</div>
+	
+	<c:set var="cafe_length" value="${fn:length(cafe)}"/>
+	
 	<script>
 		$(document).ready(function() {
 			$(".menu>.aham").click(function() {
@@ -351,6 +385,49 @@ div.photobox {
 				}
 			})
 		})
+		$('#cate-list').change(function() {
+			if ($(this).val() == 'view') {
+				$('#one').attr('src', `${cafe[0].img_root}`);
+				$('#lone').text(`${cafe[0].like_count}`);
+				$('#cone').text(`view:${cafe[0].view_count}`);
+				$('#two').attr('src', `${cafe[1].img_root}`);
+				$('#ltwo').text(`${cafe[1].like_count}`);
+				$('#ctwo').text(`view:${cafe[1].view_count}`);
+				$('#three').attr('src', `${cafe[2].img_root}`);
+				$('#lthree').text(`${cafe[2].like_count}`);
+				$('#cthree').text(`view:${cafe[2].view_count}`);
+				$('#four').attr('src', `${cafe[3].img_root}`);
+				$('#lfour').text(`${cafe[3].like_count}`);
+				$('#cfour').text(`view:${cafe[3].view_count}`);
+			} else if ($(this).val() == 'new') {
+				$('#one').attr('src', `${cafe[cafe_length-1].img_root}`);
+				$('#lone').text(`${cafe[cafe_length-1].like_count}`);
+				$('#cone').text(`view:${cafe[cafe_length-1].view_count}`);
+				$('#two').attr('src', `${cafe[cafe_length-2].img_root}`);
+				$('#ltwo').text(`${cafe[cafe_length-2].like_count}`);
+				$('#ctwo').text(`view:${cafe[cafe_length-2].view_count}`);
+				$('#three').attr('src',`${cafe[cafe_length-3].img_root}`);
+				$('#lthree').text(`${cafe[cafe_length-3].like_count}`);
+				$('#cthree').text(`view:${cafe[cafe_length-3].view_count}`);
+				$('#four').attr('src', `${cafe[cafe_length-4].img_root}`);
+				$('#lfour').text(`${cafe[cafe_length-4].like_count}`);
+				$('#cfour').text(`view:${cafe[cafe_length-4].view_count}`);
+			} else if ($(this).val() == 'like') {
+				$('#one').attr('src',`${cafe[0].img_root}`);
+				$('#lone').text(`${cafe[0].like_count}`);
+				$('#cone').text(`view:${cafe[0].view_count}`);
+				$('#two').attr('src', `${cafe[1].img_root}`);
+				$('#ltwo').text(`${cafe[1].like_count}`);
+				$('#ctwo').text(`view:${cafe[1].view_count}`);
+				$('#three').attr('src',`${cafe[2].img_root}`);
+				$('#lthree').text(`${cafe[2].like_count}`);
+				$('#cthree').text(`view:${cafe[2].view_count}`);
+				$('#four').attr('src',`${cafe[3].img_root}`);
+				$('#lfour').text(`${cafe[3].like_count}`);
+				$('#cfour').text(`view:${cafe[3].view_count}`);
+			}
+		})
+		
 	</script>
 
 </body>

@@ -34,12 +34,13 @@
 /* div의 스타일 */
 #enter {
 	width: 360px;
-	height: 1000px;
-	padding: 0px;
+	height: 0 auto;
+	padding-bottom: 30px;
 	background-color: rgba(249, 230, 191, 0.15);
 	border: 1px solid #ccc;
 	box-sizing: border-box;
-	margin: 0 auto;
+	margin: auto;
+	margin-bottom: 30px;
 }
 
 form#mid {
@@ -133,7 +134,7 @@ form#mid {
 
 #allcontents {
 	width: 300px;
-	height: 570px;
+	height: auto;
 	margin: 30px;
 	margin-bottom: 10px;
 	background-color: whitesmoke;
@@ -156,13 +157,14 @@ form#mid {
 
 #content {
 	width: 280px;
-	height: 250px;
+	height: auto;
 	font-size: 15px;
 	padding: 10px;
 }
 
 .bottom {
 	text-align: right;
+	margin-top: 8px;
 	width: 320px;
 }
 
@@ -187,7 +189,7 @@ form#mid {
 
 #commentarea {
 	width: 300px;
-	height: 180px;
+	height: auto 0;
 	margin-left: 30px;
 	background-color: whitesmoke;
 }
@@ -204,6 +206,48 @@ form#mid {
 	font-family: Katuri;
 	font-size: 13px;
 }
+
+#comment_space {
+	margin-bottom: 8px;
+}
+
+.user_comment {
+	margin-bottom: 6px;
+}
+
+.re {
+	width: 34px;
+	margin-right: 25px;
+	height: 20px;
+	background-color: rgba(243, 156, 18, 0.73);
+	color: black;
+	border-radius: 5px;
+	border-color: whitesmoke;
+	font-family: Katuri;
+	font-size: 10px;
+	float: right;
+}
+
+#re-line {
+	margin-bottom: 5px;
+}
+
+#showcomm {
+	margin-right: 15px;
+	width: 50px;
+	height: 20px;
+	background-color: rgba(243, 156, 18, 0.73);
+	color: black;
+	border-radius: 5px;
+	border-color: whitesmoke;
+	font-family: Katuri;
+	font-size: 8px;
+	margin-top: 8px;
+}
+
+#commentarea {
+	display: none;
+}
 </style>
 <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 </head>
@@ -213,8 +257,8 @@ form#mid {
 		<form action="#">
 			<header class="sangdan">
 				<button type="button" id="ham">
-					<li class="menu">
-					<a class="aham"><img src="./img/햄버거아이콘.png" /></a>
+					<li class="menu"><a class="aham"><img
+							src="./img/햄버거아이콘.png" /></a>
 						<ul class="hide">
 							<div class="kateham">
 								<li class="menu"><a class="aham">Place</a>
@@ -238,18 +282,19 @@ form#mid {
 								<li class="menu"><a class="aham">MyPage</a>
 									<ul class="hide">
 										<li class="hidelist" onClick="location.href='Gomypage.do'">‍마이페이지</li>
-										<li class="hidelist" onClick="location.href='Goinfo.do'">내정보 수정</li>
+										<li class="hidelist" onClick="location.href='Goinfo.do'">내정보
+											수정</li>
 										<li class="hidelist" onClick="location.href='Gologout.do'">로그아웃</li>
-									</ul>
-								</li>
+									</ul></li>
 							</div>
-						</ul>
-					</li>
+						</ul></li>
 				</button>
-				<button type="button" id="withdogslogo" onClick="location.href='Gomain.do'">
+				<button type="button" id="withdogslogo"
+					onClick="location.href='Main.do'">
 					<img src="./img/이름로고.png" width="180">
 				</button>
-				<button type="button" id="person" onClick="location.href='Gomypage.do'">
+				<button type="button" id="person"
+					onClick="location.href='Gomypage.do'">
 					<img src="./img/프로필아이콘.png">
 				</button>
 			</header>
@@ -257,29 +302,36 @@ form#mid {
 		<div id="midempty"></div>
 
 		<div id="allcontents">
-			<div id="title">${show2[0].title}</div>
-			<hr align="left" style="border: solid 1px rgb(233, 228, 228); width: 295px;">
-			<div id="photo"><img src="./img/하울이1.jpg" alt="" width="200" height="200"></div>
-			<div id="content">${show2[0].post_contents}</div>
+			<div id="title">하남의 식당에서</div>
+			<hr align="left"
+				style="border: solid 1px rgb(233, 228, 228); width: 295px;">
+			<div id="photo">
+				<img src="${show2[0].img_root}" alt="" width="200" height="200">
+			</div>
+			<div id="content">상다리가 부러지게 차려서 먹어요</div>
 		</div>
+		<div id="re-line">
+			<button class="re" type="button" id="drop" onClick="location.href='Main.do'" value="삭제">삭제</button>
+			<button class="re" type="button" id="rewrite" onClick="location.href='Gorewrite.do'" value="수정">수정</button>
+		</div>
+		<br>
 		<div class="bottom">
-			<!-- <img src="/img/좋아요아이콘.png" width="15px"> -->
 			<button id="like">❤</button>
-			<span id="likenum">0</span> 
-			<span class="comment"><img src="./img/댓글아이콘.png" width="17px"></span> 
-			<span class="commentnum">5</span>
+			<span id="likenum">0</span> <span class="comment"><img
+				src="./img/댓글아이콘.png" width="17px"></span> <span class="commentnum">0</span>
 		</div>
 		<br>
 		<div>
-		<form action="#"><!-- 댓글 기능단으로 보내기 -->
-			<input id="comment" placeholder="댓글 입력"/>
-			<button id="okbutton" value="확인">확인</button>
-		</form>
+			<form action="#">
+				<input id="comment" placeholder="댓글 입력" />
+				<button id="okbutton" value="확인">확인</button>
+			</form>
+			<button id="showcomm" value="확인">댓글보기</button>
 		</div>
 		<br>
 		<div id="commentarea">댓글 공간</div>
 		<br>
-		<button id="backbutton" value="뒤로" onClick="location.href='Gomain.do'">back</button>
+		<button id="backbutton" value="뒤로" onClick="location.href='Main.do'">back</button>
 	</div>
 	<script>
 		$(document).ready(function () {
@@ -306,6 +358,22 @@ form#mid {
 			$(this).removeClass('dislike');
 			$(this).attr('id','like');
 		})
+		$(document).ready(function () {
+			$('#comment_area').hide();
+			
+    		$("#showcomm").click(function () {
+        		var commentarea = $("#commentarea");
+        		if (commentarea.is(":visible")) {
+        			commentarea.fadeIn("slow");
+        			commentarea.slideToggle(500);
+            		commentarea.hide();
+        		} else {
+        			commentarea.fadeIn("slow");
+        			commentarea.show();
+        		}
+    		});
+		});
+		
 		
 		
 		

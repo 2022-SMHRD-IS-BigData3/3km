@@ -7,28 +7,24 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import km.model.SNSDAO;
 import km.model.PostVO;
+import km.model.SNSDAO;
+import km.model.UserVO;
 
-public class ShowpostService4 implements Command {
-
+public class NicknameService implements Command {
 
 	@Override
 	public String execute(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		SNSDAO dao = new SNSDAO();
-		List<PostVO> list = dao.showpost4();
+		List<UserVO> list = dao.nickname();
 		
-		if(list!=null) {
-			request.setAttribute("show4", list);
+		if (list != null) {
+			request.setAttribute("nick", list);
 			
-			return "showpost4.jsp";
-		}else {
+			return "nanum.jsp";
+		} else {
 			return "redirect:/main.do";
 		}
-		
-		
-		
-		
 		
 	}
 
