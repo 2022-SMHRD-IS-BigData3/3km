@@ -85,8 +85,7 @@
 
 <span>
     
-![image](https://user-images.githubusercontent.com/129910972/236711893-49a23e79-23ba-43bc-abab-d7602c347de4.png)
-![image](https://user-images.githubusercontent.com/129910972/236709440-35141e16-0593-4d31-aeb0-2a324e17ae75.png)
+![image](https://user-images.githubusercontent.com/129910972/236712693-3e64f224-a3f0-434b-b1c7-23a304141d56.png)
     
 </span>
 <br>
@@ -94,7 +93,7 @@
 게시물 작성
 
 <span>
- 
+![image](https://user-images.githubusercontent.com/129910972/236712737-006ee53a-502c-4027-82d8-9052adcf5f87.png)
 </span>
 
 ## 👨‍👩‍👦‍👦 팀원역할
